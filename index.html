@@ -3,162 +3,849 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>答案之书</title>
+    <title>地球-太阳-月亮运动3D模型</title>
     <style>
-        body {
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #0a0a2a, #1a1a3a);
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+        
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .visualization {
+            flex: 3;
+            min-width: 300px;
+            height: 600px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        #canvas-container {
+            width: 100%;
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            background-color: #f0f0f0;
         }
         
-        .book-container {
-            width: 380px;
-            height: 700px;
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.2rem;
+            color: #4a9eff;
+            z-index: 10;
+        }
+        
+        .error-message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #ff6666;
+            text-align: center;
+            z-index: 20;
+            display: none;
+        }
+        
+        .error-message button {
+            margin-top: 10px;
+            padding: 8px 16px;
+            background: #ff6666;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+        
+        .info-panel {
+            flex: 1;
+            min-width: 300px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .info-box {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #4a9eff;
+        }
+        
+        .info-box h3 {
+            margin-bottom: 10px;
+            color: #4a9eff;
+        }
+        
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .control-group label {
+            font-weight: bold;
+            color: #feb47b;
+        }
+        
+        .control-group input[type="range"] {
+            width: 100%;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background: linear-gradient(90deg, #4a9eff, #6a5af9);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+            flex: 1;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(74, 158, 255, 0.4);
+        }
+        
+        button.reset {
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+        }
+        
+        .moon-phase-display {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .moon-visual {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #f5f5f5, #aaa);
             position: relative;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
         
-        .book-background {
+        .moon-shadow {
+            position: absolute;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            border-radius: 50%;
+            background: #333;
+            transition: all 0.5s ease;
+        }
+        
+        .data-display {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .data-item {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .data-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #4a9eff;
+            margin-top: 5px;
+        }
+        
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+        
+        .sun-color { background: #ffcc00; }
+        .earth-color { background: #4a9eff; }
+        .moon-color { background: #cccccc; }
+        .orbit-color { background: rgba(255, 255, 255, 0.1); }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        canvas {
             display: block;
         }
         
-        .answer-text {
-            position: absolute;
-            top: 44px;
-            left: 32px;
-            width: 300px;
-            height: 190px;
-            font-family: 'SimSun', '宋体', serif;
-            font-weight: bold;
-            color: #F9DBB3;
-            font-size: 60px;
-            line-height: 65px;
-            text-align: left;
-            overflow: hidden;
-            display: none;
-        }
-        
-        .explanation {
-            position: absolute;
-            top: 256px; /* 44px + 190px + 22px */
-            left: 32px;
-            width: 300px;
-            font-family: 'SimSun', '宋体', serif;
-            font-size: 16px;
-            line-height: 26px;
-            color: white;
-            text-align: left;
-            display: none;
-        }
-        
-        .action-button {
-            position: absolute;
-            bottom: 16px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: auto;
-            height: 32px;
-            background-color: #1C1C1C;
-            color: white;
-            border: none;
-            border-radius: 16px;
-            font-size: 16px;
-            cursor: pointer;
-            padding: 0 20px;
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .visualization, .info-panel {
+                width: 100%;
+            }
+            
+            .visualization {
+                height: 400px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="book-container">
-        <img src="https://img.alicdn.com/imgextra/i3/O1CN01FSw38T1Ne6L2mg3Mb_!!6000000001594-2-tps-936-1200.png" alt="答案之书背景" class="book-background">
-        <div id="answerText" class="answer-text"></div>
-        <div id="explanation" class="explanation">遇到问题、犹豫不决时，试试拿走这个简单的答案或暗示。</div>
-        <button id="actionButton" class="action-button">默念问题、寻找答案</button>
+    <div class="container">
+        <header>
+            <h1>地球-太阳-月亮运动3D模型</h1>
+            <p class="subtitle">展示白天/黑夜、月相变化、季节轮回的天体运动模拟</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="visualization">
+                <div id="canvas-container">
+                    <div class="loading">加载3D模型中...</div>
+                    <div class="error-message" id="error-message">
+                        <p>无法加载3D库，请检查网络连接后重试</p>
+                        <button onclick="window.location.reload()">重新加载</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-panel">
+                <div class="info-box">
+                    <h3>当前状态</h3>
+                    <div class="data-display">
+                        <div class="data-item">
+                            <div>月相</div>
+                            <div id="moon-phase" class="data-value">满月</div>
+                        </div>
+                        <div class="data-item">
+                            <div>季节</div>
+                            <div id="season" class="data-value">春分</div>
+                        </div>
+                        <div class="data-item">
+                            <div>地球状态</div>
+                            <div id="earth-status" class="data-value">白天</div>
+                        </div>
+                        <div class="data-item">
+                            <div>月球位置</div>
+                            <div id="moon-position" class="data-value">东方</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-box">
+                    <h3>月相显示</h3>
+                    <div class="moon-phase-display">
+                        <div class="moon-visual">
+                            <div id="moon-shadow" class="moon-shadow" style="clip-path: inset(0 0 0 0%);"></div>
+                        </div>
+                        <div>
+                            <div id="phase-name">满月</div>
+                            <div id="phase-desc">月亮被完全照亮</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-box">
+                    <h3>时间信息</h3>
+                    <div>地球公转周期: <span id="orbit-time">365.25 天</span></div>
+                    <div>月球公转周期: <span id="moon-orbit-time">27.3 天</span></div>
+                    <div>地球自转周期: <span id="rotation-time">24 小时</span></div>
+                    <div>模拟时间: <span id="sim-time">0.0 年</span></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="time-speed">时间速度: <span id="time-speed-value">1x</span></label>
+                <input type="range" id="time-speed" min="0" max="10" step="0.1" value="1">
+            </div>
+            
+            <div class="control-group">
+                <label for="camera-angle">摄像机角度: <span id="camera-angle-value">俯视</span></label>
+                <input type="range" id="camera-angle" min="0" max="3" step="1" value="0">
+            </div>
+            
+            <div class="control-group">
+                <label for="show-orbits">显示轨道</label>
+                <input type="checkbox" id="show-orbits" checked>
+            </div>
+            
+            <div class="control-group">
+                <label for="show-labels">显示标签</label>
+                <input type="checkbox" id="show-labels" checked>
+            </div>
+            
+            <div class="button-group">
+                <button id="play-pause">暂停</button>
+                <button id="reset" class="reset">重置</button>
+            </div>
+        </div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color sun-color"></div>
+                <div>太阳 (恒星)</div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color earth-color"></div>
+                <div>地球 (行星)</div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color moon-color"></div>
+                <div>月球 (卫星)</div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color orbit-color"></div>
+                <div>运行轨道</div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>3D太阳系模型模拟 | 展示地球自转、公转、月球运动及其引起的昼夜交替、月相变化和季节轮回</p>
+        </footer>
     </div>
-
+    
+    <!-- 使用更稳定的Three.js CDN -->
+    <script src="https://unpkg.com/three@0.128.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    
     <script>
-        // 答案库 - 至少50个不重复的两段式答案
-        const answers = [
-            ["当下困难", "即将解决"],
-            ["心中所想", "终将实现"],
-            ["时机未到", "还需等待"],
-            ["努力方向", "非常正确"],
-            ["心中所爱", "值得等待"],
-            ["前方道路", "柳暗花明"],
-            ["内心声音", "值得倾听"],
-            ["过去经历", "成就未来"],
-            ["身边之人", "真心待你"],
-            ["机会来临", "把握住它"],
-            ["内心不安", "只是暂时"],
-            ["努力付出", "必有回报"],
-            ["方向明确", "勇敢前行"],
-            ["心中疑惑", "时间解答"],
-            ["所求之物", "终会到来"],
-            ["困境之中", "转机将现"],
-            ["坚持到底", "胜利在望"],
-            ["新的开始", "充满希望"],
-            ["心中梦想", "勇敢追求"],
-            ["身边机会", "值得珍惜"],
-            ["内心渴望", "即将实现"],
-            ["困难重重", "终会过去"],
-            ["前方光明", "就在眼前"],
-            ["所遇之人", "缘分很深"],
-            ["努力方向", "十分正确"],
-            ["时机已到", "大胆行动"],
-            ["心中所愿", "即将成真"],
-            ["迷茫时刻", "相信直觉"],
-            ["所做之事", "意义非凡"],
-            ["未来之路", "光明无限"],
-            ["内心呼唤", "勇敢回应"],
-            ["过往经历", "宝贵财富"],
-            ["当前处境", "只是过渡"],
-            ["心中所想", "终会实现"],
-            ["困难面前", "保持坚强"],
-            ["机会出现", "果断抓住"],
-            ["内心声音", "值得信赖"],
-            ["所求之事", "即将达成"],
-            ["路上风景", "值得欣赏"],
-            ["身边朋友", "真心支持"],
-            ["努力过程", "充满意义"],
-            ["人生方向", "越来越明"],
-            ["内心渴望", "值得追求"],
-            ["困难之后", "必有收获"],
-            ["所遇之事", "皆有深意"],
-            ["心中所念", "终会实现"],
-            ["当前状态", "只是暂时"],
-            ["未来可期", "充满希望"],
-            ["身边之人", "真心相伴"],
-            ["心中所爱", "值得珍惜"]
-        ];
-
-        // 获取DOM元素
-        const answerTextElement = document.getElementById('answerText');
-        const explanationElement = document.getElementById('explanation');
-        const actionButton = document.getElementById('actionButton');
-
-        // 点击按钮事件处理
-        actionButton.addEventListener('click', function() {
-            // 随机选择一个答案
-            const randomIndex = Math.floor(Math.random() * answers.length);
-            const selectedAnswer = answers[randomIndex];
+        // 全局变量
+        let scene, camera, renderer, controls;
+        let sun, earth, moon;
+        let earthOrbit, moonOrbit;
+        let earthOrbitRing, moonOrbitRing;
+        let time = 0;
+        let timeSpeed = 1;
+        let isPlaying = true;
+        let showOrbits = true;
+        
+        // 检查Three.js是否加载成功
+        function checkThreeJsLoaded() {
+            if (typeof THREE === 'undefined') {
+                document.getElementById('error-message').style.display = 'block';
+                return false;
+            }
+            return true;
+        }
+        
+        // 隐藏加载提示
+        function hideLoading() {
+            const loadingElement = document.querySelector('.loading');
+            if (loadingElement) {
+                loadingElement.style.display = 'none';
+            }
+        }
+        
+        // 初始化Three.js场景
+        function init() {
+            if (!checkThreeJsLoaded()) {
+                return;
+            }
             
-            // 设置答案文本
-            answerTextElement.innerHTML = `${selectedAnswer[0]}<br>${selectedAnswer[1]}`;
+            try {
+                // 创建场景
+                scene = new THREE.Scene();
+                scene.background = new THREE.Color(0x0a0a2a);
+                
+                // 创建相机
+                const canvasContainer = document.getElementById('canvas-container');
+                camera = new THREE.PerspectiveCamera(60, canvasContainer.offsetWidth / canvasContainer.offsetHeight, 0.1, 1000);
+                camera.position.set(0, 20, 30);
+                
+                // 创建渲染器
+                renderer = new THREE.WebGLRenderer({ 
+                    antialias: true,
+                    alpha: true 
+                });
+                renderer.setSize(canvasContainer.offsetWidth, canvasContainer.offsetHeight);
+                renderer.shadowMap.enabled = true;
+                renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+                canvasContainer.appendChild(renderer.domElement);
+                
+                // 添加轨道控制器
+                controls = new THREE.OrbitControls(camera, renderer.domElement);
+                controls.enableDamping = true;
+                controls.dampingFactor = 0.05;
+                
+                // 添加环境光
+                const ambientLight = new THREE.AmbientLight(0x333333);
+                scene.add(ambientLight);
+                
+                // 创建太阳
+                const sunGeometry = new THREE.SphereGeometry(3, 32, 32);
+                const sunMaterial = new THREE.MeshBasicMaterial({ 
+                    color: 0xffcc00,
+                    emissive: 0xff9900,
+                    emissiveIntensity: 0.5
+                });
+                sun = new THREE.Mesh(sunGeometry, sunMaterial);
+                sun.position.set(0, 0, 0);
+                scene.add(sun);
+                
+                // 添加太阳光
+                const sunLight = new THREE.PointLight(0xffffff, 2, 100);
+                sun.add(sunLight);
+                
+                // 创建地球轨道
+                earthOrbit = new THREE.Object3D();
+                scene.add(earthOrbit);
+                
+                // 创建地球
+                const earthGeometry = new THREE.SphereGeometry(1.5, 32, 32);
+                const earthMaterial = new THREE.MeshPhongMaterial({ 
+                    color: 0x4a9eff,
+                    shininess: 5,
+                    specular: 0x333333
+                });
+                earth = new THREE.Mesh(earthGeometry, earthMaterial);
+                earth.position.set(15, 0, 0);
+                earth.rotation.y = Math.PI / 4; // 初始倾斜
+                earthOrbit.add(earth);
+                
+                // 添加地球自转轴
+                const earthAxisGeometry = new THREE.CylinderGeometry(0.05, 0.05, 3, 8);
+                const earthAxisMaterial = new THREE.MeshBasicMaterial({ color: 0xff6666 });
+                const earthAxis = new THREE.Mesh(earthAxisGeometry, earthAxisMaterial);
+                earth.add(earthAxis);
+                
+                // 创建月球轨道
+                moonOrbit = new THREE.Object3D();
+                moonOrbit.position.set(15, 0, 0);
+                earthOrbit.add(moonOrbit);
+                
+                // 创建月球
+                const moonGeometry = new THREE.SphereGeometry(0.5, 32, 32);
+                const moonMaterial = new THREE.MeshPhongMaterial({ 
+                    color: 0xcccccc,
+                    shininess: 30
+                });
+                moon = new THREE.Mesh(moonGeometry, moonMaterial);
+                moon.position.set(5, 0, 0);
+                moonOrbit.add(moon);
+                
+                // 创建轨道线
+                createOrbits();
+                
+                // 初始化UI事件
+                initUI();
+                
+                // 隐藏加载提示
+                hideLoading();
+                
+                // 初始化动画
+                animate();
+                
+                // 处理窗口大小变化
+                window.addEventListener('resize', onWindowResize);
+                
+            } catch (error) {
+                console.error('初始化3D场景时出错:', error);
+                document.getElementById('error-message').style.display = 'block';
+                document.getElementById('error-message').innerHTML = 
+                    `<p>初始化3D场景时出错: ${error.message}</p><button onclick="window.location.reload()">重新加载</button>`;
+            }
+        }
+        
+        // 创建轨道线
+        function createOrbits() {
+            // 地球公转轨道
+            const earthOrbitGeometry = new THREE.RingGeometry(14.5, 15.5, 64);
+            const earthOrbitMaterial = new THREE.MeshBasicMaterial({ 
+                color: 0xffffff, 
+                side: THREE.DoubleSide,
+                transparent: true,
+                opacity: 0.1
+            });
+            earthOrbitRing = new THREE.Mesh(earthOrbitGeometry, earthOrbitMaterial);
+            earthOrbitRing.rotation.x = Math.PI / 2;
+            scene.add(earthOrbitRing);
             
-            // 显示答案和解释
-            answerTextElement.style.display = 'block';
-            explanationElement.style.display = 'block';
+            // 月球公转轨道 - 注意：这里要添加到地球轨道对象，但位置要正确设置
+            const moonOrbitGeometry = new THREE.RingGeometry(4.5, 5.5, 64);
+            const moonOrbitMaterial = new THREE.MeshBasicMaterial({ 
+                color: 0xaaaaaa, 
+                side: THREE.DoubleSide,
+                transparent: true,
+                opacity: 0.1
+            });
+            moonOrbitRing = new THREE.Mesh(moonOrbitGeometry, moonOrbitMaterial);
+            moonOrbitRing.rotation.x = Math.PI / 2;
+            // 将月球轨道添加到地球轨道对象，这样会跟随地球一起运动
+            // 注意：月球轨道的位置应该在地球的位置
+            moonOrbitRing.position.set(15, 0, 0);
+            earthOrbit.add(moonOrbitRing);
+        }
+        
+        // 初始化UI事件
+        function initUI() {
+            // 时间速度控制
+            const timeSpeedSlider = document.getElementById('time-speed');
+            const timeSpeedValue = document.getElementById('time-speed-value');
             
-            // 隐藏按钮
-            actionButton.style.display = 'none';
+            timeSpeedSlider.addEventListener('input', function() {
+                timeSpeed = parseFloat(this.value);
+                timeSpeedValue.textContent = timeSpeed.toFixed(1) + 'x';
+            });
+            
+            // 摄像机角度控制
+            const cameraAngleSlider = document.getElementById('camera-angle');
+            const cameraAngleValue = document.getElementById('camera-angle-value');
+            
+            const cameraPositions = [
+                { pos: [0, 20, 30], name: "俯视" },
+                { pos: [30, 10, 0], name: "侧视" },
+                { pos: [0, 0, 30], name: "正视" },
+                { pos: [20, 10, 20], name: "透视" }
+            ];
+            
+            cameraAngleSlider.addEventListener('input', function() {
+                const index = parseInt(this.value);
+                const pos = cameraPositions[index];
+                camera.position.set(pos.pos[0], pos.pos[1], pos.pos[2]);
+                camera.lookAt(0, 0, 0);
+                cameraAngleValue.textContent = pos.name;
+            });
+            
+            // 显示轨道控制
+            const showOrbitsCheckbox = document.getElementById('show-orbits');
+            showOrbitsCheckbox.addEventListener('change', function() {
+                showOrbits = this.checked;
+                if (earthOrbitRing && moonOrbitRing) {
+                    earthOrbitRing.visible = showOrbits;
+                    moonOrbitRing.visible = showOrbits;
+                }
+            });
+            
+            // 显示标签控制
+            const showLabelsCheckbox = document.getElementById('show-labels');
+            showLabelsCheckbox.addEventListener('change', function() {
+                // 这里可以添加标签显示/隐藏逻辑
+                // 目前没有添加3D文本标签，所以暂时不实现
+            });
+            
+            // 播放/暂停按钮
+            const playPauseBtn = document.getElementById('play-pause');
+            playPauseBtn.addEventListener('click', function() {
+                isPlaying = !isPlaying;
+                this.textContent = isPlaying ? '暂停' : '播放';
+            });
+            
+            // 重置按钮
+            const resetBtn = document.getElementById('reset');
+            resetBtn.addEventListener('click', function() {
+                time = 0;
+                timeSpeed = 1;
+                timeSpeedSlider.value = 1;
+                timeSpeedValue.textContent = '1x';
+                camera.position.set(0, 20, 30);
+                camera.lookAt(0, 0, 0);
+                cameraAngleSlider.value = 0;
+                cameraAngleValue.textContent = '俯视';
+                controls.reset();
+                updateDisplay();
+            });
+        }
+        
+        // 计算月相
+        function calculateMoonPhase() {
+            // 获取月球公转角度（0到2π）
+            let moonAngle = moonOrbit.rotation.y % (Math.PI * 2);
+            if (moonAngle < 0) moonAngle += Math.PI * 2;
+            
+            // 月相值 = (1 + cos(月球角度)) / 2
+            const moonPhaseValue = (1 + Math.cos(moonAngle)) / 2;
+            
+            return { moonPhaseValue, moonAngle };
+        }
+        
+        // 计算季节
+        function calculateSeason() {
+            // 获取地球公转角度（0到2π）
+            let earthAngle = earthOrbit.rotation.y % (Math.PI * 2);
+            if (earthAngle < 0) earthAngle += Math.PI * 2;
+            
+            // 季节划分：
+            // 春分：0度（太阳直射赤道）
+            // 夏至：90度（太阳直射北回归线）
+            // 秋分：180度（太阳直射赤道）
+            // 冬至：270度（太阳直射南回归线）
+            
+            // 将地球公转角度映射到季节
+            // 注意：初始位置地球在(15,0,0)，太阳在(0,0,0)，这是春分位置
+            // 地球逆时针公转，角度增加
+            
+            let season;
+            if (earthAngle >= 0 && earthAngle < Math.PI/2) {
+                // 0-90度：春分到夏至
+                season = "春分";
+            } else if (earthAngle >= Math.PI/2 && earthAngle < Math.PI) {
+                // 90-180度：夏至到秋分
+                season = "夏至";
+            } else if (earthAngle >= Math.PI && earthAngle < 3*Math.PI/2) {
+                // 180-270度：秋分到冬至
+                season = "秋分";
+            } else {
+                // 270-360度：冬至到春分
+                season = "冬至";
+            }
+            
+            return { season, earthAngle };
+        }
+        
+        // 更新显示信息
+        function updateDisplay() {
+            // 计算月相
+            const { moonPhaseValue, moonAngle } = calculateMoonPhase();
+            let phaseName, phaseDesc, shadowClip;
+            
+            // 根据月球角度确定月相
+            const normalizedAngle = moonAngle;
+            
+            if (normalizedAngle < Math.PI/8 || normalizedAngle > 15*Math.PI/8) {
+                // 0度附近：满月（地球在太阳和月球之间）
+                phaseName = "满月";
+                phaseDesc = "月亮被完全照亮";
+                shadowClip = "inset(0 0 0 0%)";
+            } else if (normalizedAngle < 3*Math.PI/8) {
+                // 0-67.5度：亏凸月
+                phaseName = "亏凸月";
+                phaseDesc = "月亮被照亮75%";
+                const shadowAmount = (normalizedAngle / (3*Math.PI/8)) * 0.25;
+                shadowClip = `inset(0 ${shadowAmount*100}% 0 0)`;
+            } else if (normalizedAngle < 5*Math.PI/8) {
+                // 67.5-112.5度：下弦月
+                phaseName = "下弦月";
+                phaseDesc = "月亮被照亮50%";
+                shadowClip = "inset(0 50% 0 0)";
+            } else if (normalizedAngle < 7*Math.PI/8) {
+                // 112.5-157.5度：残月
+                phaseName = "残月";
+                phaseDesc = "月亮被照亮25%";
+                const progress = (normalizedAngle - 5*Math.PI/8) / (Math.PI/4);
+                const shadowAmount = 0.5 + progress * 0.5;
+                shadowClip = `inset(0 ${shadowAmount*100}% 0 0)`;
+            } else if (normalizedAngle < 9*Math.PI/8) {
+                // 157.5-202.5度：新月（月球在太阳和地球之间）
+                phaseName = "新月";
+                phaseDesc = "月亮完全黑暗";
+                shadowClip = "inset(0 0 0 100%)";
+            } else if (normalizedAngle < 11*Math.PI/8) {
+                // 202.5-247.5度：蛾眉月
+                phaseName = "蛾眉月";
+                phaseDesc = "月亮被照亮25%";
+                const progress = (normalizedAngle - 9*Math.PI/8) / (Math.PI/4);
+                const shadowAmount = 0.75 - progress * 0.25;
+                shadowClip = `inset(0 0 0 ${shadowAmount*100}%)`;
+            } else if (normalizedAngle < 13*Math.PI/8) {
+                // 247.5-292.5度：上弦月
+                phaseName = "上弦月";
+                phaseDesc = "月亮被照亮50%";
+                shadowClip = "inset(0 0 0 50%)";
+            } else {
+                // 292.5-360度：盈凸月
+                phaseName = "盈凸月";
+                phaseDesc = "月亮被照亮75%";
+                const progress = (normalizedAngle - 13*Math.PI/8) / (Math.PI/4);
+                const shadowAmount = 0.5 - progress * 0.25;
+                shadowClip = `inset(0 0 0 ${shadowAmount*100}%)`;
+            }
+            
+            // 更新月相显示
+            document.getElementById('moon-phase').textContent = phaseName;
+            document.getElementById('phase-name').textContent = phaseName;
+            document.getElementById('phase-desc').textContent = phaseDesc;
+            document.getElementById('moon-shadow').style.clipPath = shadowClip;
+            
+            // 计算季节
+            const { season, earthAngle } = calculateSeason();
+            document.getElementById('season').textContent = season;
+            
+            // 计算白天/黑夜
+            const dayNightAngle = time * 50; // 地球自转
+            const dayNight = Math.sin(dayNightAngle) > 0 ? "白天" : "黑夜";
+            document.getElementById('earth-status').textContent = dayNight;
+            
+            // 计算月球位置
+            const moonPosAngle = normalizedAngle;
+            let moonPosition;
+            if (moonPosAngle < Math.PI/4) moonPosition = "东方";
+            else if (moonPosAngle < Math.PI/2) moonPosition = "东南";
+            else if (moonPosAngle < 3*Math.PI/4) moonPosition = "南方";
+            else if (moonPosAngle < Math.PI) moonPosition = "西南";
+            else if (moonPosAngle < 5*Math.PI/4) moonPosition = "西方";
+            else if (moonPosAngle < 3*Math.PI/2) moonPosition = "西北";
+            else if (moonPosAngle < 7*Math.PI/4) moonPosition = "北方";
+            else moonPosition = "东北";
+            
+            document.getElementById('moon-position').textContent = moonPosition;
+            
+            // 更新时间信息
+            document.getElementById('sim-time').textContent = (time).toFixed(2) + " 年";
+        }
+        
+        // 动画循环
+        function animate() {
+            requestAnimationFrame(animate);
+            
+            if (isPlaying) {
+                // 更新时间
+                time += 0.001 * timeSpeed; // 减慢整体速度
+                
+                // 地球公转
+                earthOrbit.rotation.y = time * Math.PI * 2; // 一年一圈
+                
+                // 地球自转
+                earth.rotation.y += 0.01 * timeSpeed; // 减慢自转速度
+                
+                // 地球倾斜（季节变化）- 固定倾斜23.5度
+                earth.rotation.x = 23.5 * Math.PI / 180;
+                
+                // 月球公转
+                moonOrbit.rotation.y = time * Math.PI * 2 * 13.37;
+                
+                // 月球自转（潮汐锁定，始终一面朝向地球）
+                moon.rotation.y = moonOrbit.rotation.y;
+                
+                // 更新月球轨道位置，使其跟随地球
+                if (moonOrbitRing) {
+                    // 确保月球轨道位置与地球位置一致
+                    moonOrbitRing.position.copy(earth.position);
+                }
+                
+                // 更新显示信息
+                updateDisplay();
+            }
+            
+            if (controls) {
+                controls.update();
+            }
+            
+            if (renderer && scene && camera) {
+                renderer.render(scene, camera);
+            }
+        }
+        
+        // 处理窗口大小变化
+        function onWindowResize() {
+            if (!camera || !renderer) return;
+            
+            const canvasContainer = document.getElementById('canvas-container');
+            camera.aspect = canvasContainer.offsetWidth / canvasContainer.offsetHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(canvasContainer.offsetWidth, canvasContainer.offsetHeight);
+        }
+        
+        // 页面加载完成后初始化
+        window.addEventListener('load', function() {
+            // 检查Three.js是否加载成功
+            setTimeout(function() {
+                if (typeof THREE !== 'undefined') {
+                    init();
+                } else {
+                    document.getElementById('error-message').style.display = 'block';
+                }
+            }, 1000); // 等待1秒确保Three.js加载
+        });
+        
+        // 添加错误处理
+        window.addEventListener('error', function(e) {
+            console.error('JavaScript错误:', e.error);
+            document.getElementById('error-message').style.display = 'block';
+            document.getElementById('error-message').innerHTML = 
+                `<p>JavaScript错误: ${e.message}</p><button onclick="window.location.reload()">重新加载</button>`;
         });
     </script>
 </body>
