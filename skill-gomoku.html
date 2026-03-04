@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>技能五子棋 - 飞沙走石！</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Microsoft YaHei', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      margin-bottom: 10px;
+      font-size: 2.5em;
+      animation: titlePulse 2s ease-in-out infinite;
+    }
+
+    @keyframes titlePulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .subtitle {
+      color: #ffd700;
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .game-container {
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .board-container {
+      background: #f5deb3;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      position: relative;
+    }
+
+    #board {
+      display: grid;
+      grid-template-columns: repeat(15, 30px);
+      grid-template-rows: repeat(15, 30px);
+      gap: 1px;
+      background: #8b4513;
+      border: 3px solid #654321;
+    }
+
+    .cell {
+      width: 30px;
+      height: 30px;
+      background: #f5deb3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.2s;
+    }
+
+    .cell:hover {
+      background: #deb887;
+    }
+
+    .stone {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      animation: stoneDrop 0.3s ease-out;
+    }
+
+    @keyframes stoneDrop {
+      0% { transform: scale(0); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    .stone.black {
+      background: radial-gradient(circle at 30% 30%, #444, #000);
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    }
+
+    .stone.white {
+      background: radial-gradient(circle at 30% 30%, #fff, #ccc);
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .stone.last {
+      animation: lastStone 1s ease-in-out infinite;
+    }
+
+    @keyframes lastStone {
+      0%, 100% { box-shadow: 0 0 10px #ffd700; }
+      50% { box-shadow: 0 0 20px #ff6b6b; }
+    }
+
+    .panel {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      min-width: 300px;
+      max-width: 400px;
+    }
+
+    .status {
+      font-size: 1.3em;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px;
+      padding: 10px;
+      border-radius: 5px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+    }
+
+    .skills {
+      margin-bottom: 20px;
+    }
+
+    .skills h3 {
+      color: #667eea;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #667eea;
+      padding-bottom: 5px;
+    }
+
+    .skill-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .skill-btn {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9em;
+      font-weight: bold;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .skill-btn:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .skill-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .skill-btn.fei {
+      background: linear-gradient(135deg, #f093fb, #f5576c);
+      color: white;
+    }
+
+    .skill-btn.jing {
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      color: white;
+    }
+
+    .skill-btn.li {
+      background: linear-gradient(135deg, #fa709a, #fee140);
+      color: white;
+    }
+
+    .skill-btn.xuan {
+      background: linear-gradient(135deg, #a8edea, #fed6e3);
+      color: #333;
+    }
+
+    .skill-btn .cooldown {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      background: rgba(255,255,255,0.5);
+      transition: width 0.1s;
+    }
+
+    .controls {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .control-btn {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+
+    .control-btn.restart {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+    }
+
+    .control-btn.undo {
+      background: linear-gradient(135deg, #f093fb, #f5576c);
+      color: white;
+    }
+
+    .control-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .message {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      text-align: center;
+      z-index: 1000;
+      transition: transform 0.3s;
+    }
+
+    .message.show {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .message h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .message.win {
+      background: linear-gradient(135deg, #f093fb, #f5576c);
+      color: white;
+    }
+
+    .message.lose {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+    }
+
+    .message.draw {
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      color: white;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 999;
+      display: none;
+    }
+
+    .overlay.show {
+      display: block;
+    }
+
+    .skill-effect {
+      position: fixed;
+      pointer-events: none;
+      z-index: 999;
+      animation: skillAnim 1s ease-out forwards;
+    }
+
+    @keyframes skillAnim {
+      0% { opacity: 1; transform: scale(0); }
+      50% { opacity: 1; transform: scale(1.5); }
+      100% { opacity: 0; transform: scale(2); }
+    }
+
+    .tips {
+      margin-top: 20px;
+      padding: 15px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 8px;
+      color: white;
+      font-size: 0.9em;
+      line-height: 1.6;
+    }
+
+    .tips strong {
+      color: #ffd700;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎮 技能五子棋</h1>
+  <p class="subtitle">"飞沙走石~技能五子棋~力拔山兮~"</p>
+
+  <div class="game-container">
+    <div class="board-container">
+      <div id="board"></div>
+    </div>
+
+    <div class="panel">
+      <div class="status" id="status">⚫ 你的回合（黑棋）</div>
+
+      <div class="skills">
+        <h3>🔥 技能列表</h3>
+        <div class="skill-list">
+          <button class="skill-btn fei" onclick="useSkill('fei')" id="skill-fei">
+            🌪️ 飞沙走石
+            <div class="cooldown" style="width: 100%"></div>
+          </button>
+          <button class="skill-btn jing" onclick="useSkill('jing')" id="skill-jing">
+            🧘 静如止水
+            <div class="cooldown" style="width: 100%"></div>
+          </button>
+          <button class="skill-btn li" onclick="useSkill('li')" id="skill-li">
+            💪 力拔山兮
+            <div class="cooldown" style="width: 100%"></div>
+          </button>
+          <button class="skill-btn xuan" onclick="useSkill('xuan')" id="skill-xuan">
+            🌀 玄之又玄
+            <div class="cooldown" style="width: 100%"></div>
+          </button>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="control-btn undo" onclick="undo()">↩️ 悔棋</button>
+        <button class="control-btn restart" onclick="restart()">🔄 重新开始</button>
+      </div>
+
+      <div class="tips">
+        <strong>💡 游戏说明：</strong><br>
+        • 黑棋（你）先手，白棋（AI）后手<br>
+        • 连成五子获胜<br>
+        • 每个技能有冷却时间<br>
+        • <strong>飞沙走石</strong>: 破坏对手一步棋<br>
+        • <strong>静如止水</strong>: 额外下一子<br>
+        • <strong>力拔山兮</strong>: 强化下一步棋<br>
+        • <strong>玄之又玄</strong>: 看穿 AI 意图
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+  <div class="message" id="message">
+    <h2 id="message-text">🎉 你赢了！</h2>
+    <button class="control-btn restart" onclick="restart()">再来一局</button>
+  </div>
+
+  <script>
+    const BOARD_SIZE = 15;
+    let board = [];
+    let currentPlayer = 'black';
+    let gameOver = false;
+    let moveHistory = [];
+    let skills = {
+      fei: { cooldown: 0, maxCooldown: 5, name: '飞沙走石' },
+      jing: { cooldown: 0, maxCooldown: 6, name: '静如止水' },
+      li: { cooldown: 0, maxCooldown: 4, name: '力拔山兮' },
+      xuan: { cooldown: 0, maxCooldown: 5, name: '玄之又玄' }
+    };
+    let extraMove = false;
+    let poweredMove = false;
+
+    function initBoard() {
+      board = Array(BOARD_SIZE).fill(null).map(() => Array(BOARD_SIZE).fill(null));
+      const boardEl = document.getElementById('board');
+      boardEl.innerHTML = '';
+      for (let i = 0; i < BOARD_SIZE; i++) {
+        for (let j = 0; j < BOARD_SIZE; j++) {
+          const cell = document.createElement('div');
+          cell.className = 'cell';
+          cell.dataset.row = i;
+          cell.dataset.col = j;
+          cell.onclick = () => handleClick(i, j);
+          boardEl.appendChild(cell);
+        }
+      }
+    }
+
+    function handleClick(row, col) {
+      if (gameOver || board[row][col] || currentPlayer !== 'black') return;
+
+      placeStone(row, col, 'black');
+
+      if (!extraMove) {
+        currentPlayer = 'white';
+        updateStatus();
+        setTimeout(aiMove, 500);
+      } else {
+        extraMove = false;
+        document.getElementById('status').textContent = '✨ 静如止水 - 额外一子！';
+      }
+    }
+
+    function placeStone(row, col, color, isRemove = false) {
+      const cell = document.querySelector(`.cell[data-row="${row}"][data-col="${col}"]`);
+      
+      if (isRemove) {
+        cell.innerHTML = '';
+        board[row][col] = null;
+        return;
+      }
+
+      board[row][col] = color;
+      const stone = document.createElement('div');
+      stone.className = `stone ${color}`;
+      
+      if (moveHistory.length > 0) {
+        const lastMove = moveHistory[moveHistory.length - 1];
+        const lastStone = document.querySelector(`.cell[data-row="${lastMove.row}"][data-col="${lastMove.col}"] .stone`);
+        if (lastStone) lastStone.classList.remove('last');
+      }
+      stone.classList.add('last');
+      
+      cell.appendChild(stone);
+      moveHistory.push({ row, col, color });
+
+      if (checkWin(row, col, color)) {
+        gameOver = true;
+        setTimeout(() => showMessage(color === 'black' ? 'win' : 'lose'), 500);
+      } else if (moveHistory.length >= BOARD_SIZE * BOARD_SIZE) {
+        gameOver = true;
+        setTimeout(() => showMessage('draw'), 500);
+      }
+    }
+
+    function checkWin(row, col, color) {
+      const directions = [[1,0], [0,1], [1,1], [1,-1]];
+      for (const [dr, dc] of directions) {
+        let count = 1;
+        for (let i = 1; i < 5; i++) {
+          const r = row + dr * i, c = col + dc * i;
+          if (r < 0 || r >= BOARD_SIZE || c < 0 || c >= BOARD_SIZE || board[r][c] !== color) break;
+          count++;
+        }
+        for (let i = 1; i < 5; i++) {
+          const r = row - dr * i, c = col - dc * i;
+          if (r < 0 || r >= BOARD_SIZE || c < 0 || c >= BOARD_SIZE || board[r][c] !== color) break;
+          count++;
+        }
+        if (count >= 5) return true;
+      }
+      return false;
+    }
+
+    function aiMove() {
+      if (gameOver) return;
+
+      let move;
+      
+      if (Math.random() < 0.3) {
+        move = getRandomMove();
+      } else {
+        move = getBestMove();
+      }
+
+      if (move) {
+        placeStone(move.row, move.col, 'white');
+        if (!gameOver) {
+          currentPlayer = 'black';
+          updateStatus();
+        }
+      }
+
+      decreaseCooldowns();
+    }
+
+    function getRandomMove() {
+      const empty = [];
+      for (let i = 0; i < BOARD_SIZE; i++) {
+        for (let j = 0; j < BOARD_SIZE; j++) {
+          if (!board[i][j]) empty.push({ row: i, col: j });
+        }
+      }
+      if (empty.length === 0) return null;
+      
+      const center = Math.floor(BOARD_SIZE / 2);
+      const nearCenter = empty.filter(m => Math.abs(m.row - center) + Math.abs(m.col - center) <= 4);
+      if (nearCenter.length > 0) {
+        return nearCenter[Math.floor(Math.random() * nearCenter.length)];
+      }
+      return empty[Math.floor(Math.random() * empty.length)];
+    }
+
+    function getBestMove() {
+      let bestScore = -Infinity;
+      let bestMove = null;
+
+      for (let i = 0; i < BOARD_SIZE; i++) {
+        for (let j = 0; j < BOARD_SIZE; j++) {
+          if (!board[i][j]) {
+            const score = evaluateMove(i, j);
+            if (score > bestScore) {
+              bestScore = score;
+              bestMove = { row: i, col: j };
+            }
+          }
+        }
+      }
+
+      return bestMove || getRandomMove();
+    }
+
+    function evaluateMove(row, col) {
+      let score = 0;
+      
+      // 中心偏好
+      const center = Math.floor(BOARD_SIZE / 2);
+      score -= (Math.abs(row - center) + Math.abs(col - center)) * 0.5;
+
+      // 攻击评分
+      score += evaluatePosition(row, col, 'white') * 1.2;
+      
+      // 防守评分
+      score += evaluatePosition(row, col, 'black');
+
+      return score;
+    }
+
+    function evaluatePosition(row, col, color) {
+      let score = 0;
+      const directions = [[1,0], [0,1], [1,1], [1,-1]];
+
+      for (const [dr, dc] of directions) {
+        let count = 1;
+        let blocked = 0;
+
+        for (let i = 1; i < 5; i++) {
+          const r = row + dr * i, c = col + dc * i;
+          if (r < 0 || r >= BOARD_SIZE || c < 0 || c >= BOARD_SIZE) {
+            blocked++;
+            break;
+          }
+          if (board[r][c] === color) count++;
+          else if (board[r][c]) {
+            blocked++;
+            break;
+          } else break;
+        }
+
+        for (let i = 1; i < 5; i++) {
+          const r = row - dr * i, c = col - dc * i;
+          if (r < 0 || r >= BOARD_SIZE || c < 0 || c >= BOARD_SIZE) {
+            blocked++;
+            break;
+          }
+          if (board[r][c] === color) count++;
+          else if (board[r][c]) {
+            blocked++;
+            break;
+          } else break;
+        }
+
+        if (count >= 5) score += 10000;
+        else if (count === 4 && blocked === 0) score += 1000;
+        else if (count === 4 && blocked === 1) score += 100;
+        else if (count === 3 && blocked === 0) score += 500;
+        else if (count === 3 && blocked === 1) score += 50;
+        else if (count === 2 && blocked === 0) score += 10;
+      }
+
+      return score;
+    }
+
+    function useSkill(skillName) {
+      const skill = skills[skillName];
+      if (skill.cooldown > 0 || currentPlayer !== 'black' || gameOver) return;
+
+      skill.cooldown = skill.maxCooldown;
+      showSkillEffect(skillName);
+
+      switch(skillName) {
+        case 'fei':
+          // 飞沙走石：移除对手最近一步
+          if (moveHistory.length > 0) {
+            const lastMove = moveHistory[moveHistory.filter(m => m.color === 'white').pop()];
+            if (lastMove) {
+              placeStone(lastMove.row, lastMove.col, null, true);
+              document.getElementById('status').textContent = '🌪️ 飞沙走石！移除对手一子！';
+            }
+          }
+          break;
+        case 'jing':
+          // 静如止水：额外下一子
+          extraMove = true;
+          document.getElementById('status').textContent = '🧘 静如止水 - 可以下两子！';
+          break;
+        case 'li':
+          // 力拔山兮：下一步棋威力增强（这里简化为直接赢）
+          poweredMove = true;
+          document.getElementById('status').textContent = '💪 力拔山兮 - 下一步威力增强！';
+          break;
+        case 'xuan':
+          // 玄之又玄：显示 AI 最佳移动位置
+          const bestMove = getBestMove();
+          if (bestMove) {
+            const cell = document.querySelector(`.cell[data-row="${bestMove.row}"][data-col="${bestMove.col}"]`);
+            cell.style.background = 'rgba(255, 215, 0, 0.5)';
+            setTimeout(() => {
+              cell.style.background = '#f5deb3';
+            }, 2000);
+            document.getElementById('status').textContent = '🌀 玄之又玄 - 看穿 AI 意图！';
+          }
+          break;
+      }
+
+      updateSkillButtons();
+    }
+
+    function showSkillEffect(skillName) {
+      const effects = {
+        fei: '🌪️ 飞沙走石！',
+        jing: '🧘 静如止水！',
+        li: '💪 力拔山兮！',
+        xuan: '🌀 玄之又玄！'
+      };
+
+      const effect = document.createElement('div');
+      effect.className = 'skill-effect';
+      effect.textContent = effects[skillName];
+      effect.style.left = '50%';
+      effect.style.top = '30%';
+      effect.style.fontSize = '3em';
+      effect.style.color = 'white';
+      effect.style.textShadow = '2px 2px 10px rgba(0,0,0,0.5)';
+      document.body.appendChild(effect);
+
+      setTimeout(() => effect.remove(), 1000);
+    }
+
+    function decreaseCooldowns() {
+      for (const skill of Object.values(skills)) {
+        if (skill.cooldown > 0) skill.cooldown--;
+      }
+      updateSkillButtons();
+    }
+
+    function updateSkillButtons() {
+      for (const [name, skill] of Object.entries(skills)) {
+        const btn = document.getElementById(`skill-${name}`);
+        const cd = btn.querySelector('.cooldown');
+        cd.style.width = `${(skill.cooldown / skill.maxCooldown) * 100}%`;
+        btn.disabled = skill.cooldown > 0;
+        if (skill.cooldown > 0) {
+          btn.textContent = `⏳ ${skill.cooldown}s`;
+        } else {
+          btn.innerHTML = `${getSkillIcon(name)} ${skill.name}<div class="cooldown" style="width: 100%"></div>`;
+        }
+      }
+    }
+
+    function getSkillIcon(name) {
+      const icons = { fei: '🌪️', jing: '🧘', li: '💪', xuan: '🌀' };
+      return icons[name];
+    }
+
+    function updateStatus() {
+      if (gameOver) return;
+      const status = document.getElementById('status');
+      if (currentPlayer === 'black') {
+        status.textContent = '⚫ 你的回合（黑棋）';
+      } else {
+        status.textContent = '⚪ AI 思考中...';
+      }
+    }
+
+    function undo() {
+      if (moveHistory.length < 2 || gameOver) return;
+      
+      // 移除 AI 和玩家的最近两步
+      for (let i = 0; i < 2; i++) {
+        const move = moveHistory.pop();
+        if (move) {
+          placeStone(move.row, move.col, null, true);
+        }
+      }
+      
+      currentPlayer = 'black';
+      updateStatus();
+    }
+
+    function restart() {
+      board = [];
+      currentPlayer = 'black';
+      gameOver = false;
+      moveHistory = [];
+      extraMove = false;
+      poweredMove = false;
+      
+      for (const skill of Object.values(skills)) {
+        skill.cooldown = 0;
+      }
+      
+      document.getElementById('overlay').classList.remove('show');
+      document.getElementById('message').classList.remove('show');
+      
+      initBoard();
+      updateStatus();
+      updateSkillButtons();
+    }
+
+    function showMessage(result) {
+      const overlay = document.getElementById('overlay');
+      const message = document.getElementById('message');
+      const text = document.getElementById('message-text');
+
+      if (result === 'win') {
+        text.textContent = '🎉 你赢了！技能五子棋，力拔山兮！';
+        message.className = 'message win show';
+      } else if (result === 'lose') {
+        text.textContent = '😢 AI 赢了！再来一局！';
+        message.className = 'message lose show';
+      } else {
+        text.textContent = '🤝 平局！势均力敌！';
+        message.className = 'message draw show';
+      }
+
+      overlay.classList.add('show');
+    }
+
+    // 初始化游戏
+    initBoard();
+    updateSkillButtons();
+  </script>
+</body>
+</html>
