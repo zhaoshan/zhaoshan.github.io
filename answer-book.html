@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>答案之书</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+        
+        .book-container {
+            width: 380px;
+            height: 700px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .book-background {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .answer-text {
+            position: absolute;
+            top: 44px;
+            left: 32px;
+            width: 300px;
+            height: 190px;
+            font-family: 'SimSun', '宋体', serif;
+            font-weight: bold;
+            color: #F9DBB3;
+            font-size: 60px;
+            line-height: 65px;
+            text-align: left;
+            overflow: hidden;
+            display: none;
+        }
+        
+        .explanation {
+            position: absolute;
+            top: 256px; /* 44px + 190px + 22px */
+            left: 32px;
+            width: 300px;
+            font-family: 'SimSun', '宋体', serif;
+            font-size: 16px;
+            line-height: 26px;
+            color: white;
+            text-align: left;
+            display: none;
+        }
+        
+        .action-button {
+            position: absolute;
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: auto;
+            height: 32px;
+            background-color: #1C1C1C;
+            color: white;
+            border: none;
+            border-radius: 16px;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="book-container">
+        <img src="https://img.alicdn.com/imgextra/i3/O1CN01FSw38T1Ne6L2mg3Mb_!!6000000001594-2-tps-936-1200.png" alt="答案之书背景" class="book-background">
+        <div id="answerText" class="answer-text"></div>
+        <div id="explanation" class="explanation">遇到问题、犹豫不决时，试试拿走这个简单的答案或暗示。</div>
+        <button id="actionButton" class="action-button">默念问题、寻找答案</button>
+    </div>
+
+    <script>
+        // 答案库 - 至少50个不重复的两段式答案
+        const answers = [
+            ["当下困难", "即将解决"],
+            ["心中所想", "终将实现"],
+            ["时机未到", "还需等待"],
+            ["努力方向", "非常正确"],
+            ["心中所爱", "值得等待"],
+            ["前方道路", "柳暗花明"],
+            ["内心声音", "值得倾听"],
+            ["过去经历", "成就未来"],
+            ["身边之人", "真心待你"],
+            ["机会来临", "把握住它"],
+            ["内心不安", "只是暂时"],
+            ["努力付出", "必有回报"],
+            ["方向明确", "勇敢前行"],
+            ["心中疑惑", "时间解答"],
+            ["所求之物", "终会到来"],
+            ["困境之中", "转机将现"],
+            ["坚持到底", "胜利在望"],
+            ["新的开始", "充满希望"],
+            ["心中梦想", "勇敢追求"],
+            ["身边机会", "值得珍惜"],
+            ["内心渴望", "即将实现"],
+            ["困难重重", "终会过去"],
+            ["前方光明", "就在眼前"],
+            ["所遇之人", "缘分很深"],
+            ["努力方向", "十分正确"],
+            ["时机已到", "大胆行动"],
+            ["心中所愿", "即将成真"],
+            ["迷茫时刻", "相信直觉"],
+            ["所做之事", "意义非凡"],
+            ["未来之路", "光明无限"],
+            ["内心呼唤", "勇敢回应"],
+            ["过往经历", "宝贵财富"],
+            ["当前处境", "只是过渡"],
+            ["心中所想", "终会实现"],
+            ["困难面前", "保持坚强"],
+            ["机会出现", "果断抓住"],
+            ["内心声音", "值得信赖"],
+            ["所求之事", "即将达成"],
+            ["路上风景", "值得欣赏"],
+            ["身边朋友", "真心支持"],
+            ["努力过程", "充满意义"],
+            ["人生方向", "越来越明"],
+            ["内心渴望", "值得追求"],
+            ["困难之后", "必有收获"],
+            ["所遇之事", "皆有深意"],
+            ["心中所念", "终会实现"],
+            ["当前状态", "只是暂时"],
+            ["未来可期", "充满希望"],
+            ["身边之人", "真心相伴"],
+            ["心中所爱", "值得珍惜"]
+        ];
+
+        // 获取DOM元素
+        const answerTextElement = document.getElementById('answerText');
+        const explanationElement = document.getElementById('explanation');
+        const actionButton = document.getElementById('actionButton');
+
+        // 点击按钮事件处理
+        actionButton.addEventListener('click', function() {
+            // 随机选择一个答案
+            const randomIndex = Math.floor(Math.random() * answers.length);
+            const selectedAnswer = answers[randomIndex];
+            
+            // 设置答案文本
+            answerTextElement.innerHTML = `${selectedAnswer[0]}<br>${selectedAnswer[1]}`;
+            
+            // 显示答案和解释
+            answerTextElement.style.display = 'block';
+            explanationElement.style.display = 'block';
+            
+            // 隐藏按钮
+            actionButton.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
