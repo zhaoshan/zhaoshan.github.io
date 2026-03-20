@@ -1,52 +1,52 @@
 {
-  "startTime": "2026-03-20T08:55:47.675Z",
+  "startTime": "2026-03-20T09:33:16.461Z",
   "url": "https://www.tokyostarbank.co.jp/",
   "pages": [
     {
       "url": "https://www.tokyostarbank.co.jp/",
       "title": "東京スター銀行",
       "depth": 0,
-      "path": "test-output/2026-03-20T08-55-47",
-      "links": 430,
-      "timestamp": "2026-03-20T08:57:12.984Z"
+      "path": "test-output/2026-03-20T09-33-16",
+      "links": 223,
+      "timestamp": "2026-03-20T09:34:09.538Z"
     },
     {
       "url": "https://www.tokyostarbank.co.jp/hojin/",
       "title": "法人・個人事業主のお客さま 【東京スター銀行】",
       "depth": 1,
-      "path": "test-output/2026-03-20T08-55-47/pages/法人・個人事業主のお客さま-【東京スター銀行】",
-      "links": 229,
-      "timestamp": "2026-03-20T08:57:29.373Z"
+      "path": "test-output/2026-03-20T09-33-16/pages/法人・個人事業主のお客さま-【東京スター銀行】",
+      "links": 163,
+      "timestamp": "2026-03-20T09:34:25.113Z"
     },
     {
       "url": "https://www.tokyostarbank.co.jp/foreign/",
       "title": "外国籍のお客さま【東京スター銀行】",
       "depth": 1,
-      "path": "test-output/2026-03-20T08-55-47/pages/外国籍のお客さま【東京スター銀行】",
-      "links": 112,
-      "timestamp": "2026-03-20T08:57:52.274Z"
+      "path": "test-output/2026-03-20T09-33-16/pages/外国籍のお客さま【東京スター銀行】",
+      "links": 58,
+      "timestamp": "2026-03-20T09:34:42.225Z"
     },
     {
       "url": "https://www.tokyostarbank.co.jp/foreign/en/",
       "title": "Foreign Customers【Tokyo Star Bank】",
       "depth": 1,
-      "path": "test-output/2026-03-20T08-55-47/pages/Foreign-Customers【Tokyo-Star-Bank】",
-      "links": 109,
-      "timestamp": "2026-03-20T08:58:07.819Z"
+      "path": "test-output/2026-03-20T09-33-16/pages/Foreign-Customers【Tokyo-Star-Bank】",
+      "links": 56,
+      "timestamp": "2026-03-20T09:34:53.200Z"
     },
     {
       "url": "https://www.tokyostarbank.co.jp/foreign/cn/",
       "title": "外國籍客戶【東京之星銀行】",
       "depth": 1,
-      "path": "test-output/2026-03-20T08-55-47/pages/外國籍客戶【東京之星銀行】",
-      "links": 109,
-      "timestamp": "2026-03-20T08:58:28.873Z"
+      "path": "test-output/2026-03-20T09-33-16/pages/外國籍客戶【東京之星銀行】",
+      "links": 56,
+      "timestamp": "2026-03-20T09:35:05.651Z"
     }
   ],
-  "totalImages": 176,
-  "totalDocuments": 83,
-  "totalLinks": 989,
-  "endTime": "2026-03-20T08:58:28.981Z",
+  "totalImages": 174,
+  "totalDocuments": 50,
+  "totalLinks": 556,
+  "endTime": "2026-03-20T09:35:05.788Z",
   "stats": {
     "pagesCrawled": 5,
     "visitedUrls": 5

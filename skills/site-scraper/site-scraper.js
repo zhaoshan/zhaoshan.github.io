@@ -328,9 +328,35 @@ async function scrapePage(url, outputDir, depth = 0) {
     const mdFilename = depth === 0 ? 'index.md' : `${safeTitle}.md`;
     fs.writeFileSync(path.join(pageOutputDir, mdFilename), markdown);
     
-    // 提取链接
+    // 提取链接并去重
     console.log('  🔗 提取链接...');
-    const links = extractLinks(html, url);
+    let links = extractLinks(html, url);
+    
+    // 去重：基于 href 去重，保留第一个出现的
+    const seenLinks = new Set();
+    const dedupedLinks = {
+      webpages: [],
+      documents: [],
+      images: [],
+      all: []
+    };
+    
+    // 辅助函数：检查并添加链接
+    function addLink(link) {
+      if (seenLinks.has(link.href)) return;
+      seenLinks.add(link.href);
+      
+      dedupedLinks.all.push(link);
+      if (link.type === 'webpage') dedupedLinks.webpages.push(link);
+      else if (link.type === 'document') dedupedLinks.documents.push(link);
+      else if (link.type === 'image') dedupedLinks.images.push(link);
+    }
+    
+    // 按顺序处理所有链接
+    links.all.forEach(link => addLink(link));
+    
+    // 更新统计
+    links = dedupedLinks;
     
     // 保存链接 JSON（每个页面独立）
     const linksData = {

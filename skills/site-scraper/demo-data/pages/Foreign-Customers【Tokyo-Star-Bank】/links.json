@@ -1,12 +1,12 @@
 {
   "url": "https://www.tokyostarbank.co.jp/foreign/en/",
   "title": "Foreign Customers【Tokyo Star Bank】",
-  "timestamp": "2026-03-20T08:57:58.175Z",
+  "timestamp": "2026-03-20T09:34:48.288Z",
   "depth": 1,
   "stats": {
-    "total": 109,
-    "webpages": 95,
-    "documents": 8,
+    "total": 56,
+    "webpages": 52,
+    "documents": 4,
     "images": 0
   },
   "links": {
@@ -24,11 +24,6 @@
       {
         "text": "Foreign nationals",
         "href": "https://www.tokyostarbank.co.jp/foreign/en/",
-        "type": "webpage"
-      },
-      {
-        "text": "(无文本)",
-        "href": "https://www.tokyostarbank.co.jp/",
         "type": "webpage"
       },
       {
@@ -52,11 +47,6 @@
         "type": "webpage"
       },
       {
-        "text": "English",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/",
-        "type": "webpage"
-      },
-      {
         "text": "中文",
         "href": "https://www.tokyostarbank.co.jp/foreign/cn/",
         "type": "webpage"
@@ -64,46 +54,6 @@
       {
         "text": "日本語",
         "href": "https://www.tokyostarbank.co.jp/foreign/",
-        "type": "webpage"
-      },
-      {
-        "text": "(无文本)",
-        "href": "https://www.tokyostarbank.co.jp/",
-        "type": "webpage"
-      },
-      {
-        "text": "English",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/",
-        "type": "webpage"
-      },
-      {
-        "text": "中文",
-        "href": "https://www.tokyostarbank.co.jp/foreign/cn/",
-        "type": "webpage"
-      },
-      {
-        "text": "日本語",
-        "href": "https://www.tokyostarbank.co.jp/foreign/",
-        "type": "webpage"
-      },
-      {
-        "text": "FAQ",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/faq/",
-        "type": "webpage"
-      },
-      {
-        "text": "Personal customers",
-        "href": "https://www.tokyostarbank.co.jp/",
-        "type": "webpage"
-      },
-      {
-        "text": "Business customers",
-        "href": "https://www.tokyostarbank.co.jp/hojin/",
-        "type": "webpage"
-      },
-      {
-        "text": "Foreign nationals",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/",
         "type": "webpage"
       },
       {
@@ -168,66 +118,6 @@
       },
       {
         "text": "(无文本)",
-        "href": "https://www.tokyostarbank.co.jp/",
-        "type": "webpage"
-      },
-      {
-        "text": "Account Opening and General Information",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/account/flow/",
-        "type": "webpage"
-      },
-      {
-        "text": "Fees",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/account/fee/",
-        "type": "webpage"
-      },
-      {
-        "text": "Change your bank card PIN number (which is also used for telephone transactions) (Japan residents)",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/account/number/",
-        "type": "webpage"
-      },
-      {
-        "text": "Lost or stolen bank cards, passbooks, or personal seals",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/account/funsitu/",
-        "type": "webpage"
-      },
-      {
-        "text": "Products",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/products/?tab=tab-02",
-        "type": "webpage"
-      },
-      {
-        "text": "Tokyo Star Direct (Internet Banking)",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/tokyostardirect/",
-        "type": "webpage"
-      },
-      {
-        "text": "Foreign Remittance Web Service",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/f_remittance/",
-        "type": "webpage"
-      },
-      {
-        "text": "Corporate Services",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/hojin/products/",
-        "type": "webpage"
-      },
-      {
-        "text": "Company Overview",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/profile/summary/",
-        "type": "webpage"
-      },
-      {
-        "text": "About Our Shareholder (CTBC Bank, Taiwan)",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/profile/shareholder/",
-        "type": "webpage"
-      },
-      {
-        "text": "Initiatives for Customers with Foreign Nationalities",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/profile/initiatives/",
-        "type": "webpage"
-      },
-      {
-        "text": "(无文本)",
         "href": "https://www.tokyostarbank.co.jp/foreign/en/products/loan/homeloan_star/",
         "type": "webpage"
       },
@@ -239,41 +129,6 @@
       {
         "text": "(无文本)",
         "href": "https://www.tokyostarbank.co.jp/foreign/en/orangeport/",
-        "type": "webpage"
-      },
-      {
-        "text": "(无文本)",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/products/loan/homeloan_star/",
-        "type": "webpage"
-      },
-      {
-        "text": "(无文本)",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/products/loan/property/",
-        "type": "webpage"
-      },
-      {
-        "text": "(无文本)",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/orangeport/",
-        "type": "webpage"
-      },
-      {
-        "text": "(无文本)",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/products/loan/homeloan_star/",
-        "type": "webpage"
-      },
-      {
-        "text": "(无文本)",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/products/loan/property/",
-        "type": "webpage"
-      },
-      {
-        "text": "Initiatives for Customers with Foreign Nationalities",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/profile/initiatives/",
-        "type": "webpage"
-      },
-      {
-        "text": "Open a Star One account",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/account/flow/",
         "type": "webpage"
       },
       {
@@ -282,28 +137,8 @@
         "type": "webpage"
       },
       {
-        "text": "Fees",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/account/fee/",
-        "type": "webpage"
-      },
-      {
-        "text": "Change your bank card PIN number (which is also used for telephone transactions) (Japan residents)",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/account/number/",
-        "type": "webpage"
-      },
-      {
-        "text": "Lost or stolen bank cards, passbooks, or personal seals",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/account/funsitu/",
-        "type": "webpage"
-      },
-      {
         "text": "Guide to opening a non-resident account",
         "href": "https://www.tokyostarbank.co.jp/foreign/en/account/foreign_customers/",
-        "type": "webpage"
-      },
-      {
-        "text": "Tokyo Star Direct (Internet Banking)",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/tokyostardirect/",
         "type": "webpage"
       },
       {
@@ -322,28 +157,8 @@
         "type": "webpage"
       },
       {
-        "text": "Find out more about Star Mortgages",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/products/loan/homeloan_star/",
-        "type": "webpage"
-      },
-      {
-        "text": "Find out more about Tokyo Lucky Star Real-Estate Investment Loans (for non-residents of Japan)",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/products/loan/property/",
-        "type": "webpage"
-      },
-      {
-        "text": "About Our Shareholder (CTBC Bank, Taiwan)",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/profile/shareholder/",
-        "type": "webpage"
-      },
-      {
-        "text": "Find out more about our corporate services",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/hojin/products/",
-        "type": "webpage"
-      },
-      {
-        "text": "Open an account",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/account/flow/",
+        "text": "0120-16-3838",
+        "href": "tel:0120163838",
         "type": "webpage"
       },
       {
@@ -352,48 +167,23 @@
         "type": "webpage"
       },
       {
-        "text": "Account Opening and General Information",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/account/flow/",
+        "text": "(无文本)",
+        "href": "https://ja-jp.facebook.com/tokyostarbank/",
         "type": "webpage"
       },
       {
-        "text": "Products and Services",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/products/?tab=tab-02",
+        "text": "(无文本)",
+        "href": "https://www.youtube.com/channel/UCva8Phpv6oJ-4V4UJR5hU7Q",
         "type": "webpage"
       },
       {
-        "text": "Corporate Services",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/hojin/products/",
+        "text": "(无文本)",
+        "href": "https://twitter.com/tsb_jp",
         "type": "webpage"
       },
       {
-        "text": "Corporate Profile",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/profile/summary/",
-        "type": "webpage"
-      },
-      {
-        "text": "Personal customers",
-        "href": "https://www.tokyostarbank.co.jp/",
-        "type": "webpage"
-      },
-      {
-        "text": "Business customers",
-        "href": "https://www.tokyostarbank.co.jp/hojin/",
-        "type": "webpage"
-      },
-      {
-        "text": "Foreign nationals",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/",
-        "type": "webpage"
-      },
-      {
-        "text": "IR",
-        "href": "https://www.tokyostarbank.co.jp/profile/en/",
-        "type": "webpage"
-      },
-      {
-        "text": "Recruting (in Japanese)",
-        "href": "https://www.tokyostarbank.co.jp/recruit/",
+        "text": "(无文本)",
+        "href": "https://lin.ee/RPrD2Th",
         "type": "webpage"
       },
       {
@@ -472,18 +262,13 @@
         "type": "webpage"
       },
       {
-        "text": "Fiduciary Duty of Tokyo Star Bank",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/fiduciary_duty/",
-        "type": "webpage"
-      },
-      {
         "text": "Sitemap",
         "href": "https://www.tokyostarbank.co.jp/sitemap/",
         "type": "webpage"
       },
       {
-        "text": "クッキーポリシー",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/cookie_policy/",
+        "text": "マイナンバーカードをスマホで読み取り口座開設",
+        "href": "https://direct.tokyostarbank.co.jp/sp_xm2a/page/18001/sX01101CT/dsX0110100",
         "type": "webpage"
       }
     ],
@@ -501,26 +286,6 @@
       {
         "text": "Notice of New PIN Change Function on Seven Bank ATMs",
         "href": "https://www.tokyostarbank.co.jp/foreign/en/topics/pdf/240322_en.pdf",
-        "type": "document"
-      },
-      {
-        "text": "[Important] Please beware of fraudulent emails",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/topics/pdf/fraudulent_emails_en.pdf",
-        "type": "document"
-      },
-      {
-        "text": "[Important] (To customers who are foreign nationals residing in Japan) Please cooperate with us to confirm your status of residence, period of stay, and other matters.",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/topics/pdf/250901_en.pdf",
-        "type": "document"
-      },
-      {
-        "text": "Notice of New PIN Change Function on Seven Bank ATMs",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/topics/pdf/240322_en.pdf",
-        "type": "document"
-      },
-      {
-        "text": "[Important] Please beware of fraudulent emails",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/topics/pdf/fraudulent_emails_en.pdf",
         "type": "document"
       },
       {
@@ -547,11 +312,6 @@
         "type": "webpage"
       },
       {
-        "text": "(无文本)",
-        "href": "https://www.tokyostarbank.co.jp/",
-        "type": "webpage"
-      },
-      {
         "text": "Fiduciary Duty of Tokyo Star Bank",
         "href": "https://www.tokyostarbank.co.jp/foreign/en/fiduciary_duty/",
         "type": "webpage"
@@ -572,11 +332,6 @@
         "type": "webpage"
       },
       {
-        "text": "English",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/",
-        "type": "webpage"
-      },
-      {
         "text": "中文",
         "href": "https://www.tokyostarbank.co.jp/foreign/cn/",
         "type": "webpage"
@@ -584,46 +339,6 @@
       {
         "text": "日本語",
         "href": "https://www.tokyostarbank.co.jp/foreign/",
-        "type": "webpage"
-      },
-      {
-        "text": "(无文本)",
-        "href": "https://www.tokyostarbank.co.jp/",
-        "type": "webpage"
-      },
-      {
-        "text": "English",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/",
-        "type": "webpage"
-      },
-      {
-        "text": "中文",
-        "href": "https://www.tokyostarbank.co.jp/foreign/cn/",
-        "type": "webpage"
-      },
-      {
-        "text": "日本語",
-        "href": "https://www.tokyostarbank.co.jp/foreign/",
-        "type": "webpage"
-      },
-      {
-        "text": "FAQ",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/faq/",
-        "type": "webpage"
-      },
-      {
-        "text": "Personal customers",
-        "href": "https://www.tokyostarbank.co.jp/",
-        "type": "webpage"
-      },
-      {
-        "text": "Business customers",
-        "href": "https://www.tokyostarbank.co.jp/hojin/",
-        "type": "webpage"
-      },
-      {
-        "text": "Foreign nationals",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/",
         "type": "webpage"
       },
       {
@@ -687,66 +402,6 @@
         "type": "webpage"
       },
       {
-        "text": "(无文本)",
-        "href": "https://www.tokyostarbank.co.jp/",
-        "type": "webpage"
-      },
-      {
-        "text": "Account Opening and General Information",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/account/flow/",
-        "type": "webpage"
-      },
-      {
-        "text": "Fees",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/account/fee/",
-        "type": "webpage"
-      },
-      {
-        "text": "Change your bank card PIN number (which is also used for telephone transactions) (Japan residents)",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/account/number/",
-        "type": "webpage"
-      },
-      {
-        "text": "Lost or stolen bank cards, passbooks, or personal seals",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/account/funsitu/",
-        "type": "webpage"
-      },
-      {
-        "text": "Products",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/products/?tab=tab-02",
-        "type": "webpage"
-      },
-      {
-        "text": "Tokyo Star Direct (Internet Banking)",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/tokyostardirect/",
-        "type": "webpage"
-      },
-      {
-        "text": "Foreign Remittance Web Service",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/f_remittance/",
-        "type": "webpage"
-      },
-      {
-        "text": "Corporate Services",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/hojin/products/",
-        "type": "webpage"
-      },
-      {
-        "text": "Company Overview",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/profile/summary/",
-        "type": "webpage"
-      },
-      {
-        "text": "About Our Shareholder (CTBC Bank, Taiwan)",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/profile/shareholder/",
-        "type": "webpage"
-      },
-      {
-        "text": "Initiatives for Customers with Foreign Nationalities",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/profile/initiatives/",
-        "type": "webpage"
-      },
-      {
         "text": "[Important] Please beware of fraudulent emails",
         "href": "https://www.tokyostarbank.co.jp/foreign/en/topics/pdf/fraudulent_emails_en.pdf",
         "type": "document"
@@ -762,26 +417,6 @@
         "type": "document"
       },
       {
-        "text": "[Important] Please beware of fraudulent emails",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/topics/pdf/fraudulent_emails_en.pdf",
-        "type": "document"
-      },
-      {
-        "text": "[Important] (To customers who are foreign nationals residing in Japan) Please cooperate with us to confirm your status of residence, period of stay, and other matters.",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/topics/pdf/250901_en.pdf",
-        "type": "document"
-      },
-      {
-        "text": "Notice of New PIN Change Function on Seven Bank ATMs",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/topics/pdf/240322_en.pdf",
-        "type": "document"
-      },
-      {
-        "text": "[Important] Please beware of fraudulent emails",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/topics/pdf/fraudulent_emails_en.pdf",
-        "type": "document"
-      },
-      {
         "text": "(无文本)",
         "href": "https://www.tokyostarbank.co.jp/foreign/en/products/loan/homeloan_star/",
         "type": "webpage"
@@ -794,41 +429,6 @@
       {
         "text": "(无文本)",
         "href": "https://www.tokyostarbank.co.jp/foreign/en/orangeport/",
-        "type": "webpage"
-      },
-      {
-        "text": "(无文本)",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/products/loan/homeloan_star/",
-        "type": "webpage"
-      },
-      {
-        "text": "(无文本)",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/products/loan/property/",
-        "type": "webpage"
-      },
-      {
-        "text": "(无文本)",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/orangeport/",
-        "type": "webpage"
-      },
-      {
-        "text": "(无文本)",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/products/loan/homeloan_star/",
-        "type": "webpage"
-      },
-      {
-        "text": "(无文本)",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/products/loan/property/",
-        "type": "webpage"
-      },
-      {
-        "text": "Initiatives for Customers with Foreign Nationalities",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/profile/initiatives/",
-        "type": "webpage"
-      },
-      {
-        "text": "Open a Star One account",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/account/flow/",
         "type": "webpage"
       },
       {
@@ -837,28 +437,8 @@
         "type": "webpage"
       },
       {
-        "text": "Fees",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/account/fee/",
-        "type": "webpage"
-      },
-      {
-        "text": "Change your bank card PIN number (which is also used for telephone transactions) (Japan residents)",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/account/number/",
-        "type": "webpage"
-      },
-      {
-        "text": "Lost or stolen bank cards, passbooks, or personal seals",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/account/funsitu/",
-        "type": "webpage"
-      },
-      {
         "text": "Guide to opening a non-resident account",
         "href": "https://www.tokyostarbank.co.jp/foreign/en/account/foreign_customers/",
-        "type": "webpage"
-      },
-      {
-        "text": "Tokyo Star Direct (Internet Banking)",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/tokyostardirect/",
         "type": "webpage"
       },
       {
@@ -877,33 +457,8 @@
         "type": "webpage"
       },
       {
-        "text": "Find out more about Star Mortgages",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/products/loan/homeloan_star/",
-        "type": "webpage"
-      },
-      {
-        "text": "Find out more about Tokyo Lucky Star Real-Estate Investment Loans (for non-residents of Japan)",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/products/loan/property/",
-        "type": "webpage"
-      },
-      {
-        "text": "About Our Shareholder (CTBC Bank, Taiwan)",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/profile/shareholder/",
-        "type": "webpage"
-      },
-      {
         "text": "0120-16-3838",
         "href": "tel:0120163838",
-        "type": "webpage"
-      },
-      {
-        "text": "Find out more about our corporate services",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/hojin/products/",
-        "type": "webpage"
-      },
-      {
-        "text": "Open an account",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/account/flow/",
         "type": "webpage"
       },
       {
@@ -937,51 +492,6 @@
         "type": "document"
       },
       {
-        "text": "Account Opening and General Information",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/account/flow/",
-        "type": "webpage"
-      },
-      {
-        "text": "Products and Services",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/products/?tab=tab-02",
-        "type": "webpage"
-      },
-      {
-        "text": "Corporate Services",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/hojin/products/",
-        "type": "webpage"
-      },
-      {
-        "text": "Corporate Profile",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/profile/summary/",
-        "type": "webpage"
-      },
-      {
-        "text": "Personal customers",
-        "href": "https://www.tokyostarbank.co.jp/",
-        "type": "webpage"
-      },
-      {
-        "text": "Business customers",
-        "href": "https://www.tokyostarbank.co.jp/hojin/",
-        "type": "webpage"
-      },
-      {
-        "text": "Foreign nationals",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/",
-        "type": "webpage"
-      },
-      {
-        "text": "IR",
-        "href": "https://www.tokyostarbank.co.jp/profile/en/",
-        "type": "webpage"
-      },
-      {
-        "text": "Recruting (in Japanese)",
-        "href": "https://www.tokyostarbank.co.jp/recruit/",
-        "type": "webpage"
-      },
-      {
         "text": "Website Terms and Conditions",
         "href": "https://www.tokyostarbank.co.jp/foreign/en/terms/",
         "type": "webpage"
@@ -1057,18 +567,8 @@
         "type": "webpage"
       },
       {
-        "text": "Fiduciary Duty of Tokyo Star Bank",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/fiduciary_duty/",
-        "type": "webpage"
-      },
-      {
         "text": "Sitemap",
         "href": "https://www.tokyostarbank.co.jp/sitemap/",
-        "type": "webpage"
-      },
-      {
-        "text": "クッキーポリシー",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/cookie_policy/",
         "type": "webpage"
       },
       {
