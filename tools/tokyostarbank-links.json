@@ -1,10 +1,17 @@
 {
   "url": "https://www.tokyostarbank.co.jp/",
-  "timestamp": "2026-03-20T14:10:00+09:00",
-  "totalLinks": 234,
-  "visitedPages": 39,
-  "interactiveElements": 89,
-  "crawlDepth": 2,
+  "timestamp": "2026-03-20T14:45:00+09:00",
+  "crawlType": "deep-interactive",
+  "description": "深度交互爬取 - 模拟点击所有可交互元素，检测弹窗和动态加载链接",
+  "stats": {
+    "totalLinks": 234,
+    "pagesVisited": 1,
+    "totalClicks": 30,
+    "popupsDetected": 0,
+    "maxDepthReached": 0,
+    "interactiveElementsClicked": 30
+  },
+  "note": "该网站采用同窗口导航，未检测到独立弹窗。所有 234 个链接已在初始页面 HTML 中预渲染。",
   "links": [
     {
       "category": "主导航",
