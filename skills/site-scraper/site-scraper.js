@@ -80,13 +80,33 @@ function ensureDir(dir) {
   }
 }
 
+// 清理文件名，保留有意义的字符
+function sanitizeFilename(name, maxLength = 50) {
+  return name
+    .replace(/[<>:"/\\|？*]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-{2,}/g, '-')
+    .substring(0, maxLength)
+    .replace(/-$/, '');
+}
+
 // 下载文件
-async function downloadFile(url, outputPath) {
+async function downloadFile(url, outputPath, textHint = '') {
   try {
     const response = await axios.get(url, {
       responseType: 'arraybuffer',
       timeout: config.timeout
     });
+    
+    // 如果提供了文本提示，重命名文件
+    if (textHint && !outputPath.includes(textHint)) {
+      const ext = path.extname(outputPath);
+      const dir = path.dirname(outputPath);
+      const safeText = sanitizeFilename(textHint, 50);
+      const counter = Date.now() % 10000;
+      const newName = `${safeText}-${counter}${ext}`;
+      outputPath = path.join(dir, newName);
+    }
     
     fs.writeFileSync(outputPath, response.data);
     console.log(`  ⬇️ 已下载：${path.basename(outputPath)}`);
@@ -233,10 +253,13 @@ async function downloadDocuments(documents, attachmentsDir) {
   for (const doc of documents) {
     try {
       const urlPath = new URL(doc.href).pathname;
-      const filename = path.basename(urlPath) || `document-${Date.now()}`;
-      const outputPath = path.join(attachmentsDir, sanitizeFilename(filename));
+      const originalFilename = path.basename(urlPath) || `document-${Date.now()}`;
       
-      await downloadFile(doc.href, outputPath);
+      // 使用文本描述 + 原始文件名
+      const textHint = doc.text && doc.text !== '(无文本)' ? sanitizeFilename(doc.text, 40) : null;
+      const outputPath = path.join(attachmentsDir, originalFilename);
+      
+      await downloadFile(doc.href, outputPath, textHint);
       state.manifest.totalDocuments++;
     } catch (error) {
       console.log(`  ⚠️ 文档下载失败：${doc.href}`);
@@ -309,7 +332,7 @@ async function scrapePage(url, outputDir, depth = 0) {
     console.log('  🔗 提取链接...');
     const links = extractLinks(html, url);
     
-    // 保存链接 JSON
+    // 保存链接 JSON（每个页面独立）
     const linksData = {
       url,
       title,
@@ -324,9 +347,9 @@ async function scrapePage(url, outputDir, depth = 0) {
       links
     };
     
-    const jsonFilename = depth === 0 ? 'links.json' : `${safeTitle}.json`;
+    // 每个页面都保存为 links.json 在各自目录中
     fs.writeFileSync(
-      path.join(pageOutputDir, jsonFilename),
+      path.join(pageOutputDir, 'links.json'),
       JSON.stringify(linksData, null, 2)
     );
     
