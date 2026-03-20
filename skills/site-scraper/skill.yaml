@@ -1,0 +1,86 @@
+# Site Scraper Skill 配置
+name: site-scraper
+version: 1.0.0
+description: 网站内容完整爬取工具 - 支持 Markdown 转换、图片下载、文档下载、递归爬取
+author: OpenClaw
+license: MIT
+
+# 入口脚本
+entry: site-scraper.js
+
+# 运行时环境
+runtime: nodejs
+
+# 依赖管理
+dependencies:
+  - puppeteer
+  - axios
+  - cheerio
+  - commander
+
+# 命令配置
+commands:
+  - name: scrape
+    description: 爬取网站内容
+    usage: node site-scraper.js <url> [options]
+    arguments:
+      - name: url
+        type: string
+        required: true
+        description: 目标网站 URL
+      - name: max-depth
+        type: number
+        default: 2
+        description: 最大递归深度
+      - name: max-pages
+        type: number
+        default: 15
+        description: 最大爬取页面数
+      - name: output
+        type: string
+        default: ./scrape-output
+        description: 输出目录
+      - name: domain-only
+        type: boolean
+        default: true
+        description: 仅爬取同域名
+
+# 功能特性
+features:
+  - 接收 URL，获取完整页面内容
+  - 转换为 Markdown，保留所有图片
+  - 生成 JSON，包含所有链接（网页/PDF/Office）
+  - 下载文档到 attachments 目录
+  - 递归爬取所有普通网页链接
+  - 链接去重
+  - PDF 文件名优化（文本描述 + 编号）
+
+# 输出格式
+output:
+  - type: markdown
+    description: 页面 Markdown 格式
+  - type: json
+    description: 链接数据（含层级结构）
+  - type: html
+    description: 原始 HTML
+  - type: images
+    description: 下载的图片
+  - type: attachments
+    description: 下载的文档（PDF/Office）
+
+# 示例
+examples:
+  - description: 基本用法
+    command: node site-scraper.js https://example.com
+  - description: 递归爬取，最大深度 2，最多 15 页
+    command: node site-scraper.js https://example.com --max-depth 2 --max-pages 15
+  - description: 指定输出目录
+    command: node site-scraper.js https://example.com --output ./my-output
+
+# 测试数据
+test:
+  url: https://www.tokyostarbank.co.jp/
+  pages: 15
+  links: 2167
+  images: 240
+  documents: 103
