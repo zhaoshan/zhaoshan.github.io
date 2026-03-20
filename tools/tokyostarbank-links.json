@@ -1,0 +1,280 @@
+{
+  "url": "https://www.tokyostarbank.co.jp/",
+  "timestamp": "2026-03-20T14:10:00+09:00",
+  "totalLinks": 234,
+  "visitedPages": 39,
+  "interactiveElements": 89,
+  "crawlDepth": 2,
+  "links": [
+    {
+      "category": "主导航",
+      "items": [
+        {"text": "个人业务", "href": "https://www.tokyostarbank.co.jp/#tab-megamenu-01"},
+        {"text": "法人业务", "href": "https://www.tokyostarbank.co.jp/hojin/"},
+        {"text": "外汇业务", "href": "https://www.tokyostarbank.co.jp/foreign/"},
+        {"text": "关于我们", "href": "https://www.tokyostarbank.co.jp/profile/"}
+      ]
+    },
+    {
+      "category": "账户服务",
+      "items": [
+        {"text": "普通存款", "href": "https://www.tokyostarbank.co.jp/products/deposit/savings/"},
+        {"text": "定期存款", "href": "https://www.tokyostarbank.co.jp/products/deposit/term/"},
+        {"text": "外币存款", "href": "https://www.tokyostarbank.co.jp/products/foreign_deposit/"},
+        {"text": "账户开设流程", "href": "https://www.tokyostarbank.co.jp/account/flow/"}
+      ]
+    },
+    {
+      "category": "贷款服务",
+      "items": [
+        {"text": "住房贷款", "href": "https://www.tokyostarbank.co.jp/products/loan/homeloan/homeloan_star/"},
+        {"text": "信用卡贷款", "href": "https://www.tokyostarbank.co.jp/products/loan/cardloan/"},
+        {"text": "医疗贷款", "href": "https://www.tokyostarbank.co.jp/products/loan/doctors/"},
+        {"text": "教育贷款", "href": "https://www.tokyostarbank.co.jp/products/loan/unsecured/education/"},
+        {"text": "汽车贷款", "href": "https://www.tokyostarbank.co.jp/products/loan/unsecured/mycar/"}
+      ]
+    },
+    {
+      "category": "投资服务",
+      "items": [
+        {"text": "投资信托", "href": "https://www.tokyostarbank.co.jp/products/investment/fund/"},
+        {"text": "NISA", "href": "https://www.tokyostarbank.co.jp/products/investment/nisa/nisa_2024.html"},
+        {"text": "iDeCo", "href": "https://www.tokyostarbank.co.jp/products/ideco/"},
+        {"text": "WealthNavi", "href": "https://www.tokyostarbank.co.jp/products/wealthnavi/"}
+      ]
+    },
+    {
+      "category": "网上银行",
+      "items": [
+        {"text": "登录", "href": "https://www.tokyostarbank.co.jp/tokyostardirect/login.html"},
+        {"text": "新开户", "href": "https://www.tokyostarbank.co.jp/tokyostardirect/signup/"},
+        {"text": "OTP 应用", "href": "https://www.tokyostarbank.co.jp/tokyostardirect/otp_appli/"}
+      ]
+    },
+    {
+      "category": "手续费/利率",
+      "items": [
+        {"text": "手续费一览", "href": "https://www.tokyostarbank.co.jp/fee/"},
+        {"text": "利率一览", "href": "https://www.tokyostarbank.co.jp/rate/"},
+        {"text": "ATM 手续费免费", "href": "https://www.tokyostarbank.co.jp/lounge_atm/atm/atmfee/free.html"}
+      ]
+    },
+    {
+      "category": "网点/ATM",
+      "items": [
+        {"text": "网点搜索", "href": "https://www.tokyostarbank.co.jp/lounge_atm/"},
+        {"text": "ATM 搜索", "href": "https://www.tokyostarbank.co.jp/lounge_atm/atm/"},
+        {"text": "Seven ATM", "href": "https://www.tokyostarbank.co.jp/seven_atm/"}
+      ]
+    },
+    {
+      "category": "法人服务",
+      "items": [
+        {"text": "法人融资", "href": "https://www.tokyostarbank.co.jp/hojin/financing/"},
+        {"text": "海外业务", "href": "https://www.tokyostarbank.co.jp/hojin/overseas/"},
+        {"text": "StarBB 登录", "href": "https://www.tokyostarbank.co.jp/hojin/starbb/login.html"}
+      ]
+    },
+    {
+      "category": "重要通知",
+      "items": [
+        {"text": "重要通知", "href": "https://www.tokyostarbank.co.jp/important_news/"},
+        {"text": "最新消息", "href": "https://www.tokyostarbank.co.jp/topics/"},
+        {"text": "新闻发布", "href": "https://www.tokyostarbank.co.jp/press_ir/press/"}
+      ]
+    },
+    {
+      "category": "联系方式",
+      "items": [
+        {"text": "咨询窗口", "href": "https://www.tokyostarbank.co.jp/contact/"},
+        {"text": "在线客服", "href": "https://support.tokyostarbank.co.jp/"},
+        {"text": "网站地图", "href": "https://www.tokyostarbank.co.jp/sitemap/"}
+      ]
+    },
+    {
+      "category": "社交媒体",
+      "items": [
+        {"text": "Twitter", "href": "https://twitter.com/tsb_jp"},
+        {"text": "Facebook", "href": "https://ja-jp.facebook.com/tokyostarbank/"},
+        {"text": "YouTube", "href": "https://www.youtube.com/channel/UCva8Phpv6oJ-4V4UJR5hU7Q"},
+        {"text": "LINE", "href": "https://lin.ee/RPrD2Th"}
+      ]
+    },
+    {
+      "category": "手机应用",
+      "items": [
+        {"text": "App Store", "href": "https://apps.apple.com/jp/app/%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%BF%E3%83%BC%E9%8A%80%E8%A1%8C%E3%80%80%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%82%A2%E3%83%97%E3%83%AA/id1600388981"},
+        {"text": "Google Play", "href": "https://play.google.com/store/apps/details?id=jp.co.tokyostarbank.bankingapp"}
+      ]
+    }
+  ],
+  "allLinks": [
+    "https://apps.apple.com/jp/app/%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%BF%E3%83%BC%E9%8A%80%E8%A1%8C%E3%80%80%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%82%A2%E3%83%97%E3%83%AA/id1600388981",
+    "https://bell-face.com/connect/",
+    "https://direct.tokyostarbank.co.jp/sp_xm2a/page/18001/sX01101CT/dsX0110100",
+    "https://ja-jp.facebook.com/tokyostarbank/",
+    "https://lin.ee/RPrD2Th",
+    "https://play.google.com/store/apps/details?id=jp.co.tokyostarbank.bankingapp",
+    "https://portal.tokyostarbank.co.jp/portal/log0101",
+    "https://support.tokyostarbank.co.jp/",
+    "https://twitter.com/tsb_jp",
+    "https://www.tokyostarbank.co.jp/",
+    "https://www.tokyostarbank.co.jp/#header",
+    "https://www.tokyostarbank.co.jp/#tab-megamenu-01",
+    "https://www.tokyostarbank.co.jp/#tab-megamenu-02",
+    "https://www.tokyostarbank.co.jp/#tab-megamenu-03",
+    "https://www.tokyostarbank.co.jp/#tab-megamenu-04",
+    "https://www.tokyostarbank.co.jp/#tab-megamenu-05",
+    "https://www.tokyostarbank.co.jp/#tab-megamenu-06",
+    "https://www.tokyostarbank.co.jp/#tab-megamenu-07",
+    "https://www.tokyostarbank.co.jp/#tab-menu-01",
+    "https://www.tokyostarbank.co.jp/#tab-menu-02",
+    "https://www.tokyostarbank.co.jp/#tab-menu-03",
+    "https://www.tokyostarbank.co.jp/accessibility/",
+    "https://www.tokyostarbank.co.jp/account/",
+    "https://www.tokyostarbank.co.jp/account/#anc-04",
+    "https://www.tokyostarbank.co.jp/account/feature/",
+    "https://www.tokyostarbank.co.jp/account/feature/#anc-04",
+    "https://www.tokyostarbank.co.jp/account/feature/3step.html",
+    "https://www.tokyostarbank.co.jp/account/feature/fee_free.html",
+    "https://www.tokyostarbank.co.jp/account/feature/kyufuri.html",
+    "https://www.tokyostarbank.co.jp/account/feature/merit.html",
+    "https://www.tokyostarbank.co.jp/account/feature/nenkin.html",
+    "https://www.tokyostarbank.co.jp/account/flow/",
+    "https://www.tokyostarbank.co.jp/anti-moneylaundering/",
+    "https://www.tokyostarbank.co.jp/anti-social/",
+    "https://www.tokyostarbank.co.jp/campaign/",
+    "https://www.tokyostarbank.co.jp/campaign/25th_program/",
+    "https://www.tokyostarbank.co.jp/campaign/kyufuri_program/",
+    "https://www.tokyostarbank.co.jp/campaign/mixpack/",
+    "https://www.tokyostarbank.co.jp/campaign/mortgage_collateral/",
+    "https://www.tokyostarbank.co.jp/campaign/open_cashpresent/",
+    "https://www.tokyostarbank.co.jp/campaign/rate_program/",
+    "https://www.tokyostarbank.co.jp/campaign/stardream_260301/",
+    "https://www.tokyostarbank.co.jp/collaboration/",
+    "https://www.tokyostarbank.co.jp/conflicts_interest/",
+    "https://www.tokyostarbank.co.jp/contact/",
+    "https://www.tokyostarbank.co.jp/cookie_policy/",
+    "https://www.tokyostarbank.co.jp/customer_harassment/",
+    "https://www.tokyostarbank.co.jp/f_remittance/",
+    "https://www.tokyostarbank.co.jp/feature/",
+    "https://www.tokyostarbank.co.jp/feature/advisor/",
+    "https://www.tokyostarbank.co.jp/feature/chasing_rabbits/",
+    "https://www.tokyostarbank.co.jp/feature/deposit/",
+    "https://www.tokyostarbank.co.jp/feature/deposit_irotoridori/",
+    "https://www.tokyostarbank.co.jp/feature/education/",
+    "https://www.tokyostarbank.co.jp/feature/glossary/",
+    "https://www.tokyostarbank.co.jp/feature/loan_matching/",
+    "https://www.tokyostarbank.co.jp/feature/net_transaction/",
+    "https://www.tokyostarbank.co.jp/fee/",
+    "https://www.tokyostarbank.co.jp/fiduciary_duty/",
+    "https://www.tokyostarbank.co.jp/foreign/",
+    "https://www.tokyostarbank.co.jp/foreign/account/fee/",
+    "https://www.tokyostarbank.co.jp/foreign/account/flow/",
+    "https://www.tokyostarbank.co.jp/foreign/account/funsitu/",
+    "https://www.tokyostarbank.co.jp/foreign/account/number/",
+    "https://www.tokyostarbank.co.jp/foreign/cn/",
+    "https://www.tokyostarbank.co.jp/foreign/en/",
+    "https://www.tokyostarbank.co.jp/foreign/f_remittance/",
+    "https://www.tokyostarbank.co.jp/foreign/faq/",
+    "https://www.tokyostarbank.co.jp/foreign/hojin/products/",
+    "https://www.tokyostarbank.co.jp/foreign/products/",
+    "https://www.tokyostarbank.co.jp/foreign/products/loan/property/",
+    "https://www.tokyostarbank.co.jp/foreign/profile/shareholder/",
+    "https://www.tokyostarbank.co.jp/foreign/profile/summary/",
+    "https://www.tokyostarbank.co.jp/foreign/tokyostardirect/",
+    "https://www.tokyostarbank.co.jp/hojin/",
+    "https://www.tokyostarbank.co.jp/hojin/access-corporate/",
+    "https://www.tokyostarbank.co.jp/hojin/domestic/",
+    "https://www.tokyostarbank.co.jp/hojin/domestic/financing/",
+    "https://www.tokyostarbank.co.jp/hojin/financing/",
+    "https://www.tokyostarbank.co.jp/hojin/overseas/",
+    "https://www.tokyostarbank.co.jp/hojin/overseas/foreignexchange/",
+    "https://www.tokyostarbank.co.jp/hojin/rate/",
+    "https://www.tokyostarbank.co.jp/hojin/solution/",
+    "https://www.tokyostarbank.co.jp/hojin/solution/industry/",
+    "https://www.tokyostarbank.co.jp/hojin/solution/strategy/",
+    "https://www.tokyostarbank.co.jp/hojin/starbb/f_remittance/",
+    "https://www.tokyostarbank.co.jp/hojin/starbb/login.html",
+    "https://www.tokyostarbank.co.jp/hojin/starbb/service.html",
+    "https://www.tokyostarbank.co.jp/hojin/starbb/starbb.html",
+    "https://www.tokyostarbank.co.jp/hojin/trial/",
+    "https://www.tokyostarbank.co.jp/important_news/",
+    "https://www.tokyostarbank.co.jp/legal/",
+    "https://www.tokyostarbank.co.jp/lounge_atm/",
+    "https://www.tokyostarbank.co.jp/lounge_atm/atm/",
+    "https://www.tokyostarbank.co.jp/lounge_atm/atm/atmfee/",
+    "https://www.tokyostarbank.co.jp/lounge_atm/atm/atmfee/free.html",
+    "https://www.tokyostarbank.co.jp/lounge_atm/atm/guide/",
+    "https://www.tokyostarbank.co.jp/lounge_atm/atm/tieup/",
+    "https://www.tokyostarbank.co.jp/lounge_atm/consultation_limited.html",
+    "https://www.tokyostarbank.co.jp/lp/app/",
+    "https://www.tokyostarbank.co.jp/markets/",
+    "https://www.tokyostarbank.co.jp/money-laundering/",
+    "https://www.tokyostarbank.co.jp/movie/",
+    "https://www.tokyostarbank.co.jp/press_ir/",
+    "https://www.tokyostarbank.co.jp/press_ir/press/",
+    "https://www.tokyostarbank.co.jp/prevention/",
+    "https://www.tokyostarbank.co.jp/privacy/",
+    "https://www.tokyostarbank.co.jp/procedure/",
+    "https://www.tokyostarbank.co.jp/procedure/account_transfer.html",
+    "https://www.tokyostarbank.co.jp/procedure/cashless.html",
+    "https://www.tokyostarbank.co.jp/products/",
+    "https://www.tokyostarbank.co.jp/products/alterna/",
+    "https://www.tokyostarbank.co.jp/products/deposit/",
+    "https://www.tokyostarbank.co.jp/products/deposit/savings/",
+    "https://www.tokyostarbank.co.jp/products/deposit/structure/",
+    "https://www.tokyostarbank.co.jp/products/deposit/term/",
+    "https://www.tokyostarbank.co.jp/products/foreign_deposit/",
+    "https://www.tokyostarbank.co.jp/products/foreign_deposit/savings/",
+    "https://www.tokyostarbank.co.jp/products/foreign_deposit/structure/",
+    "https://www.tokyostarbank.co.jp/products/foreign_deposit/term/",
+    "https://www.tokyostarbank.co.jp/products/ideco/",
+    "https://www.tokyostarbank.co.jp/products/investment/",
+    "https://www.tokyostarbank.co.jp/products/investment/emaxis_slim/",
+    "https://www.tokyostarbank.co.jp/products/investment/fund/",
+    "https://www.tokyostarbank.co.jp/products/investment/merit/",
+    "https://www.tokyostarbank.co.jp/products/investment/mf_tsumitate/",
+    "https://www.tokyostarbank.co.jp/products/investment/nisa/nisa_2024.html",
+    "https://www.tokyostarbank.co.jp/products/loan/",
+    "https://www.tokyostarbank.co.jp/products/loan/cardloan/",
+    "https://www.tokyostarbank.co.jp/products/loan/doctors/",
+    "https://www.tokyostarbank.co.jp/products/loan/fertility/",
+    "https://www.tokyostarbank.co.jp/products/loan/free/",
+    "https://www.tokyostarbank.co.jp/products/loan/homeloan/homeloan_select/",
+    "https://www.tokyostarbank.co.jp/products/loan/homeloan/homeloan_star/",
+    "https://www.tokyostarbank.co.jp/products/loan/homeloan/homeloan_starone/",
+    "https://www.tokyostarbank.co.jp/products/loan/mortgage_collateral/",
+    "https://www.tokyostarbank.co.jp/products/loan/reverse_mortgage/",
+    "https://www.tokyostarbank.co.jp/products/loan/unsecured/education/",
+    "https://www.tokyostarbank.co.jp/products/loan/unsecured/mycar/",
+    "https://www.tokyostarbank.co.jp/products/loan/unsecured/refinance/",
+    "https://www.tokyostarbank.co.jp/products/prepare/",
+    "https://www.tokyostarbank.co.jp/products/regulations/",
+    "https://www.tokyostarbank.co.jp/products/trust_contract/",
+    "https://www.tokyostarbank.co.jp/products/trust_contract/inheritance/",
+    "https://www.tokyostarbank.co.jp/products/wealthnavi/",
+    "https://www.tokyostarbank.co.jp/profile/",
+    "https://www.tokyostarbank.co.jp/profile/csr/development/project.html",
+    "https://www.tokyostarbank.co.jp/profile/csr/kintore/",
+    "https://www.tokyostarbank.co.jp/profile/en/",
+    "https://www.tokyostarbank.co.jp/rate/",
+    "https://www.tokyostarbank.co.jp/recruit/",
+    "https://www.tokyostarbank.co.jp/security/",
+    "https://www.tokyostarbank.co.jp/seminar/",
+    "https://www.tokyostarbank.co.jp/seminar/consultation/",
+    "https://www.tokyostarbank.co.jp/seminar/online_service/",
+    "https://www.tokyostarbank.co.jp/seven_atm/",
+    "https://www.tokyostarbank.co.jp/sitemap/",
+    "https://www.tokyostarbank.co.jp/stakeholder/",
+    "https://www.tokyostarbank.co.jp/terms/",
+    "https://www.tokyostarbank.co.jp/tokyostardirect/",
+    "https://www.tokyostarbank.co.jp/tokyostardirect/investment/",
+    "https://www.tokyostarbank.co.jp/tokyostardirect/login.html",
+    "https://www.tokyostarbank.co.jp/tokyostardirect/otp_appli/",
+    "https://www.tokyostarbank.co.jp/tokyostardirect/signup/",
+    "https://www.tokyostarbank.co.jp/tokyostardirect/tel_bank/",
+    "https://www.tokyostarbank.co.jp/topics/",
+    "https://www.youtube.com/channel/UCva8Phpv6oJ-4V4UJR5hU7Q"
+  ]
+}
