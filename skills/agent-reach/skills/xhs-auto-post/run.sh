@@ -2,13 +2,18 @@
 # 小红书图文笔记自动生成脚本
 # 用法：./run.sh "主题"
 
+set -e
+
 THEME="${1:-AI 工具推荐}"
+OUTPUT_DIR=~/xiaohongshu_post
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 echo "🎨 开始生成小红书笔记：$THEME"
 echo ""
 
 # 1. 检查环境
 echo "【步骤 1/5】检查环境..."
+
 if ! command -v python3 &> /dev/null; then
     echo "❌ Python3 未安装"
     exit 1
@@ -21,16 +26,19 @@ fi
 
 if ! curl -s http://localhost:18060/mcp > /dev/null 2>&1; then
     echo "⚠️  小红书 MCP 服务未运行"
-    echo "   运行：~/.agent-reach/tools/xiaohongshu-mcp/xiaohongshu-mcp"
+    echo "   运行：~/.agent-reach/tools/xiaohongshu-mcp/xiaohongshu-mcp &"
 fi
+
+# 创建输出目录
+mkdir -p "$OUTPUT_DIR"
 
 echo "✅ 环境检查完成"
 echo ""
 
 # 2. 生成图片
 echo "【步骤 2/5】生成图片..."
-cd /Users/zhaoshan/.openclaw/workspace
-python3 generate-xhs-images-final.py
+cd "$SCRIPT_DIR"
+python3 generate_images.py skills
 
 if [ $? -ne 0 ]; then
     echo "❌ 图片生成失败"
@@ -39,20 +47,17 @@ fi
 
 echo ""
 echo "✅ 图片已生成："
-ls -lh xhs-skill-*-final.png
+ls -lh $OUTPUT_DIR/xhs-skills-*.png 2>/dev/null || echo "   （图片在 $OUTPUT_DIR 目录）"
 echo ""
 
 # 3. 显示文案
 echo "【步骤 3/5】笔记文案："
 echo ""
-echo "标题：🚀OpenClaw 必装的 5 个 Skills！效率翻倍✨"
+echo "标题：OpenClaw 必装 5 个 Skills！效率翻倍"
 echo ""
 echo "正文："
 cat << 'EOF'
 AI 打工人必看！亲测好用的 OpenClaw Skills 分享～
-
-用了 3 个月 OpenClaw，这 5 个 Skills 真的离不开！
-安装后 AI 能力直接翻倍，强烈建议收藏～
 
 1️⃣ site-scraper 网站爬取神器
 一键抓取整个网站内容
@@ -81,7 +86,7 @@ Gemini 图像生成
 
 👇 你最想用哪个？评论区告诉我～
 
-#OpenClaw #AI 工具 #效率工具 #职场技能 #AI 技能 #自动化 #打工人 #技能推荐 #AI 助手 #2026 推荐
+#OpenClaw #AI 工具 #效率工具 #职场技能 #AI 技能
 EOF
 echo ""
 
@@ -90,7 +95,7 @@ echo "【步骤 4/5】准备发布..."
 echo ""
 echo "图片文件："
 for i in 01 02 03 04 05; do
-    echo "  - xhs-skill-${i}-final.png"
+    echo "  - $OUTPUT_DIR/xhs-skills-${i}.png"
 done
 echo ""
 
@@ -104,29 +109,81 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo ""
     echo "📤 正在发布..."
     
-    # 调用 MCP 发布（需要配置好小红书 MCP）
-    # mcporter call 'xiaohongshu.publish_note' '{...}'
+    # 检查 mcporter 配置
+    if [ ! -f ~/.openclaw/workspace/config/mcporter.json ]; then
+        echo "❌ mcporter 配置文件不存在"
+        echo "   请先配置：~/.openclaw/workspace/config/mcporter.json"
+        exit 1
+    fi
     
-    echo "✅ 发布命令已准备，请手动执行或使用 MCP 工具发布"
-    echo ""
-    echo "发布命令："
-    echo "mcporter call 'xiaohongshu.publish_note' '{"
-    echo "  \"title\": \"🚀OpenClaw 必装的 5 个 Skills！效率翻倍✨\","
-    echo "  \"content\": \"AI 打工人必看！...（完整正文）\","
-    echo "  \"images\": ["
-    echo "    \"/Users/zhaoshan/.openclaw/workspace/xhs-skill-01-final.png\","
-    echo "    \"/Users/zhaoshan/.openclaw/workspace/xhs-skill-02-final.png\","
-    echo "    \"/Users/zhaoshan/.openclaw/workspace/xhs-skill-03-final.png\","
-    echo "    \"/Users/zhaoshan/.openclaw/workspace/xhs-skill-04-final.png\","
-    echo "    \"/Users/zhaoshan/.openclaw/workspace/xhs-skill-05-final.png\""
-    echo "  ],"
-    echo "  \"topics\": [\"OpenClaw\", \"AI 工具\", \"效率工具\", \"职场技能\", \"AI 技能\"]"
-    echo "}'"
+    # 检查登录状态
+    LOGIN_STATUS=$(mcporter --config ~/.openclaw/workspace/config/mcporter.json call xiaohongshu.check_login_status 2>&1)
+    if echo "$LOGIN_STATUS" | grep -q "未登录"; then
+        echo "❌ 小红书未登录"
+        echo "   请先配置 Cookie 或扫码登录"
+        exit 1
+    fi
+    
+    # 发布笔记
+    echo "📤 调用发布接口..."
+    
+    # 处理换行符（将 \n 转换为实际换行）
+    CONTENT=$(cat << 'CONTENTEOF'
+AI 打工人必看！亲测好用的 OpenClaw Skills 分享～
+
+1️⃣ site-scraper 网站爬取神器
+2️⃣ agent-reach 全网搜索
+3️⃣ capability-evolver 自我进化
+4️⃣ nano-banana-pro AI 绘图
+5️⃣ healthcheck 系统检查
+
+💡 安装方法简单！
+
+👇 你最想用哪个？评论区告诉我～
+
+#OpenClaw #AI 工具 #效率工具
+CONTENTEOF
+)
+    
+    RESULT=$(mcporter --config ~/.openclaw/workspace/config/mcporter.json call xiaohongshu.publish_content \
+      title='OpenClaw 必装 5 个 Skills！效率翻倍' \
+      content="$CONTENT" \
+      images='["'"$OUTPUT_DIR"'/xhs-skills-01.png","'"$OUTPUT_DIR"'/xhs-skills-02.png","'"$OUTPUT_DIR"'/xhs-skills-03.png","'"$OUTPUT_DIR"'/xhs-skills-04.png","'"$OUTPUT_DIR"'/xhs-skills-05.png"]' \
+      tags='["OpenClaw","AI 工具","效率工具","职场技能","AI 技能"]' \
+      2>&1)
+    
+    if echo "$RESULT" | grep -q "发布成功"; then
+        echo ""
+        echo "✅ 发布成功！"
+        echo ""
+        echo "$RESULT"
+        echo ""
+        echo "📱 可以上小红书查看笔记了！"
+    else
+        echo ""
+        echo "❌ 发布失败"
+        echo "$RESULT"
+        echo ""
+        echo "💡 常见问题："
+        echo "   1. 标题长度超过限制（需≤20 字符）"
+        echo "   2. Cookie 过期（需重新配置）"
+        echo "   3. 图片路径错误（检查文件是否存在）"
+        exit 1
+    fi
 else
     echo "❌ 已取消发布"
+    echo ""
+    echo "💡 你可以稍后手动发布："
+    echo "   1. 打开小红书 App 或官网"
+    echo "   2. 上传 $OUTPUT_DIR 中的 5 张图片"
+    echo "   3. 复制上面的文案"
+    echo "   4. 发布"
 fi
 
 echo ""
 echo "================================"
 echo "✅ 流程完成！"
 echo "================================"
+echo ""
+echo "📁 输出目录：$OUTPUT_DIR"
+echo "📝 文案已保存在：$OUTPUT_DIR/post-content.md"
