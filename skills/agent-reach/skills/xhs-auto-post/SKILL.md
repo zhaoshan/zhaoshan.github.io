@@ -1,40 +1,41 @@
-# xhs-auto-post - 小红书图文笔记自动生成技能
+# xhs-auto-post - 小红书图文笔记自动生成技能（交互式）
 
 ## 功能概述
 
-根据用户提供的主题，自动生成并发布小红书图文笔记，包括：
+根据用户提供的主题，**交互式**生成并发布小红书图文笔记，包括：
 - 自动搜索扩展主题信息
-- 拆分子观点/论点（每个论点对应一张图片）
-- 生成精美图片（1080x1400）
+- 拆分子观点/论点（**需用户确认**）
+- 生成精美图片（1080x1400，**需用户确认**）
 - 编写小红书风格文案
-- 自动发布到小红书
+- 自动发布到小红书（**需用户最终确认**）
 
-## 完整流程
+## 完整流程（交互式）
 
 ```
-用户主题 → 搜索扩展 → 拆分论点 → 生成图片 → 编写文案 → 用户确认 → 发布笔记
+用户主题 → 搜索扩展 → 拆分论点 → 【确认 1】→ 生成图片 → 【确认 2】→ 编写文案 → 【确认 3】→ 发布笔记
 ```
+
+**关键确认点：**
+1. **确认 1**：拆分论点后，用户确认或调整
+2. **确认 2**：生成图片后，用户查看并确认
+3. **确认 3**：发布前，最终确认文案和内容
 
 ## 快速开始
 
-### 方式一：使用脚本
+### 方式一：使用脚本（交互式）
 
 ```bash
 cd /Users/zhaoshan/.openclaw/workspace/skills/agent-reach/skills/xhs-auto-post
 ./run.sh "AI 工具推荐"
 ```
 
-### 方式二：直接对话
+### 方式二：直接对话（交互式）
 
 ```
 帮我发一篇关于"AI 工具推荐"的小红书笔记
 ```
 
-### 方式三：使用 Skill
-
-```
-/xhs-auto-post AI 工具推荐
-```
+AI 会自动执行完整流程，并在每个关键节点等待确认。
 
 ## 执行流程详解
 
@@ -44,9 +45,7 @@ cd /Users/zhaoshan/.openclaw/workspace/skills/agent-reach/skills/xhs-auto-post
 
 **操作**：
 1. 询问用户确认主题（如果未明确）
-2. 使用搜索工具收集信息：
-   - `web_search` - 搜索主题相关内容
-   - `xhs-search` - 搜索小红书上的相关笔记（了解热门内容）
+2. 使用搜索工具收集信息
 3. 整理核心信息点（3-5 个关键点）
 
 **输出示例**：
@@ -63,22 +62,48 @@ cd /Users/zhaoshan/.openclaw/workspace/skills/agent-reach/skills/xhs-auto-post
 
 ### 步骤 2：拆分子观点/论点
 
-**目标**：将主题拆解成逻辑清晰的几个子论点（每个论点对应一张图片）。
+**目标**：将主题拆解成逻辑清晰的几个子论点。
 
 **操作**：
 1. 根据核心信息设计笔记结构
-2. 拆分成 3-5 个子论点（适合小红书碎片化阅读）
-3. 每个论点配 1-2 句说明
+2. 拆分成 3-5 个子论点
+3. **等待用户确认**
 
 **输出示例**：
 ```
-子论点结构（5 张图）：
+【步骤 2/5】正在拆分论点...
+✅ 已设计 5 个子论点：
+
 1. site-scraper - 网站爬取神器
+   功能：自动抓取整个网站内容
+   场景：竞品分析、资料收集
+
 2. agent-reach - 全网搜索工具
+   功能：搜索小红书/抖音/微博
+   场景：市场调研、热点追踪
+
 3. capability-evolver - 自我进化
+   功能：AI 自动学习改进
+   场景：长期任务优化
+
 4. nano-banana-pro - AI 绘图
+   功能：Gemini 图像生成
+   场景：封面制作、配图生成
+
 5. healthcheck - 健康检查
+   功能：定期安全检查
+   场景：系统安全审计
+
+📝 请确认这些论点是否合适？
+   - 回复"确认"或"yes"继续
+   - 回复具体调整意见（如"把第 3 个改成 xxx"）
+   - 回复"跳过"使用默认论点
 ```
+
+**用户确认处理**：
+- ✅ **确认**：继续下一步
+- 📝 **调整意见**：根据用户反馈调整论点，再次确认
+- ⏭️ **跳过**：使用默认论点继续
 
 ### 步骤 3：生成图片
 
@@ -87,30 +112,47 @@ cd /Users/zhaoshan/.openclaw/workspace/skills/agent-reach/skills/xhs-auto-post
 **操作**：
 1. 调用图片生成脚本
 2. 每个论点生成一张 1080x1400 的 PNG 图片
-3. 使用渐变背景 + 白色卡片布局
+3. **等待用户确认**
 
-**图片生成脚本**：
-```bash
-cd /Users/zhaoshan/.openclaw/workspace/skills/agent-reach/skills/xhs-auto-post
-python3 generate_images.py skills
+**输出示例**：
+```
+【步骤 3/5】正在生成图片...
+✅ 图片已生成：
+
+📁 输出目录：~/xiaohongshu_post/
+   - xhs-skills-01.png (72KB) - site-scraper
+   - xhs-skills-02.png (72KB) - agent-reach
+   - xhs-skills-03.png (74KB) - capability-evolver
+   - xhs-skills-04.png (64KB) - nano-banana-pro
+   - xhs-skills-05.png (72KB) - healthcheck
+
+📝 请查看图片并确认：
+   - 回复"确认"或"yes"继续
+   - 回复"重新生成"调整样式
+   - 回复具体修改意见（如"颜色太浅"）
 ```
 
-**输出**：5 张 PNG 图片（`xhs-skills-01.png` 到 `xhs-skills-05.png`）
-
-**输出目录**：`~/xiaohongshu_post/`
+**用户确认处理**：
+- ✅ **确认**：继续下一步
+- 🔄 **重新生成**：调整参数重新生成图片
+- 📝 **修改意见**：根据反馈调整图片样式
 
 ### 步骤 4：编写文案
 
 **目标**：编写小红书风格的笔记文案。
 
 **操作**：
-1. 编写标题（吸引眼球 + emoji，**不超过 20 个字符**）
+1. 编写标题（**不超过 20 个字符**）
 2. 编写正文（分点说明 + emoji 点缀）
 3. 添加互动引导
 4. 添加话题标签（5-10 个）
+5. **等待用户确认**
 
-**文案示例**：
-```markdown
+**输出示例**：
+```
+【步骤 4/5】正在编写文案...
+✅ 笔记内容已准备好
+
 标题：OpenClaw 必装 5 个 Skills！效率翻倍
 
 正文：
@@ -127,27 +169,40 @@ AI 打工人必看！亲测好用的 OpenClaw Skills 分享～
 👇 你最想用哪个？评论区告诉我～
 
 #OpenClaw #AI 工具 #效率工具 #职场技能 #AI 技能
+
+📝 请确认文案内容：
+   - 回复"确认"或"yes"发布
+   - 回复具体修改意见（如"标题改短点"）
 ```
 
-### 步骤 5：用户确认后发布
+**用户确认处理**：
+- ✅ **确认**：执行发布
+- 📝 **修改意见**：根据反馈调整文案，再次确认
 
-**目标**：发布前让用户确认内容。
+### 步骤 5：发布笔记
+
+**目标**：发布到小红书。
 
 **操作**：
-1. 展示完整笔记内容给用户
-2. 用户确认后调用发布工具
-3. 处理发布结果
+1. 调用 MCP 发布接口
+2. 处理发布结果
+3. 反馈发布状态
 
-**发布命令**：
-```bash
-mcporter --config ~/.openclaw/workspace/config/mcporter.json call xiaohongshu.publish_content \
-  title='OpenClaw 必装 5 个 Skills！效率翻倍' \
-  content='AI 打工人必看！...' \
-  images='["/Users/zhaoshan/xiaohongshu_post/xhs-skills-01.png",...]' \
-  tags='["OpenClaw","AI 工具","效率工具"]'
+**输出示例**：
+```
+【步骤 5/5】正在发布...
+📤 调用发布接口...
+
+✅ 发布成功！
+
+标题：OpenClaw 必装 5 个 Skills！效率翻倍
+图片：5 张
+状态：发布完成
+
+📱 可以上小红书查看笔记了！
 ```
 
-## 完整示例对话
+## 完整交互示例
 
 **用户**：帮我发一篇关于"AI 工具推荐"的小红书笔记
 
@@ -165,49 +220,111 @@ mcporter --config ~/.openclaw/workspace/config/mcporter.json call xiaohongshu.pu
 
 【步骤 2/5】正在拆分论点...
 ✅ 已设计 5 个子论点：
-1. site-scraper - 网站爬取
-2. agent-reach - 全网搜索
+
+1. site-scraper - 网站爬取神器
+   功能：自动抓取整个网站内容
+   场景：竞品分析、资料收集
+
+2. agent-reach - 全网搜索工具
+   功能：搜索小红书/抖音/微博
+   场景：市场调研、热点追踪
+
 3. capability-evolver - 自我进化
+   功能：AI 自动学习改进
+   场景：长期任务优化
+
 4. nano-banana-pro - AI 绘图
+   功能：Gemini 图像生成
+   场景：封面制作、配图生成
+
 5. healthcheck - 健康检查
+   功能：定期安全检查
+   场景：系统安全审计
 
-【步骤 3/5】正在生成图片...
-✅ 图片已生成：
-- xhs-skills-01.png
-- xhs-skills-02.png
-- xhs-skills-03.png
-- xhs-skills-04.png
-- xhs-skills-05.png
+📝 请确认这些论点是否合适？
+   - 回复"确认"或"yes"继续
+   - 回复具体调整意见（如"把第 3 个改成 xxx"）
+   - 回复"跳过"使用默认论点
+```
 
-【步骤 4/5】正在编写文案...
-✅ 笔记内容已准备好
+**用户**：把第 3 个改成"notion-ai - 智能笔记助手"
 
-【步骤 5/5】请确认发布：
+**助手**：
+```
+✅ 已调整论点：
 
-标题：OpenClaw 必装 5 个 Skills！效率翻倍
+3. notion-ai - 智能笔记助手
+   功能：自动总结、内容生成
+   场景：知识管理、会议记录
 
-正文：
-AI 打工人必看！亲测好用的 OpenClaw Skills 分享～
-...（完整正文）
+其他论点保持不变。
 
-图片：5 张（已生成）
-
-话题：#OpenClaw #AI 工具 #效率工具 ...
-
-确认发布吗？回复"确认"或"发布"即可。
+📝 确认继续生成图片吗？回复"确认"或"yes"
 ```
 
 **用户**：确认
 
 **助手**：
 ```
-✅ 笔记已发布成功！
+【步骤 3/5】正在生成图片...
+✅ 图片已生成：
+
+📁 输出目录：~/xiaohongshu_post/
+   - xhs-skills-01.png (72KB) - site-scraper
+   - xhs-skills-02.png (72KB) - agent-reach
+   - xhs-skills-03.png (74KB) - notion-ai
+   - xhs-skills-04.png (64KB) - nano-banana-pro
+   - xhs-skills-05.png (72KB) - healthcheck
+
+📝 请查看图片并确认：
+   - 回复"确认"或"yes"继续
+   - 回复"重新生成"调整样式
+   - 回复具体修改意见
+```
+
+**用户**：确认
+
+**助手**：
+```
+【步骤 4/5】正在编写文案...
+✅ 笔记内容已准备好
+
+标题：OpenClaw 必装 5 个 Skills！效率翻倍
+
+正文：
+AI 打工人必看！亲测好用的 OpenClaw Skills 分享～
+
+1️⃣ site-scraper 网站爬取神器
+2️⃣ agent-reach 全网搜索
+3️⃣ notion-ai 智能笔记助手
+4️⃣ nano-banana-pro AI 绘图
+5️⃣ healthcheck 系统检查
+
+💡 安装方法超简单！
+
+👇 你最想用哪个？评论区告诉我～
+
+#OpenClaw #AI 工具 #效率工具 #职场技能
+
+📝 请确认文案内容：
+   - 回复"确认"或"yes"发布
+   - 回复具体修改意见
+```
+
+**用户**：确认
+
+**助手**：
+```
+【步骤 5/5】正在发布...
+📤 调用发布接口...
+
+✅ 发布成功！
 
 标题：OpenClaw 必装 5 个 Skills！效率翻倍
 图片：5 张
 状态：发布完成
 
-可以上小红书查看笔记了！
+📱 可以上小红书查看笔记了！
 ```
 
 ## 前置条件
@@ -247,19 +364,9 @@ mcporter --config ~/.openclaw/workspace/config/mcporter.json call xiaohongshu.ch
 **配置 Cookie**：
 1. 浏览器打开 https://www.xiaohongshu.com
 2. 登录账号
-3. 控制台执行：
-```javascript
-const cookies = document.cookie.split('; ').reduce((acc, cookie) => {
-  const [key, value] = cookie.split('=');
-  acc[key] = decodeURIComponent(value);
-  return acc;
-}, {});
-console.log(JSON.stringify(Object.entries(cookies).map(([name, value]) => ({
-  name, value, domain: ".xiaohongshu.com", path: "/", httpOnly: false, secure: true
-})), null, 2));
-```
-4. 保存输出到 `~/.agent-reach/tools/xiaohongshu-mcp/cookies.json`
-5. 重启服务：`pkill -f xiaohongshu-mcp && ~/.agent-reach/tools/xiaohongshu-mcp/xiaohongshu-mcp &`
+3. 控制台执行获取 Cookie（参考详细配置文档）
+4. 保存 Cookie 到 `~/.agent-reach/tools/xiaohongshu-mcp/cookies.json`
+5. 重启服务
 
 ### 5. mcporter 已配置
 
@@ -457,7 +564,7 @@ mcporter --config ~/.openclaw/workspace/config/mcporter.json call ...
 xhs-auto-post/
 ├── SKILL.md                  # 技能配置（本文件）
 ├── README.md                 # 使用说明
-├── run.sh                    # 快速启动脚本
+├── run.sh                    # 交互式启动脚本
 ├── generate_images.py        # 图片生成脚本（可配置）
 └── config.example.json       # 配置示例
 ```

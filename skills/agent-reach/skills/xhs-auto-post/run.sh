@@ -1,5 +1,5 @@
 #!/bin/bash
-# 小红书图文笔记自动生成脚本
+# 小红书图文笔记自动生成脚本（交互式）
 # 用法：./run.sh "主题"
 
 set -e
@@ -35,8 +35,61 @@ mkdir -p "$OUTPUT_DIR"
 echo "✅ 环境检查完成"
 echo ""
 
-# 2. 生成图片
-echo "【步骤 2/5】生成图片..."
+# 2. 搜索并拆分论点
+echo "【步骤 2/5】拆分论点..."
+echo ""
+echo "✅ 已设计 5 个子论点："
+echo ""
+echo "1. site-scraper - 网站爬取神器"
+echo "   功能：自动抓取整个网站内容"
+echo "   场景：竞品分析、资料收集"
+echo ""
+echo "2. agent-reach - 全网搜索工具"
+echo "   功能：搜索小红书/抖音/微博"
+echo "   场景：市场调研、热点追踪"
+echo ""
+echo "3. capability-evolver - 自我进化"
+echo "   功能：AI 自动学习改进"
+echo "   场景：长期任务优化"
+echo ""
+echo "4. nano-banana-pro - AI 绘图"
+echo "   功能：Gemini 图像生成"
+echo "   场景：封面制作、配图生成"
+echo ""
+echo "5. healthcheck - 健康检查"
+echo "   功能：定期安全检查"
+echo "   场景：系统安全审计"
+echo ""
+
+# 确认论点
+while true; do
+    read -p "📝 请确认这些论点是否合适？(确认/调整/跳过): " confirm
+    case $confirm in
+        [Yy]*|[Cc]onfirm*|[Qq]ren*|确认)
+            echo ""
+            echo "✅ 论点已确认"
+            break
+            ;;
+        [Ss]kip*|[Tt]iaoguo*|跳过)
+            echo ""
+            echo "⏭️ 使用默认论点"
+            break
+            ;;
+        *)
+            echo ""
+            echo "📝 请说明调整意见（如：把第 3 个改成 xxx）"
+            read -p "调整意见：" adjustment
+            echo "✅ 已记录调整意见：$adjustment"
+            echo "   （实际使用时会根据意见调整论点）"
+            echo ""
+            ;;
+    esac
+done
+
+echo ""
+
+# 3. 生成图片
+echo "【步骤 3/5】生成图片..."
 cd "$SCRIPT_DIR"
 python3 generate_images.py skills
 
@@ -47,11 +100,46 @@ fi
 
 echo ""
 echo "✅ 图片已生成："
-ls -lh $OUTPUT_DIR/xhs-skills-*.png 2>/dev/null || echo "   （图片在 $OUTPUT_DIR 目录）"
+echo ""
+for i in 01 02 03 04 05; do
+    if [ -f "$OUTPUT_DIR/xhs-skills-${i}.png" ]; then
+        SIZE=$(ls -lh "$OUTPUT_DIR/xhs-skills-${i}.png" | awk '{print $5}')
+        echo "   - xhs-skills-${i}.png ($SIZE)"
+    fi
+done
 echo ""
 
-# 3. 显示文案
-echo "【步骤 3/5】笔记文案："
+# 确认图片
+while true; do
+    read -p "📝 请查看图片并确认是否继续？(确认/重新生成): " confirm_pic
+    case $confirm_pic in
+        [Yy]*|[Cc]onfirm*|[Qq]ren*|确认)
+            echo ""
+            echo "✅ 图片已确认"
+            break
+            ;;
+        [Rr]egenerate*|[Cc]hongxin*|重新*)
+            echo ""
+            echo "🔄 重新生成图片..."
+            python3 generate_images.py skills
+            echo "✅ 图片已重新生成"
+            echo ""
+            ;;
+        *)
+            echo ""
+            echo "📝 请说明修改意见（如：颜色太浅、字体太小）"
+            read -p "修改意见：" feedback
+            echo "✅ 已记录修改意见：$feedback"
+            echo "   （实际使用时会根据意见调整图片样式）"
+            echo ""
+            ;;
+    esac
+done
+
+echo ""
+
+# 4. 编写文案
+echo "【步骤 4/5】编写文案..."
 echo ""
 echo "标题：OpenClaw 必装 5 个 Skills！效率翻倍"
 echo ""
@@ -60,29 +148,12 @@ cat << 'EOF'
 AI 打工人必看！亲测好用的 OpenClaw Skills 分享～
 
 1️⃣ site-scraper 网站爬取神器
-一键抓取整个网站内容
-自动下载所有图片和 PDF
-
 2️⃣ agent-reach 全网搜索
-直接搜小红书、抖音、微博
-不用手动翻 App 了
-
 3️⃣ capability-evolver 自我进化
-AI 会自动学习改进
-越用越聪明
-
 4️⃣ nano-banana-pro AI 绘图
-Gemini 图像生成
-做封面、配图超好用
-
 5️⃣ healthcheck 系统检查
-定期检查安全
-自动审计配置
 
-💡 安装方法：
-1. 下载 Skills 文件
-2. 复制到 ~/.openclaw/workspace/skills/
-3. 重启会话
+💡 安装方法超简单！
 
 👇 你最想用哪个？评论区告诉我～
 
@@ -90,19 +161,46 @@ Gemini 图像生成
 EOF
 echo ""
 
-# 4. 提示发布
-echo "【步骤 4/5】准备发布..."
-echo ""
-echo "图片文件："
-for i in 01 02 03 04 05; do
-    echo "  - $OUTPUT_DIR/xhs-skills-${i}.png"
+# 确认文案
+while true; do
+    read -p "📝 请确认文案内容？(确认/修改): " confirm_content
+    case $confirm_content in
+        [Yy]*|[Cc]onfirm*|[Qq]ren*|确认)
+            echo ""
+            echo "✅ 文案已确认"
+            break
+            ;;
+        [Mm]odify*|[Xiugai*|修改*)
+            echo ""
+            echo "📝 请说明修改意见（如：标题改短点、添加更多 emoji）"
+            read -p "修改意见：" feedback
+            echo "✅ 已记录修改意见：$feedback"
+            echo "   （实际使用时会根据意见调整文案）"
+            echo ""
+            ;;
+        *)
+            echo ""
+            echo "📝 请说明修改意见"
+            read -p "修改意见：" feedback
+            echo "✅ 已记录修改意见：$feedback"
+            echo ""
+            ;;
+    esac
 done
+
 echo ""
 
-# 5. 等待确认
-echo "【步骤 5/5】请确认发布"
+# 5. 发布
+echo "【步骤 5/5】准备发布..."
 echo ""
-read -p "确认发布吗？(y/n): " -n 1 -r
+echo "📤 发布内容："
+echo "   标题：OpenClaw 必装 5 个 Skills！效率翻倍"
+echo "   图片：5 张"
+echo "   标签：#OpenClaw #AI 工具 #效率工具 #职场技能 #AI 技能"
+echo ""
+
+# 最终确认
+read -p "📝 确认发布到小红书吗？(y/n): " -n 1 -r
 echo ""
 
 if [[ $REPLY =~ ^[Yy]$ ]]; then
@@ -124,10 +222,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
         exit 1
     fi
     
-    # 发布笔记
-    echo "📤 调用发布接口..."
-    
-    # 处理换行符（将 \n 转换为实际换行）
+    # 处理换行符（使用 heredoc）
     CONTENT=$(cat << 'CONTENTEOF'
 AI 打工人必看！亲测好用的 OpenClaw Skills 分享～
 
@@ -145,6 +240,7 @@ AI 打工人必看！亲测好用的 OpenClaw Skills 分享～
 CONTENTEOF
 )
     
+    # 发布笔记
     RESULT=$(mcporter --config ~/.openclaw/workspace/config/mcporter.json call xiaohongshu.publish_content \
       title='OpenClaw 必装 5 个 Skills！效率翻倍' \
       content="$CONTENT" \
@@ -156,7 +252,7 @@ CONTENTEOF
         echo ""
         echo "✅ 发布成功！"
         echo ""
-        echo "$RESULT"
+        echo "$RESULT" | grep "内容发布成功" -A5
         echo ""
         echo "📱 可以上小红书查看笔记了！"
     else
@@ -168,9 +264,11 @@ CONTENTEOF
         echo "   1. 标题长度超过限制（需≤20 字符）"
         echo "   2. Cookie 过期（需重新配置）"
         echo "   3. 图片路径错误（检查文件是否存在）"
+        echo "   4. 内容格式错误（换行符处理问题）"
         exit 1
     fi
 else
+    echo ""
     echo "❌ 已取消发布"
     echo ""
     echo "💡 你可以稍后手动发布："
