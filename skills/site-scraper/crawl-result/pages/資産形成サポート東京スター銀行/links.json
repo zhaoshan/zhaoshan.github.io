@@ -1,0 +1,40 @@
+{
+  "url": "https://www.tokyostarbank.co.jp/feature/",
+  "title": "資産形成サポート | 東京スター銀行",
+  "timestamp": "2026-03-24T08:10:27.174Z",
+  "depth": 1,
+  "stats": {
+    "total": 2,
+    "webpages": 2,
+    "documents": 0,
+    "images": 0
+  },
+  "links": {
+    "webpages": [
+      {
+        "text": "おトク運用二兎流 東京スター銀行で☆運用マイスター☆",
+        "href": "https://www.tokyostarbank.co.jp/feature/chasing_rabbits/",
+        "type": "webpage"
+      },
+      {
+        "text": "各種サービス平日夜間と土日相談開始のお知らせ",
+        "href": "https://www.tokyostarbank.co.jp/lounge_atm/consultation_limited.html",
+        "type": "webpage"
+      }
+    ],
+    "documents": [],
+    "images": [],
+    "all": [
+      {
+        "text": "おトク運用二兎流 東京スター銀行で☆運用マイスター☆",
+        "href": "https://www.tokyostarbank.co.jp/feature/chasing_rabbits/",
+        "type": "webpage"
+      },
+      {
+        "text": "各種サービス平日夜間と土日相談開始のお知らせ",
+        "href": "https://www.tokyostarbank.co.jp/lounge_atm/consultation_limited.html",
+        "type": "webpage"
+      }
+    ]
+  }
+}

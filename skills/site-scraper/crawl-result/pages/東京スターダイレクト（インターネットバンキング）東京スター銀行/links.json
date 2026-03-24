@@ -1,0 +1,101 @@
+{
+  "url": "https://www.tokyostarbank.co.jp/tokyostardirect/",
+  "title": "東京スターダイレクト（インターネットバンキング） | 東京スター銀行",
+  "timestamp": "2026-03-24T08:08:06.762Z",
+  "depth": 1,
+  "stats": {
+    "total": 8,
+    "webpages": 4,
+    "documents": 4,
+    "images": 0
+  },
+  "links": {
+    "webpages": [
+      {
+        "text": "ご登録手順について詳しくはこちら",
+        "href": "https://www.tokyostarbank.co.jp/tokyostardirect/registration/",
+        "type": "webpage"
+      },
+      {
+        "text": "セキュリティソフト「saat netizen」",
+        "href": "https://www.tokyostarbank.co.jp/tokyostardirect/netizen/",
+        "type": "webpage"
+      },
+      {
+        "text": "ログイン合言葉(リスクベース認証)",
+        "href": "https://www.tokyostarbank.co.jp/tokyostardirect/login_word/",
+        "type": "webpage"
+      },
+      {
+        "text": "ご利用規定",
+        "href": "https://www.tokyostarbank.co.jp/tokyostardirect/regulations/",
+        "type": "webpage"
+      }
+    ],
+    "documents": [
+      {
+        "text": "預金口座解約依頼書[PDF:0.0MB]",
+        "href": "https://www.tokyostarbank.co.jp/tokyostardirect/pdf/request_paper.pdf?250127",
+        "type": "document"
+      },
+      {
+        "text": "お手続き書類[PDF:1,269KB]",
+        "href": "https://www.tokyostarbank.co.jp/tokyostardirect/pdf/loancard_issue.pdf?251208",
+        "type": "document"
+      },
+      {
+        "text": "お手続き書類[PDF:344KB]",
+        "href": "https://www.tokyostarbank.co.jp/tokyostardirect/pdf/ib_alteration_report02.pdf?251208",
+        "type": "document"
+      },
+      {
+        "text": "解約届[PDF:171KB]",
+        "href": "https://www.tokyostarbank.co.jp/tokyostardirect/pdf/notification_close.pdf?251208",
+        "type": "document"
+      }
+    ],
+    "images": [],
+    "all": [
+      {
+        "text": "ご登録手順について詳しくはこちら",
+        "href": "https://www.tokyostarbank.co.jp/tokyostardirect/registration/",
+        "type": "webpage"
+      },
+      {
+        "text": "セキュリティソフト「saat netizen」",
+        "href": "https://www.tokyostarbank.co.jp/tokyostardirect/netizen/",
+        "type": "webpage"
+      },
+      {
+        "text": "ログイン合言葉(リスクベース認証)",
+        "href": "https://www.tokyostarbank.co.jp/tokyostardirect/login_word/",
+        "type": "webpage"
+      },
+      {
+        "text": "ご利用規定",
+        "href": "https://www.tokyostarbank.co.jp/tokyostardirect/regulations/",
+        "type": "webpage"
+      },
+      {
+        "text": "預金口座解約依頼書[PDF:0.0MB]",
+        "href": "https://www.tokyostarbank.co.jp/tokyostardirect/pdf/request_paper.pdf?250127",
+        "type": "document"
+      },
+      {
+        "text": "お手続き書類[PDF:1,269KB]",
+        "href": "https://www.tokyostarbank.co.jp/tokyostardirect/pdf/loancard_issue.pdf?251208",
+        "type": "document"
+      },
+      {
+        "text": "お手続き書類[PDF:344KB]",
+        "href": "https://www.tokyostarbank.co.jp/tokyostardirect/pdf/ib_alteration_report02.pdf?251208",
+        "type": "document"
+      },
+      {
+        "text": "解約届[PDF:171KB]",
+        "href": "https://www.tokyostarbank.co.jp/tokyostardirect/pdf/notification_close.pdf?251208",
+        "type": "document"
+      }
+    ]
+  }
+}

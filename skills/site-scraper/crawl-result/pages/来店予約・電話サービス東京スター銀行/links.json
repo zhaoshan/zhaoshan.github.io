@@ -1,0 +1,50 @@
+{
+  "url": "https://www.tokyostarbank.co.jp/seminar/consultation/",
+  "title": "来店予約・電話サービス | 東京スター銀行",
+  "timestamp": "2026-03-24T08:13:22.677Z",
+  "depth": 1,
+  "stats": {
+    "total": 3,
+    "webpages": 3,
+    "documents": 0,
+    "images": 0
+  },
+  "links": {
+    "webpages": [
+      {
+        "text": "予約する",
+        "href": "https://tokyostarbank-branch.resv.jp/direct_calendar.php?direct_id=16",
+        "type": "webpage"
+      },
+      {
+        "text": "電話で相談",
+        "href": "https://www.tokyostarbank.co.jp/contact/#anc-04",
+        "type": "webpage"
+      },
+      {
+        "text": "予約する",
+        "href": "https://tokyostarbank-tb.resv.jp/reserve/calendar.php",
+        "type": "webpage"
+      }
+    ],
+    "documents": [],
+    "images": [],
+    "all": [
+      {
+        "text": "予約する",
+        "href": "https://tokyostarbank-branch.resv.jp/direct_calendar.php?direct_id=16",
+        "type": "webpage"
+      },
+      {
+        "text": "電話で相談",
+        "href": "https://www.tokyostarbank.co.jp/contact/#anc-04",
+        "type": "webpage"
+      },
+      {
+        "text": "予約する",
+        "href": "https://tokyostarbank-tb.resv.jp/reserve/calendar.php",
+        "type": "webpage"
+      }
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "url": "https://www.tokyostarbank.co.jp/money-laundering/",
+  "title": "マネー・ローンダリングおよびテロ資金供与等に関する取組み | 東京スター銀行",
+  "timestamp": "2026-03-24T08:35:58.718Z",
+  "depth": 1,
+  "stats": {
+    "total": 7,
+    "webpages": 4,
+    "documents": 3,
+    "images": 0
+  },
+  "links": {
+    "webpages": [
+      {
+        "text": "金融庁のホームページ",
+        "href": "https://www.fsa.go.jp/news/r3/20220117/20220117.html",
+        "type": "webpage"
+      },
+      {
+        "text": "米国OFACのホームページ",
+        "href": "https://ofac.treasury.gov/",
+        "type": "webpage"
+      },
+      {
+        "text": "金融庁｜金融機関のマネロン対策にご協力ください",
+        "href": "https://www.fsa.go.jp/news/30/20180427/20180427.html",
+        "type": "webpage"
+      },
+      {
+        "text": "一般社団法人全国銀行協会ホームページ　「銀行をご利用のお客さまへのお知らせ」",
+        "href": "https://www.zenginkyo.or.jp/money-laundering/",
+        "type": "webpage"
+      }
+    ],
+    "documents": [
+      {
+        "text": "外国PEPsについて[PDF:64KB]",
+        "href": "https://www.tokyostarbank.co.jp/money-laundering/pdf/foreignPEPs.pdf",
+        "type": "document"
+      },
+      {
+        "text": "制裁対象国・地域はこちら[PDF:100KB]",
+        "href": "https://www.tokyostarbank.co.jp/money-laundering/pdf/sanction.pdf",
+        "type": "document"
+      },
+      {
+        "text": "「北朝鮮IT労働者に関する企業等に対する注意喚起」の公表（令和7年8月27日）（財務省）",
+        "href": "https://www.mof.go.jp/policy/international_policy/gaitame_kawase/press_release/2statement.pdf",
+        "type": "document"
+      }
+    ],
+    "images": [],
+    "all": [
+      {
+        "text": "金融庁のホームページ",
+        "href": "https://www.fsa.go.jp/news/r3/20220117/20220117.html",
+        "type": "webpage"
+      },
+      {
+        "text": "外国PEPsについて[PDF:64KB]",
+        "href": "https://www.tokyostarbank.co.jp/money-laundering/pdf/foreignPEPs.pdf",
+        "type": "document"
+      },
+      {
+        "text": "制裁対象国・地域はこちら[PDF:100KB]",
+        "href": "https://www.tokyostarbank.co.jp/money-laundering/pdf/sanction.pdf",
+        "type": "document"
+      },
+      {
+        "text": "米国OFACのホームページ",
+        "href": "https://ofac.treasury.gov/",
+        "type": "webpage"
+      },
+      {
+        "text": "「北朝鮮IT労働者に関する企業等に対する注意喚起」の公表（令和7年8月27日）（財務省）",
+        "href": "https://www.mof.go.jp/policy/international_policy/gaitame_kawase/press_release/2statement.pdf",
+        "type": "document"
+      },
+      {
+        "text": "金融庁｜金融機関のマネロン対策にご協力ください",
+        "href": "https://www.fsa.go.jp/news/30/20180427/20180427.html",
+        "type": "webpage"
+      },
+      {
+        "text": "一般社団法人全国銀行協会ホームページ　「銀行をご利用のお客さまへのお知らせ」",
+        "href": "https://www.zenginkyo.or.jp/money-laundering/",
+        "type": "webpage"
+      }
+    ]
+  }
+}

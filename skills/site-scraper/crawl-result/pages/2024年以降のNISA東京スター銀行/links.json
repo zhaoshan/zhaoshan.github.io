@@ -1,0 +1,60 @@
+{
+  "url": "https://www.tokyostarbank.co.jp/products/investment/nisa/nisa_2024.html",
+  "title": "2024年以降のNISA | 東京スター銀行",
+  "timestamp": "2026-03-24T08:00:12.199Z",
+  "depth": 1,
+  "stats": {
+    "total": 4,
+    "webpages": 4,
+    "documents": 0,
+    "images": 0
+  },
+  "links": {
+    "webpages": [
+      {
+        "text": "NISA口座の開設方法を確認する",
+        "href": "https://www.tokyostarbank.co.jp/products/investment/nisa/account.html",
+        "type": "webpage"
+      },
+      {
+        "text": "おすすめファンド",
+        "href": "https://www.tokyostarbank.co.jp/products/investment/nisa/recommend_typea.html",
+        "type": "webpage"
+      },
+      {
+        "text": "つみたてNISA\n\t\t\t\t\t\t\t\t定期的に一定金額を購入していく「積立形式」のNISAで、リスク分散が図れます。\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t※投資可能期間は、2023年末で終了しています。",
+        "href": "https://www.tokyostarbank.co.jp/products/investment/nisa/tsumitate.html",
+        "type": "webpage"
+      },
+      {
+        "text": "2023年までのNISA\n\t\t\t\t\t\t\t\t個人の資産運用を応援する税制優遇制度です。",
+        "href": "https://www.tokyostarbank.co.jp/products/investment/nisa/",
+        "type": "webpage"
+      }
+    ],
+    "documents": [],
+    "images": [],
+    "all": [
+      {
+        "text": "NISA口座の開設方法を確認する",
+        "href": "https://www.tokyostarbank.co.jp/products/investment/nisa/account.html",
+        "type": "webpage"
+      },
+      {
+        "text": "おすすめファンド",
+        "href": "https://www.tokyostarbank.co.jp/products/investment/nisa/recommend_typea.html",
+        "type": "webpage"
+      },
+      {
+        "text": "つみたてNISA\n\t\t\t\t\t\t\t\t定期的に一定金額を購入していく「積立形式」のNISAで、リスク分散が図れます。\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t※投資可能期間は、2023年末で終了しています。",
+        "href": "https://www.tokyostarbank.co.jp/products/investment/nisa/tsumitate.html",
+        "type": "webpage"
+      },
+      {
+        "text": "2023年までのNISA\n\t\t\t\t\t\t\t\t個人の資産運用を応援する税制優遇制度です。",
+        "href": "https://www.tokyostarbank.co.jp/products/investment/nisa/",
+        "type": "webpage"
+      }
+    ]
+  }
+}

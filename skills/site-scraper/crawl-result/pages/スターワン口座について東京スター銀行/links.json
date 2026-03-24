@@ -1,0 +1,41 @@
+{
+  "url": "https://www.tokyostarbank.co.jp/account/feature/merit.html",
+  "title": "スターワン口座について | 東京スター銀行",
+  "timestamp": "2026-03-24T07:55:54.342Z",
+  "depth": 1,
+  "stats": {
+    "total": 2,
+    "webpages": 1,
+    "documents": 1,
+    "images": 0
+  },
+  "links": {
+    "webpages": [
+      {
+        "text": "お取引明細書の送付時期について",
+        "href": "https://support.tokyostarbank.co.jp/answer/666831943d58d4a3aaeca6e9/",
+        "type": "webpage"
+      }
+    ],
+    "documents": [
+      {
+        "text": "口座移管について[PDF:94KB]",
+        "href": "https://www.tokyostarbank.co.jp/account/pdf/220901.pdf",
+        "type": "document"
+      }
+    ],
+    "images": [],
+    "all": [
+      {
+        "text": "口座移管について[PDF:94KB]",
+        "href": "https://www.tokyostarbank.co.jp/account/pdf/220901.pdf",
+        "type": "document"
+      },
+      {
+        "text": "お取引明細書の送付時期について",
+        "href": "https://support.tokyostarbank.co.jp/answer/666831943d58d4a3aaeca6e9/",
+        "type": "webpage"
+      }
+    ]
+  }
+}

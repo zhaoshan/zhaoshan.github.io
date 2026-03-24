@@ -1,0 +1,111 @@
+{
+  "url": "https://www.tokyostarbank.co.jp/important_news/",
+  "title": "重要なお知らせ（法令改正等） | 東京スター銀行",
+  "timestamp": "2026-03-24T08:32:25.378Z",
+  "depth": 1,
+  "stats": {
+    "total": 9,
+    "webpages": 6,
+    "documents": 3,
+    "images": 0
+  },
+  "links": {
+    "webpages": [
+      {
+        "text": "休眠預金等活用法と当行の対応について",
+        "href": "https://www.tokyostarbank.co.jp/important_news/171229.html",
+        "type": "webpage"
+      },
+      {
+        "text": "個人番号に係る利用目的の変更について",
+        "href": "https://www.tokyostarbank.co.jp/important_news/important170703.html",
+        "type": "webpage"
+      },
+      {
+        "text": "犯罪収益移転防止法に基づく確認に関するお願い",
+        "href": "https://www.tokyostarbank.co.jp/important_news/important130208.html",
+        "type": "webpage"
+      },
+      {
+        "text": "復興特別所得税に関するお知らせ",
+        "href": "https://www.tokyostarbank.co.jp/important_news/important120810.html",
+        "type": "webpage"
+      },
+      {
+        "text": "預金保険制度について",
+        "href": "https://www.tokyostarbank.co.jp/important_news/payoff.html",
+        "type": "webpage"
+      },
+      {
+        "text": "Adobe Reader ダウンロードページ",
+        "href": "https://get.adobe.com/reader/?loc=jp",
+        "type": "webpage"
+      }
+    ],
+    "documents": [
+      {
+        "text": "「金融商品取引法」の施行について[PDF:253KB]",
+        "href": "https://www.tokyostarbank.co.jp/important_news/pdf/fptl.pdf",
+        "type": "document"
+      },
+      {
+        "text": "要管理債権以下の債権売却について[PDF:32KB]",
+        "href": "https://www.tokyostarbank.co.jp/important_news/pdf/bond_none.pdf",
+        "type": "document"
+      },
+      {
+        "text": "遊休不動産の売却等について[PDF:32KB]",
+        "href": "https://www.tokyostarbank.co.jp/important_news/pdf/idle_realestate.pdf",
+        "type": "document"
+      }
+    ],
+    "images": [],
+    "all": [
+      {
+        "text": "休眠預金等活用法と当行の対応について",
+        "href": "https://www.tokyostarbank.co.jp/important_news/171229.html",
+        "type": "webpage"
+      },
+      {
+        "text": "個人番号に係る利用目的の変更について",
+        "href": "https://www.tokyostarbank.co.jp/important_news/important170703.html",
+        "type": "webpage"
+      },
+      {
+        "text": "犯罪収益移転防止法に基づく確認に関するお願い",
+        "href": "https://www.tokyostarbank.co.jp/important_news/important130208.html",
+        "type": "webpage"
+      },
+      {
+        "text": "復興特別所得税に関するお知らせ",
+        "href": "https://www.tokyostarbank.co.jp/important_news/important120810.html",
+        "type": "webpage"
+      },
+      {
+        "text": "「金融商品取引法」の施行について[PDF:253KB]",
+        "href": "https://www.tokyostarbank.co.jp/important_news/pdf/fptl.pdf",
+        "type": "document"
+      },
+      {
+        "text": "要管理債権以下の債権売却について[PDF:32KB]",
+        "href": "https://www.tokyostarbank.co.jp/important_news/pdf/bond_none.pdf",
+        "type": "document"
+      },
+      {
+        "text": "遊休不動産の売却等について[PDF:32KB]",
+        "href": "https://www.tokyostarbank.co.jp/important_news/pdf/idle_realestate.pdf",
+        "type": "document"
+      },
+      {
+        "text": "預金保険制度について",
+        "href": "https://www.tokyostarbank.co.jp/important_news/payoff.html",
+        "type": "webpage"
+      },
+      {
+        "text": "Adobe Reader ダウンロードページ",
+        "href": "https://get.adobe.com/reader/?loc=jp",
+        "type": "webpage"
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "url": "https://www.tokyostarbank.co.jp/products/deposit/structure/",
+  "title": "仕組み預金 | 東京スター銀行",
+  "timestamp": "2026-03-24T07:58:17.743Z",
+  "depth": 1,
+  "stats": {
+    "total": 2,
+    "webpages": 2,
+    "documents": 0,
+    "images": 0
+  },
+  "links": {
+    "webpages": [
+      {
+        "text": "資産運用をお考えのお客さまへ",
+        "href": "https://www.tokyostarbank.co.jp/products/foreign_deposit/#anc-02",
+        "type": "webpage"
+      },
+      {
+        "text": "円預金 金利一覧",
+        "href": "https://www.tokyostarbank.co.jp/rate/en_commission/#anc-05",
+        "type": "webpage"
+      }
+    ],
+    "documents": [],
+    "images": [],
+    "all": [
+      {
+        "text": "資産運用をお考えのお客さまへ",
+        "href": "https://www.tokyostarbank.co.jp/products/foreign_deposit/#anc-02",
+        "type": "webpage"
+      },
+      {
+        "text": "円預金 金利一覧",
+        "href": "https://www.tokyostarbank.co.jp/rate/en_commission/#anc-05",
+        "type": "webpage"
+      }
+    ]
+  }
+}

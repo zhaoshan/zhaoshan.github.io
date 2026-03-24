@@ -1,0 +1,70 @@
+{
+  "url": "https://www.tokyostarbank.co.jp/foreign/account/fee/",
+  "title": "手数料一覧 | 外国籍のお客さま【東京スター銀行】",
+  "timestamp": "2026-03-24T08:21:53.717Z",
+  "depth": 1,
+  "stats": {
+    "total": 5,
+    "webpages": 5,
+    "documents": 0,
+    "images": 0
+  },
+  "links": {
+    "webpages": [
+      {
+        "text": "手数料一覧（法人のお客さま）",
+        "href": "https://www.tokyostarbank.co.jp/foreign/account/fee/hojin/",
+        "type": "webpage"
+      },
+      {
+        "text": "東京スター銀行キャッシュカードで当行店舗内セブン銀行ATMをご利用の場合（リンク先は日本語のみのご案内です）",
+        "href": "https://www.tokyostarbank.co.jp/lounge_atm/atm/tieup/sevenbank.html#anc-01",
+        "type": "webpage"
+      },
+      {
+        "text": "法人のお客さまはこちら",
+        "href": "https://www.tokyostarbank.co.jp/foreign/account/fee/hojin/#fc_exchange_fee",
+        "type": "webpage"
+      },
+      {
+        "text": "外貨送金依頼書　基本記入事項（記入例）はこちら（リンク先は日本語のみのご案内です）",
+        "href": "https://www.tokyostarbank.co.jp/fee/lounge/",
+        "type": "webpage"
+      },
+      {
+        "text": "全国銀行協会ウェブサイト（リンク先は日本語のみのご案内です）",
+        "href": "https://www.zenginkyo.or.jp/article/tag-f/17491",
+        "type": "webpage"
+      }
+    ],
+    "documents": [],
+    "images": [],
+    "all": [
+      {
+        "text": "手数料一覧（法人のお客さま）",
+        "href": "https://www.tokyostarbank.co.jp/foreign/account/fee/hojin/",
+        "type": "webpage"
+      },
+      {
+        "text": "東京スター銀行キャッシュカードで当行店舗内セブン銀行ATMをご利用の場合（リンク先は日本語のみのご案内です）",
+        "href": "https://www.tokyostarbank.co.jp/lounge_atm/atm/tieup/sevenbank.html#anc-01",
+        "type": "webpage"
+      },
+      {
+        "text": "法人のお客さまはこちら",
+        "href": "https://www.tokyostarbank.co.jp/foreign/account/fee/hojin/#fc_exchange_fee",
+        "type": "webpage"
+      },
+      {
+        "text": "外貨送金依頼書　基本記入事項（記入例）はこちら（リンク先は日本語のみのご案内です）",
+        "href": "https://www.tokyostarbank.co.jp/fee/lounge/",
+        "type": "webpage"
+      },
+      {
+        "text": "全国銀行協会ウェブサイト（リンク先は日本語のみのご案内です）",
+        "href": "https://www.zenginkyo.or.jp/article/tag-f/17491",
+        "type": "webpage"
+      }
+    ]
+  }
+}

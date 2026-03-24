@@ -1,0 +1,50 @@
+{
+  "url": "https://www.tokyostarbank.co.jp/hojin/trial/",
+  "title": "体験版 | 法人・個人事業主のお客さま 【東京スター銀行】",
+  "timestamp": "2026-03-24T08:20:45.549Z",
+  "depth": 1,
+  "stats": {
+    "total": 3,
+    "webpages": 3,
+    "documents": 0,
+    "images": 0
+  },
+  "links": {
+    "webpages": [
+      {
+        "text": "スターBB! 体験版",
+        "href": "https://www.tokyostarbank.co.jp/hojin/starbb/bizsol/taiken_index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "「スターBB!」ご利用マニュアル",
+        "href": "https://www.tokyostarbank.co.jp/hojin/starbb/manual.html",
+        "type": "webpage"
+      },
+      {
+        "text": "でんさいサービス 体験版",
+        "href": "https://www.tokyostarbank.co.jp/hojin/densai/taiken/CMO002/SC_CMO_002_corp.html",
+        "type": "webpage"
+      }
+    ],
+    "documents": [],
+    "images": [],
+    "all": [
+      {
+        "text": "スターBB! 体験版",
+        "href": "https://www.tokyostarbank.co.jp/hojin/starbb/bizsol/taiken_index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "「スターBB!」ご利用マニュアル",
+        "href": "https://www.tokyostarbank.co.jp/hojin/starbb/manual.html",
+        "type": "webpage"
+      },
+      {
+        "text": "でんさいサービス 体験版",
+        "href": "https://www.tokyostarbank.co.jp/hojin/densai/taiken/CMO002/SC_CMO_002_corp.html",
+        "type": "webpage"
+      }
+    ]
+  }
+}

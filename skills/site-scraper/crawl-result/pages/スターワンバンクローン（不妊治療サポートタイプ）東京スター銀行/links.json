@@ -1,0 +1,61 @@
+{
+  "url": "https://www.tokyostarbank.co.jp/products/loan/fertility/",
+  "title": "スターワンバンクローン（不妊治療サポートタイプ） | 東京スター銀行",
+  "timestamp": "2026-03-24T08:07:29.819Z",
+  "depth": 1,
+  "stats": {
+    "total": 4,
+    "webpages": 2,
+    "documents": 2,
+    "images": 0
+  },
+  "links": {
+    "webpages": [
+      {
+        "text": "資料請求",
+        "href": "https://www.tokyostarbank.co.jp/p/req/bankloan/entry",
+        "type": "webpage"
+      },
+      {
+        "text": "お手続きの流れはこちら",
+        "href": "https://www.tokyostarbank.co.jp/products/loan/fertility/?tab=03#tab-03",
+        "type": "webpage"
+      }
+    ],
+    "documents": [
+      {
+        "text": "お借り入れの操作方法[PDF:851KB]",
+        "href": "https://www.tokyostarbank.co.jp/tokyostardirect/taiken/pdf/03_tsuika_kariire.pdf",
+        "type": "document"
+      },
+      {
+        "text": "必要書類について[PDF:1.1MB]",
+        "href": "https://www.tokyostarbank.co.jp/products/loan/fertility/pdf/checklist.pdf?260324",
+        "type": "document"
+      }
+    ],
+    "images": [],
+    "all": [
+      {
+        "text": "資料請求",
+        "href": "https://www.tokyostarbank.co.jp/p/req/bankloan/entry",
+        "type": "webpage"
+      },
+      {
+        "text": "お借り入れの操作方法[PDF:851KB]",
+        "href": "https://www.tokyostarbank.co.jp/tokyostardirect/taiken/pdf/03_tsuika_kariire.pdf",
+        "type": "document"
+      },
+      {
+        "text": "必要書類について[PDF:1.1MB]",
+        "href": "https://www.tokyostarbank.co.jp/products/loan/fertility/pdf/checklist.pdf?260324",
+        "type": "document"
+      },
+      {
+        "text": "お手続きの流れはこちら",
+        "href": "https://www.tokyostarbank.co.jp/products/loan/fertility/?tab=03#tab-03",
+        "type": "webpage"
+      }
+    ]
+  }
+}

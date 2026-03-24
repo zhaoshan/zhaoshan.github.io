@@ -1,0 +1,30 @@
+{
+  "url": "https://www.tokyostarbank.co.jp/products/foreign_deposit/term/",
+  "title": "外貨定期預金 | 東京スター銀行",
+  "timestamp": "2026-03-24T07:59:10.722Z",
+  "depth": 1,
+  "stats": {
+    "total": 1,
+    "webpages": 1,
+    "documents": 0,
+    "images": 0
+  },
+  "links": {
+    "webpages": [
+      {
+        "text": "外貨預金 金利一覧",
+        "href": "https://www.tokyostarbank.co.jp/rate/fc_commission/#anc-02",
+        "type": "webpage"
+      }
+    ],
+    "documents": [],
+    "images": [],
+    "all": [
+      {
+        "text": "外貨預金 金利一覧",
+        "href": "https://www.tokyostarbank.co.jp/rate/fc_commission/#anc-02",
+        "type": "webpage"
+      }
+    ]
+  }
+}

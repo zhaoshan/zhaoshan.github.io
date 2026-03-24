@@ -1,0 +1,40 @@
+{
+  "url": "https://www.tokyostarbank.co.jp/seminar/online_service/",
+  "title": "オンライン相談 | 東京スター銀行",
+  "timestamp": "2026-03-24T08:13:37.430Z",
+  "depth": 1,
+  "stats": {
+    "total": 2,
+    "webpages": 2,
+    "documents": 0,
+    "images": 0
+  },
+  "links": {
+    "webpages": [
+      {
+        "text": "オンライン相談予約\n\t\t\t\t\t\t\t預金、投資信託、ローンなど、各種ご相談",
+        "href": "https://tokyostarbank-cc.resv.jp/reserve/calendar.php",
+        "type": "webpage"
+      },
+      {
+        "text": "こちら",
+        "href": "https://yoyaku-package.com/news/",
+        "type": "webpage"
+      }
+    ],
+    "documents": [],
+    "images": [],
+    "all": [
+      {
+        "text": "オンライン相談予約\n\t\t\t\t\t\t\t預金、投資信託、ローンなど、各種ご相談",
+        "href": "https://tokyostarbank-cc.resv.jp/reserve/calendar.php",
+        "type": "webpage"
+      },
+      {
+        "text": "こちら",
+        "href": "https://yoyaku-package.com/news/",
+        "type": "webpage"
+      }
+    ]
+  }
+}

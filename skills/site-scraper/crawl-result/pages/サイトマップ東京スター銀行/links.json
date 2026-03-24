@@ -1,0 +1,70 @@
+{
+  "url": "https://www.tokyostarbank.co.jp/sitemap/",
+  "title": "サイトマップ | 東京スター銀行",
+  "timestamp": "2026-03-24T08:38:10.425Z",
+  "depth": 1,
+  "stats": {
+    "total": 5,
+    "webpages": 5,
+    "documents": 0,
+    "images": 0
+  },
+  "links": {
+    "webpages": [
+      {
+        "text": "商用車担保ローン",
+        "href": "https://www.tokyostarbank.co.jp/hojin/financing/commercial_car.html",
+        "type": "webpage"
+      },
+      {
+        "text": "NEST（不動産買取事業者向け当座貸越商品）",
+        "href": "https://www.tokyostarbank.co.jp/hojin/financing/residence.html",
+        "type": "webpage"
+      },
+      {
+        "text": "スタースモールビジネスローン",
+        "href": "https://www.tokyostarbank.co.jp/sbl/ssbl/",
+        "type": "webpage"
+      },
+      {
+        "text": "不動産担保ビジネスローン（中小企業応援ローン）",
+        "href": "https://www.tokyostarbank.co.jp/hojin/financing/mortgage_business_sm.html",
+        "type": "webpage"
+      },
+      {
+        "text": "CSRの取り組み",
+        "href": "https://www.tokyostarbank.co.jp/profile/csr/",
+        "type": "webpage"
+      }
+    ],
+    "documents": [],
+    "images": [],
+    "all": [
+      {
+        "text": "商用車担保ローン",
+        "href": "https://www.tokyostarbank.co.jp/hojin/financing/commercial_car.html",
+        "type": "webpage"
+      },
+      {
+        "text": "NEST（不動産買取事業者向け当座貸越商品）",
+        "href": "https://www.tokyostarbank.co.jp/hojin/financing/residence.html",
+        "type": "webpage"
+      },
+      {
+        "text": "スタースモールビジネスローン",
+        "href": "https://www.tokyostarbank.co.jp/sbl/ssbl/",
+        "type": "webpage"
+      },
+      {
+        "text": "不動産担保ビジネスローン（中小企業応援ローン）",
+        "href": "https://www.tokyostarbank.co.jp/hojin/financing/mortgage_business_sm.html",
+        "type": "webpage"
+      },
+      {
+        "text": "CSRの取り組み",
+        "href": "https://www.tokyostarbank.co.jp/profile/csr/",
+        "type": "webpage"
+      }
+    ]
+  }
+}

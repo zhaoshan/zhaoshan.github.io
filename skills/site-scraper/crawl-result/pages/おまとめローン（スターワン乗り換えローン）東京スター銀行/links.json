@@ -1,0 +1,111 @@
+{
+  "url": "https://www.tokyostarbank.co.jp/products/loan/unsecured_refinance/",
+  "title": "おまとめローン（スターワン乗り換えローン） | 東京スター銀行",
+  "timestamp": "2026-03-24T08:05:50.922Z",
+  "depth": 1,
+  "stats": {
+    "total": 9,
+    "webpages": 6,
+    "documents": 3,
+    "images": 0
+  },
+  "links": {
+    "webpages": [
+      {
+        "text": "簡単3分でお申し込み",
+        "href": "https://portal.tokyostarbank.co.jp/net-loan/wa010c?id=21",
+        "type": "webpage"
+      },
+      {
+        "text": "お手続きの流れはこちら",
+        "href": "https://www.tokyostarbank.co.jp/products/loan/unsecured_refinance/step.html",
+        "type": "webpage"
+      },
+      {
+        "text": "最新のローン金利一覧",
+        "href": "https://www.tokyostarbank.co.jp/rate/loan_commission/#anc-08",
+        "type": "webpage"
+      },
+      {
+        "text": "スターフリーローン",
+        "href": "https://www.tokyostarbank.co.jp/products/loan/free/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "スターカードローンの詳細はこちら",
+        "href": "https://www.tokyostarbank.co.jp/products/loan/starcard/",
+        "type": "webpage"
+      },
+      {
+        "text": "その他のよくある質問はこちら",
+        "href": "https://www.tokyostarbank.co.jp/faq/",
+        "type": "webpage"
+      }
+    ],
+    "documents": [
+      {
+        "text": "一部繰上返済（期間短縮型）[PDF:0.0MB]",
+        "href": "https://www.tokyostarbank.co.jp/products/loan/unsecured_refinance/pdf/03_partialpay_stype.pdf",
+        "type": "document"
+      },
+      {
+        "text": "一部繰上返済（返済額軽減型）[PDF:0.0MB]",
+        "href": "https://www.tokyostarbank.co.jp/products/loan/unsecured_refinance/pdf/03_partialpay_rtype.pdf",
+        "type": "document"
+      },
+      {
+        "text": "全額繰上返済[PDF:0.0MB]",
+        "href": "https://www.tokyostarbank.co.jp/products/loan/unsecured_refinance/pdf/03_fullpay.pdf",
+        "type": "document"
+      }
+    ],
+    "images": [],
+    "all": [
+      {
+        "text": "簡単3分でお申し込み",
+        "href": "https://portal.tokyostarbank.co.jp/net-loan/wa010c?id=21",
+        "type": "webpage"
+      },
+      {
+        "text": "お手続きの流れはこちら",
+        "href": "https://www.tokyostarbank.co.jp/products/loan/unsecured_refinance/step.html",
+        "type": "webpage"
+      },
+      {
+        "text": "最新のローン金利一覧",
+        "href": "https://www.tokyostarbank.co.jp/rate/loan_commission/#anc-08",
+        "type": "webpage"
+      },
+      {
+        "text": "一部繰上返済（期間短縮型）[PDF:0.0MB]",
+        "href": "https://www.tokyostarbank.co.jp/products/loan/unsecured_refinance/pdf/03_partialpay_stype.pdf",
+        "type": "document"
+      },
+      {
+        "text": "一部繰上返済（返済額軽減型）[PDF:0.0MB]",
+        "href": "https://www.tokyostarbank.co.jp/products/loan/unsecured_refinance/pdf/03_partialpay_rtype.pdf",
+        "type": "document"
+      },
+      {
+        "text": "全額繰上返済[PDF:0.0MB]",
+        "href": "https://www.tokyostarbank.co.jp/products/loan/unsecured_refinance/pdf/03_fullpay.pdf",
+        "type": "document"
+      },
+      {
+        "text": "スターフリーローン",
+        "href": "https://www.tokyostarbank.co.jp/products/loan/free/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "スターカードローンの詳細はこちら",
+        "href": "https://www.tokyostarbank.co.jp/products/loan/starcard/",
+        "type": "webpage"
+      },
+      {
+        "text": "その他のよくある質問はこちら",
+        "href": "https://www.tokyostarbank.co.jp/faq/",
+        "type": "webpage"
+      }
+    ]
+  }
+}

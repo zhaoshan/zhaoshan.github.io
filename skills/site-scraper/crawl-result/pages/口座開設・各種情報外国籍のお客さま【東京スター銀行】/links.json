@@ -1,0 +1,71 @@
+{
+  "url": "https://www.tokyostarbank.co.jp/foreign/account/flow/",
+  "title": "口座開設・各種情報 | 外国籍のお客さま【東京スター銀行】",
+  "timestamp": "2026-03-24T08:21:36.449Z",
+  "depth": 1,
+  "stats": {
+    "total": 5,
+    "webpages": 2,
+    "documents": 3,
+    "images": 0
+  },
+  "links": {
+    "webpages": [
+      {
+        "text": "Webでの口座開設方法はこちら",
+        "href": "https://www.tokyostarbank.co.jp/foreign/account/flow/two_id.html",
+        "type": "webpage"
+      },
+      {
+        "text": "郵送・店頭での口座開設方法はこちら",
+        "href": "https://www.tokyostarbank.co.jp/foreign/account/flow/offline.html",
+        "type": "webpage"
+      }
+    ],
+    "documents": [
+      {
+        "text": "インターネットでの口座開設時におけるご本人さまが確認できる書類について[PDF:276.6KB]",
+        "href": "https://www.tokyostarbank.co.jp/account/flow/pdf/200323.pdf",
+        "type": "document"
+      },
+      {
+        "text": "外国籍のお客さまの郵送口座開設時提出書類について[PDF:189.8KB]",
+        "href": "https://www.tokyostarbank.co.jp/account/flow/pdf/required_documents_of_foreigners.pdf",
+        "type": "document"
+      },
+      {
+        "text": "外国籍のお客さまの口座開設時提出書類について[PDF:288.9KB]",
+        "href": "https://www.tokyostarbank.co.jp/account/flow/pdf/190722.pdf",
+        "type": "document"
+      }
+    ],
+    "images": [],
+    "all": [
+      {
+        "text": "インターネットでの口座開設時におけるご本人さまが確認できる書類について[PDF:276.6KB]",
+        "href": "https://www.tokyostarbank.co.jp/account/flow/pdf/200323.pdf",
+        "type": "document"
+      },
+      {
+        "text": "Webでの口座開設方法はこちら",
+        "href": "https://www.tokyostarbank.co.jp/foreign/account/flow/two_id.html",
+        "type": "webpage"
+      },
+      {
+        "text": "外国籍のお客さまの郵送口座開設時提出書類について[PDF:189.8KB]",
+        "href": "https://www.tokyostarbank.co.jp/account/flow/pdf/required_documents_of_foreigners.pdf",
+        "type": "document"
+      },
+      {
+        "text": "郵送・店頭での口座開設方法はこちら",
+        "href": "https://www.tokyostarbank.co.jp/foreign/account/flow/offline.html",
+        "type": "webpage"
+      },
+      {
+        "text": "外国籍のお客さまの口座開設時提出書類について[PDF:288.9KB]",
+        "href": "https://www.tokyostarbank.co.jp/account/flow/pdf/190722.pdf",
+        "type": "document"
+      }
+    ]
+  }
+}

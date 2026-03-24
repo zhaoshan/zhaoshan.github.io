@@ -1,0 +1,615 @@
+<!DOCTYPE html><html lang="ja"><head>
+<meta charset="UTF-8">
+
+
+<meta name="robots" content="noindex,nofollow">
+
+<meta name="viewport" content="width=1030">
+<meta name="format-detection" content="telephone=no, email=no, address=no">
+
+<link rel="stylesheet" href="/docs/0526/0/css/reset.css?ver=18000" type="text/css">
+<link rel="stylesheet" href="/docs/0526/0/css/jquery-ui.min.css?ver=18000" type="text/css">
+<link rel="stylesheet" href="/docs/0526/0/css/bizsol-ui.min.css?ver=28000" type="text/css">
+<link rel="stylesheet" href="/docs/0526/0/css/template.css?ver=18001" type="text/css">
+
+
+
+
+<script src="/docs/0526/0/js/jquery-1.12.4.min.js?ver=18000"></script>
+<script src="/docs/0526/0/js/jquery-ui.min.js?ver=18000"></script>
+<script src="/docs/0526/0/js/jquery.menu-aim.js?ver=18000"></script>
+
+<script src="/docs/0526/0/js/bizsol-common.js?ver=23200"></script>
+
+
+<script src="/docs/0526/0/js/bizsol-menu.js?ver=20000"></script>
+<script src="/docs/0526/0/js/template.js?ver=18000"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<title>ログイン</title>
+
+
+
+
+
+
+<script async="" type="text/javascript" src="https://distribute.cafisbrain.com/cafisbrainriskcollector.js" onload="business_processing()"></script>
+
+<script type="text/javascript" src="/docs/0526/0/js/bizsol-common-perfs.js?ver=27000"></script>
+
+
+
+<script type="text/javascript" src="/docs/0526/0/js/RBLGI01/BLGI001.js?ver=18000"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+var cookieEnabled = checkCookieEnable("blGI001Info");
+var cookieMukoKenchiHyojiCtrl = 0;
+if (cookieEnabled || (cookieMukoKenchiHyojiCtrl == "0")) {
+$("#warncookie").hide();
+}
+
+var fncBtnCtrl = controlSoftwareKeyboardCheckBox(
+"skloginpwdshiyoumu",
+"お客様の取引をより安全にお守りするために、ソフトウェアキーボードの使用をお勧めいたします。<br>このまま、ソフトウェアキーボードを使わないということでよろしいですか？",
+[
+"blGI001InfoLoginPwd","blGI001InfoLoginPwd1","blGI001InfoLoginPwd2","blGI001InfoLoginPwd3"
+],
+[
+"loginBtn"
+],
+[
+"blGI001Info.loginId","blGI001Info.oneTimePwd"
+]
+);
+
+var obj = document.getElementById("blGI001InfoLoginId");
+
+if (obj) {
+obj.focus();
+}
+});
+
+function executeAlert(obj) {
+$("#blGI001InfoLoginPwd").prop("readonly", true);
+if (!isLoaded() || isClicked()) {
+return false;
+}
+var browserName = navigator.appName;
+var browserVer = parseInt(navigator.appVersion);
+var requiredBrowserNumMS = 4;
+var dispFlag = false;
+var fnc = function() {
+if (executeSubmit()) {
+
+
+
+executePerfsKoukaigoSubmit(jscPayloadIchijiTaihi, "dtokeninfo", "blGI001Info", obj.name);
+
+}
+}
+if (browserName != "Microsoft Internet Explorer") {
+if (isIE11Ijo()) {
+dispFlag = true;
+
+} else if (isChrome()) {
+dispFlag = true;
+} else if (isEdge()) {
+dispFlag = true;
+
+}
+} else {
+if (browserVer < requiredBrowserNumMS) {
+} else {
+dispFlag = true;
+}
+}
+checkCookieEnable("blGI001Info");
+
+if (dispFlag) {
+
+}
+
+
+
+
+if (executeSubmit()) {
+executePerfsKoukaigoSubmit(jscPayloadIchijiTaihi, "dtokeninfo", "blGI001Info", obj.name);
+}
+return false;
+
+};
+function executeSubmitDomain2(btnName) {
+if (executeSubmit()) {
+var frm = document.getElementById("domainForm");
+var elm = document.getElementById("blGI001InfoLoginPwd3");
+hidElm = createHiddenElement(elm.id, elm.name, elm.value);
+frm.appendChild(hidElm);
+checkCookieEnable("domainForm");
+
+
+
+executePerfsKoukaigoSubmit(jscPayloadIchijiTaihi, "dtokeninfo2", "domainForm", btnName);
+
+}
+return false;
+};
+function executeLogin(obj) {
+if (executeSubmit()) {
+checkCookieEnable("blGI001Info");
+
+
+
+executePerfsKoukaigoSubmit(jscPayloadIchijiTaihi, "dtokeninfo", "blGI001Info", obj.name);
+
+}
+return false;
+};
+
+var jscPayloadIchijiTaihi;
+function business_processing() {
+CAFISBrainRiskCollector.init({clientChannel : 'ANSBIZ'});
+CAFISBrainRiskCollector.getDeviceTokenInfoV3(function (res) {
+if (res && res.deviceTokenInfo) {
+jscPayloadIchijiTaihi = res.deviceTokenInfo;
+}
+})
+};
+</script>
+
+
+
+<style>.custom_grid1, .custom_grid2 {width: 480px;}
+.custom_certificate {text-align:center;border-top: solid 1px #d9d9d9;padding: 30px 0px 0px 5px;}
+.centralcontents {display: flex;justify-content: center;}
+.c_central_linkimages {background-size: contain;width: 370px;height: 70px;background-repeat: no-repeat;background-position: center;margin: 0px 50px;}
+.c_central_linkimages a {display: block;position: relative;top: -68px;left: 4px;height: 48px;width: 352px;border-radius: 10px;}
+.c_linkimages {background-size: contain;width: 370px;height: 110px;background-repeat: no-repeat;background-position: center;margin: 0 auto;}
+.c_linkimages a {display: block;position: relative;top: -105px;left: 3px;height: 86px;width: 355px;border-radius: 16px;}
+</style>
+
+
+
+
+</head>
+<body>
+
+
+<header id="header" class="l-header p-header-nomenu">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="p-header-top-area">
+
+<div class="p-header-top-area__logo"><a href="http://www.tokyostarbank.co.jp/hojin/" target="_blank"><img src="/docs/0526/0/images/logo-01.png?ver=18002" alt="logo"></a>
+
+
+<img src="/docs/0526/0/images/logo.png?ver=18000" alt="logo">
+
+</div>
+
+
+
+
+
+
+
+<div class="p-header-top-area__btn-area">
+<ul class="p-header__list">
+
+<li class="p-header__item">
+<p class="p-header__timestamp">2026年03月24日&nbsp;17時16分16秒</p>
+</li>
+</ul>
+<ul class="p-header__list">
+<li class="p-header__item">
+<div class="p-font-change">
+<ul class="p-font-change__list">
+<li>文字サイズ</li>
+
+<li id="FontSizeS" class="p-font-change__list-small">小</li>
+
+<li id="FontSizeM" class="p-font-change__list-middium is-active">中</li>
+
+<li id="FontSizeL" class="p-font-change__list-large">大</li>
+
+</ul>
+</div>
+</li>
+
+</ul>
+</div>
+
+
+
+</div>
+
+<nav class="p-nav"></nav>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="l-header p-header">
+<div class="p-header-heading">
+<h1>
+<span class="p-header-heading__title">ログイン</span>
+</h1>
+<div class="p-header-heading__info">
+<p class="p-header-heading__page-id">BLGI001</p>
+<button class="p-help-btn" id="helpBtn" onclick="displayHelp('http://www.tokyostarbank.co.jp/hojin/starbb/bizsol/help/BLGI001/help.html'); return false;">ヘルプ</button>
+</div>
+</div>
+</header>
+<main class="l-main" style="font-size: 1.4rem;">
+<form id="blGI001Info" action="https://www.starbb.jp/BIZ_0CA0703/rblgi01/BLGI001-BLGI001Info" method="post"><div><input type="hidden" name="_TRANSACTION_TOKEN" value="globalToken~fb2c20915e89391604af4751b6fabdb2~44f41d6434255c309778ccde38626ed9"></div><input type="hidden" name="hiddenbankcode" value="0526"><input type="hidden" name="hiddenslv" value="0"><input type="hidden" name="hiddenscreenid" value="BLGI001"><input type="hidden" name="hiddencentercode" value="0526"><input type="hidden" name="hiddenTEST" value="false"><input type="hidden" name="hiddenidlinksogoseniflg" value="false"><input type="hidden" name="hiddenidlinksogosenishubetsu" value="false"><input type="hidden" name="hiddenclientid" value=""><input type="hidden" name="hiddenbetsutabseniflg" value="false"><input type="hidden" name="hiddenMPN" value=""><input type="hidden" name="hiddenloginhoho" value=""><input type="hidden" name="hiddensamlrenkeininshoflg" value="false"><input type="text" style="display: none;"><input type="image" onclick="return false;" src="/docs/0526/0/images/null.png" style="position: absolute;" tabindex="-1" alt="emptyimg"><a id="defaultfocus" tabindex="-1" style="float: left;"></a>
+
+<div class="p-login-content-base">
+
+
+<div class="p-login-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="p-content__lead-comment">
+
+<p>■■■Microsoft&nbsp;Edge（電子証明書方式）ブラウザによるログインができない件■■■<br>Microsoft&nbsp;Edgeブラウザを利用されている一部のお客さまで電子証明書ログイン時にエラーとなりログインができない事象が発生した旨お問い合わせを頂いております。<br>以下で問題が解消することがありますのでお試しください。<br><br>1.証明書選択ダイアログが表示されず、証明書提出エラーとなる<br>　⇒Edgeブラウザのキャッシュクリアをお試しください。<br>2.証明書選択ダイアログで証明書の選択ができない(該当証明書が青枠で囲われない)<br>　⇒該当の証明書に対しダブルクリックをお試しください。ダブルクリックしてもご利用できない場合はGoogle&nbsp;Chromeブラウザをお試しください。<br><br>お客さまにはご不便をおかけいたしますが何卒よろしくお願い申し上げます。<br><br>--------------------------------------------------------------------------------<br>■以下の行為は「重大な犯罪」となりますので、絶対に行わないでください。<br>・不正利用されることを知りながら、または正当な理由なく、口座、キャッシュカード、インターネットバンキングのID・パスワードなどを売買・譲渡すること（法人格自体の譲渡にともなう売買も含まれます）<br>・転売目的での口座開設や他人・架空名義での口座開設<br><br>■上記の行為が判明した場合、刑事罰の対象(※）となるほか、将来にわたって東京スター銀行ならびに他銀行での口座開設ができなくなる可能性があります。<br>※口座売買は1年以下の懲役または100万円以下の罰金、転売目的での口座開設等は10年以下の懲役が課されます。<br>--------------------------------------------------------------------------------</p>
+
+
+
+
+
+
+<p>ご利用のブラウザでは証明書を発行できません。証明書を発行する場合は対応ブラウザをご利用ください。</p>
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+<div class="p-login-grid">
+<div class="p-login-grid__grid1">
+<div class="p-login-card">
+<h2 class="p-login-title">電子証明書方式のお客様</h2>
+
+<div class="p-login-btn-wrap">
+<button class="c-btn c-btn-login" name="forward_rblgi01_s01" onclick="return executeSubmitDomain(this.name);" id="s01"><!--ログイン-->電子証明書ログイン</button>
+
+</div>
+
+
+</div>
+</div>
+
+<div class="p-login-grid__grid2">
+<div class="p-login-card">
+<h2 class="p-login-title">ID・パスワード方式のお客様</h2>
+<div class="p-login-area">
+<table class="c-table">
+<tbody><tr>
+<td>
+<div><label for="blGI001InfoLoginId">ログインID</label></div>
+<div>
+<input id="blGI001InfoLoginId" name="blGI001Info.loginId" class="u-tpsz_h12" type="text" value="" maxlength="12">
+
+
+
+
+
+
+
+
+
+
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div><label for="blGI001InfoLoginPwd">ログインパスワード</label></div>
+<div class="u-flex-jc-flex-start  p-form-certification-wrapper">
+
+<div class="p-form-certification">
+<div>
+<input id="blGI001InfoLoginPwd" name="blGI001Info.loginPwd" class="p-form-certification__textbox u-tpsz_p12" type="password" value="" maxlength="12">
+
+
+
+
+
+
+
+
+<div class="p-info-capslock" id="blGI001InfoLoginPwdAreaInfo">
+<p class="title"><i class="icon-alert"></i>CapsLockキーがオン</p>
+<p>CapsLockキーがオンになっていると、パスワードが誤って入力される可能性があります。<br>CapsLockキーを押してオフしてから、パスワードを入力してください。</p>
+</div>
+
+</div>
+<button class="p-form-certification__btn" value="ソフトウェアキーボード" onclick="displaySoftKeyboard('hiddenForm','blGI001InfoLoginPwd','forward_rblgi01_s07');return false;" id="s07"></button>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="p-login-btn-wrap u-mt-25">
+<button class="c-btn c-btn-login" id="loginBtn" name="forward_rblgi01_s03" onclick="return executeAlert(this);" disabled="">ログイン</button>
+
+</div>
+</div>
+</div>
+
+</div>
+
+
+<div class="p-login-grid">
+<div class="p-login-grid__grid1">
+</div>
+<div class="p-login-grid__grid2">
+<div class="p-login-card">
+<h2 class="p-login-title">ログインパスワードが利用停止中のお客さま<br>（マスターユーザ・管理者ユーザ）</h2>
+<div class="p-login-certificate">
+<p class="p-login-certificate__text">ログインパスワードが利用停止中の方は、こちらからログインパスワードの再設定を行ってください。</p>
+</div>
+<div class="p-login-btn-wrap">
+<button class="c-btn c-btn-blue p-btn-login" name="forward_rblgi01_s08" onclick="return executeSubmit();" id="s08">パスワードの再設定</button>
+
+</div>
+</div>
+</div>
+</div><div style="margin-bottom:20px;text-align:center;"><a href="https://www.tokyostarbank.co.jp/hojin/starbb/secure.html" target="_blank"><img src="/docs/0526/0/images/mainimg_caution.png?ver=18002" alt="image"></a></div>
+
+
+
+</div>
+<p class="c-btn-page-top"><a href="#header" id="pageTop"></a></p>
+
+
+
+
+
+
+
+
+
+<input type="hidden" name="bankcode" id="bankcode" value="0526">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<input id="blGI001InfoOtpKanrenKubun" name="blGI001Info.otpKanrenKubun" type="hidden" value="1">
+
+
+<input id="dtokeninfo" name="blGI001Info.dtokeninfo" type="hidden" value="">
+
+<input type="hidden" name="hiddencookieenabled" value="true"></form>
+<form id="hiddenForm" action="/BIZ_0CA0703/rblgi01/BLGI001-BLGI001Info" method="post"><div><input type="hidden" name="_TRANSACTION_TOKEN" value="globalToken~fb2c20915e89391604af4751b6fabdb2~44f41d6434255c309778ccde38626ed9"></div><input type="hidden" name="hiddenbankcode" value="0526"><input type="hidden" name="hiddenslv" value="0"><input type="hidden" name="hiddenscreenid" value="BLGI001"><input type="hidden" name="hiddencentercode" value="0526"><input type="hidden" name="hiddenTEST" value="false"><input type="hidden" name="hiddenidlinksogoseniflg" value="false"><input type="hidden" name="hiddenidlinksogosenishubetsu" value="false"><input type="hidden" name="hiddenclientid" value=""><input type="hidden" name="hiddenbetsutabseniflg" value="false"><input type="hidden" name="hiddenMPN" value=""><input type="hidden" name="hiddenloginhoho" value=""><input type="hidden" name="hiddensamlrenkeininshoflg" value="false"><input type="text" style="display: none;"><input type="image" onclick="return false;" src="/docs/0526/0/images/null.png" style="position: absolute;" tabindex="-1" alt="emptyimg">
+
+
+
+<input type="hidden" name="bankcode" id="hd_bankcode" value="0526">
+
+
+
+
+
+</form>
+<form id="domainForm" action="https://www.cc0526.starbb.jp/BIZ_0CA0703/rblgi01/BLGI001-BLGI001Info" method="post"><div><input type="hidden" name="_TRANSACTION_TOKEN" value="globalToken~fb2c20915e89391604af4751b6fabdb2~44f41d6434255c309778ccde38626ed9"></div><input type="hidden" name="hiddenbankcode" value="0526"><input type="hidden" name="hiddenslv" value="0"><input type="hidden" name="hiddenscreenid" value="BLGI001"><input type="hidden" name="hiddencentercode" value="0526"><input type="hidden" name="hiddenTEST" value="false"><input type="hidden" name="hiddenidlinksogoseniflg" value="false"><input type="hidden" name="hiddenidlinksogosenishubetsu" value="false"><input type="hidden" name="hiddenclientid" value=""><input type="hidden" name="hiddenbetsutabseniflg" value="false"><input type="hidden" name="hiddenMPN" value=""><input type="hidden" name="hiddenloginhoho" value=""><input type="hidden" name="hiddensamlrenkeininshoflg" value="false"><input type="text" style="display: none;"><input type="image" onclick="return false;" src="/docs/0526/0/images/null.png" style="position: absolute;" tabindex="-1" alt="emptyimg">
+
+
+<input id="dtokeninfo2" name="blGI001Info.dtokeninfo" type="hidden" value="">
+
+
+
+
+
+
+
+
+
+
+<input type="hidden" name="bankcode" id="dm_bankcode" value="0526">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<input id="dm_blGI001InfoOtpKanrenKubun" name="blGI001Info.otpKanrenKubun" type="hidden" value="1">
+</form>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="l-footer">
+<div class="p-footer">
+
+<p class="p-footer__inquiry">
+<span>■操作方法その他のお問い合わせ<br>　｢スターBB！サポートデスク」TEL:042-303-9260（平日9:00～21:00）<br></span><br>
+■不正送金などによる緊急停止依頼<br>　｢東京スター銀行ATMサービスセンター」TEL:0120-917-517（年中無休24時間対応）<a id="footerInquiryMail" href="mailto:" class="p-footer__mail"></a>
+</p>
+
+
+<p class="p-footer__copy-right">(C)&nbsp;2003&nbsp;The&nbsp;Tokyo&nbsp;Star&nbsp;Bank,&nbsp;Limited</p>
+
+</div>
+</footer>
+
+
+
+
+
+
+
+
+</body></html>

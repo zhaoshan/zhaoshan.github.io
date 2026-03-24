@@ -1,0 +1,41 @@
+{
+  "url": "https://www.tokyostarbank.co.jp/products/deposit/term/enteiki_plus/",
+  "title": "スターワン円定期預金プラス | 東京スター銀行",
+  "timestamp": "2026-03-24T08:32:54.393Z",
+  "depth": 1,
+  "stats": {
+    "total": 2,
+    "webpages": 1,
+    "documents": 1,
+    "images": 0
+  },
+  "links": {
+    "webpages": [
+      {
+        "text": "取引する\n\t\t\t\t\t\t\t\t\t\t\t\t\t（東京スターダイレクト ログイン）",
+        "href": "https://www.tokyostarbank.co.jp/tokyostardirect/ib/dir_login.html#A20002_1",
+        "type": "webpage"
+      }
+    ],
+    "documents": [
+      {
+        "text": "商品説明書[PDF:428KB]",
+        "href": "https://www.tokyostarbank.co.jp/products/deposit/term/enteiki_plus/pdf/enteiki_plus_manual.pdf?251031",
+        "type": "document"
+      }
+    ],
+    "images": [],
+    "all": [
+      {
+        "text": "取引する\n\t\t\t\t\t\t\t\t\t\t\t\t\t（東京スターダイレクト ログイン）",
+        "href": "https://www.tokyostarbank.co.jp/tokyostardirect/ib/dir_login.html#A20002_1",
+        "type": "webpage"
+      },
+      {
+        "text": "商品説明書[PDF:428KB]",
+        "href": "https://www.tokyostarbank.co.jp/products/deposit/term/enteiki_plus/pdf/enteiki_plus_manual.pdf?251031",
+        "type": "document"
+      }
+    ]
+  }
+}
