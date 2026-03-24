@@ -1,0 +1,8 @@
+# Company Overview | Foreign Customers【Tokyo Star Bank】
+
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5FBXW9" height="0" width="0" style="display:none;visibility:hidden"></iframe> Company Overview Key Management Indicators (Consolidated values, correct as of March 31, 2025) Deposits (including negotiable certificates of deposit) 1,869.1billion Loans 1,602.1billion Capital Adequacy Ratio 12.08% Non-performing Loan Ratio 1.37% (Disclosed claims including Category IV Claims) 0.95% (Disclosed claims after writing-off Category IV Claims) Total Net Income 9.6billion Long-term Issuer Rating (forecast) A(Stable) Japan Credit Rating Agency (JCR) Tokyo Star Bank Overview (Consolidated values, correct as of March 31, 2025) Name The Tokyo Star Bank, Limited Date of Commencement of Commercial Banking Operation June 11, 2001 Head Office 2-3-5 Akasaka, Minato-ku, Tokyo, JAPAN Paid-in Capital \26 billion Full-Time Staff 1,230 *Full-time staff excludes part-time employees and temporary staff. Branches 32 branches (excluding subbranches and internet branch) Number of branches：as of September 1, 2025 PRS [Foreign Customers](/foreign/en/) Company Overview Close 当サイトでは、操作性の向上、お客さまの嗜好に合った広告掲載等のため、クッキー（Cookie）を使用することがあります。 詳細は[クッキーポリシー](/foreign/en/cookie_policy/)をご覧ください。クッキーを無効化せずに当サイトの利用を継続することにより、クッキーの使用に同意したものとみなされます。 マイナンバーカードをスマホで読み取り 口座開設 スマホで以下の二次元コードを読み込んでお手続きください。パソコンやタブレット端末では開設できません。 [マイナンバーカードをスマホで読み取り口座開設](https://direct.tokyostarbank.co.jp/sp_xm2a/page/18001/sX01101CT/dsX0110100)
+
+---
+
+**来源:** https://www.tokyostarbank.co.jp/foreign/en/profile/summary/
+**爬取时间:** 2026-03-24T04:09:26.106Z
