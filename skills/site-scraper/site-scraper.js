@@ -463,7 +463,7 @@ async function scrapePage(url, outputDir, depth = 0) {
   }
 }
 
-// 保存 manifest
+// 保存 manifest 和全局链接字典
 function saveManifest() {
   state.manifest.endTime = new Date().toISOString();
   state.manifest.stats = {
@@ -476,6 +476,17 @@ function saveManifest() {
     JSON.stringify(state.manifest, null, 2)
   );
   
+  // 保存全局链接字典（去重后的所有链接）
+  const globalLinksObject = {};
+  state.globalLinksMap.forEach((value, key) => {
+    globalLinksObject[key] = value;
+  });
+  
+  fs.writeFileSync(
+    path.join(state.outputDir, 'global_links.json'),
+    JSON.stringify(globalLinksObject, null, 2)
+  );
+  
   console.log('\n' + '='.repeat(60));
   console.log('📊 爬取完成');
   console.log('='.repeat(60));
@@ -483,6 +494,7 @@ function saveManifest() {
   console.log(` 总链接：${state.manifest.totalLinks}`);
   console.log(` 图片数：${state.manifest.totalImages}`);
   console.log(` 文档数：${state.manifest.totalDocuments}`);
+  console.log(` 全局去重链接数：${state.globalLinksMap.size}`);
   console.log(` 输出目录：${state.outputDir}`);
 }
 
