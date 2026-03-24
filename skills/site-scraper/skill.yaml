@@ -38,8 +38,8 @@ commands:
         description: 最大爬取页面数
       - name: output
         type: string
-        default: ./scrape-output
-        description: 输出目录
+        default: ~/site-scraper-output
+        description: 输出目录（默认：~/site-scraper-output）
       - name: domain-only
         type: boolean
         default: true

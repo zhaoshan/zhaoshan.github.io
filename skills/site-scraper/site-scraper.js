@@ -24,7 +24,7 @@ program
   .argument('<url>', '目标网站 URL')
   .option('--max-depth <number>', '最大递归深度', '2')
   .option('--max-pages <number>', '最大爬取页面数', '50')
-  .option('--output <dir>', '输出目录', './scrape-output')
+  .option('--output <dir>', '输出目录', path.join(process.env.HOME || process.env.USERPROFILE || '.', 'site-scraper-output'))
   .option('--domain-only', '仅爬取同域名', true)
   .option('--exclude <pattern>', '排除路径正则', '')
   .parse(process.argv);
