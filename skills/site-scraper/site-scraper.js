@@ -27,6 +27,7 @@ program
   .option('--output <dir>', '输出目录', path.join(process.env.HOME || process.env.USERPROFILE || '.', 'site-scraper-output'))
   .option('--domain-only', '仅爬取同域名', true)
   .option('--exclude <pattern>', '排除路径正则', '')
+  .option('--download-attachments', '下载附件（图片和文档），默认不下载', false)
   .parse(process.argv);
 
 const options = program.opts();
@@ -36,6 +37,7 @@ const config = {
   outputDir: options.output,
   domainOnly: options.domainOnly,
   excludePattern: options.exclude ? new RegExp(options.exclude) : null,
+  downloadAttachments: options.downloadAttachments || false,  // 是否下载附件
   timeout: 30000,
   allowedDocExtensions: ['.pdf', '.doc', '.docx', '.xls', '.xlsx', '.ppt', '.pptx'],
   imageExtensions: ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg', '.bmp'],
@@ -141,15 +143,19 @@ function htmlToMarkdown(html, baseUrl, imagesDir) {
       src = new URL(src, baseUrl).href;
     }
     
-    // 下载图片
+    // 生成图片文件名
     const ext = path.extname(new URL(src).pathname) || '.jpg';
     const imageFilename = `image-${++imageIndex}${ext}`;
-    const imagePath = path.join(imagesDir, imageFilename);
     
-    // 异步下载（不等待）
-    downloadFile(src, imagePath).then(success => {
-      if (success) state.manifest.totalImages++;
-    });
+    // 下载图片（仅当启用附件下载时）
+    if (config.downloadAttachments) {
+      const imagePath = path.join(imagesDir, imageFilename);
+      
+      // 异步下载（不等待）
+      downloadFile(src, imagePath).then(success => {
+        if (success) state.manifest.totalImages++;
+      });
+    }
     
     // 更新 src 为本地路径
     imgEl.attr('src', `images/${imageFilename}`);
@@ -255,8 +261,12 @@ function extractLinks(html, baseUrl) {
   return links;
 }
 
-// 下载文档（全局去重）
+// 下载文档（全局去重，仅当启用附件下载时）
 async function downloadDocuments(documents, attachmentsDir) {
+  if (!config.downloadAttachments) {
+    return; // 不下载附件时直接返回
+  }
+  
   ensureDir(attachmentsDir);
   
   for (const doc of documents) {

@@ -44,6 +44,10 @@ commands:
         type: boolean
         default: true
         description: 仅爬取同域名
+      - name: download-attachments
+        type: boolean
+        default: false
+        description: 下载附件（图片和文档），默认不下载
 
 # 功能特性
 features:
