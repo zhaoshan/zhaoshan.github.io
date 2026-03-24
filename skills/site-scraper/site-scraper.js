@@ -447,7 +447,7 @@ async function scrapePage(url, outputDir, depth = 0) {
     if (depth < config.maxDepth && links.webpages.length > 0) {
       console.log(`  🔄 发现 ${links.webpages.length} 个网页链接，准备递归爬取...`);
       
-      for (const link of links.webpages.slice(0, 20)) { // 限制每页递归数量
+      for (const link of links.webpages) { // 爬取所有网页链接
         if (state.pagesCrawled >= config.maxPages) break;
         await scrapePage(link.href, outputDir, depth + 1);
       }
