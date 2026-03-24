@@ -1,0 +1,134 @@
+{
+  "startTime": "2026-03-20T09:42:59.061Z",
+  "url": "https://www.tokyostarbank.co.jp/",
+  "pages": [
+    {
+      "url": "https://www.tokyostarbank.co.jp/",
+      "title": "東京スター銀行",
+      "depth": 0,
+      "path": "test-output-deep/2026-03-20T09-42-59",
+      "links": 223,
+      "timestamp": "2026-03-20T09:43:46.889Z"
+    },
+    {
+      "url": "https://www.tokyostarbank.co.jp/hojin/",
+      "title": "法人・個人事業主のお客さま 【東京スター銀行】",
+      "depth": 1,
+      "path": "test-output-deep/2026-03-20T09-42-59/pages/法人・個人事業主のお客さま-【東京スター銀行】",
+      "links": 163,
+      "timestamp": "2026-03-20T09:44:01.098Z"
+    },
+    {
+      "url": "https://www.tokyostarbank.co.jp/foreign/",
+      "title": "外国籍のお客さま【東京スター銀行】",
+      "depth": 2,
+      "path": "test-output-deep/2026-03-20T09-42-59/pages/外国籍のお客さま【東京スター銀行】",
+      "links": 58,
+      "timestamp": "2026-03-20T09:44:14.634Z"
+    },
+    {
+      "url": "https://www.tokyostarbank.co.jp/profile/",
+      "title": "会社情報 | 東京スター銀行",
+      "depth": 2,
+      "path": "test-output-deep/2026-03-20T09-42-59/pages/会社情報-東京スター銀行",
+      "links": 165,
+      "timestamp": "2026-03-20T09:44:22.979Z"
+    },
+    {
+      "url": "https://www.tokyostarbank.co.jp/fiduciary_duty/",
+      "title": "東京スター銀行の「フィデューシャリー・デューティー」｜東京スター銀行 | 東京スター銀行",
+      "depth": 2,
+      "path": "test-output-deep/2026-03-20T09-42-59/pages/東京スター銀行の「フィデューシャリー・デューティー」｜東京スター銀行-東京スター銀行",
+      "links": 179,
+      "timestamp": "2026-03-20T09:44:56.340Z"
+    },
+    {
+      "url": "https://www.tokyostarbank.co.jp/press_ir/",
+      "title": "ニュースリリース・IR | 東京スター銀行",
+      "depth": 2,
+      "path": "test-output-deep/2026-03-20T09-42-59/pages/ニュースリリース・IR-東京スター銀行",
+      "links": 174,
+      "timestamp": "2026-03-20T09:45:15.260Z"
+    },
+    {
+      "url": "https://www.tokyostarbank.co.jp/profile/en/",
+      "title": "Investor Relations｜Tokyo Star Bank",
+      "depth": 2,
+      "path": "test-output-deep/2026-03-20T09-42-59/pages/Investor-Relations｜Tokyo-Star-Bank",
+      "links": 170,
+      "timestamp": "2026-03-20T09:45:31.350Z"
+    },
+    {
+      "url": "https://www.tokyostarbank.co.jp/recruit/",
+      "title": "ページが移動しました | 東京スター銀行",
+      "depth": 2,
+      "path": "test-output-deep/2026-03-20T09-42-59/pages/ページが移動しました-東京スター銀行",
+      "links": 0,
+      "timestamp": "2026-03-20T09:45:34.656Z"
+    },
+    {
+      "url": "https://support.tokyostarbank.co.jp/",
+      "title": "よくある質問｜東京スター銀行",
+      "depth": 2,
+      "path": "test-output-deep/2026-03-20T09-42-59/pages/よくある質問｜東京スター銀行",
+      "links": 37,
+      "timestamp": "2026-03-20T09:45:38.450Z"
+    },
+    {
+      "url": "https://www.tokyostarbank.co.jp/contact/",
+      "title": "お問い合わせ一覧 | 東京スター銀行",
+      "depth": 2,
+      "path": "test-output-deep/2026-03-20T09-42-59/pages/お問い合わせ一覧-東京スター銀行",
+      "links": 190,
+      "timestamp": "2026-03-20T09:45:46.146Z"
+    },
+    {
+      "url": "https://www.tokyostarbank.co.jp/hojin/overseas/foreignexchange/",
+      "title": "外国為替手数料（法人のお客さま向け） | お客さまの海外事業を強化するサービス 【東京スター銀行】",
+      "depth": 2,
+      "path": "test-output-deep/2026-03-20T09-42-59/pages/外国為替手数料（法人のお客さま向け）-お客さまの海外事業を強化するサービス-【東京スター銀行】",
+      "links": 147,
+      "timestamp": "2026-03-20T09:45:51.936Z"
+    },
+    {
+      "url": "https://www.tokyostarbank.co.jp/hojin/rate/",
+      "title": "法人のお客さま向け普通預金の金利についてのご案内 【東京スター銀行】",
+      "depth": 2,
+      "path": "test-output-deep/2026-03-20T09-42-59/pages/法人のお客さま向け普通預金の金利についてのご案内-【東京スター銀行】",
+      "links": 149,
+      "timestamp": "2026-03-20T09:45:59.692Z"
+    },
+    {
+      "url": "https://www.tokyostarbank.co.jp/account/flow/",
+      "title": "口座開設に必要なもの・手順のご案内 | 東京スター銀行",
+      "depth": 2,
+      "path": "test-output-deep/2026-03-20T09-42-59/pages/口座開設に必要なもの・手順のご案内-東京スター銀行",
+      "links": 178,
+      "timestamp": "2026-03-20T09:46:13.023Z"
+    },
+    {
+      "url": "https://www.tokyostarbank.co.jp/account/feature/kyufuri.html?bannerId=spmenu",
+      "title": "スターワン円普通預金の金利が給与振込で優遇金利に！ | 東京スター銀行",
+      "depth": 2,
+      "path": "test-output-deep/2026-03-20T09-42-59/pages/スターワン円普通預金の金利が給与振込で優遇金利に！-東京スター銀行",
+      "links": 168,
+      "timestamp": "2026-03-20T09:46:23.443Z"
+    },
+    {
+      "url": "https://www.tokyostarbank.co.jp/account/",
+      "title": "口座開設 | スターワン口座は各種手数料が断然おトク | 東京スター銀行",
+      "depth": 2,
+      "path": "test-output-deep/2026-03-20T09-42-59/pages/口座開設-スターワン口座は各種手数料が断然おトク-東京スター銀行",
+      "links": 166,
+      "timestamp": "2026-03-20T09:46:30.885Z"
+    }
+  ],
+  "totalImages": 240,
+  "totalDocuments": 103,
+  "totalLinks": 2167,
+  "endTime": "2026-03-20T09:46:31.111Z",
+  "stats": {
+    "pagesCrawled": 15,
+    "visitedUrls": 15
+  }
+}
