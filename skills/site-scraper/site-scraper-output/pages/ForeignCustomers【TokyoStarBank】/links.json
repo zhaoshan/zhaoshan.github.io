@@ -1,59 +1,24 @@
 {
   "url": "https://www.tokyostarbank.co.jp/foreign/en/",
   "title": "Foreign Customers【Tokyo Star Bank】",
-  "timestamp": "2026-03-24T04:05:51.792Z",
+  "timestamp": "2026-03-24T05:59:07.372Z",
   "depth": 1,
   "stats": {
-    "total": 56,
-    "webpages": 52,
+    "total": 39,
+    "webpages": 35,
     "documents": 4,
     "images": 0
   },
   "links": {
     "webpages": [
       {
-        "text": "Personal customers",
-        "href": "https://www.tokyostarbank.co.jp/",
-        "type": "webpage"
-      },
-      {
-        "text": "Business customers",
-        "href": "https://www.tokyostarbank.co.jp/hojin/",
-        "type": "webpage"
-      },
-      {
-        "text": "Foreign nationals",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/",
-        "type": "webpage"
-      },
-      {
         "text": "Fiduciary Duty of Tokyo Star Bank",
         "href": "https://www.tokyostarbank.co.jp/foreign/en/fiduciary_duty/",
         "type": "webpage"
       },
       {
-        "text": "IR",
-        "href": "https://www.tokyostarbank.co.jp/profile/en/",
-        "type": "webpage"
-      },
-      {
-        "text": "Recruting (in Japanese)",
-        "href": "https://www.tokyostarbank.co.jp/recruit/",
-        "type": "webpage"
-      },
-      {
         "text": "FAQ",
         "href": "https://www.tokyostarbank.co.jp/foreign/en/faq/",
-        "type": "webpage"
-      },
-      {
-        "text": "中文",
-        "href": "https://www.tokyostarbank.co.jp/foreign/cn/",
-        "type": "webpage"
-      },
-      {
-        "text": "日本語",
-        "href": "https://www.tokyostarbank.co.jp/foreign/",
         "type": "webpage"
       },
       {
@@ -112,11 +77,6 @@
         "type": "webpage"
       },
       {
-        "text": "Login",
-        "href": "https://www.tokyostarbank.co.jp/tokyostardirect/login.html",
-        "type": "webpage"
-      },
-      {
         "text": "(无文本)",
         "href": "https://www.tokyostarbank.co.jp/foreign/en/products/loan/homeloan_star/",
         "type": "webpage"
@@ -154,36 +114,6 @@
       {
         "text": "Find out more about products for residents",
         "href": "https://www.tokyostarbank.co.jp/foreign/en/products/?tab=tab-01",
-        "type": "webpage"
-      },
-      {
-        "text": "0120-16-3838",
-        "href": "tel:0120163838",
-        "type": "webpage"
-      },
-      {
-        "text": "Download Tokyo Star Bank Star Direct App (in Japanese)",
-        "href": "https://www.tokyostarbank.co.jp/lp/app/",
-        "type": "webpage"
-      },
-      {
-        "text": "(无文本)",
-        "href": "https://ja-jp.facebook.com/tokyostarbank/",
-        "type": "webpage"
-      },
-      {
-        "text": "(无文本)",
-        "href": "https://www.youtube.com/channel/UCva8Phpv6oJ-4V4UJR5hU7Q",
-        "type": "webpage"
-      },
-      {
-        "text": "(无文本)",
-        "href": "https://twitter.com/tsb_jp",
-        "type": "webpage"
-      },
-      {
-        "text": "(无文本)",
-        "href": "https://lin.ee/RPrD2Th",
         "type": "webpage"
       },
       {
@@ -254,21 +184,6 @@
       {
         "text": "Unauthorized Use of Internet Banking",
         "href": "https://www.tokyostarbank.co.jp/foreign/en/topics/201127.html",
-        "type": "webpage"
-      },
-      {
-        "text": "Multi-Stakeholder Policy (in Japanese)",
-        "href": "https://www.tokyostarbank.co.jp/stakeholder/",
-        "type": "webpage"
-      },
-      {
-        "text": "Sitemap",
-        "href": "https://www.tokyostarbank.co.jp/sitemap/",
-        "type": "webpage"
-      },
-      {
-        "text": "マイナンバーカードをスマホで読み取り口座開設",
-        "href": "https://direct.tokyostarbank.co.jp/sp_xm2a/page/18001/sX01101CT/dsX0110100",
         "type": "webpage"
       }
     ],
@@ -297,48 +212,13 @@
     "images": [],
     "all": [
       {
-        "text": "Personal customers",
-        "href": "https://www.tokyostarbank.co.jp/",
-        "type": "webpage"
-      },
-      {
-        "text": "Business customers",
-        "href": "https://www.tokyostarbank.co.jp/hojin/",
-        "type": "webpage"
-      },
-      {
-        "text": "Foreign nationals",
-        "href": "https://www.tokyostarbank.co.jp/foreign/en/",
-        "type": "webpage"
-      },
-      {
         "text": "Fiduciary Duty of Tokyo Star Bank",
         "href": "https://www.tokyostarbank.co.jp/foreign/en/fiduciary_duty/",
         "type": "webpage"
       },
       {
-        "text": "IR",
-        "href": "https://www.tokyostarbank.co.jp/profile/en/",
-        "type": "webpage"
-      },
-      {
-        "text": "Recruting (in Japanese)",
-        "href": "https://www.tokyostarbank.co.jp/recruit/",
-        "type": "webpage"
-      },
-      {
         "text": "FAQ",
         "href": "https://www.tokyostarbank.co.jp/foreign/en/faq/",
-        "type": "webpage"
-      },
-      {
-        "text": "中文",
-        "href": "https://www.tokyostarbank.co.jp/foreign/cn/",
-        "type": "webpage"
-      },
-      {
-        "text": "日本語",
-        "href": "https://www.tokyostarbank.co.jp/foreign/",
         "type": "webpage"
       },
       {
@@ -397,11 +277,6 @@
         "type": "webpage"
       },
       {
-        "text": "Login",
-        "href": "https://www.tokyostarbank.co.jp/tokyostardirect/login.html",
-        "type": "webpage"
-      },
-      {
         "text": "[Important] Please beware of fraudulent emails",
         "href": "https://www.tokyostarbank.co.jp/foreign/en/topics/pdf/fraudulent_emails_en.pdf",
         "type": "document"
@@ -454,36 +329,6 @@
       {
         "text": "Find out more about products for residents",
         "href": "https://www.tokyostarbank.co.jp/foreign/en/products/?tab=tab-01",
-        "type": "webpage"
-      },
-      {
-        "text": "0120-16-3838",
-        "href": "tel:0120163838",
-        "type": "webpage"
-      },
-      {
-        "text": "Download Tokyo Star Bank Star Direct App (in Japanese)",
-        "href": "https://www.tokyostarbank.co.jp/lp/app/",
-        "type": "webpage"
-      },
-      {
-        "text": "(无文本)",
-        "href": "https://ja-jp.facebook.com/tokyostarbank/",
-        "type": "webpage"
-      },
-      {
-        "text": "(无文本)",
-        "href": "https://www.youtube.com/channel/UCva8Phpv6oJ-4V4UJR5hU7Q",
-        "type": "webpage"
-      },
-      {
-        "text": "(无文本)",
-        "href": "https://twitter.com/tsb_jp",
-        "type": "webpage"
-      },
-      {
-        "text": "(无文本)",
-        "href": "https://lin.ee/RPrD2Th",
         "type": "webpage"
       },
       {
@@ -559,21 +404,6 @@
       {
         "text": "Unauthorized Use of Internet Banking",
         "href": "https://www.tokyostarbank.co.jp/foreign/en/topics/201127.html",
-        "type": "webpage"
-      },
-      {
-        "text": "Multi-Stakeholder Policy (in Japanese)",
-        "href": "https://www.tokyostarbank.co.jp/stakeholder/",
-        "type": "webpage"
-      },
-      {
-        "text": "Sitemap",
-        "href": "https://www.tokyostarbank.co.jp/sitemap/",
-        "type": "webpage"
-      },
-      {
-        "text": "マイナンバーカードをスマホで読み取り口座開設",
-        "href": "https://direct.tokyostarbank.co.jp/sp_xm2a/page/18001/sX01101CT/dsX0110100",
         "type": "webpage"
       }
     ]

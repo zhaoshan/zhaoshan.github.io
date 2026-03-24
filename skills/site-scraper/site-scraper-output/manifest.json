@@ -1,302 +1,174 @@
 {
-  "startTime": "2026-03-24T03:56:35.889Z",
+  "startTime": "2026-03-24T05:57:47.252Z",
   "url": "https://www.tokyostarbank.co.jp/",
   "pages": [
     {
       "url": "https://www.tokyostarbank.co.jp/",
       "title": "東京スター銀行",
       "depth": 0,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35",
-      "links": 195,
-      "timestamp": "2026-03-24T03:57:16.593Z"
+      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T05-57-47",
+      "links": 181,
+      "timestamp": "2026-03-24T05:58:06.372Z"
     },
     {
       "url": "https://www.tokyostarbank.co.jp/hojin/",
       "title": "法人・個人事業主のお客さま 【東京スター銀行】",
       "depth": 1,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/法人・個人事業主のお客さま【東京スター銀行】",
-      "links": 163,
-      "timestamp": "2026-03-24T03:58:00.887Z"
+      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T05-57-47/pages/法人・個人事業主のお客さま【東京スター銀行】",
+      "links": 21,
+      "timestamp": "2026-03-24T05:58:27.437Z"
     },
     {
       "url": "https://www.tokyostarbank.co.jp/foreign/",
       "title": "外国籍のお客さま【東京スター銀行】",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/外国籍のお客さま【東京スター銀行】",
-      "links": 58,
-      "timestamp": "2026-03-24T03:58:42.504Z"
-    },
-    {
-      "url": "https://www.tokyostarbank.co.jp/profile/",
-      "title": "会社情報 | 東京スター銀行",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/会社情報東京スター銀行",
-      "links": 165,
-      "timestamp": "2026-03-24T03:59:05.773Z"
-    },
-    {
-      "url": "https://www.tokyostarbank.co.jp/fiduciary_duty/",
-      "title": "東京スター銀行の「フィデューシャリー・デューティー」｜東京スター銀行 | 東京スター銀行",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/東京スター銀行の「フィデューシャリー・デューティー」｜東京スター銀行東京スター銀行",
-      "links": 179,
-      "timestamp": "2026-03-24T04:00:55.537Z"
-    },
-    {
-      "url": "https://www.tokyostarbank.co.jp/press_ir/",
-      "title": "ニュースリリース・IR | 東京スター銀行",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/ニュースリリース・IR東京スター銀行",
-      "links": 169,
-      "timestamp": "2026-03-24T04:01:36.666Z"
-    },
-    {
-      "url": "https://www.tokyostarbank.co.jp/profile/en/",
-      "title": "Investor Relations｜Tokyo Star Bank",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/InvestorRelations｜TokyoStarBank",
-      "links": 170,
-      "timestamp": "2026-03-24T04:02:25.210Z"
-    },
-    {
-      "url": "https://www.tokyostarbank.co.jp/recruit/",
-      "title": "ページが移動しました | 東京スター銀行",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/ページが移動しました東京スター銀行",
-      "links": 0,
-      "timestamp": "2026-03-24T04:02:30.022Z"
-    },
-    {
-      "url": "https://support.tokyostarbank.co.jp/",
-      "title": "よくある質問｜東京スター銀行",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/よくある質問｜東京スター銀行",
-      "links": 37,
-      "timestamp": "2026-03-24T04:02:36.736Z"
-    },
-    {
-      "url": "https://www.tokyostarbank.co.jp/contact/",
-      "title": "お問い合わせ一覧 | 東京スター銀行",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/お問い合わせ一覧東京スター銀行",
-      "links": 190,
-      "timestamp": "2026-03-24T04:02:56.740Z"
-    },
-    {
-      "url": "https://www.tokyostarbank.co.jp/hojin/overseas/foreignexchange/",
-      "title": "外国為替手数料（法人のお客さま向け） | お客さまの海外事業を強化するサービス 【東京スター銀行】",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/外国為替手数料（法人のお客さま向け）お客さまの海外事業を強化するサービス【東京スター銀行】",
-      "links": 147,
-      "timestamp": "2026-03-24T04:03:12.935Z"
-    },
-    {
-      "url": "https://www.tokyostarbank.co.jp/hojin/rate/",
-      "title": "法人のお客さま向け普通預金の金利についてのご案内 【東京スター銀行】",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/法人のお客さま向け普通預金の金利についてのご案内【東京スター銀行】",
-      "links": 149,
-      "timestamp": "2026-03-24T04:03:27.226Z"
-    },
-    {
-      "url": "https://www.tokyostarbank.co.jp/account/flow/",
-      "title": "口座開設に必要なもの・手順のご案内 | 東京スター銀行",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/口座開設に必要なもの・手順のご案内東京スター銀行",
-      "links": 178,
-      "timestamp": "2026-03-24T04:03:51.944Z"
-    },
-    {
-      "url": "https://www.tokyostarbank.co.jp/account/feature/kyufuri.html?bannerId=spmenu",
-      "title": "スターワン円普通預金の金利が給与振込で優遇金利に！ | 東京スター銀行",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/スターワン円普通預金の金利が給与振込で優遇金利に！東京スター銀行",
-      "links": 168,
-      "timestamp": "2026-03-24T04:04:11.399Z"
-    },
-    {
-      "url": "https://www.tokyostarbank.co.jp/account/",
-      "title": "口座開設 | スターワン口座は各種手数料が断然おトク | 東京スター銀行",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/口座開設スターワン口座は各種手数料が断然おトク東京スター銀行",
-      "links": 166,
-      "timestamp": "2026-03-24T04:04:27.690Z"
-    },
-    {
-      "url": "https://www.tokyostarbank.co.jp/fee/",
-      "title": "手数料一覧 | 東京スター銀行",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/手数料一覧東京スター銀行",
-      "links": 160,
-      "timestamp": "2026-03-24T04:04:40.568Z"
-    },
-    {
-      "url": "https://www.tokyostarbank.co.jp/rate/",
-      "title": "金利・為替相場・投資信託基準価額一覧 | 東京スター銀行",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/金利・為替相場・投資信託基準価額一覧東京スター銀行",
-      "links": 168,
-      "timestamp": "2026-03-24T04:04:58.099Z"
-    },
-    {
-      "url": "https://www.tokyostarbank.co.jp/procedure/#anc-01",
-      "title": "各種お手続き | 東京スター銀行",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/各種お手続き東京スター銀行",
-      "links": 165,
-      "timestamp": "2026-03-24T04:05:11.653Z"
-    },
-    {
-      "url": "https://www.tokyostarbank.co.jp/procedure/#anc-02",
-      "title": "各種お手続き | 東京スター銀行",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/各種お手続き東京スター銀行",
-      "links": 165,
-      "timestamp": "2026-03-24T04:05:24.671Z"
-    },
-    {
-      "url": "https://www.tokyostarbank.co.jp/procedure/account_transfer.html",
-      "title": "口座振替 | 東京スター銀行",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/口座振替東京スター銀行",
-      "links": 159,
-      "timestamp": "2026-03-24T04:05:43.039Z"
+      "depth": 1,
+      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T05-57-47/pages/外国籍のお客さま【東京スター銀行】",
+      "links": 27,
+      "timestamp": "2026-03-24T05:58:48.378Z"
     },
     {
       "url": "https://www.tokyostarbank.co.jp/foreign/en/",
       "title": "Foreign Customers【Tokyo Star Bank】",
       "depth": 1,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/ForeignCustomers【TokyoStarBank】",
-      "links": 56,
-      "timestamp": "2026-03-24T04:05:59.649Z"
-    },
-    {
-      "url": "https://www.tokyostarbank.co.jp/foreign/en/fiduciary_duty/",
-      "title": "Our Fiduciary Duty | Foreign Customers【Tokyo Star Bank】",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/OurFiduciaryDutyForeignCustomers【TokyoStarBank】",
-      "links": 45,
-      "timestamp": "2026-03-24T04:06:12.827Z"
-    },
-    {
-      "url": "https://www.tokyostarbank.co.jp/foreign/en/faq/",
-      "title": "FAQ | Foreign Customers【Tokyo Star Bank】",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/FAQForeignCustomers【TokyoStarBank】",
-      "links": 50,
-      "timestamp": "2026-03-24T04:06:27.605Z"
+      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T05-57-47/pages/ForeignCustomers【TokyoStarBank】",
+      "links": 39,
+      "timestamp": "2026-03-24T05:59:07.373Z"
     },
     {
       "url": "https://www.tokyostarbank.co.jp/foreign/cn/",
       "title": "外國籍客戶【東京之星銀行】",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/外國籍客戶【東京之星銀行】",
-      "links": 56,
-      "timestamp": "2026-03-24T04:06:54.479Z"
+      "depth": 1,
+      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T05-57-47/pages/外國籍客戶【東京之星銀行】",
+      "links": 39,
+      "timestamp": "2026-03-24T05:59:33.080Z"
     },
     {
-      "url": "https://www.tokyostarbank.co.jp/foreign/en/account/flow/",
-      "title": "Account Opening and General Information | Foreign Customers【Tokyo Star Bank】",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/AccountOpeningandGeneralInformationForeignCustomer",
-      "links": 50,
-      "timestamp": "2026-03-24T04:07:16.444Z"
+      "url": "https://www.tokyostarbank.co.jp/profile/",
+      "title": "会社情報 | 東京スター銀行",
+      "depth": 1,
+      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T05-57-47/pages/会社情報東京スター銀行",
+      "links": 7,
+      "timestamp": "2026-03-24T05:59:49.309Z"
     },
     {
-      "url": "https://www.tokyostarbank.co.jp/foreign/en/account/fee/",
-      "title": "Fees | Foreign Customers【Tokyo Star Bank】",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/FeesForeignCustomers【TokyoStarBank】",
-      "links": 55,
-      "timestamp": "2026-03-24T04:07:31.930Z"
+      "url": "https://www.tokyostarbank.co.jp/fiduciary_duty/",
+      "title": "東京スター銀行の「フィデューシャリー・デューティー」｜東京スター銀行 | 東京スター銀行",
+      "depth": 1,
+      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T05-57-47/pages/東京スター銀行の「フィデューシャリー・デューティー」｜東京スター銀行東京スター銀行",
+      "links": 22,
+      "timestamp": "2026-03-24T06:00:06.477Z"
     },
     {
-      "url": "https://www.tokyostarbank.co.jp/foreign/en/account/number/",
-      "title": "Change your bank card PIN number (which is also used for telephone transactions) (Japan residents) | Foreign Customers【Tokyo Star Bank】",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/ChangeyourbankcardPINnumber(whichisalsousedfortele",
-      "links": 46,
-      "timestamp": "2026-03-24T04:07:44.040Z"
+      "url": "https://www.tokyostarbank.co.jp/press_ir/",
+      "title": "ニュースリリース・IR | 東京スター銀行",
+      "depth": 1,
+      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T05-57-47/pages/ニュースリリース・IR東京スター銀行",
+      "links": 10,
+      "timestamp": "2026-03-24T06:00:21.394Z"
     },
     {
-      "url": "https://www.tokyostarbank.co.jp/foreign/en/account/funsitu/",
-      "title": "What to do if your bank card, passbook, or personal seal is lost or stolen | Foreign Customers【Tokyo Star Bank】",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/Whattodoifyourbankcard,passbook,orpersonalsealislo",
-      "links": 46,
-      "timestamp": "2026-03-24T04:07:56.376Z"
+      "url": "https://www.tokyostarbank.co.jp/profile/en/",
+      "title": "Investor Relations｜Tokyo Star Bank",
+      "depth": 1,
+      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T05-57-47/pages/InvestorRelations｜TokyoStarBank",
+      "links": 14,
+      "timestamp": "2026-03-24T06:00:36.624Z"
     },
     {
-      "url": "https://www.tokyostarbank.co.jp/foreign/en/products/?tab=tab-02",
-      "title": "Products | Foreign Customers【Tokyo Star Bank】",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/ProductsForeignCustomers【TokyoStarBank】",
-      "links": 54,
-      "timestamp": "2026-03-24T04:08:12.847Z"
+      "url": "https://www.tokyostarbank.co.jp/recruit/",
+      "title": "ページが移動しました | 東京スター銀行",
+      "depth": 1,
+      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T05-57-47/pages/ページが移動しました東京スター銀行",
+      "links": 0,
+      "timestamp": "2026-03-24T06:00:42.111Z"
     },
     {
-      "url": "https://www.tokyostarbank.co.jp/foreign/en/tokyostardirect/",
-      "title": "For Non-resident Customers Tokyo Star Direct (Internet Banking) | Foreign Customers【Tokyo Star Bank】",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/ForNon-residentCustomersTokyoStarDirect(InternetBa",
-      "links": 55,
-      "timestamp": "2026-03-24T04:08:43.734Z"
+      "url": "https://support.tokyostarbank.co.jp/",
+      "title": "よくある質問｜東京スター銀行",
+      "depth": 1,
+      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T05-57-47/pages/よくある質問｜東京スター銀行",
+      "links": 21,
+      "timestamp": "2026-03-24T06:00:50.606Z"
     },
     {
-      "url": "https://www.tokyostarbank.co.jp/foreign/en/f_remittance/",
-      "title": "Foreign Remittance Web Service | Foreign Customers【Tokyo Star Bank】",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/ForeignRemittanceWebServiceForeignCustomers【TokyoS",
-      "links": 50,
-      "timestamp": "2026-03-24T04:09:06.384Z"
+      "url": "https://www.tokyostarbank.co.jp/contact/",
+      "title": "お問い合わせ一覧 | 東京スター銀行",
+      "depth": 1,
+      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T05-57-47/pages/お問い合わせ一覧東京スター銀行",
+      "links": 33,
+      "timestamp": "2026-03-24T06:01:07.172Z"
     },
     {
-      "url": "https://www.tokyostarbank.co.jp/foreign/en/hojin/products/",
-      "title": "Corporate Services (Foreign Nationals) | Foreign Customers【Tokyo Star Bank】",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/CorporateServices(ForeignNationals)ForeignCustomer",
-      "links": 52,
-      "timestamp": "2026-03-24T04:09:18.099Z"
+      "url": "https://www.tokyostarbank.co.jp/fee/",
+      "title": "手数料一覧 | 東京スター銀行",
+      "depth": 1,
+      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T05-57-47/pages/手数料一覧東京スター銀行",
+      "links": 3,
+      "timestamp": "2026-03-24T06:01:23.944Z"
     },
     {
-      "url": "https://www.tokyostarbank.co.jp/foreign/en/profile/summary/",
-      "title": "Company Overview | Foreign Customers【Tokyo Star Bank】",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/CompanyOverviewForeignCustomers【TokyoStarBank】",
-      "links": 44,
-      "timestamp": "2026-03-24T04:09:29.892Z"
-    },
-    {
-      "url": "https://www.tokyostarbank.co.jp/foreign/en/profile/shareholder/",
-      "title": "About Our Shareholder (CTBC Bank, Taiwan) | Foreign Customers【Tokyo Star Bank】",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/AboutOurShareholder(CTBCBank,Taiwan)ForeignCustome",
-      "links": 45,
-      "timestamp": "2026-03-24T04:09:41.652Z"
-    },
-    {
-      "url": "https://www.tokyostarbank.co.jp/foreign/en/profile/initiatives/",
-      "title": "Initiatives for Customers with Foreign Nationalities | Foreign Customers【Tokyo Star Bank】",
-      "depth": 2,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/InitiativesforCustomerswithForeignNationalitiesFor",
-      "links": 44,
-      "timestamp": "2026-03-24T04:09:52.726Z"
+      "url": "https://www.tokyostarbank.co.jp/rate/",
+      "title": "金利・為替相場・投資信託基準価額一覧 | 東京スター銀行",
+      "depth": 1,
+      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T05-57-47/pages/金利・為替相場・投資信託基準価額一覧東京スター銀行",
+      "links": 10,
+      "timestamp": "2026-03-24T06:01:41.597Z"
     },
     {
       "url": "https://www.tokyostarbank.co.jp/tokyostardirect/login.html",
       "title": "東京スターダイレクトへ移動します | 東京スター銀行",
       "depth": 1,
-      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T03-56-35/pages/東京スターダイレクトへ移動します東京スター銀行",
+      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T05-57-47/pages/東京スターダイレクトへ移動します東京スター銀行",
       "links": 0,
-      "timestamp": "2026-03-24T04:09:57.640Z"
+      "timestamp": "2026-03-24T06:01:50.080Z"
+    },
+    {
+      "url": "https://www.tokyostarbank.co.jp/account/flow/",
+      "title": "口座開設に必要なもの・手順のご案内 | 東京スター銀行",
+      "depth": 1,
+      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T05-57-47/pages/口座開設に必要なもの・手順のご案内東京スター銀行",
+      "links": 16,
+      "timestamp": "2026-03-24T06:02:06.583Z"
+    },
+    {
+      "url": "https://www.tokyostarbank.co.jp/account/feature/kyufuri.html?bannerId=spmenu",
+      "title": "スターワン円普通預金の金利が給与振込で優遇金利に！ | 東京スター銀行",
+      "depth": 1,
+      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T05-57-47/pages/スターワン円普通預金の金利が給与振込で優遇金利に！東京スター銀行",
+      "links": 6,
+      "timestamp": "2026-03-24T06:02:29.965Z"
+    },
+    {
+      "url": "https://www.tokyostarbank.co.jp/account/",
+      "title": "口座開設 | スターワン口座は各種手数料が断然おトク | 東京スター銀行",
+      "depth": 1,
+      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T05-57-47/pages/口座開設スターワン口座は各種手数料が断然おトク東京スター銀行",
+      "links": 3,
+      "timestamp": "2026-03-24T06:02:53.504Z"
+    },
+    {
+      "url": "https://www.tokyostarbank.co.jp/procedure/#anc-01",
+      "title": "各種お手続き | 東京スター銀行",
+      "depth": 1,
+      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T05-57-47/pages/各種お手続き東京スター銀行",
+      "links": 6,
+      "timestamp": "2026-03-24T06:03:10.386Z"
+    },
+    {
+      "url": "https://www.tokyostarbank.co.jp/procedure/#anc-02",
+      "title": "各種お手続き | 東京スター銀行",
+      "depth": 1,
+      "path": "/Users/zhaoshan/site-scraper-output/2026-03-24T05-57-47/pages/各種お手続き東京スター銀行",
+      "links": 0,
+      "timestamp": "2026-03-24T06:03:27.892Z"
     }
   ],
-  "totalImages": 395,
-  "totalDocuments": 121,
-  "totalLinks": 3699,
-  "endTime": "2026-03-24T04:09:57.757Z",
+  "totalImages": 0,
+  "totalDocuments": 0,
+  "totalLinks": 458,
+  "endTime": "2026-03-24T06:03:28.000Z",
   "stats": {
-    "pagesCrawled": 36,
-    "visitedUrls": 36
+    "pagesCrawled": 20,
+    "visitedUrls": 20
   }
 }
