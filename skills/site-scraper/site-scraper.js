@@ -331,11 +331,17 @@ async function scrapePage(url, outputDir, depth = 0) {
   state.visitedUrls.add(url);
   state.pagesCrawled++;
   
-  // 每爬取 50 个页面保存一次中间结果，防止内存累积
-  if (state.pagesCrawled % 50 === 0) {
-    console.log(`\n💾 保存中间结果（已爬取 ${state.pagesCrawled} 页）...`);
+  // 每爬取 20 个页面保存一次中间结果并推送进度
+  if (state.pagesCrawled % 20 === 0) {
+    const progressMsg = `📊 爬取进度：已爬取 ${state.pagesCrawled} 页 | 全局链接：${state.globalLinksMap.size} 个 | 文档：${state.manifest.totalDocuments} 个`;
+    console.log(`\n${progressMsg}`);
     saveManifest();
     saveGlobalLinks();
+    // 输出进度报告
+    console.log(`\n📈 进度报告:`);
+    console.log(`   - 网页链接：${[...state.globalLinksMap.values()].filter(v => v.type === 'webpage').length} 个`);
+    console.log(`   - 文档链接：${[...state.globalLinksMap.values()].filter(v => v.type === 'document').length} 个`);
+    console.log(`   - 已下载文档：${state.manifest.totalDocuments} 个\n`);
   }
   
   console.log(`\n📄 [深度 ${depth}] 爬取：${url}`);
