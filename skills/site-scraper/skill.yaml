@@ -30,12 +30,12 @@ commands:
         description: 目标网站 URL
       - name: max-depth
         type: number
-        default: 2
-        description: 最大递归深度
+        default: 1
+        description: 最大递归深度（建议 1-2，仅获取示例子页面）
       - name: max-pages
         type: number
-        default: 15
-        description: 最大爬取页面数
+        default: 5
+        description: 最大爬取页面数（建议 5-10，仅获取示例）
       - name: output
         type: string
         default: ~/site-scraper-output
