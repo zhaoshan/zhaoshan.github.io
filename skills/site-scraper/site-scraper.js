@@ -199,7 +199,7 @@ function htmlToMarkdown(html, baseUrl, imagesDir) {
   return { markdown, title };
 }
 
-// 提取链接（全局去重）
+// 提取链接（全局去重，仅保留 HTTP/HTTPS 链接）
 function extractLinks(html, baseUrl) {
   const $ = cheerio.load(html);
   const links = {
@@ -223,6 +223,11 @@ function extractLinks(html, baseUrl) {
       absoluteHref = 'https:' + href;
     } else if (!href.startsWith('http')) {
       absoluteHref = new URL(href, baseUrl).href;
+    }
+    
+    // 过滤非 HTTP/HTTPS 链接（如 tel:、mailto: 等）
+    if (!absoluteHref.startsWith('http://') && !absoluteHref.startsWith('https://')) {
+      return;
     }
     
     // 检查是否已存在于全局字典
