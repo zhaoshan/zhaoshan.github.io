@@ -90,7 +90,7 @@ function sanitizeFilename(name, maxLength = 50) {
 }
 
 // 下载文件
-async function downloadFile(url, outputPath, textHint = '', numericSuffix = null) {
+async function downloadFile(url, outputPath, textHint = '', fileSuffix = null) {
   try {
     const response = await axios.get(url, {
       responseType: 'arraybuffer',
@@ -102,8 +102,8 @@ async function downloadFile(url, outputPath, textHint = '', numericSuffix = null
       const ext = path.extname(outputPath);
       const dir = path.dirname(outputPath);
       const safeText = sanitizeFilename(textHint, 50);
-      // 优先使用原始文件名中的数字后缀，否则使用时间戳
-      const suffix = numericSuffix || (Date.now() % 10000);
+      // 使用文件后缀（数字或原始文件名），如果没有则使用时间戳
+      const suffix = fileSuffix || (Date.now() % 10000);
       const newName = `${safeText}-${suffix}${ext}`;
       outputPath = path.join(dir, newName);
     }
@@ -255,15 +255,16 @@ async function downloadDocuments(documents, attachmentsDir) {
       const urlPath = new URL(doc.href).pathname;
       const originalFilename = path.basename(urlPath) || `document-${Date.now()}`;
       
-      // 提取原始文件名中的数字部分（如 260318.pdf -> 260318）
+      // 提取原始文件名（不含扩展名），用于后缀（如 260318.pdf -> 260318, social_media.pdf -> social_media）
       const nameWithoutExt = path.basename(originalFilename, path.extname(originalFilename));
-      const numericSuffix = nameWithoutExt.match(/^\d+$/) ? nameWithoutExt : null;
+      // 如果是纯数字则使用数字，否则使用原始文件名（ sanitized）
+      const fileSuffix = nameWithoutExt.match(/^\d+$/) ? nameWithoutExt : sanitizeFilename(nameWithoutExt, 30);
       
       // 使用文本描述 + 原始文件名
       const textHint = doc.text && doc.text !== '(无文本)' ? sanitizeFilename(doc.text, 40) : null;
       const outputPath = path.join(attachmentsDir, originalFilename);
       
-      await downloadFile(doc.href, outputPath, textHint, numericSuffix);
+      await downloadFile(doc.href, outputPath, textHint, fileSuffix);
       state.manifest.totalDocuments++;
     } catch (error) {
       console.log(`  ⚠️ 文档下载失败：${doc.href}`);
