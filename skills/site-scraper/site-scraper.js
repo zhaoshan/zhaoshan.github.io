@@ -515,6 +515,11 @@ function saveGlobalLinks() {
     JSON.stringify(globalLinksObject, null, 2)
   );
 }
+
+// 保存 manifest 和全局链接字典（最终完成时调用）
+function saveFinalResults() {
+  saveManifest();
+  saveGlobalLinks();
   
   console.log('\n' + '='.repeat(60));
   console.log('📊 爬取完成');
@@ -548,9 +553,8 @@ async function main() {
   // 开始爬取
   await scrapePage(url, state.outputDir, 0);
   
-  // 保存 manifest 和全局链接字典
-  saveManifest();
-  saveGlobalLinks();
+  // 保存最终结果
+  saveFinalResults();
   
   console.log('\n✅ 所有任务完成！\n');
 }
