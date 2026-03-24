@@ -48,6 +48,8 @@ const state = {
   pagesCrawled: 0,
   timestamp: new Date().toISOString().replace(/[:.]/g, '-').slice(0, -5),
   outputDir: '',
+  // 全局链接字典：key=链接地址，value={type, text, downloaded}
+  globalLinksMap: new Map(),
   manifest: {
     startTime: new Date().toISOString(),
     url: program.args[0],
@@ -191,7 +193,7 @@ function htmlToMarkdown(html, baseUrl, imagesDir) {
   return { markdown, title };
 }
 
-// 提取链接
+// 提取链接（全局去重）
 function extractLinks(html, baseUrl) {
   const $ = cheerio.load(html);
   const links = {
@@ -217,6 +219,11 @@ function extractLinks(html, baseUrl) {
       absoluteHref = new URL(href, baseUrl).href;
     }
     
+    // 检查是否已存在于全局字典
+    if (state.globalLinksMap.has(absoluteHref)) {
+      return; // 跳过重复链接
+    }
+    
     const linkData = {
       text: text || '(无文本)',
       href: absoluteHref,
@@ -240,32 +247,48 @@ function extractLinks(html, baseUrl) {
       }
     }
     
+    // 添加到全局字典
+    state.globalLinksMap.set(absoluteHref, linkData);
     links.all.push(linkData);
   });
   
   return links;
 }
 
-// 下载文档
+// 下载文档（全局去重）
 async function downloadDocuments(documents, attachmentsDir) {
   ensureDir(attachmentsDir);
   
   for (const doc of documents) {
     try {
+      // 检查是否已下载
+      const existingDoc = state.globalLinksMap.get(doc.href);
+      if (existingDoc && existingDoc.downloaded) {
+        continue; // 跳过已下载的文档
+      }
+      
       const urlPath = new URL(doc.href).pathname;
       const originalFilename = path.basename(urlPath) || `document-${Date.now()}`;
       
       // 提取原始文件名（不含扩展名），用于后缀（如 260318.pdf -> 260318, social_media.pdf -> social_media）
       const nameWithoutExt = path.basename(originalFilename, path.extname(originalFilename));
-      // 如果是纯数字则使用数字，否则使用原始文件名（ sanitized）
+      // 如果是纯数字则使用数字，否则使用原始文件名（sanitized）
       const fileSuffix = nameWithoutExt.match(/^\d+$/) ? nameWithoutExt : sanitizeFilename(nameWithoutExt, 30);
       
       // 使用文本描述 + 原始文件名
       const textHint = doc.text && doc.text !== '(无文本)' ? sanitizeFilename(doc.text, 40) : null;
       const outputPath = path.join(attachmentsDir, originalFilename);
       
-      await downloadFile(doc.href, outputPath, textHint, fileSuffix);
-      state.manifest.totalDocuments++;
+      const success = await downloadFile(doc.href, outputPath, textHint, fileSuffix);
+      if (success) {
+        state.manifest.totalDocuments++;
+        // 标记为已下载
+        if (existingDoc) {
+          existingDoc.downloaded = true;
+        } else {
+          state.globalLinksMap.set(doc.href, { ...doc, downloaded: true });
+        }
+      }
     } catch (error) {
       console.log(`  ⚠️ 文档下载失败：${doc.href}`);
     }
