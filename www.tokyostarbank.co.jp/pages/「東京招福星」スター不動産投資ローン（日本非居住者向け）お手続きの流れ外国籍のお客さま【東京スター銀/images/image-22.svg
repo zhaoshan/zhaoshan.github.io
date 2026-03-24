@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="95.942" height="92.333" viewBox="0 0 95.942 92.333">
+  <g id="icon-certificate" transform="translate(1.505 1.5)">
+    <path id="パス_11" data-name="パス 11" d="M0,8.284,63.068,0V81.241H0Z" transform="translate(12.828 1.323)" fill="#ffaf00"/>
+    <line id="線_9" data-name="線 9" y1="26.706" transform="translate(12.362 49.107)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <path id="パス_6" data-name="パス 6" d="M3.823,18.217V36.79a1.343,1.343,0,0,0,2.194,1.04L12.2,32.777l6.181,5.053a1.342,1.342,0,0,0,2.193-1.04V18.217" transform="translate(1.788 15.007)" fill="#ffaf00" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="パス_4" data-name="パス 4" d="M28.872,19.831c0,1.4-2.242,2.423-2.653,3.683-.424,1.306.773,3.453-.017,4.541s-3.215.618-4.314,1.418-1.373,3.24-2.68,3.664c-1.26.411-2.925-1.391-4.324-1.391s-3.062,1.8-4.322,1.391c-1.308-.424-1.594-2.874-2.68-3.664s-3.514-.32-4.314-1.42.407-3.232-.019-4.539C3.14,22.254.9,21.228.9,19.831s2.242-2.423,2.651-3.683c.426-1.306-.771-3.453.019-4.541s3.215-.618,4.314-1.418,1.373-3.24,2.68-3.664c1.26-.411,2.925,1.391,4.322,1.391s3.063-1.8,4.324-1.391c1.306.424,1.592,2.874,2.68,3.664s3.514.32,4.314,1.42-.407,3.232.017,4.539C26.629,17.408,28.872,18.435,28.872,19.831Z" transform="translate(-0.898 4.216)" fill="#ffaf00" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="パス_5" data-name="パス 5" d="M17.421,16.421a6.243,6.243,0,1,1-6.242-6.242A6.242,6.242,0,0,1,17.421,16.421Z" transform="translate(2.809 7.626)" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <line id="線_8" data-name="線 8" y1="11.815" transform="translate(13.986 35.969)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="パス_8" data-name="パス 8" d="M47.206.9h0A10.5,10.5,0,0,1,57.7,11.4v3.017H40.245V7.86A6.962,6.962,0,0,1,47.206.9Z" transform="translate(35.232 -0.895)" fill="#ffaf00" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <path id="パス_9" data-name="パス 9" d="M7.37,12.52A12.762,12.762,0,0,1,20.092.9H77.808l-.015.017" transform="translate(5.045 -0.897)" fill="#ffaf00" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <path id="パス_10" data-name="パス 10" d="M7.347,86.384H60.329a9.87,9.87,0,0,0,4.558-1.1,10.076,10.076,0,0,0,5.561-9.02V5.084" transform="translate(5.024 2.948)" fill="#ffaf00" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <path id="パス_7" data-name="パス 7" d="M70.805,52.846s-9.862,1.149-9.862-12.425H.908s-.7,13.516,12.355,13.516" transform="translate(-0.895 35.396)" fill="#ffaf00" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <line id="線_10" data-name="線 10" x2="24.038" transform="translate(34.453 9.4)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <line id="線_11" data-name="線 11" x2="32.104" transform="translate(35.03 20.585)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <line id="線_12" data-name="線 12" x2="32.104" transform="translate(35.03 31.771)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <line id="線_13" data-name="線 13" x2="36.031" transform="translate(31.103 42.956)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <line id="線_14" data-name="線 14" x2="36.031" transform="translate(31.103 54.141)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <line id="線_15" data-name="線 15" x2="41.323" transform="translate(25.81 65.327)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <line id="線_16" data-name="線 16" x2="54.029" transform="translate(12.362 89.333)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  </g>
+</svg>

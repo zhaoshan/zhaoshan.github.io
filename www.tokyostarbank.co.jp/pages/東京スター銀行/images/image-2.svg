@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20.084" height="26.542" viewBox="0 0 20.084 26.542">
+  <g id="icon_step2" transform="translate(-5.458 -2.229)">
+    <path id="パス_4" data-name="パス 4" d="M28.084,15.333V26.959A2.583,2.583,0,0,1,25.5,29.542H12.583A2.583,2.583,0,0,1,10,26.959V7.583A2.583,2.583,0,0,1,12.583,5h9.042" transform="translate(-3.542 -1.771)" fill="none" stroke="#0b3190" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="パス_5" data-name="パス 5" d="M34.458,11.458h-4.7A1.763,1.763,0,0,1,28,9.7V5" transform="translate(-9.916 -1.771)" fill="none" stroke="#0b3190" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="パス_6" data-name="パス 6" d="M28,5a6.458,6.458,0,0,1,6.458,6.458" transform="translate(-9.916 -1.771)" fill="none" stroke="#0b3190" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <line id="線_13" data-name="線 13" x2="7" transform="translate(12 13)" fill="none" stroke="#ec6b15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <line id="線_14" data-name="線 14" x2="7" transform="translate(12 17)" fill="none" stroke="#ec6b15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <line id="線_21" data-name="線 21" x2="7" transform="translate(12 21)" fill="none" stroke="#ec6b15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>
