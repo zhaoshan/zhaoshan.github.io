@@ -331,6 +331,13 @@ async function scrapePage(url, outputDir, depth = 0) {
   state.visitedUrls.add(url);
   state.pagesCrawled++;
   
+  // 每爬取 50 个页面保存一次中间结果，防止内存累积
+  if (state.pagesCrawled % 50 === 0) {
+    console.log(`\n💾 保存中间结果（已爬取 ${state.pagesCrawled} 页）...`);
+    saveManifest();
+    saveGlobalLinks();
+  }
+  
   console.log(`\n📄 [深度 ${depth}] 爬取：${url}`);
   
   const browser = await puppeteer.launch({
@@ -488,8 +495,10 @@ function saveManifest() {
     path.join(state.outputDir, 'manifest.json'),
     JSON.stringify(state.manifest, null, 2)
   );
-  
-  // 保存全局链接字典（去重后的所有链接）
+}
+
+// 保存全局链接字典
+function saveGlobalLinks() {
   const globalLinksObject = {};
   state.globalLinksMap.forEach((value, key) => {
     globalLinksObject[key] = value;
@@ -499,6 +508,7 @@ function saveManifest() {
     path.join(state.outputDir, 'global_links.json'),
     JSON.stringify(globalLinksObject, null, 2)
   );
+}
   
   console.log('\n' + '='.repeat(60));
   console.log('📊 爬取完成');
@@ -532,8 +542,9 @@ async function main() {
   // 开始爬取
   await scrapePage(url, state.outputDir, 0);
   
-  // 保存 manifest
+  // 保存 manifest 和全局链接字典
   saveManifest();
+  saveGlobalLinks();
   
   console.log('\n✅ 所有任务完成！\n');
 }
