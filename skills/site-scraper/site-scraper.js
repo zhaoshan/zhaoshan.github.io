@@ -336,7 +336,15 @@ async function scrapePage(url, outputDir, depth = 0) {
   const browser = await puppeteer.launch({
     headless: 'new',
     protocolTimeout: config.timeout,
-    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage']
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-dev-shm-usage',
+      '--disable-gpu',
+      '--no-zygote',
+      '--single-process',
+      '--js-flags=--max-old-space-size=512'
+    ]
   });
   
   try {
