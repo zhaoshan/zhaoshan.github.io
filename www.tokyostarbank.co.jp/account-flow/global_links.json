@@ -1,0 +1,840 @@
+{
+  "https://www.tokyostarbank.co.jp/": {
+    "text": "個人のお客さま",
+    "href": "https://www.tokyostarbank.co.jp/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/hojin/": {
+    "text": "法人のお客さま",
+    "href": "https://www.tokyostarbank.co.jp/hojin/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/foreign/": {
+    "text": "外国籍のお客さま",
+    "href": "https://www.tokyostarbank.co.jp/foreign/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/foreign/en/": {
+    "text": "English",
+    "href": "https://www.tokyostarbank.co.jp/foreign/en/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/foreign/cn/": {
+    "text": "中文",
+    "href": "https://www.tokyostarbank.co.jp/foreign/cn/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/profile/": {
+    "text": "会社情報",
+    "href": "https://www.tokyostarbank.co.jp/profile/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/fiduciary_duty/": {
+    "text": "当行のフィデューシャリー・デューティー",
+    "href": "https://www.tokyostarbank.co.jp/fiduciary_duty/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/press_ir/": {
+    "text": "ニュースリリース・IR",
+    "href": "https://www.tokyostarbank.co.jp/press_ir/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/profile/en/": {
+    "text": "IR（English）",
+    "href": "https://www.tokyostarbank.co.jp/profile/en/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/recruit/": {
+    "text": "採用情報",
+    "href": "https://www.tokyostarbank.co.jp/recruit/",
+    "type": "webpage"
+  },
+  "https://support.tokyostarbank.co.jp/": {
+    "text": "よくある質問",
+    "href": "https://support.tokyostarbank.co.jp/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/contact/": {
+    "text": "お問い合わせ",
+    "href": "https://www.tokyostarbank.co.jp/contact/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/fee/": {
+    "text": "手数料",
+    "href": "https://www.tokyostarbank.co.jp/fee/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/rate/": {
+    "text": "金利",
+    "href": "https://www.tokyostarbank.co.jp/rate/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/account/flow/#tab-menu-01": {
+    "text": "個人のお客さま",
+    "href": "https://www.tokyostarbank.co.jp/account/flow/#tab-menu-01",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/tokyostardirect/login.html": {
+    "text": "東京スターダイレクト ログイン",
+    "href": "https://www.tokyostarbank.co.jp/tokyostardirect/login.html",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/account/feature/kyufuri.html?bannerId=spmenu": {
+    "text": "(无文本)",
+    "href": "https://www.tokyostarbank.co.jp/account/feature/kyufuri.html?bannerId=spmenu",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/account/": {
+    "text": "口座開設・各種情報",
+    "href": "https://www.tokyostarbank.co.jp/account/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/procedure/#anc-01": {
+    "text": "銀行への届出内容の変更",
+    "href": "https://www.tokyostarbank.co.jp/procedure/#anc-01",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/procedure/account_transfer.html": {
+    "text": "口座振替",
+    "href": "https://www.tokyostarbank.co.jp/procedure/account_transfer.html",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/trust_contract/inheritance/": {
+    "text": "相続のお手続き",
+    "href": "https://www.tokyostarbank.co.jp/products/trust_contract/inheritance/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/procedure/cashless.html": {
+    "text": "電子決済サービス",
+    "href": "https://www.tokyostarbank.co.jp/procedure/cashless.html",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/account/feature/": {
+    "text": "東京スター銀行ってどんな銀行？",
+    "href": "https://www.tokyostarbank.co.jp/account/feature/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/account/feature/merit.html": {
+    "text": "スターワン口座について",
+    "href": "https://www.tokyostarbank.co.jp/account/feature/merit.html",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/lounge_atm/atm/atmfee/free.html": {
+    "text": "ATM利用手数料が月8回まで実質無料",
+    "href": "https://www.tokyostarbank.co.jp/lounge_atm/atm/atmfee/free.html",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/account/feature/fee_free.html": {
+    "text": "他行宛振込手数料が月5回まで実質無料",
+    "href": "https://www.tokyostarbank.co.jp/account/feature/fee_free.html",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/account/feature/kyufuri.html": {
+    "text": "円普通預金の金利が給与振込で優遇金利に",
+    "href": "https://www.tokyostarbank.co.jp/account/feature/kyufuri.html",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/account/feature/nenkin.html": {
+    "text": "円普通預金の金利が年金受取で優遇金利に",
+    "href": "https://www.tokyostarbank.co.jp/account/feature/nenkin.html",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/": {
+    "text": "商品・サービス",
+    "href": "https://www.tokyostarbank.co.jp/products/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/deposit/": {
+    "text": "円預金",
+    "href": "https://www.tokyostarbank.co.jp/products/deposit/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/deposit/savings/": {
+    "text": "普通預金",
+    "href": "https://www.tokyostarbank.co.jp/products/deposit/savings/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/deposit/term/": {
+    "text": "定期預金",
+    "href": "https://www.tokyostarbank.co.jp/products/deposit/term/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/deposit/structure/": {
+    "text": "仕組み預金",
+    "href": "https://www.tokyostarbank.co.jp/products/deposit/structure/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/foreign_deposit/": {
+    "text": "外貨預金",
+    "href": "https://www.tokyostarbank.co.jp/products/foreign_deposit/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/foreign_deposit/savings/": {
+    "text": "外貨普通預金",
+    "href": "https://www.tokyostarbank.co.jp/products/foreign_deposit/savings/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/foreign_deposit/term/": {
+    "text": "外貨定期預金",
+    "href": "https://www.tokyostarbank.co.jp/products/foreign_deposit/term/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/foreign_deposit/structure/": {
+    "text": "外貨仕組み預金",
+    "href": "https://www.tokyostarbank.co.jp/products/foreign_deposit/structure/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/investment/": {
+    "text": "投資信託",
+    "href": "https://www.tokyostarbank.co.jp/products/investment/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/investment/fund/": {
+    "text": "投資信託ファンド一覧",
+    "href": "https://www.tokyostarbank.co.jp/products/investment/fund/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/investment/nisa/nisa_2024.html": {
+    "text": "2024年以降のNISA",
+    "href": "https://www.tokyostarbank.co.jp/products/investment/nisa/nisa_2024.html",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/investment/mf_tsumitate/": {
+    "text": "積立買付サービス",
+    "href": "https://www.tokyostarbank.co.jp/products/investment/mf_tsumitate/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/investment/emaxis_slim/": {
+    "text": "eMAXIS Slim（イーマクシス　スリム）",
+    "href": "https://www.tokyostarbank.co.jp/products/investment/emaxis_slim/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/investment/merit/": {
+    "text": "インターネット投資信託サービスの魅力",
+    "href": "https://www.tokyostarbank.co.jp/products/investment/merit/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/wealthnavi/": {
+    "text": "WealthNavi for 東京スター銀行（ロボアドバイザー）",
+    "href": "https://www.tokyostarbank.co.jp/products/wealthnavi/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/alterna/": {
+    "text": "ALTERNA（オルタナ）",
+    "href": "https://www.tokyostarbank.co.jp/products/alterna/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/ideco/": {
+    "text": "iDeCo（個人型確定拠出年金）",
+    "href": "https://www.tokyostarbank.co.jp/products/ideco/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/loan/": {
+    "text": "ローン商品",
+    "href": "https://www.tokyostarbank.co.jp/products/loan/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/loan/mortgage_collateral/": {
+    "text": "スター不動産担保ローン",
+    "href": "https://www.tokyostarbank.co.jp/products/loan/mortgage_collateral/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/loan/mortgage_collateral/omatome.html": {
+    "text": "おまとめローン",
+    "href": "https://www.tokyostarbank.co.jp/products/loan/mortgage_collateral/omatome.html",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/loan/mortgage_collateral/overseas.html": {
+    "text": "海外不動産ローン",
+    "href": "https://www.tokyostarbank.co.jp/products/loan/mortgage_collateral/overseas.html",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/loan/mortgage_collateral/vehicle.html": {
+    "text": "車・船・航空機ローン",
+    "href": "https://www.tokyostarbank.co.jp/products/loan/mortgage_collateral/vehicle.html",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/loan/mortgage_collateral/education.html": {
+    "text": "教育ローン",
+    "href": "https://www.tokyostarbank.co.jp/products/loan/mortgage_collateral/education.html",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/loan/mortgage_collateral/divorce.html": {
+    "text": "離婚関連ローン",
+    "href": "https://www.tokyostarbank.co.jp/products/loan/mortgage_collateral/divorce.html",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/loan/mortgage_collateral/inheritance.html": {
+    "text": "相続関連ローン",
+    "href": "https://www.tokyostarbank.co.jp/products/loan/mortgage_collateral/inheritance.html",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/loan/mortgage_collateral/second_house.html": {
+    "text": "セカンドハウス・別荘ローン",
+    "href": "https://www.tokyostarbank.co.jp/products/loan/mortgage_collateral/second_house.html",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/loan/homeloan/homeloan_starone/": {
+    "text": "預金連動型スターワン住宅ローン",
+    "href": "https://www.tokyostarbank.co.jp/products/loan/homeloan/homeloan_starone/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/loan/homeloan/homeloan_select/": {
+    "text": "スターセレクト住宅ローン",
+    "href": "https://www.tokyostarbank.co.jp/products/loan/homeloan/homeloan_select/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/loan/homeloan/homeloan_star/": {
+    "text": "スター住宅ローン",
+    "href": "https://www.tokyostarbank.co.jp/products/loan/homeloan/homeloan_star/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/loan/reverse_mortgage/": {
+    "text": "リバースモーゲージ 「充実人生」",
+    "href": "https://www.tokyostarbank.co.jp/products/loan/reverse_mortgage/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/foreign/products/loan/property/": {
+    "text": "スター不動産投資ローン（日本非居住者向け）「東京招福星」",
+    "href": "https://www.tokyostarbank.co.jp/foreign/products/loan/property/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/loan/unsecured_refinance/": {
+    "text": "おまとめローン（スターワン乗り換えローン）",
+    "href": "https://www.tokyostarbank.co.jp/products/loan/unsecured_refinance/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/loan/cardloan/": {
+    "text": "カードローン（スターカードローンα）",
+    "href": "https://www.tokyostarbank.co.jp/products/loan/cardloan/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/loan/free/": {
+    "text": "フリーローン（スターフリーローン）",
+    "href": "https://www.tokyostarbank.co.jp/products/loan/free/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/loan/unsecured/mycar/": {
+    "text": "マイカーローン（スターマイカーローン）",
+    "href": "https://www.tokyostarbank.co.jp/products/loan/unsecured/mycar/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/loan/unsecured/education/": {
+    "text": "教育ローン（スター教育ローン）",
+    "href": "https://www.tokyostarbank.co.jp/products/loan/unsecured/education/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/loan/unsecured/reform/": {
+    "text": "リフォームローン（スターリフォームローン）",
+    "href": "https://www.tokyostarbank.co.jp/products/loan/unsecured/reform/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/loan/fertility/": {
+    "text": "スターワンバンクローン（不妊治療サポートタイプ）",
+    "href": "https://www.tokyostarbank.co.jp/products/loan/fertility/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/loan/doctors/": {
+    "text": "スターワンドクターズローン",
+    "href": "https://www.tokyostarbank.co.jp/products/loan/doctors/",
+    "type": "webpage"
+  },
+  "https://portal.tokyostarbank.co.jp/portal/log0101": {
+    "text": "マイページ",
+    "href": "https://portal.tokyostarbank.co.jp/portal/log0101",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/tokyostardirect/": {
+    "text": "東京スターダイレクト",
+    "href": "https://www.tokyostarbank.co.jp/tokyostardirect/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/tokyostardirect/investment/": {
+    "text": "インターネット投資信託サービス",
+    "href": "https://www.tokyostarbank.co.jp/tokyostardirect/investment/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/lp/app/": {
+    "text": "東京スター銀行　スターダイレクトアプリ",
+    "href": "https://www.tokyostarbank.co.jp/lp/app/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/tokyostardirect/otp_appli/": {
+    "text": "ワンタイムパスワードアプリ",
+    "href": "https://www.tokyostarbank.co.jp/tokyostardirect/otp_appli/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/tokyostardirect/tel_bank/": {
+    "text": "テレホンバンク",
+    "href": "https://www.tokyostarbank.co.jp/tokyostardirect/tel_bank/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/f_remittance/": {
+    "text": "外国送金Web受付サービス",
+    "href": "https://www.tokyostarbank.co.jp/f_remittance/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/seven_atm/": {
+    "text": "セブン銀行ATM窓口サービス",
+    "href": "https://www.tokyostarbank.co.jp/seven_atm/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/prepare/": {
+    "text": "保険商品",
+    "href": "https://www.tokyostarbank.co.jp/products/prepare/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/trust_contract/": {
+    "text": "相続・遺言・信託に関するご相談",
+    "href": "https://www.tokyostarbank.co.jp/products/trust_contract/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/feature/": {
+    "text": "資産形成サポート",
+    "href": "https://www.tokyostarbank.co.jp/feature/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/account/feature/3step.html": {
+    "text": "お金に困らない将来を手に入れるための3つのSTEP",
+    "href": "https://www.tokyostarbank.co.jp/account/feature/3step.html",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/feature/deposit/": {
+    "text": "預金で資産形成",
+    "href": "https://www.tokyostarbank.co.jp/feature/deposit/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/feature/loan_matching/": {
+    "text": "あなたにぴったりのローンは？　おすすめローンマッチング",
+    "href": "https://www.tokyostarbank.co.jp/feature/loan_matching/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/omatome/about_ltg08.html": {
+    "text": "複数のローンは「おまとめローン」で",
+    "href": "https://www.tokyostarbank.co.jp/omatome/about_ltg08.html",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/feature/net_transaction/": {
+    "text": "スマホで東京スター銀行",
+    "href": "https://www.tokyostarbank.co.jp/feature/net_transaction/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/feature/education/": {
+    "text": "お金の見通しラボ",
+    "href": "https://www.tokyostarbank.co.jp/feature/education/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/feature/glossary/": {
+    "text": "用語集",
+    "href": "https://www.tokyostarbank.co.jp/feature/glossary/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/feature/advisor/": {
+    "text": "お金の未来診断",
+    "href": "https://www.tokyostarbank.co.jp/feature/advisor/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/campaign/": {
+    "text": "キャンペーン",
+    "href": "https://www.tokyostarbank.co.jp/campaign/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/seminar/": {
+    "text": "予約サービス",
+    "href": "https://www.tokyostarbank.co.jp/seminar/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/seminar/consultation/": {
+    "text": "来店予約・電話サービス",
+    "href": "https://www.tokyostarbank.co.jp/seminar/consultation/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/seminar/online_service/": {
+    "text": "オンライン相談",
+    "href": "https://www.tokyostarbank.co.jp/seminar/online_service/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/lounge_atm/": {
+    "text": "店舗・ATM",
+    "href": "https://www.tokyostarbank.co.jp/lounge_atm/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/lounge_atm/atm/": {
+    "text": "ATM",
+    "href": "https://www.tokyostarbank.co.jp/lounge_atm/atm/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/lounge_atm/atm/atmfee/": {
+    "text": "ATM手数料のご案内",
+    "href": "https://www.tokyostarbank.co.jp/lounge_atm/atm/atmfee/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/lounge_atm/atm/guide/": {
+    "text": "カードご利用案内",
+    "href": "https://www.tokyostarbank.co.jp/lounge_atm/atm/guide/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/lounge_atm/atm/tieup/": {
+    "text": "提携ATMご利用案内",
+    "href": "https://www.tokyostarbank.co.jp/lounge_atm/atm/tieup/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/movie/": {
+    "text": "動画ライブラリ",
+    "href": "https://www.tokyostarbank.co.jp/movie/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/markets/": {
+    "text": "マーケット情報",
+    "href": "https://www.tokyostarbank.co.jp/markets/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/topics/": {
+    "text": "トピックス",
+    "href": "https://www.tokyostarbank.co.jp/topics/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/hojin/starbb/login.html": {
+    "text": "スターBB! ログイン",
+    "href": "https://www.tokyostarbank.co.jp/hojin/starbb/login.html",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/hojin/domestic/": {
+    "text": "法人のお客さま向けサービス一覧",
+    "href": "https://www.tokyostarbank.co.jp/hojin/domestic/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/hojin/domestic/financing/": {
+    "text": "資金を調達したい（中小企業・個人事業主のお客さま向けローン商品）",
+    "href": "https://www.tokyostarbank.co.jp/hojin/domestic/financing/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/hojin/solution/strategy/": {
+    "text": "業種・事業戦略に特化した専門的なソリューションを探したい",
+    "href": "https://www.tokyostarbank.co.jp/hojin/solution/strategy/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/hojin/overseas/": {
+    "text": "お客さまの海外事業を強化するサービス",
+    "href": "https://www.tokyostarbank.co.jp/hojin/overseas/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/hojin/financing/": {
+    "text": "中小企業向け融資・ビジネスローン",
+    "href": "https://www.tokyostarbank.co.jp/hojin/financing/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/hojin/solution/": {
+    "text": "業種・事業戦略に特化した専門サービス",
+    "href": "https://www.tokyostarbank.co.jp/hojin/solution/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/hojin/solution/industry/": {
+    "text": "お客さまの業種別ソリューション",
+    "href": "https://www.tokyostarbank.co.jp/hojin/solution/industry/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/hojin/solution/strategy/business-succession.html": {
+    "text": "お客さまの事業承継",
+    "href": "https://www.tokyostarbank.co.jp/hojin/solution/strategy/business-succession.html",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/hojin/access-corporate/": {
+    "text": "法人金融部門拠点・法人のお客さまへのお知らせ",
+    "href": "https://www.tokyostarbank.co.jp/hojin/access-corporate/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/hojin/starbb/starbb.html": {
+    "text": "法人のお客さま向けインターネットバンキング スターBB!",
+    "href": "https://www.tokyostarbank.co.jp/hojin/starbb/starbb.html",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/hojin/starbb/service.html#SERVICE03": {
+    "text": "手数料（スターBB!）",
+    "href": "https://www.tokyostarbank.co.jp/hojin/starbb/service.html#SERVICE03",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/hojin/starbb/f_remittance/": {
+    "text": "スターBB！外国送金",
+    "href": "https://www.tokyostarbank.co.jp/hojin/starbb/f_remittance/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/hojin/overseas/foreignexchange/": {
+    "text": "手数料（スターBB!外国送金）",
+    "href": "https://www.tokyostarbank.co.jp/hojin/overseas/foreignexchange/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/hojin/trial/": {
+    "text": "体験版",
+    "href": "https://www.tokyostarbank.co.jp/hojin/trial/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/hojin/rate/": {
+    "text": "金利",
+    "href": "https://www.tokyostarbank.co.jp/hojin/rate/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/foreign/faq/": {
+    "text": "FAQ",
+    "href": "https://www.tokyostarbank.co.jp/foreign/faq/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/foreign/account/flow/": {
+    "text": "口座開設・各種情報",
+    "href": "https://www.tokyostarbank.co.jp/foreign/account/flow/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/foreign/account/fee/": {
+    "text": "手数料一覧",
+    "href": "https://www.tokyostarbank.co.jp/foreign/account/fee/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/foreign/account/number/": {
+    "text": "キャッシュカード（兼電話取引用）暗証番号の変更",
+    "href": "https://www.tokyostarbank.co.jp/foreign/account/number/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/foreign/account/funsitu/": {
+    "text": "カード・通帳・お届け印の紛失、盗難にあわれた場合",
+    "href": "https://www.tokyostarbank.co.jp/foreign/account/funsitu/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/foreign/products/?tab=tab-02": {
+    "text": "商品",
+    "href": "https://www.tokyostarbank.co.jp/foreign/products/?tab=tab-02",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/foreign/tokyostardirect/": {
+    "text": "東京スターダイレクト（インターネットバンキング）",
+    "href": "https://www.tokyostarbank.co.jp/foreign/tokyostardirect/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/foreign/f_remittance/": {
+    "text": "外国送金Web受付サービス",
+    "href": "https://www.tokyostarbank.co.jp/foreign/f_remittance/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/foreign/hojin/products/": {
+    "text": "法人向けサービス",
+    "href": "https://www.tokyostarbank.co.jp/foreign/hojin/products/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/foreign/profile/summary/": {
+    "text": "会社概要",
+    "href": "https://www.tokyostarbank.co.jp/foreign/profile/summary/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/foreign/profile/shareholder/": {
+    "text": "株主（台湾CTBC Bank）について",
+    "href": "https://www.tokyostarbank.co.jp/foreign/profile/shareholder/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/topics/pdf/260318.pdf": {
+    "text": "2026年3月18日【復旧報】東京スターダイレクト等にアクセスしづらい状況に関する復旧のお知らせ[PDF:74KB]",
+    "href": "https://www.tokyostarbank.co.jp/topics/pdf/260318.pdf",
+    "type": "document",
+    "downloaded": true
+  },
+  "https://apps.apple.com/jp/app/e-ninsho%E6%9C%AC%E4%BA%BA%E7%A2%BA%E8%AA%8D%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/id6457952109": {
+    "text": "(无文本)",
+    "href": "https://apps.apple.com/jp/app/e-ninsho%E6%9C%AC%E4%BA%BA%E7%A2%BA%E8%AA%8D%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/id6457952109",
+    "type": "webpage"
+  },
+  "https://play.google.com/store/apps/details?id=jp.co.nri.sdx.android.apps.general&hl=ja": {
+    "text": "(无文本)",
+    "href": "https://play.google.com/store/apps/details?id=jp.co.nri.sdx.android.apps.general&hl=ja",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/tokyostardirect/time_environment/": {
+    "text": "動作確認済み環境はこちら",
+    "href": "https://www.tokyostarbank.co.jp/tokyostardirect/time_environment/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/campaign/kyufuri_program/": {
+    "text": "キャッシュプレゼントにはご注意事項がございますので、詳しくはこちらをご覧ください。",
+    "href": "https://www.tokyostarbank.co.jp/campaign/kyufuri_program/",
+    "type": "webpage"
+  },
+  "https://apps.apple.com/jp/app/%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%BF%E3%83%BC%E9%8A%80%E8%A1%8C-%E3%83%AF%E3%83%B3%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%91%E3%82%B9%E3%83%AF%E3%83%BC%E3%83%89%E3%82%A2%E3%83%97%E3%83%AA/id1416423911": {
+    "text": "(无文本)",
+    "href": "https://apps.apple.com/jp/app/%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%BF%E3%83%BC%E9%8A%80%E8%A1%8C-%E3%83%AF%E3%83%B3%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%91%E3%82%B9%E3%83%AF%E3%83%BC%E3%83%89%E3%82%A2%E3%83%97%E3%83%AA/id1416423911",
+    "type": "webpage"
+  },
+  "https://play.google.com/store/apps/details?id=jp.co.tokyostarbank.tsbotp": {
+    "text": "(无文本)",
+    "href": "https://play.google.com/store/apps/details?id=jp.co.tokyostarbank.tsbotp",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/campaign/open_cashpresent/": {
+    "text": "口座開設 \n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\tWEB新規口座開設のお客さま限定！春のデビューキャンペーン実施中！",
+    "href": "https://www.tokyostarbank.co.jp/campaign/open_cashpresent/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/campaign/25th_program/": {
+    "text": "各種サービス \n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t日頃ご愛顧いただいているお客さまへ感謝を込めて、毎月抽選で当たるプレゼント企画を実施中！",
+    "href": "https://www.tokyostarbank.co.jp/campaign/25th_program/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/campaign/rate_program/": {
+    "text": "金利優遇サービス \n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t条件に応じてスターワン円普通預金金利を優遇！",
+    "href": "https://www.tokyostarbank.co.jp/campaign/rate_program/",
+    "type": "webpage"
+  },
+  "https://www.jpki.go.jp/jpkiidreset/howto/index.html": {
+    "text": "「マイナンバーカードのパスワードをコンビニで初期化」",
+    "href": "https://www.jpki.go.jp/jpkiidreset/howto/index.html",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/account/flow/two_id.html": {
+    "text": "WEB口座開設（本人確認書類2点）お申し込みまでの流れ",
+    "href": "https://www.tokyostarbank.co.jp/account/flow/two_id.html",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/account/flow/offline.html": {
+    "text": "郵送・店頭での口座開設",
+    "href": "https://www.tokyostarbank.co.jp/account/flow/offline.html",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/feature/education/useful/20230605.html": {
+    "text": "便利・おトク\n\t\t\t\t\t\t\t\t\t2023年6月5日\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\tインターネットバンキングとは？できることや利用時の注意点を知っておこう\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t インターネットバンキング 銀行サービス",
+    "href": "https://www.tokyostarbank.co.jp/feature/education/useful/20230605.html",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/feature/education/useful/20210125_2.html": {
+    "text": "便利・おトク\n\t\t\t\t\t\t\t\t\t2023年12月18日\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t東京スター銀行で資産運用を始めよう！おトクなプログラムやおすすめ情報等をご紹介\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t 資産運用 銀行サービス",
+    "href": "https://www.tokyostarbank.co.jp/feature/education/useful/20210125_2.html",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/feature/education/increase/20220815_1.html": {
+    "text": "増やす・備える\n\t\t\t\t\t\t\t\t\t2024年2月1日\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t定期預金とは？メリット・デメリットや種類ごとの特徴を徹底解説！\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t 定期預金",
+    "href": "https://www.tokyostarbank.co.jp/feature/education/increase/20220815_1.html",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/feature/education/trends/20240527_2.html": {
+    "text": "トレンド\n\t\t\t\t\t\t\t\t\t2024年5月27日\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t銀行の口座売買は犯罪！逮捕や口座凍結のリスクについて解説\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t 金融犯罪 時事",
+    "href": "https://www.tokyostarbank.co.jp/feature/education/trends/20240527_2.html",
+    "type": "webpage"
+  },
+  "https://apps.apple.com/jp/app/%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%BF%E3%83%BC%E9%8A%80%E8%A1%8C%E3%80%80%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%82%A2%E3%83%97%E3%83%AA/id1600388981": {
+    "text": "(无文本)",
+    "href": "https://apps.apple.com/jp/app/%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%BF%E3%83%BC%E9%8A%80%E8%A1%8C%E3%80%80%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%82%A2%E3%83%97%E3%83%AA/id1600388981",
+    "type": "webpage"
+  },
+  "https://play.google.com/store/apps/details?id=jp.co.tokyostarbank.bankingapp": {
+    "text": "(无文本)",
+    "href": "https://play.google.com/store/apps/details?id=jp.co.tokyostarbank.bankingapp",
+    "type": "webpage"
+  },
+  "https://ja-jp.facebook.com/tokyostarbank/": {
+    "text": "(无文本)",
+    "href": "https://ja-jp.facebook.com/tokyostarbank/",
+    "type": "webpage"
+  },
+  "https://www.youtube.com/channel/UCva8Phpv6oJ-4V4UJR5hU7Q": {
+    "text": "(无文本)",
+    "href": "https://www.youtube.com/channel/UCva8Phpv6oJ-4V4UJR5hU7Q",
+    "type": "webpage"
+  },
+  "https://twitter.com/tsb_jp": {
+    "text": "(无文本)",
+    "href": "https://twitter.com/tsb_jp",
+    "type": "webpage"
+  },
+  "https://lin.ee/RPrD2Th": {
+    "text": "(无文本)",
+    "href": "https://lin.ee/RPrD2Th",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/terms/pdf/social_media.pdf": {
+    "text": "ソーシャルメディア利用規約（PDF：866KB）",
+    "href": "https://www.tokyostarbank.co.jp/terms/pdf/social_media.pdf",
+    "type": "document",
+    "downloaded": true
+  },
+  "https://www.tokyostarbank.co.jp/terms/": {
+    "text": "本ウェブサイトのご利用にあたって",
+    "href": "https://www.tokyostarbank.co.jp/terms/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/cookie_policy/": {
+    "text": "Cookieポリシーについて",
+    "href": "https://www.tokyostarbank.co.jp/cookie_policy/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/accessibility/": {
+    "text": "アクセシビリティについて",
+    "href": "https://www.tokyostarbank.co.jp/accessibility/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/security/": {
+    "text": "セキュリティについて",
+    "href": "https://www.tokyostarbank.co.jp/security/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/privacy/": {
+    "text": "個人情報のお取り扱いについて",
+    "href": "https://www.tokyostarbank.co.jp/privacy/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/anti-social/": {
+    "text": "反社会的勢力に対する基本方針",
+    "href": "https://www.tokyostarbank.co.jp/anti-social/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/money-laundering/": {
+    "text": "マネー・ローンダリングおよびテロ資金供与等に関する当行の取組み",
+    "href": "https://www.tokyostarbank.co.jp/money-laundering/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/collaboration/": {
+    "text": "電子決済等代行業者との連携及び協働に係る方針",
+    "href": "https://www.tokyostarbank.co.jp/collaboration/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/anti-moneylaundering/": {
+    "text": "マネー・ローンダリングおよびテロ資金供与対策に関する基本方針",
+    "href": "https://www.tokyostarbank.co.jp/anti-moneylaundering/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/conflicts_interest/": {
+    "text": "利益相反管理方針の概要",
+    "href": "https://www.tokyostarbank.co.jp/conflicts_interest/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/legal/": {
+    "text": "金融商品勧誘方針",
+    "href": "https://www.tokyostarbank.co.jp/legal/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/prevention/": {
+    "text": "預金等との誤認防止について",
+    "href": "https://www.tokyostarbank.co.jp/prevention/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/press_ir/press/pdf/250513.pdf": {
+    "text": "当行が発行するインボイスに関するご案内",
+    "href": "https://www.tokyostarbank.co.jp/press_ir/press/pdf/250513.pdf",
+    "type": "document",
+    "downloaded": true
+  },
+  "https://www.tokyostarbank.co.jp/stakeholder/": {
+    "text": "マルチステークホルダー方針",
+    "href": "https://www.tokyostarbank.co.jp/stakeholder/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/customer_harassment/": {
+    "text": "カスタマーハラスメントに対する基本方針",
+    "href": "https://www.tokyostarbank.co.jp/customer_harassment/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/sitemap/": {
+    "text": "サイトマップ",
+    "href": "https://www.tokyostarbank.co.jp/sitemap/",
+    "type": "webpage"
+  },
+  "https://direct.tokyostarbank.co.jp/sp_xm2a/page/18001/sX01101CT/dsX0110100": {
+    "text": "個人番号カードをスマホで読み取り 口座開設",
+    "href": "https://direct.tokyostarbank.co.jp/sp_xm2a/page/18001/sX01101CT/dsX0110100",
+    "type": "webpage"
+  }
+}

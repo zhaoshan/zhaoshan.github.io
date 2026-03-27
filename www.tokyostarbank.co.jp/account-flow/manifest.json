@@ -1,0 +1,22 @@
+{
+  "startTime": "2026-03-26T23:44:14.385Z",
+  "url": "https://www.tokyostarbank.co.jp/account/flow/",
+  "pages": [
+    {
+      "url": "https://www.tokyostarbank.co.jp/account/flow/",
+      "title": "口座開設に必要なもの・手順のご案内 | 東京スター銀行",
+      "depth": 0,
+      "path": "/Users/zhaoshan/site-scraper-output/www.tokyostarbank.co.jp/account-flow/2026-03-26T23-44-14",
+      "links": 167,
+      "timestamp": "2026-03-26T23:48:35.706Z"
+    }
+  ],
+  "totalImages": 37,
+  "totalDocuments": 3,
+  "totalLinks": 167,
+  "endTime": "2026-03-26T23:48:35.780Z",
+  "stats": {
+    "pagesCrawled": 1,
+    "visitedUrls": 1
+  }
+}
