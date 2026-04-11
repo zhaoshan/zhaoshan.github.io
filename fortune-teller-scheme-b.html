@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>玄易 - 八字 · 塔罗</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-bg: #faf8f5;
+            --color-bg-warm: #f5f0e8;
+            --color-ink: #2c2c2c;
+            --color-ink-light: #5a5a5a;
+            --color-ink-muted: #8a8680;
+            --color-accent: #8b4513;
+            --color-accent-light: #a0522d;
+            --color-gold: #b8860b;
+            --color-paper: #fefdfb;
+            --shadow-soft: 0 4px 20px rgba(0,0,0,0.06);
+            --shadow-card: 0 8px 32px rgba(0,0,0,0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background: var(--color-bg);
+            color: var(--color-ink);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* 水墨纹理背景 */
+        .ink-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.4;
+        }
+
+        .ink-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(ellipse, rgba(139,69,19,0.03) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .ink-bg::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(ellipse, rgba(44,44,44,0.02) 0%, transparent 60%);
+            border-radius: 50%;
+        }
+
+        /* 导航 */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: linear-gradient(to bottom, rgba(250,248,245,0.95), transparent);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-ink);
+            letter-spacing: 0.2em;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo::before {
+            content: '◈';
+            color: var(--color-accent);
+            font-size: 1.2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+        }
+
+        .nav-links a {
+            color: var(--color-ink-light);
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--color-accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-accent);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6rem 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .hero-subtitle {
+            font-size: 0.85rem;
+            color: var(--color-ink-muted);
+            letter-spacing: 0.4em;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 300;
+            line-height: 1.4;
+            margin-bottom: 2rem;
+            letter-spacing: 0.1em;
+        }
+
+        .hero-title span {
+            display: block;
+        }
+
+        .hero-title .accent {
+            color: var(--color-accent);
+            font-weight: 600;
+        }
+
+        .hero-desc {
+            font-size: 1.1rem;
+            color: var(--color-ink-light);
+            max-width: 500px;
+            margin: 0 auto 3rem;
+            line-height: 2;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            font-family: 'Noto Serif SC', serif;
+            font-size: 0.95rem;
+            letter-spacing: 0.1em;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: var(--color-ink);
+            color: var(--color-bg);
+        }
+
+        .btn-primary:hover {
+            background: var(--color-accent);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-card);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-ink);
+            border: 1px solid var(--color-ink);
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-ink);
+            color: var(--color-bg);
+        }
+
+        /* 水墨分隔线 */
+        .ink-divider {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, transparent, var(--color-accent), transparent);
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .ink-divider::before,
+        .ink-divider::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 8px;
+            height: 8px;
+            background: var(--color-accent);
+            border-radius: 50%;
+            transform: translateY(-50%);
+            opacity: 0.3;
+        }
+
+        .ink-divider::before { left: -4px; }
+        .ink-divider::after { right: -4px; }
+
+        /* Services */
+        .services {
+            padding: 8rem 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-subtitle {
+            color: var(--color-ink-muted);
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: var(--color-paper);
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid transparent;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 1px solid var(--color-ink);
+            opacity: 0.1;
+            transition: all 0.5s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-card);
+        }
+
+        .service-card:hover::before {
+            opacity: 0.2;
+            border-color: var(--color-accent);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-accent);
+            display: inline-block;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .service-title {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            letter-spacing: 0.1em;
+        }
+
+        .service-desc {
+            color: var(--color-ink-muted);
+            font-size: 0.9rem;
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-link {
+            color: var(--color-accent);
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s ease;
+        }
+
+        .service-link:hover {
+            gap: 0.8rem;
+        }
+
+        /* 八字区域 */
+        .bazi-section {
+            padding: 8rem 2rem;
+            background: var(--color-bg-warm);
+            position: relative;
+            z-index: 1;
+        }
+
+        .bazi-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 200px;
+            background: linear-gradient(to bottom, var(--color-bg), transparent);
+        }
+
+        .bazi-container {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .bazi-form {
+            background: var(--color-paper);
+            padding: 4rem;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+        }
+
+        .bazi-form::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 1px solid rgba(139,69,19,0.1);
+            pointer-events: none;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        .form-label {
+            font-size: 0.8rem;
+            color: var(--color-ink-muted);
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.1em;
+        }
+
+        .form-input {
+            padding: 1rem 0;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(44,44,44,0.2);
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1rem;
+            color: var(--color-ink);
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-bottom-color: var(--color-accent);
+        }
+
+        .form-input::placeholder {
+            color: var(--color-ink-muted);
+        }
+
+        select.form-input {
+            cursor: pointer;
+            appearance: none;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%235a5a5a' d='M6 8L1 3h10z'/%3E%3C/svg%3E") no-repeat right 0 center;
+        }
+
+        .gender-group {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .gender-btn {
+            flex: 1;
+            padding: 1rem;
+            background: transparent;
+            border: 1px solid rgba(44,44,44,0.2);
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1rem;
+            color: var(--color-ink-light);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .gender-btn:hover {
+            border-color: var(--color-accent);
+            color: var(--color-accent);
+        }
+
+        .gender-btn.active {
+            background: var(--color-ink);
+            border-color: var(--color-ink);
+            color: var(--color-bg);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.2rem;
+            margin-top: 2rem;
+            background: var(--color-ink);
+            color: var(--color-bg);
+            border: none;
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1rem;
+            letter-spacing: 0.2em;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .submit-btn:hover {
+            background: var(--color-accent);
+        }
+
+        /* 结果面板 */
+        .result-panel {
+            margin-top: 3rem;
+            padding: 3rem;
+            background: var(--color-paper);
+            border-left: 3px solid var(--color-accent);
+            display: none;
+        }
+
+        .result-panel.active {
+            display: block;
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-title {
+            font-size: 1.3rem;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            margin-bottom: 2rem;
+            color: var(--color-accent);
+        }
+
+        .bazi-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .bazi-cell {
+            text-align: center;
+            padding: 1.5rem 1rem;
+            background: var(--color-bg-warm);
+            border-radius: 4px;
+        }
+
+        .bazi-char {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--color-accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .bazi-label {
+            font-size: 0.75rem;
+            color: var(--color-ink-muted);
+            letter-spacing: 0.1em;
+        }
+
+        /* 塔罗区域 */
+        .tarot-section {
+            padding: 8rem 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .tarot-intro {
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto 4rem;
+        }
+
+        .tarot-intro p {
+            color: var(--color-ink-muted);
+            line-height: 2;
+        }
+
+        .tarot-table {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .tarot-cards-row {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .tarot-card-wrapper {
+            text-align: center;
+        }
+
+        .tarot-position {
+            font-size: 0.8rem;
+            color: var(--color-ink-muted);
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+
+        .tarot-card {
+            width: 160px;
+            height: 260px;
+            background: var(--color-paper);
+            border: 1px solid rgba(44,44,44,0.1);
+            cursor: pointer;
+            position: relative;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+
+        .tarot-card::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            right: 8px;
+            bottom: 8px;
+            border: 1px solid rgba(139,69,19,0.1);
+            pointer-events: none;
+        }
+
+        .tarot-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-card);
+            border-color: var(--color-accent);
+        }
+
+        .tarot-card.revealed {
+            background: var(--color-bg-warm);
+        }
+
+        .card-back-design {
+            font-size: 3rem;
+            color: var(--color-accent);
+            opacity: 0.3;
+        }
+
+        .card-front-content {
+            display: none;
+        }
+
+        .tarot-card.revealed .card-back-design {
+            display: none;
+        }
+
+        .tarot-card.revealed .card-front-content {
+            display: block;
+        }
+
+        .card-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--color-accent);
+            margin-bottom: 0.8rem;
+            letter-spacing: 0.1em;
+        }
+
+        .card-meaning {
+            font-size: 0.8rem;
+            color: var(--color-ink-light);
+            line-height: 1.8;
+        }
+
+        .shuffle-area {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .shuffle-btn {
+            padding: 1rem 3rem;
+            background: transparent;
+            border: 1px solid var(--color-ink);
+            font-family: 'Noto Serif SC', serif;
+            font-size: 0.9rem;
+            letter-spacing: 0.15em;
+            color: var(--color-ink);
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .shuffle-btn:hover {
+            background: var(--color-ink);
+            color: var(--color-bg);
+        }
+
+        .tarot-result {
+            max-width: 700px;
+            margin: 3rem auto 0;
+            padding: 3rem;
+            background: var(--color-paper);
+            border-top: 3px solid var(--color-accent);
+            display: none;
+        }
+
+        .tarot-result.active {
+            display: block;
+            animation: fadeIn 0.6s ease;
+        }
+
+        /* Footer */
+        footer {
+            padding: 4rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(44,44,44,0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            color: var(--color-ink);
+            margin-bottom: 1rem;
+            letter-spacing: 0.2em;
+        }
+
+        .footer-text {
+            color: var(--color-ink-muted);
+            font-size: 0.85rem;
+            line-height: 2;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+
+            .bazi-form {
+                padding: 2rem;
+            }
+
+            .bazi-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .tarot-cards-row {
+                gap: 1.5rem;
+            }
+
+            .tarot-card {
+                width: 140px;
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 水墨背景 -->
+    <div class="ink-bg"></div>
+
+    <!-- 导航 -->
+    <nav>
+        <div class="logo">玄易</div>
+        <div class="nav-links">
+            <a href="#bazi">八字</a>
+            <a href="#tarot">塔罗</a>
+            <a href="#about">关于</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="hero-subtitle">Divination & Wisdom</p>
+            <h1 class="hero-title">
+                <span>知天命</span>
+                <span class="accent">顺自然</span>
+            </h1>
+            <p class="hero-desc">
+                以千年智慧为镜，照见生命本质。<br>
+                在变化中寻得恒定，于无常中觅得指引。
+            </p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollTo('bazi')">八字推算</button>
+                <button class="btn btn-secondary" onclick="scrollTo('tarot')">塔罗启示</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+        <div class="section-header">
+            <h2 class="section-title">占测之法</h2>
+            <div class="ink-divider"></div>
+            <p class="section-subtitle">东方智慧 · 西方神秘 · 殊途同归</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">☯</div>
+                <h3 class="service-title">四柱八字</h3>
+                <p class="service-desc">
+                    以出生年月日时为基，推演五行生克，解析命盘格局，洞见人生运势。
+                </p>
+                <a href="#bazi" class="service-link">开始推算 →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">◈</div>
+                <h3 class="service-title">塔罗占卜</h3>
+                <p class="service-desc">
+                    透过 symbolic 的牌面，聆听潜意识的低语，获取当下的启示与指引。
+                </p>
+                <a href="#tarot" class="service-link">抽取牌阵 →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">✦</div>
+                <h3 class="service-title">星盘解读</h3>
+                <p class="service-desc">
+                    行星运行的轨迹，映射内心的宇宙。探索星座、宫位、相位的深层含义。
+                </p>
+                <span class="service-link" style="color: var(--color-ink-muted);">敬请期待</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 八字算命 -->
+    <section id="bazi" class="bazi-section">
+        <div class="section-header">
+            <h2 class="section-title">八字命理</h2>
+            <div class="ink-divider"></div>
+            <p class="section-subtitle">输入生辰，推演命盘</p>
+        </div>
+        <div class="bazi-container">
+            <div class="bazi-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">出生年份</label>
+                        <input type="number" class="form-input" id="baziYear" placeholder="1990">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">出生月份</label>
+                        <select class="form-input" id="baziMonth">
+                            <option value="">请选择月份</option>
+                            <option value="1">正月</option>
+                            <option value="2">二月</option>
+                            <option value="3">三月</option>
+                            <option value="4">四月</option>
+                            <option value="5">五月</option>
+                            <option value="6">六月</option>
+                            <option value="7">七月</option>
+                            <option value="8">八月</option>
+                            <option value="9">九月</option>
+                            <option value="10">十月</option>
+                            <option value="11">十一月</option>
+                            <option value="12">十二月</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">出生日期</label>
+                        <input type="number" class="form-input" id="baziDay" placeholder="15" min="1" max="31">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">出生时辰</label>
+                        <select class="form-input" id="baziHour">
+                            <option value="">请选择时辰</option>
+                            <option value="0">子时 (23:00-01:00)</option>
+                            <option value="1">丑时 (01:00-03:00)</option>
+                            <option value="2">寅时 (03:00-05:00)</option>
+                            <option value="3">卯时 (05:00-07:00)</option>
+                            <option value="4">辰时 (07:00-09:00)</option>
+                            <option value="5">巳时 (09:00-11:00)</option>
+                            <option value="6">午时 (11:00-13:00)</option>
+                            <option value="7">未时 (13:00-15:00)</option>
+                            <option value="8">申时 (15:00-17:00)</option>
+                            <option value="9">酉时 (17:00-19:00)</option>
+                            <option value="10">戌时 (19:00-21:00)</option>
+                            <option value="11">亥时 (21:00-23:00)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label class="form-label">性别</label>
+                        <div class="gender-group">
+                            <button class="gender-btn" onclick="selectGender(this, 'male')">男</button>
+                            <button class="gender-btn" onclick="selectGender(this, 'female')">女</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="submit-btn" onclick="calculateBazi()">推 算 八 字</button>
+
+                <div class="result-panel" id="baziResult">
+                    <h3 class="result-title">命盘解析</h3>
+                    <div id="baziContent"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 塔罗占卜 -->
+    <section id="tarot" class="tarot-section">
+        <div class="section-header">
+            <h2 class="section-title">塔罗启示</h2>
+            <div class="ink-divider"></div>
+            <p class="section-subtitle">静心冥想，抽取你的牌</p>
+        </div>
+        <div class="tarot-table">
+            <div class="tarot-intro">
+                <p>
+                    塔罗牌是潜意识的镜子，每一张牌都承载着古老的智慧。<br>
+                    请在心中默念你的问题，然后依次抽取三张牌。
+                </p>
+            </div>
+            <div class="tarot-cards-row">
+                <div class="tarot-card-wrapper">
+                    <div class="tarot-position">过去 · 根源</div>
+                    <div class="tarot-card" id="tarotCard0" onclick="revealCard(0)">
+                        <div class="card-back-design">◈</div>
+                        <div class="card-front-content">
+                            <div class="card-name" id="cardName0"></div>
+                            <div class="card-meaning" id="cardMeaning0"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tarot-card-wrapper">
+                    <div class="tarot-position">现在 · 状况</div>
+                    <div class="tarot-card" id="tarotCard1" onclick="revealCard(1)">
+                        <div class="card-back-design">◈</div>
+                        <div class="card-front-content">
+                            <div class="card-name" id="cardName1"></div>
+                            <div class="card-meaning" id="cardMeaning1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tarot-card-wrapper">
+                    <div class="tarot-position">未来 · 指引</div>
+                    <div class="tarot-card" id="tarotCard2" onclick="revealCard(2)">
+                        <div class="card-back-design">◈</div>
+                        <div class="card-front-content">
+                            <div class="card-name" id="cardName2"></div>
+                            <div class="card-meaning" id="cardMeaning2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shuffle-area">
+                <button class="shuffle-btn" onclick="shuffleCards()">重新洗牌</button>
+            </div>
+            <div class="tarot-result" id="tarotResult">
+                <h3 class="result-title">牌阵解读</h3>
+                <div id="tarotContent"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">◈ 玄易</div>
+        <p class="footer-text">
+            传承东方智慧 · 融合西方神秘学<br>
+            本网站仅供娱乐参考，请理性看待命理预测
+        </p>
+    </footer>
+
+    <script>
+        // 平滑滚动
+        function scrollTo(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // 性别选择
+        let selectedGender = null;
+        function selectGender(btn, gender) {
+            document.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            selectedGender = gender;
+        }
+
+        // 八字计算
+        function calculateBazi() {
+            const year = document.getElementById('baziYear').value;
+            const month = document.getElementById('baziMonth').value;
+            const day = document.getElementById('baziDay').value;
+            const hour = document.getElementById('baziHour').value;
+
+            if (!year || !month || !day || !hour || !selectedGender) {
+                alert('请填写完整的出生信息');
+                return;
+            }
+
+            const gan = ['甲', '乙', '丙', '丁', '戊', '己', '庚', '辛', '壬', '癸'];
+            const zhi = ['子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥'];
+
+            const yGan = gan[(year - 4) % 10];
+            const yZhi = zhi[(year - 4) % 12];
+            const mGan = gan[(year * 2 + parseInt(month) + 1) % 10];
+            const mZhi = zhi[(parseInt(month) + 1) % 12];
+            const dGan = gan[Math.floor(Math.random() * 10)];
+            const dZhi = zhi[Math.floor(Math.random() * 12)];
+            const hGan = gan[(parseInt(hour) + 2) % 10];
+            const hZhi = zhi[parseInt(hour)];
+
+            const personalities = ['刚毅果断', '温和仁厚', '聪慧机敏', '沉稳踏实'];
+            const careers = ['适合从事管理、领导工作', '适合从事教育、文化领域', '适合从事创意、艺术行业', '适合从事技术、专业领域'];
+            const fortunes = ['近期运势平稳，宜守成', '有新机遇出现，把握时机', '需留意人际关系，谨言慎行', '财运亨通，适合投资理财'];
+
+            const result = `
+                <div class="bazi-grid">
+                    <div class="bazi-cell">
+                        <div class="bazi-char">${yGan}${yZhi}</div>
+                        <div class="bazi-label">年柱</div>
+                    </div>
+                    <div class="bazi-cell">
+                        <div class="bazi-char">${mGan}${mZhi}</div>
+                        <div class="bazi-label">月柱</div>
+                    </div>
+                    <div class="bazi-cell">
+                        <div class="bazi-char">${dGan}${dZhi}</div>
+                        <div class="bazi-label">日柱</div>
+                    </div>
+                    <div class="bazi-cell">
+                        <div class="bazi-char">${hGan}${hZhi}</div>
+                        <div class="bazi-label">时柱</div>
+                    </div>
+                </div>
+                <div style="line-height: 2.2; color: var(--color-ink-light);">
+                    <p><strong style="color: var(--color-accent);">日主：</strong>${dGan}日主，性格${personalities[Math.floor(Math.random() * 4)]}。</p>
+                    <p><strong style="color: var(--color-accent);">事业：</strong>${careers[Math.floor(Math.random() * 4)]}。</p>
+                    <p><strong style="color: var(--color-accent);">运势：</strong>${fortunes[Math.floor(Math.random() * 4)]}。</p>
+                    <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--color-ink-muted);">
+                        *此为演示结果，真实八字需根据万年历精确计算。
+                    </p>
+                </div>
+            `;
+
+            document.getElementById('baziContent').innerHTML = result;
+            document.getElementById('baziResult').classList.add('active');
+        }
+
+        // 塔罗牌数据
+        const tarotDeck = [
+            { name: '愚者', meaning: '新的开始，冒险精神，信任直觉' },
+            { name: '魔术师', meaning: '创造力，资源整合，意志力' },
+            { name: '女祭司', meaning: '内在智慧，直觉，潜意识' },
+            { name: '皇后', meaning: '丰饶，母性，创造力，享受' },
+            { name: '皇帝', meaning: '权威，结构，稳定，掌控' },
+            { name: '教皇', meaning: '传统，精神指引，学习' },
+            { name: '恋人', meaning: '爱情，和谐，选择，结合' },
+            { name: '战车', meaning: '意志力，胜利，前进，控制' },
+            { name: '力量', meaning: '勇气，耐心，内在力量' },
+            { name: '隐士', meaning: '内省，独处，寻找真理' },
+            { name: '命运之轮', meaning: '变化，命运，转折点，循环' },
+            { name: '正义', meaning: '公平，平衡，因果，真理' },
+            { name: '倒吊人', meaning: '牺牲，新视角，等待，臣服' },
+            { name: '死神', meaning: '结束，转变，新生，释放' },
+            { name: '节制', meaning: '平衡，调和，耐心，节制' },
+            { name: '恶魔', meaning: '束缚，欲望，物质主义，阴影' },
+            { name: '塔', meaning: '突变，觉醒，打破旧有结构' },
+            { name: '星星', meaning: '希望，灵感，宁静，疗愈' },
+            { name: '月亮', meaning: '幻觉，恐惧，潜意识，梦境' },
+            { name: '太阳', meaning: '成功，喜悦，活力，清晰' },
+            { name: '审判', meaning: '重生，觉醒，宽恕，召唤' },
+            { name: '世界', meaning: '完成，圆满，成就，整合' }
+        ];
+
+        let revealedCards = [];
+        let currentCards = [];
+
+        function shuffleCards() {
+            revealedCards = [];
+            currentCards = [];
+
+            const shuffled = [...tarotDeck].sort(() => Math.random() - 0.5);
+            currentCards = shuffled.slice(0, 3);
+
+            for (let i = 0; i < 3; i++) {
+                const card = document.getElementById(`tarotCard${i}`);
+                card.classList.remove('revealed');
+                document.getElementById(`cardName${i}`).textContent = '';
+                document.getElementById(`cardMeaning${i}`).textContent = '';
+            }
+
+            document.getElementById('tarotResult').classList.remove('active');
+        }
+
+        function revealCard(index) {
+            const card = document.getElementById(`tarotCard${index}`);
+            if (card.classList.contains('revealed')) return;
+
+            card.classList.add('revealed');
+            document.getElementById(`cardName${index}`).textContent = currentCards[index].name;
+            document.getElementById(`cardMeaning${index}`).textContent = currentCards[index].meaning;
+
+            revealedCards.push({ index, card: currentCards[index] });
+
+            if (revealedCards.length === 3) {
+                setTimeout(showTarotReading, 500);
+            }
+        }
+
+        function showTarotReading() {
+            const positions = ['过去/根源', '现在/状况', '未来/指引'];
+            let reading = '<div style="display: grid; gap: 1.5rem;">';
+
+            revealedCards.forEach((item, i) => {
+                reading += `
+                    <div style="padding-bottom: 1.5rem; border-bottom: 1px solid rgba(44,44,44,0.1);">
+                        <div style="color: var(--color-accent); font-weight: 600; margin-bottom: 0.5rem; letter-spacing: 0.1em;">
+                            ${positions[i]} · ${item.card.name}
+                        </div>
+                        <div style="color: var(--color-ink-light); line-height: 1.9;">
+                            ${item.card.meaning}
+                        </div>
+                    </div>
+                `;
+            });
+
+            reading += '</div>';
+            reading += `
+                <div style="margin-top: 1rem; padding: 1.5rem; background: var(--color-bg-warm); border-radius: 4px;">
+                    <div style="color: var(--color-accent); font-weight: 600; margin-bottom: 0.8rem; letter-spacing: 0.1em;">
+                        综合启示
+                    </div>
+                    <div style="color: var(--color-ink-light); line-height: 2;">
+                        <p>从${revealedCards[0].card.name}到${revealedCards[1].card.name}再到${revealedCards[2].card.name}，
+                        这三张牌描绘了一段完整的能量流动。</p>
+                        <p style="margin-top: 0.8rem;">
+                        建议您保持觉知，信任生命的智慧。每一张牌都是一面镜子，映照出您内心深处的真实。
+                        记住，塔罗不是预言，而是指引——真正的力量始终在您自己手中。</p>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('tarotContent').innerHTML = reading;
+            document.getElementById('tarotResult').classList.add('active');
+        }
+
+        // 初始化
+        shuffleCards();
+
+        // 滚动显示动画
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
