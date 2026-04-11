@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#0a0a0f">
+    <title>塔罗占卜 - 天机阁</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- 粒子背景 -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- 顶部导航 -->
+    <header class="nav-header">
+        <a href="../index.html" class="nav-back">← 返回</a>
+        <div class="logo">塔罗占卜</div>
+        <div style="width: 40px;"></div>
+    </header>
+
+    <!-- 主内容 -->
+    <main class="page-container">
+        <div class="page-header">
+            <h1 class="page-title">塔罗启示</h1>
+            <p class="page-subtitle">静心冥想，抽取你的牌</p>
+        </div>
+
+        <div class="tarot-intro">
+            <p>
+                闭上眼睛，深呼吸<br>
+                在心中默念你的问题<br>
+                然后依次抽取三张牌
+            </p>
+        </div>
+
+        <div class="tarot-cards-container">
+            <div class="tarot-card-wrapper">
+                <div class="tarot-position">过去/根源</div>
+                <div class="tarot-card" id="tarotCard0" onclick="TarotReader.reveal(0)">
+                    <div class="tarot-card-face tarot-card-front">
+                        <div class="card-pattern">
+                            <span class="card-symbol">✦</span>
+                        </div>
+                    </div>
+                    <div class="tarot-card-face tarot-card-back">
+                        <div class="card-name" id="cardName0"></div>
+                        <div class="card-meaning" id="cardMeaning0"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tarot-card-wrapper">
+                <div class="tarot-position">现在/状况</div>
+                <div class="tarot-card" id="tarotCard1" onclick="TarotReader.reveal(1)">
+                    <div class="tarot-card-face tarot-card-front">
+                        <div class="card-pattern">
+                            <span class="card-symbol">☽</span>
+                        </div>
+                    </div>
+                    <div class="tarot-card-face tarot-card-back">
+                        <div class="card-name" id="cardName1"></div>
+                        <div class="card-meaning" id="cardMeaning1"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tarot-card-wrapper">
+                <div class="tarot-position">未来/指引</div>
+                <div class="tarot-card" id="tarotCard2" onclick="TarotReader.reveal(2)">
+                    <div class="tarot-card-face tarot-card-front">
+                        <div class="card-pattern">
+                            <span class="card-symbol">☀</span>
+                        </div>
+                    </div>
+                    <div class="tarot-card-face tarot-card-back">
+                        <div class="card-name" id="cardName2"></div>
+                        <div class="card-meaning" id="cardMeaning2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="shuffle-area">
+            <button class="btn btn-purple btn-large" onclick="TarotReader.shuffle()">
+                🔮 重新洗牌
+            </button>
+        </div>
+
+        <div class="tarot-result" id="tarotResult">
+            <h3 class="result-title">牌阵解读</h3>
+            <div id="tarotContent"></div>
+        </div>
+    </main>
+
+    <!-- 底部导航 -->
+    <nav class="tab-bar">
+        <a href="../index.html" class="tab-item">
+            <span class="tab-icon">◈</span>
+            <span>首页</span>
+        </a>
+        <a href="bazi.html" class="tab-item">
+            <span class="tab-icon">☯</span>
+            <span>八字</span>
+        </a>
+        <a href="tarot.html" class="tab-item active">
+            <span class="tab-icon">🌙</span>
+            <span>塔罗</span>
+        </a>
+        <a href="profile.html" class="tab-item">
+            <span class="tab-icon">✦</span>
+            <span>我的</span>
+        </a>
+    </nav>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

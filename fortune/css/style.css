@@ -1,0 +1,833 @@
+/* ========================================
+   天机阁 - H5端样式表
+   风格：暗夜神殿 · 东方神秘主义
+   ======================================== */
+
+:root {
+    --color-bg-deep: #0a0a0f;
+    --color-bg-secondary: #12121a;
+    --color-primary: #1a1a2e;
+    --color-accent-gold: #d4af37;
+    --color-accent-gold-light: #f4e4ba;
+    --color-accent-purple: #6b4c7a;
+    --color-accent-purple-light: #9b7bb8;
+    --color-text: #e8e6e3;
+    --color-text-muted: #8a8a8a;
+    --shadow-gold: 0 0 30px rgba(212, 175, 55, 0.3);
+    --shadow-purple: 0 0 40px rgba(107, 76, 122, 0.4);
+    --safe-area-top: env(safe-area-inset-top);
+    --safe-area-bottom: env(safe-area-inset-bottom);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: 'Noto Serif SC', serif;
+    background: var(--color-bg-deep);
+    color: var(--color-text);
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* 粒子背景 */
+#particles-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* 底部安全区域 */
+.safe-bottom {
+    padding-bottom: calc(1rem + var(--safe-area-bottom));
+}
+
+/* ========================================
+   导航栏
+   ======================================== */
+.nav-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    padding-top: calc(0.8rem + var(--safe-area-top));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: linear-gradient(to bottom, rgba(10,10,15,0.95), transparent);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-accent-gold);
+    text-shadow: var(--shadow-gold);
+    letter-spacing: 0.1em;
+}
+
+.nav-back {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: color 0.3s ease;
+}
+
+.nav-back:hover,
+.nav-back:active {
+    color: var(--color-accent-gold);
+}
+
+.nav-menu-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.nav-menu-btn span {
+    width: 24px;
+    height: 2px;
+    background: var(--color-accent-gold);
+    transition: all 0.3s ease;
+}
+
+/* 底部导航 */
+.tab-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.6rem 0;
+    padding-bottom: calc(0.6rem + var(--safe-area-bottom));
+    background: rgba(10, 10, 15, 0.95);
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+.tab-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-size: 0.7rem;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.tab-item.active,
+.tab-item:hover {
+    color: var(--color-accent-gold);
+}
+
+.tab-icon {
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+/* ========================================
+   主页 Hero
+   ======================================== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 5rem 1.5rem 6rem;
+}
+
+.hero-subtitle {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 0.8rem;
+    color: var(--color-accent-purple-light);
+    letter-spacing: 0.3em;
+    margin-bottom: 1rem;
+}
+
+.hero-title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.hero-title .gold {
+    color: var(--color-accent-gold);
+    text-shadow: var(--shadow-gold);
+}
+
+.hero-desc {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    max-width: 280px;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+/* ========================================
+   按钮样式
+   ======================================== */
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.9rem 2rem;
+    font-family: 'Noto Serif SC', serif;
+    font-size: 0.95rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--color-accent-gold), #b8941f);
+    color: var(--color-bg-deep);
+    font-weight: 600;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-gold);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--color-accent-gold);
+    border: 1.5px solid var(--color-accent-gold);
+}
+
+.btn-secondary:hover,
+.btn-secondary:active {
+    background: var(--color-accent-gold);
+    color: var(--color-bg-deep);
+}
+
+.btn-large {
+    width: 100%;
+    padding: 1.1rem;
+    font-size: 1rem;
+}
+
+.btn-purple {
+    background: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-purple-light));
+    color: white;
+}
+
+.btn-purple:hover,
+.btn-purple:active {
+    box-shadow: var(--shadow-purple);
+}
+
+/* ========================================
+   服务卡片网格
+   ======================================== */
+.services-section {
+    padding: 2rem 1rem 7rem;
+    position: relative;
+    z-index: 1;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.5rem;
+    color: var(--color-accent-gold);
+    margin-bottom: 0.5rem;
+}
+
+.section-divider {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--color-accent-gold), transparent);
+    margin: 0 auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.service-card {
+    background: linear-gradient(135deg, rgba(26,26,46,0.8), rgba(18,18,26,0.9));
+    border: 1px solid rgba(212,175,55,0.2);
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-card:hover,
+.service-card:active {
+    transform: translateY(-5px);
+    border-color: var(--color-accent-gold);
+    box-shadow: var(--shadow-purple);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.service-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-accent-gold-light);
+}
+
+.service-desc {
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.service-link {
+    color: var(--color-accent-gold);
+    font-size: 0.8rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/* ========================================
+   功能页面通用样式
+   ======================================== */
+.page-container {
+    min-height: 100vh;
+    padding: 4rem 1rem 6rem;
+    position: relative;
+    z-index: 1;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+}
+
+.page-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.8rem;
+    color: var(--color-accent-gold);
+    margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+}
+
+/* ========================================
+   表单样式
+   ======================================== */
+.form-container {
+    background: rgba(26,26,46,0.6);
+    border: 1px solid rgba(212,175,55,0.3);
+    border-radius: 16px;
+    padding: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--color-accent-gold-light);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    background: rgba(10,10,15,0.6);
+    border: 1px solid rgba(212,175,55,0.3);
+    border-radius: 8px;
+    color: var(--color-text);
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    -webkit-appearance: none;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-accent-gold);
+    box-shadow: 0 0 15px rgba(212,175,55,0.2);
+}
+
+select.form-input {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23d4af37' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+}
+
+/* 性别选择 */
+.gender-select {
+    display: flex;
+    gap: 1rem;
+}
+
+.gender-option {
+    flex: 1;
+    padding: 0.9rem;
+    background: rgba(10,10,15,0.6);
+    border: 1px solid rgba(212,175,55,0.3);
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.gender-option:hover,
+.gender-option:active {
+    border-color: var(--color-accent-gold);
+}
+
+.gender-option.active {
+    border-color: var(--color-accent-gold);
+    background: rgba(212,175,55,0.15);
+    color: var(--color-accent-gold);
+}
+
+/* ========================================
+   八字结果展示
+   ======================================== */
+.result-panel {
+    background: rgba(26,26,46,0.9);
+    border: 1px solid var(--color-accent-gold);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    display: none;
+}
+
+.result-panel.active {
+    display: block;
+    animation: fadeInUp 0.5s ease;
+}
+
+.result-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.2rem;
+    color: var(--color-accent-gold);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.bazi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.bazi-cell {
+    background: rgba(212,175,55,0.1);
+    border-radius: 8px;
+    padding: 1rem 0.5rem;
+    text-align: center;
+}
+
+.bazi-char {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--color-accent-gold);
+    margin-bottom: 0.3rem;
+}
+
+.bazi-label {
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+}
+
+.result-content {
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.result-content p {
+    margin-bottom: 0.8rem;
+}
+
+.result-content strong {
+    color: var(--color-accent-gold);
+}
+
+/* ========================================
+   塔罗牌样式
+   ======================================== */
+.tarot-intro {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
+.tarot-intro p {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.tarot-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+    padding: 0 0.5rem;
+}
+
+.tarot-card-wrapper {
+    text-align: center;
+    flex: 1;
+    max-width: 120px;
+}
+
+.tarot-position {
+    font-size: 0.7rem;
+    color: var(--color-accent-purple-light);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+}
+
+.tarot-card {
+    aspect-ratio: 180/300;
+    background: linear-gradient(135deg, #1a1a2e, #0a0a0f);
+    border: 2px solid var(--color-accent-gold);
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+.tarot-card.flipped {
+    transform: rotateY(180deg);
+}
+
+.tarot-card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.tarot-card-front {
+    background: linear-gradient(135deg, #1a1a2e, #0a0a0f);
+}
+
+.tarot-card-back {
+    background: linear-gradient(135deg, var(--color-accent-purple), var(--color-primary));
+    transform: rotateY(180deg);
+    padding: 0.8rem;
+}
+
+.card-pattern {
+    width: 70%;
+    height: 70%;
+    border: 1px solid var(--color-accent-gold);
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-symbol {
+    font-size: 2rem;
+    color: var(--color-accent-gold);
+}
+
+.card-name {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 0.9rem;
+    color: var(--color-accent-gold);
+    margin-bottom: 0.3rem;
+}
+
+.card-meaning {
+    font-size: 0.65rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    text-align: center;
+}
+
+.tarot-result {
+    background: rgba(26,26,46,0.9);
+    border: 1px solid var(--color-accent-gold);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: none;
+}
+
+.tarot-result.active {
+    display: block;
+    animation: fadeInUp 0.5s ease;
+}
+
+.tarot-reading-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(212,175,55,0.2);
+}
+
+.tarot-reading-item:last-child {
+    border-bottom: none;
+}
+
+.reading-position {
+    color: var(--color-accent-gold);
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+}
+
+.reading-card-name {
+    color: var(--color-accent-gold-light);
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.reading-meaning {
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+.reading-summary {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(107,76,122,0.2);
+    border-radius: 8px;
+}
+
+.reading-summary-title {
+    color: var(--color-accent-gold);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.reading-summary-text {
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+    line-height: 1.7;
+}
+
+/* ========================================
+   个人中心
+   ======================================== */
+.profile-header {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-gold));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin: 0 auto 1rem;
+    border: 2px solid var(--color-accent-gold);
+}
+
+.profile-name {
+    font-size: 1.2rem;
+    color: var(--color-accent-gold);
+    margin-bottom: 0.3rem;
+}
+
+.profile-id {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+}
+
+.menu-list {
+    background: rgba(26,26,46,0.6);
+    border-radius: 12px;
+    margin: 0 1rem 1rem;
+    overflow: hidden;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.2rem;
+    color: var(--color-text);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(212,175,55,0.1);
+    transition: background 0.3s ease;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item:hover,
+.menu-item:active {
+    background: rgba(212,175,55,0.1);
+}
+
+.menu-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(212,175,55,0.1);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.menu-text {
+    flex: 1;
+    font-size: 0.95rem;
+}
+
+.menu-arrow {
+    color: var(--color-text-muted);
+    font-size: 1.2rem;
+}
+
+/* ========================================
+   动画
+   ======================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+.animate-fade-in {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* ========================================
+   触摸优化
+   ======================================== */
+@media (hover: none) {
+    .btn:hover {
+        transform: none;
+    }
+
+    .btn:active {
+        transform: scale(0.98);
+    }
+
+    .service-card:hover {
+        transform: none;
+    }
+
+    .service-card:active {
+        transform: scale(0.98);
+    }
+}
+
+/* ========================================
+   适配大屏手机
+   ======================================== */
+@media (min-width: 390px) {
+    html {
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 414px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+/* ========================================
+   iPad 适配
+   ======================================== */
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+
+    .page-container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .tarot-cards-container {
+        gap: 1.5rem;
+    }
+
+    .tarot-card-wrapper {
+        max-width: 150px;
+    }
+}

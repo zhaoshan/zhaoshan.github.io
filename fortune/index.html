@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#0a0a0f">
+    <title>天机阁 - 探索命运的奥秘</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 粒子背景 -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- 主内容 -->
+    <main class="hero">
+        <p class="hero-subtitle">DESTINY AWAITS</p>
+        <h1 class="hero-title">
+            探索<span class="gold">命运</span>的奥秘
+        </h1>
+        <p class="hero-desc">
+            千年智慧，星辰指引<br>
+            古老的东方命理与西方神秘学相遇
+        </p>
+        <div class="hero-buttons">
+            <a href="pages/bazi.html" class="btn btn-primary">八字算命</a>
+            <a href="pages/tarot.html" class="btn btn-secondary">塔罗占卜</a>
+        </div>
+    </main>
+
+    <!-- 服务区域 -->
+    <section class="services-section">
+        <div class="section-header">
+            <h2 class="section-title">神秘服务</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="services-grid">
+            <a href="pages/bazi.html" class="service-card">
+                <div class="service-icon">☯</div>
+                <h3 class="service-title">八字命理</h3>
+                <p class="service-desc">四柱八字，解析五行生克</p>
+                <span class="service-link">立即测算 →</span>
+            </a>
+            <a href="pages/tarot.html" class="service-card">
+                <div class="service-icon">🌙</div>
+                <h3 class="service-title">塔罗占卜</h3>
+                <p class="service-desc">牌阵解读，指引当下选择</p>
+                <span class="service-link">开始抽牌 →</span>
+            </a>
+            <a href="pages/astrology.html" class="service-card">
+                <div class="service-icon">✦</div>
+                <h3 class="service-title">星盘解读</h3>
+                <p class="service-desc">行星轨迹，映射内心宇宙</p>
+                <span class="service-link">即将推出</span>
+            </a>
+            <a href="pages/profile.html" class="service-card">
+                <div class="service-icon">◈</div>
+                <h3 class="service-title">个人中心</h3>
+                <p class="service-desc">查看记录，管理个人信息</p>
+                <span class="service-link">进入 →</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- 底部导航 -->
+    <nav class="tab-bar">
+        <a href="index.html" class="tab-item active">
+            <span class="tab-icon">◈</span>
+            <span>首页</span>
+        </a>
+        <a href="pages/bazi.html" class="tab-item">
+            <span class="tab-icon">☯</span>
+            <span>八字</span>
+        </a>
+        <a href="pages/tarot.html" class="tab-item">
+            <span class="tab-icon">🌙</span>
+            <span>塔罗</span>
+        </a>
+        <a href="pages/profile.html" class="tab-item">
+            <span class="tab-icon">✦</span>
+            <span>我的</span>
+        </a>
+    </nav>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#0a0a0f">
+    <title>个人中心 - 天机阁</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- 粒子背景 -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- 顶部导航 -->
+    <header class="nav-header">
+        <a href="../index.html" class="nav-back">← 返回</a>
+        <div class="logo">个人中心</div>
+        <div style="width: 40px;"></div>
+    </header>
+
+    <!-- 主内容 -->
+    <main class="page-container">
+        <!-- 用户信息 -->
+        <div class="profile-header">
+            <div class="profile-avatar">
+                <span>✦</span>
+            </div>
+            <div class="profile-name">神秘访客</div>
+            <div class="profile-id">ID: 888888</div>
+        </div>
+
+        <!-- 功能菜单 -->
+        <div class="menu-list">
+            <a href="#" class="menu-item" onclick="showToast('功能开发中')">
+                <div class="menu-icon">📜</div>
+                <div class="menu-text">测算记录</div>
+                <div class="menu-arrow">›</div>
+            </a>
+            <a href="#" class="menu-item" onclick="showToast('功能开发中')">
+                <div class="menu-icon">🔖</div>
+                <div class="menu-text">我的收藏</div>
+                <div class="menu-arrow">›</div>
+            </a>
+            <a href="#" class="menu-item" onclick="showToast('功能开发中')">
+                <div class="menu-icon">⚙️</div>
+                <div class="menu-text">设置</div>
+                <div class="menu-arrow">›</div>
+            </a>
+            <a href="#" class="menu-item" onclick="showToast('功能开发中')">
+                <div class="menu-icon">💬</div>
+                <div class="menu-text">意见反馈</div>
+                <div class="menu-arrow">›</div>
+            </a>
+        </div>
+
+        <!-- 关于信息 -->
+        <div class="menu-list" style="margin-top: 1rem;">
+            <a href="#" class="menu-item" onclick="showToast('天机阁 v1.0.0')">
+                <div class="menu-icon">ℹ️</div>
+                <div class="menu-text">关于我们</div>
+                <div class="menu-arrow">›</div>
+            </a>
+        </div>
+
+        <div style="text-align: center; padding: 2rem 1rem; color: var(--color-text-muted); font-size: 0.75rem;">
+            <p>本应用仅供娱乐参考</p>
+            <p style="margin-top: 0.5rem;">请理性看待命理预测</p>
+        </div>
+    </main>
+
+    <!-- 底部导航 -->
+    <nav class="tab-bar">
+        <a href="../index.html" class="tab-item">
+            <span class="tab-icon">◈</span>
+            <span>首页</span>
+        </a>
+        <a href="bazi.html" class="tab-item">
+            <span class="tab-icon">☯</span>
+            <span>八字</span>
+        </a>
+        <a href="tarot.html" class="tab-item">
+            <span class="tab-icon">🌙</span>
+            <span>塔罗</span>
+        </a>
+        <a href="profile.html" class="tab-item active">
+            <span class="tab-icon">✦</span>
+            <span>我的</span>
+        </a>
+    </nav>
+
+    <script src="../js/main.js"></script>
+    <script>
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: rgba(26,26,46,0.95);
+                color: var(--color-accent-gold);
+                padding: 1rem 1.5rem;
+                border-radius: 8px;
+                border: 1px solid var(--color-accent-gold);
+                z-index: 1000;
+                font-size: 0.9rem;
+                animation: fadeInUp 0.3s ease;
+            `;
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 2000);
+        }
+    </script>
+</body>
+</html>
