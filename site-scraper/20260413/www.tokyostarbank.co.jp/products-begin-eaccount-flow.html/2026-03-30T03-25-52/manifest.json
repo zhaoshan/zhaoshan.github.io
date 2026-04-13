@@ -1,0 +1,22 @@
+{
+  "startTime": "2026-03-30T03:25:52.929Z",
+  "url": "https://www.tokyostarbank.co.jp/products/begin/eaccount/flow.html",
+  "pages": [
+    {
+      "url": "https://www.tokyostarbank.co.jp/products/begin/eaccount/flow.html",
+      "title": "口座開設に必要なもの・手順のご案内 | 東京スター銀行",
+      "depth": 0,
+      "path": "/Users/zhaoshan/site-scraper-output/www.tokyostarbank.co.jp/products-begin-eaccount-flow.html/2026-03-30T03-25-52",
+      "links": 167,
+      "timestamp": "2026-03-30T03:27:38.943Z"
+    }
+  ],
+  "totalImages": 37,
+  "totalDocuments": 3,
+  "totalLinks": 167,
+  "endTime": "2026-03-30T03:27:39.024Z",
+  "stats": {
+    "pagesCrawled": 1,
+    "visitedUrls": 1
+  }
+}

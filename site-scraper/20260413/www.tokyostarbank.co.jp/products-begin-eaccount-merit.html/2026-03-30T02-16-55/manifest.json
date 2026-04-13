@@ -1,0 +1,22 @@
+{
+  "startTime": "2026-03-30T02:16:55.811Z",
+  "url": "https://www.tokyostarbank.co.jp/products/begin/eaccount/merit.html",
+  "pages": [
+    {
+      "url": "https://www.tokyostarbank.co.jp/products/begin/eaccount/merit.html",
+      "title": "スターワン口座について | 東京スター銀行",
+      "depth": 0,
+      "path": "/Users/zhaoshan/site-scraper-output/www.tokyostarbank.co.jp/products-begin-eaccount-merit.html/2026-03-30T02-16-55",
+      "links": 152,
+      "timestamp": "2026-03-30T02:17:27.638Z"
+    }
+  ],
+  "totalImages": 11,
+  "totalDocuments": 3,
+  "totalLinks": 152,
+  "endTime": "2026-03-30T02:17:27.703Z",
+  "stats": {
+    "pagesCrawled": 1,
+    "visitedUrls": 1
+  }
+}

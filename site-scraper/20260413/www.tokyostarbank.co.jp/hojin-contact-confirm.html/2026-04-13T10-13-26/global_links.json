@@ -1,0 +1,92 @@
+{
+  "https://www.tokyostarbank.co.jp/contact/": {
+    "text": "キャンセル",
+    "href": "https://www.tokyostarbank.co.jp/contact/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/hojin/contact/agreement.html": {
+    "text": "次へ",
+    "href": "https://www.tokyostarbank.co.jp/hojin/contact/agreement.html",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/terms/": {
+    "text": "本ウェブサイトのご利用にあたって",
+    "href": "https://www.tokyostarbank.co.jp/terms/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/cookie_policy/": {
+    "text": "Cookieポリシーについて",
+    "href": "https://www.tokyostarbank.co.jp/cookie_policy/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/accessibility/": {
+    "text": "アクセシビリティについて",
+    "href": "https://www.tokyostarbank.co.jp/accessibility/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/security/": {
+    "text": "セキュリティについて",
+    "href": "https://www.tokyostarbank.co.jp/security/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/privacy/": {
+    "text": "個人情報のお取り扱いについて",
+    "href": "https://www.tokyostarbank.co.jp/privacy/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/facilitation/": {
+    "text": "金融円滑化に向けた取り組み",
+    "href": "https://www.tokyostarbank.co.jp/facilitation/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/anti-social/": {
+    "text": "反社会的勢力に対する基本方針",
+    "href": "https://www.tokyostarbank.co.jp/anti-social/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/money-laundering/": {
+    "text": "マネー・ローンダリングおよびテロ資金供与等に関する当行の取組み",
+    "href": "https://www.tokyostarbank.co.jp/money-laundering/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/collaboration/": {
+    "text": "電子決済等代行業者との連携及び協働に係る方針",
+    "href": "https://www.tokyostarbank.co.jp/collaboration/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/conflicts_interest/": {
+    "text": "利益相反管理方針の概要",
+    "href": "https://www.tokyostarbank.co.jp/conflicts_interest/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/legal/": {
+    "text": "金融商品勧誘方針",
+    "href": "https://www.tokyostarbank.co.jp/legal/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/prevention/": {
+    "text": "預金等との誤認防止について",
+    "href": "https://www.tokyostarbank.co.jp/prevention/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/stakeholder/": {
+    "text": "マルチステークホルダー方針",
+    "href": "https://www.tokyostarbank.co.jp/stakeholder/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/fiduciary_duty/": {
+    "text": "当行のフィデューシャリー・デューティー",
+    "href": "https://www.tokyostarbank.co.jp/fiduciary_duty/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/sitemap/": {
+    "text": "サイトマップ",
+    "href": "https://www.tokyostarbank.co.jp/sitemap/",
+    "type": "webpage"
+  },
+  "https://direct.tokyostarbank.co.jp/sp_xm2a/page/18001/sX01101CT/dsX0110100": {
+    "text": "マイナンバーカードをスマホで読み取り口座開設",
+    "href": "https://direct.tokyostarbank.co.jp/sp_xm2a/page/18001/sX01101CT/dsX0110100",
+    "type": "webpage"
+  }
+}

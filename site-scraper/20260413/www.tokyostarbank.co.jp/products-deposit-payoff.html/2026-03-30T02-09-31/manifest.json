@@ -1,0 +1,22 @@
+{
+  "startTime": "2026-03-30T02:09:31.334Z",
+  "url": "https://www.tokyostarbank.co.jp/products/deposit/payoff.html",
+  "pages": [
+    {
+      "url": "https://www.tokyostarbank.co.jp/products/deposit/payoff.html",
+      "title": "預金保険制度について | 東京スター銀行",
+      "depth": 0,
+      "path": "/Users/zhaoshan/site-scraper-output/www.tokyostarbank.co.jp/products-deposit-payoff.html/2026-03-30T02-09-31",
+      "links": 154,
+      "timestamp": "2026-03-30T02:10:13.460Z"
+    }
+  ],
+  "totalImages": 2,
+  "totalDocuments": 2,
+  "totalLinks": 154,
+  "endTime": "2026-03-30T02:10:13.531Z",
+  "stats": {
+    "pagesCrawled": 1,
+    "visitedUrls": 1
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "startTime": "2026-04-13T10:15:05.057Z",
+  "url": "https://www.nenkin.go.jp/shinsei/jukyu/kyotsu/20140421-12.html",
+  "pages": [
+    {
+      "url": "https://www.nenkin.go.jp/shinsei/jukyu/kyotsu/20140421-12.html",
+      "title": "年金の受取機関や住所を変えるとき｜日本年金機構",
+      "depth": 0,
+      "path": "/Users/zhaoshan/site-scraper-output/www.nenkin.go.jp/shinsei-jukyu-kyotsu-20140421-12.html/2026-04-13T10-15-05",
+      "links": 88,
+      "timestamp": "2026-04-13T10:15:28.061Z"
+    }
+  ],
+  "totalImages": 20,
+  "totalDocuments": 9,
+  "totalLinks": 88,
+  "endTime": "2026-04-13T10:15:28.118Z",
+  "stats": {
+    "pagesCrawled": 1,
+    "visitedUrls": 1
+  }
+}

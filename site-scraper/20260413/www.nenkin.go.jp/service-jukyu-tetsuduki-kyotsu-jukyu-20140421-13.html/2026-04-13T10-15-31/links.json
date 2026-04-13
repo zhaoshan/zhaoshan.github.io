@@ -1,0 +1,820 @@
+{
+  "url": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/20140421-13.html",
+  "title": "年金を受けている方が年金の受取機関や住所を変更するとき｜日本年金機構",
+  "timestamp": "2026-04-13T10:15:44.315Z",
+  "depth": 0,
+  "stats": {
+    "total": 80,
+    "webpages": 80,
+    "documents": 0,
+    "images": 0
+  },
+  "links": {
+    "webpages": [
+      {
+        "text": "メニューを飛ばして本文へ",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/20140421-13.html#CONT",
+        "type": "webpage"
+      },
+      {
+        "text": "(无文本)",
+        "href": "https://www.nenkin.go.jp/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金の制度・手続き",
+        "href": "https://www.nenkin.go.jp/service/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "国民年金",
+        "href": "https://www.nenkin.go.jp/service/kokunen/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "厚生年金保険",
+        "href": "https://www.nenkin.go.jp/service/kounen/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金の受け取り",
+        "href": "https://www.nenkin.go.jp/service/jukyu/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "利用者別ガイド",
+        "href": "https://www.nenkin.go.jp/service/riyoushabetsu/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金制度全般",
+        "href": "https://www.nenkin.go.jp/service/seidozenpan/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金記録に関する取り組み",
+        "href": "https://www.nenkin.go.jp/service/nenkinkiroku/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "社会保障協定",
+        "href": "https://www.nenkin.go.jp/service/shaho-kyotei/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "「特定技能」にかかる社会保険関係の書類交付",
+        "href": "https://www.nenkin.go.jp/service/tokuteiginou/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金について学ぼう",
+        "href": "https://www.nenkin.go.jp/service/learn/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "パンフレット",
+        "href": "https://www.nenkin.go.jp/service/pamphlet/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "動画",
+        "href": "https://www.nenkin.go.jp/service/doga/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金用語集",
+        "href": "https://www.nenkin.go.jp/service/yougo/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "シーンから探す",
+        "href": "https://www.nenkin.go.jp/service/scenebetsu/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "様式のダウンロード",
+        "href": "https://www.nenkin.go.jp/shinsei/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "申請・届出様式（国民年金）",
+        "href": "https://www.nenkin.go.jp/shinsei/kokunen/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "申請・届出様式（健康保険・厚生年金保険）",
+        "href": "https://www.nenkin.go.jp/shinsei/kounen/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "申請・届出様式（年金等の受け取り）",
+        "href": "https://www.nenkin.go.jp/shinsei/jukyu/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "申請・届出様式（年金記録の照会、訂正請求）",
+        "href": "https://www.nenkin.go.jp/shinsei/kiroku/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "申請・届出様式（社会保障協定）",
+        "href": "https://www.nenkin.go.jp/shinsei/kyotei/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "申請・届出様式（「特定技能」にかかる書類交付）",
+        "href": "https://www.nenkin.go.jp/shinsei/sonota/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "申請・届出様式（年金委員）",
+        "href": "https://www.nenkin.go.jp/shinsei/nenkiniin/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "オンラインで手続きする（個人の方）",
+        "href": "https://www.nenkin.go.jp/denshibenri_kojin/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "オンラインで手続きする（事業所の方）",
+        "href": "https://www.nenkin.go.jp/denshibenri/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "ご相談・Q&A",
+        "href": "https://www.nenkin.go.jp/section/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "Q&Aから探す",
+        "href": "https://www.nenkin.go.jp/section/faq/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "チャットボットで調べる",
+        "href": "https://www.nenkin.go.jp/service/seidozenpan/chatbot.html",
+        "type": "webpage"
+      },
+      {
+        "text": "日本年金機構について",
+        "href": "https://www.nenkin.go.jp/info/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "理事長のごあいさつ",
+        "href": "https://www.nenkin.go.jp/info/message.html",
+        "type": "webpage"
+      },
+      {
+        "text": "基本情報",
+        "href": "https://www.nenkin.go.jp/info/kihonjoho/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "各種方針",
+        "href": "https://www.nenkin.go.jp/info/houshin/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "日本年金機構の取り組み",
+        "href": "https://www.nenkin.go.jp/info/torikumi/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "アニュアルレポート",
+        "href": "https://www.nenkin.go.jp/info/annual/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "情報公開・統計情報",
+        "href": "https://www.nenkin.go.jp/info/kokaitokei/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "ご意見・ご要望、法令等違反通報",
+        "href": "https://www.nenkin.go.jp/info/goiken/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "日本年金機構ホームページについて",
+        "href": "https://www.nenkin.go.jp/info/aboutweb/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "法人文書・個人情報の開示",
+        "href": "https://www.nenkin.go.jp/info/kaiji.html",
+        "type": "webpage"
+      },
+      {
+        "text": "プレスリリース",
+        "href": "https://www.nenkin.go.jp/info/press/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "調達情報",
+        "href": "https://www.nenkin.go.jp/info/chotatu/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "採用情報",
+        "href": "https://www.nenkin.go.jp/info/recruit/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "サイトマップ",
+        "href": "https://www.nenkin.go.jp/sitemap.html",
+        "type": "webpage"
+      },
+      {
+        "text": "language",
+        "href": "https://www.nenkin.go.jp/international/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "音声読み上げ",
+        "href": "https://www.nenkin.go.jp/info/aboutweb/yomiage.html",
+        "type": "webpage"
+      },
+      {
+        "text": "20歳になったとき",
+        "href": "https://www.nenkin.go.jp/service/scenebetsu/hatachi.html",
+        "type": "webpage"
+      },
+      {
+        "text": "就職・転職・退職",
+        "href": "https://www.nenkin.go.jp/service/scenebetsu/shushoku.html",
+        "type": "webpage"
+      },
+      {
+        "text": "結婚・離婚・出産・育児",
+        "href": "https://www.nenkin.go.jp/service/scenebetsu/kekkon.html",
+        "type": "webpage"
+      },
+      {
+        "text": "海外転出入・海外在住の皆さま",
+        "href": "https://www.nenkin.go.jp/service/scenebetsu/kaigai.html",
+        "type": "webpage"
+      },
+      {
+        "text": "老齢年金の手続き",
+        "href": "https://www.nenkin.go.jp/service/scenebetsu/rourei.html",
+        "type": "webpage"
+      },
+      {
+        "text": "病気やけがで障害が残ったとき",
+        "href": "https://www.nenkin.go.jp/service/scenebetsu/shougai.html",
+        "type": "webpage"
+      },
+      {
+        "text": "身近な方が亡くなったとき",
+        "href": "https://www.nenkin.go.jp/service/scenebetsu/shibou.html",
+        "type": "webpage"
+      },
+      {
+        "text": "被災したとき",
+        "href": "https://www.nenkin.go.jp/service/scenebetsu/hisai.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金の受け取りに関する届出・手続き",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "共通事項",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金を受けている方やそのご家族の手続き（共通事項）",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金受給権者 受取機関変更届",
+        "href": "https://www.nenkin.go.jp/shinsei/jukyu/kyotsu/20140421-12.html#cmsuketorikikan",
+        "type": "webpage"
+      },
+      {
+        "text": "海外にお住まいの年金を受けている方が海外の金融機関の口座への振込を希望するとき",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/kaigaikoza.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金事務所または街角の年金相談センター",
+        "href": "https://www.nenkin.go.jp/section/soudan/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "ねんきんダイヤル",
+        "href": "https://www.nenkin.go.jp/section/tel/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "個人の方の電子申請（年金受取機関変更届）",
+        "href": "https://www.nenkin.go.jp/denshibenri_kojin/denshibenri_rorei/denshi_uketorikikan/uketorikikan_shinsei.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金Q&A「インターネット専業銀行で年金の受け取りはできますか。」",
+        "href": "https://www.nenkin.go.jp/section/faq/jukyu/uketori/uketori/ginkouketori/20191010.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金を受けている方が海外に居住するとき",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/kaigaitenshutsu.html",
+        "type": "webpage"
+      },
+      {
+        "text": "海外にお住まいの年金を受けている方が誕生月を迎えたとき",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/kaigaigenkyo.html",
+        "type": "webpage"
+      },
+      {
+        "text": "海外にお住まいの年金を受けている方が引っ越しをしたとき",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/kaigaihikkoshi.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金を受けている方の氏名が変わったとき",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/20140421-09.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金を受けている方が誕生月を迎えたとき",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/20140421-11.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金を受けている方が亡くなったとき",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/20140731-01.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金を受けている方が所在不明になったとき",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/20190201.html",
+        "type": "webpage"
+      },
+      {
+        "text": "2つ以上の年金を受ける権利ができたとき",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/20150501.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金証書・年金額改定通知書・年金振込通知書の再交付を希望するとき",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/20140627-01.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金送金通知書が届かなかったり、なくしたりしたとき",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/20140421-04.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金の支給停止（撤回）を希望するとき",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/20140421.html",
+        "type": "webpage"
+      },
+      {
+        "text": "ねんきんネット",
+        "href": "https://www.nenkin.go.jp/denshibenri_kojin/n_net/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "通知書の見方を調べる",
+        "href": "https://www.nenkin.go.jp/service/seidozenpan/20150601.html",
+        "type": "webpage"
+      },
+      {
+        "text": "このサイトについて",
+        "href": "https://www.nenkin.go.jp/info/aboutweb/aboutsite.html",
+        "type": "webpage"
+      },
+      {
+        "text": "個人情報の保護について",
+        "href": "https://www.nenkin.go.jp/info/aboutweb/kojinjoho.html",
+        "type": "webpage"
+      },
+      {
+        "text": "関連サイト",
+        "href": "https://www.nenkin.go.jp/info/aboutweb/kanren/kanren.html",
+        "type": "webpage"
+      },
+      {
+        "text": "所在地・連絡先",
+        "href": "https://www.nenkin.go.jp/info/kihonjoho/adress.html",
+        "type": "webpage"
+      },
+      {
+        "text": "公式SNS",
+        "href": "https://www.nenkin.go.jp/info/aboutweb/tw-policy.html",
+        "type": "webpage"
+      }
+    ],
+    "documents": [],
+    "images": [],
+    "all": [
+      {
+        "text": "メニューを飛ばして本文へ",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/20140421-13.html#CONT",
+        "type": "webpage"
+      },
+      {
+        "text": "(无文本)",
+        "href": "https://www.nenkin.go.jp/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金の制度・手続き",
+        "href": "https://www.nenkin.go.jp/service/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "国民年金",
+        "href": "https://www.nenkin.go.jp/service/kokunen/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "厚生年金保険",
+        "href": "https://www.nenkin.go.jp/service/kounen/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金の受け取り",
+        "href": "https://www.nenkin.go.jp/service/jukyu/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "利用者別ガイド",
+        "href": "https://www.nenkin.go.jp/service/riyoushabetsu/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金制度全般",
+        "href": "https://www.nenkin.go.jp/service/seidozenpan/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金記録に関する取り組み",
+        "href": "https://www.nenkin.go.jp/service/nenkinkiroku/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "社会保障協定",
+        "href": "https://www.nenkin.go.jp/service/shaho-kyotei/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "「特定技能」にかかる社会保険関係の書類交付",
+        "href": "https://www.nenkin.go.jp/service/tokuteiginou/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金について学ぼう",
+        "href": "https://www.nenkin.go.jp/service/learn/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "パンフレット",
+        "href": "https://www.nenkin.go.jp/service/pamphlet/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "動画",
+        "href": "https://www.nenkin.go.jp/service/doga/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金用語集",
+        "href": "https://www.nenkin.go.jp/service/yougo/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "シーンから探す",
+        "href": "https://www.nenkin.go.jp/service/scenebetsu/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "様式のダウンロード",
+        "href": "https://www.nenkin.go.jp/shinsei/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "申請・届出様式（国民年金）",
+        "href": "https://www.nenkin.go.jp/shinsei/kokunen/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "申請・届出様式（健康保険・厚生年金保険）",
+        "href": "https://www.nenkin.go.jp/shinsei/kounen/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "申請・届出様式（年金等の受け取り）",
+        "href": "https://www.nenkin.go.jp/shinsei/jukyu/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "申請・届出様式（年金記録の照会、訂正請求）",
+        "href": "https://www.nenkin.go.jp/shinsei/kiroku/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "申請・届出様式（社会保障協定）",
+        "href": "https://www.nenkin.go.jp/shinsei/kyotei/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "申請・届出様式（「特定技能」にかかる書類交付）",
+        "href": "https://www.nenkin.go.jp/shinsei/sonota/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "申請・届出様式（年金委員）",
+        "href": "https://www.nenkin.go.jp/shinsei/nenkiniin/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "オンラインで手続きする（個人の方）",
+        "href": "https://www.nenkin.go.jp/denshibenri_kojin/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "オンラインで手続きする（事業所の方）",
+        "href": "https://www.nenkin.go.jp/denshibenri/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "ご相談・Q&A",
+        "href": "https://www.nenkin.go.jp/section/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "Q&Aから探す",
+        "href": "https://www.nenkin.go.jp/section/faq/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "チャットボットで調べる",
+        "href": "https://www.nenkin.go.jp/service/seidozenpan/chatbot.html",
+        "type": "webpage"
+      },
+      {
+        "text": "日本年金機構について",
+        "href": "https://www.nenkin.go.jp/info/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "理事長のごあいさつ",
+        "href": "https://www.nenkin.go.jp/info/message.html",
+        "type": "webpage"
+      },
+      {
+        "text": "基本情報",
+        "href": "https://www.nenkin.go.jp/info/kihonjoho/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "各種方針",
+        "href": "https://www.nenkin.go.jp/info/houshin/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "日本年金機構の取り組み",
+        "href": "https://www.nenkin.go.jp/info/torikumi/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "アニュアルレポート",
+        "href": "https://www.nenkin.go.jp/info/annual/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "情報公開・統計情報",
+        "href": "https://www.nenkin.go.jp/info/kokaitokei/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "ご意見・ご要望、法令等違反通報",
+        "href": "https://www.nenkin.go.jp/info/goiken/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "日本年金機構ホームページについて",
+        "href": "https://www.nenkin.go.jp/info/aboutweb/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "法人文書・個人情報の開示",
+        "href": "https://www.nenkin.go.jp/info/kaiji.html",
+        "type": "webpage"
+      },
+      {
+        "text": "プレスリリース",
+        "href": "https://www.nenkin.go.jp/info/press/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "調達情報",
+        "href": "https://www.nenkin.go.jp/info/chotatu/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "採用情報",
+        "href": "https://www.nenkin.go.jp/info/recruit/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "サイトマップ",
+        "href": "https://www.nenkin.go.jp/sitemap.html",
+        "type": "webpage"
+      },
+      {
+        "text": "language",
+        "href": "https://www.nenkin.go.jp/international/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "音声読み上げ",
+        "href": "https://www.nenkin.go.jp/info/aboutweb/yomiage.html",
+        "type": "webpage"
+      },
+      {
+        "text": "20歳になったとき",
+        "href": "https://www.nenkin.go.jp/service/scenebetsu/hatachi.html",
+        "type": "webpage"
+      },
+      {
+        "text": "就職・転職・退職",
+        "href": "https://www.nenkin.go.jp/service/scenebetsu/shushoku.html",
+        "type": "webpage"
+      },
+      {
+        "text": "結婚・離婚・出産・育児",
+        "href": "https://www.nenkin.go.jp/service/scenebetsu/kekkon.html",
+        "type": "webpage"
+      },
+      {
+        "text": "海外転出入・海外在住の皆さま",
+        "href": "https://www.nenkin.go.jp/service/scenebetsu/kaigai.html",
+        "type": "webpage"
+      },
+      {
+        "text": "老齢年金の手続き",
+        "href": "https://www.nenkin.go.jp/service/scenebetsu/rourei.html",
+        "type": "webpage"
+      },
+      {
+        "text": "病気やけがで障害が残ったとき",
+        "href": "https://www.nenkin.go.jp/service/scenebetsu/shougai.html",
+        "type": "webpage"
+      },
+      {
+        "text": "身近な方が亡くなったとき",
+        "href": "https://www.nenkin.go.jp/service/scenebetsu/shibou.html",
+        "type": "webpage"
+      },
+      {
+        "text": "被災したとき",
+        "href": "https://www.nenkin.go.jp/service/scenebetsu/hisai.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金の受け取りに関する届出・手続き",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "共通事項",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金を受けている方やそのご家族の手続き（共通事項）",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金受給権者 受取機関変更届",
+        "href": "https://www.nenkin.go.jp/shinsei/jukyu/kyotsu/20140421-12.html#cmsuketorikikan",
+        "type": "webpage"
+      },
+      {
+        "text": "海外にお住まいの年金を受けている方が海外の金融機関の口座への振込を希望するとき",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/kaigaikoza.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金事務所または街角の年金相談センター",
+        "href": "https://www.nenkin.go.jp/section/soudan/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "ねんきんダイヤル",
+        "href": "https://www.nenkin.go.jp/section/tel/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "個人の方の電子申請（年金受取機関変更届）",
+        "href": "https://www.nenkin.go.jp/denshibenri_kojin/denshibenri_rorei/denshi_uketorikikan/uketorikikan_shinsei.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金Q&A「インターネット専業銀行で年金の受け取りはできますか。」",
+        "href": "https://www.nenkin.go.jp/section/faq/jukyu/uketori/uketori/ginkouketori/20191010.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金を受けている方が海外に居住するとき",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/kaigaitenshutsu.html",
+        "type": "webpage"
+      },
+      {
+        "text": "海外にお住まいの年金を受けている方が誕生月を迎えたとき",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/kaigaigenkyo.html",
+        "type": "webpage"
+      },
+      {
+        "text": "海外にお住まいの年金を受けている方が引っ越しをしたとき",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/kaigaihikkoshi.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金を受けている方の氏名が変わったとき",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/20140421-09.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金を受けている方が誕生月を迎えたとき",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/20140421-11.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金を受けている方が亡くなったとき",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/20140731-01.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金を受けている方が所在不明になったとき",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/20190201.html",
+        "type": "webpage"
+      },
+      {
+        "text": "2つ以上の年金を受ける権利ができたとき",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/20150501.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金証書・年金額改定通知書・年金振込通知書の再交付を希望するとき",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/20140627-01.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金送金通知書が届かなかったり、なくしたりしたとき",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/20140421-04.html",
+        "type": "webpage"
+      },
+      {
+        "text": "年金の支給停止（撤回）を希望するとき",
+        "href": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/20140421.html",
+        "type": "webpage"
+      },
+      {
+        "text": "ねんきんネット",
+        "href": "https://www.nenkin.go.jp/denshibenri_kojin/n_net/index.html",
+        "type": "webpage"
+      },
+      {
+        "text": "通知書の見方を調べる",
+        "href": "https://www.nenkin.go.jp/service/seidozenpan/20150601.html",
+        "type": "webpage"
+      },
+      {
+        "text": "このサイトについて",
+        "href": "https://www.nenkin.go.jp/info/aboutweb/aboutsite.html",
+        "type": "webpage"
+      },
+      {
+        "text": "個人情報の保護について",
+        "href": "https://www.nenkin.go.jp/info/aboutweb/kojinjoho.html",
+        "type": "webpage"
+      },
+      {
+        "text": "関連サイト",
+        "href": "https://www.nenkin.go.jp/info/aboutweb/kanren/kanren.html",
+        "type": "webpage"
+      },
+      {
+        "text": "所在地・連絡先",
+        "href": "https://www.nenkin.go.jp/info/kihonjoho/adress.html",
+        "type": "webpage"
+      },
+      {
+        "text": "公式SNS",
+        "href": "https://www.nenkin.go.jp/info/aboutweb/tw-policy.html",
+        "type": "webpage"
+      }
+    ]
+  }
+}

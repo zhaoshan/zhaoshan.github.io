@@ -1,0 +1,22 @@
+{
+  "startTime": "2026-03-30T02:22:17.930Z",
+  "url": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/20140421-13.html",
+  "pages": [
+    {
+      "url": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/20140421-13.html",
+      "title": "年金を受けている方が年金の受取機関や住所を変更するとき｜日本年金機構",
+      "depth": 0,
+      "path": "/Users/zhaoshan/site-scraper-output/www.nenkin.go.jp/service-jukyu-tetsuduki-kyotsu-jukyu-20140421-13.html/2026-03-30T02-22-17",
+      "links": 80,
+      "timestamp": "2026-03-30T02:22:29.563Z"
+    }
+  ],
+  "totalImages": 1,
+  "totalDocuments": 0,
+  "totalLinks": 80,
+  "endTime": "2026-03-30T02:22:29.593Z",
+  "stats": {
+    "pagesCrawled": 1,
+    "visitedUrls": 1
+  }
+}

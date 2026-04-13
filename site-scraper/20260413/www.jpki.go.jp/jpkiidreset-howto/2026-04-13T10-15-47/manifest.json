@@ -1,0 +1,22 @@
+{
+  "startTime": "2026-04-13T10:15:47.972Z",
+  "url": "https://www.jpki.go.jp/jpkiidreset/howto/index.html",
+  "pages": [
+    {
+      "url": "https://www.jpki.go.jp/jpkiidreset/howto/index.html",
+      "title": "マイナンバーカードのパスワードをコンビニで初期化 | 公的個人認証サービス ポータルサイト",
+      "depth": 0,
+      "path": "/Users/zhaoshan/site-scraper-output/www.jpki.go.jp/jpkiidreset-howto/2026-04-13T10-15-47",
+      "links": 29,
+      "timestamp": "2026-04-13T10:17:27.352Z"
+    }
+  ],
+  "totalImages": 8,
+  "totalDocuments": 3,
+  "totalLinks": 29,
+  "endTime": "2026-04-13T10:17:27.406Z",
+  "stats": {
+    "pagesCrawled": 1,
+    "visitedUrls": 1
+  }
+}

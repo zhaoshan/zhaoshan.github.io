@@ -1,0 +1,22 @@
+{
+  "startTime": "2026-03-30T02:20:04.361Z",
+  "url": "https://www.tokyostarbank.co.jp/service/tel_bank/",
+  "pages": [
+    {
+      "url": "https://www.tokyostarbank.co.jp/service/tel_bank/",
+      "title": "テレホンバンク | 東京スター銀行",
+      "depth": 0,
+      "path": "/Users/zhaoshan/site-scraper-output/www.tokyostarbank.co.jp/service-tel_bank/2026-03-30T02-20-04",
+      "links": 162,
+      "timestamp": "2026-03-30T02:20:39.585Z"
+    }
+  ],
+  "totalImages": 2,
+  "totalDocuments": 3,
+  "totalLinks": 162,
+  "endTime": "2026-03-30T02:20:39.646Z",
+  "stats": {
+    "pagesCrawled": 1,
+    "visitedUrls": 1
+  }
+}

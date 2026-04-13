@@ -1,0 +1,22 @@
+{
+  "startTime": "2026-04-13T10:14:04.218Z",
+  "url": "https://www.tokyostarbank.co.jp/account/flow/two_id.html",
+  "pages": [
+    {
+      "url": "https://www.tokyostarbank.co.jp/account/flow/two_id.html",
+      "title": "WEB口座開設（本人確認書類2点） | 東京スター銀行",
+      "depth": 0,
+      "path": "/Users/zhaoshan/site-scraper-output/www.tokyostarbank.co.jp/account-flow-two_id.html/2026-04-13T10-14-04",
+      "links": 155,
+      "timestamp": "2026-04-13T10:14:50.203Z"
+    }
+  ],
+  "totalImages": 19,
+  "totalDocuments": 2,
+  "totalLinks": 155,
+  "endTime": "2026-04-13T10:14:50.266Z",
+  "stats": {
+    "pagesCrawled": 1,
+    "visitedUrls": 1
+  }
+}

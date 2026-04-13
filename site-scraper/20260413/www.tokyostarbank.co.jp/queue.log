@@ -1,0 +1,9 @@
+[Wed Mar 25 15:54:40 CST 2026] 等待当前任务完成...
+[Wed Mar 25 16:10:16 CST 2026] 当前任务已完成
+[Wed Mar 25 16:10:22 CST 2026] 开始: deposit/structure
+[Wed Mar 25 16:40:29 CST 2026] 完成: deposit/structure
+[Wed Mar 25 16:40:34 CST 2026] 开始: foreign_deposit/term
+[Wed Mar 25 17:07:51 CST 2026] 完成: foreign_deposit/term
+[Wed Mar 25 17:07:56 CST 2026] 开始: foreign_deposit/structure
+[Wed Mar 25 17:35:06 CST 2026] 完成: foreign_deposit/structure
+[Wed Mar 25 17:35:06 CST 2026] ✅ 全部队列完成

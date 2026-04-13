@@ -1,0 +1,22 @@
+{
+  "startTime": "2026-03-30T02:20:42.917Z",
+  "url": "https://www.tokyostarbank.co.jp/contact/#anc-01",
+  "pages": [
+    {
+      "url": "https://www.tokyostarbank.co.jp/contact/#anc-01",
+      "title": "お問い合わせ一覧 | 東京スター銀行",
+      "depth": 0,
+      "path": "/Users/zhaoshan/site-scraper-output/www.tokyostarbank.co.jp/contact/2026-03-30T02-20-42",
+      "links": 157,
+      "timestamp": "2026-03-30T02:21:11.398Z"
+    }
+  ],
+  "totalImages": 1,
+  "totalDocuments": 2,
+  "totalLinks": 157,
+  "endTime": "2026-03-30T02:21:11.464Z",
+  "stats": {
+    "pagesCrawled": 1,
+    "visitedUrls": 1
+  }
+}

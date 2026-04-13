@@ -1,0 +1,22 @@
+{
+  "startTime": "2026-03-30T02:10:16.913Z",
+  "url": "http://www.tokyostarbank.co.jp/products/deposit/index_fcy.html",
+  "pages": [
+    {
+      "url": "http://www.tokyostarbank.co.jp/products/deposit/index_fcy.html",
+      "title": "外貨預金 | 東京スター銀行",
+      "depth": 0,
+      "path": "/Users/zhaoshan/site-scraper-output/www.tokyostarbank.co.jp/products-deposit-index_fcy.html/2026-03-30T02-10-16",
+      "links": 170,
+      "timestamp": "2026-03-30T02:10:55.981Z"
+    }
+  ],
+  "totalImages": 29,
+  "totalDocuments": 2,
+  "totalLinks": 170,
+  "endTime": "2026-03-30T02:10:56.051Z",
+  "stats": {
+    "pagesCrawled": 1,
+    "visitedUrls": 1
+  }
+}

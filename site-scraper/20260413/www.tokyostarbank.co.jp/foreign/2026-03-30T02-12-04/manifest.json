@@ -1,0 +1,22 @@
+{
+  "startTime": "2026-03-30T02:12:04.844Z",
+  "url": "https://www.tokyostarbank.co.jp/foreign/",
+  "pages": [
+    {
+      "url": "https://www.tokyostarbank.co.jp/foreign/",
+      "title": "外国籍のお客さま【東京スター銀行】",
+      "depth": 0,
+      "path": "/Users/zhaoshan/site-scraper-output/www.tokyostarbank.co.jp/foreign/2026-03-30T02-12-04",
+      "links": 55,
+      "timestamp": "2026-03-30T02:12:44.422Z"
+    }
+  ],
+  "totalImages": 32,
+  "totalDocuments": 6,
+  "totalLinks": 55,
+  "endTime": "2026-03-30T02:12:44.494Z",
+  "stats": {
+    "pagesCrawled": 1,
+    "visitedUrls": 1
+  }
+}

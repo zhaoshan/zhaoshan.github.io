@@ -1,0 +1,571 @@
+{
+  "url": "https://www.tokyostarbank.co.jp/foreign/",
+  "title": "外国籍のお客さま【東京スター銀行】",
+  "timestamp": "2026-03-30T02:12:22.909Z",
+  "depth": 0,
+  "stats": {
+    "total": 55,
+    "webpages": 49,
+    "documents": 6,
+    "images": 0
+  },
+  "links": {
+    "webpages": [
+      {
+        "text": "個人のお客さま",
+        "href": "https://www.tokyostarbank.co.jp/",
+        "type": "webpage"
+      },
+      {
+        "text": "法人のお客さま",
+        "href": "https://www.tokyostarbank.co.jp/hojin/",
+        "type": "webpage"
+      },
+      {
+        "text": "外国籍のお客さま",
+        "href": "https://www.tokyostarbank.co.jp/foreign/",
+        "type": "webpage"
+      },
+      {
+        "text": "当行のフィデューシャリー・デューティー",
+        "href": "https://www.tokyostarbank.co.jp/foreign/fiduciary_duty/",
+        "type": "webpage"
+      },
+      {
+        "text": "IR（English）",
+        "href": "https://www.tokyostarbank.co.jp/profile/en/",
+        "type": "webpage"
+      },
+      {
+        "text": "採用情報",
+        "href": "https://www.tokyostarbank.co.jp/recruit/",
+        "type": "webpage"
+      },
+      {
+        "text": "FAQ",
+        "href": "https://www.tokyostarbank.co.jp/foreign/faq/",
+        "type": "webpage"
+      },
+      {
+        "text": "English",
+        "href": "https://www.tokyostarbank.co.jp/foreign/en/",
+        "type": "webpage"
+      },
+      {
+        "text": "中文",
+        "href": "https://www.tokyostarbank.co.jp/foreign/cn/",
+        "type": "webpage"
+      },
+      {
+        "text": "口座開設・各種情報",
+        "href": "https://www.tokyostarbank.co.jp/foreign/account/flow/",
+        "type": "webpage"
+      },
+      {
+        "text": "手数料一覧",
+        "href": "https://www.tokyostarbank.co.jp/foreign/account/fee/",
+        "type": "webpage"
+      },
+      {
+        "text": "キャッシュカード（兼電話取引用）暗証番号の変更",
+        "href": "https://www.tokyostarbank.co.jp/foreign/account/number/",
+        "type": "webpage"
+      },
+      {
+        "text": "カード・通帳・お届け印の紛失、盗難にあわれた場合",
+        "href": "https://www.tokyostarbank.co.jp/foreign/account/funsitu/",
+        "type": "webpage"
+      },
+      {
+        "text": "商品",
+        "href": "https://www.tokyostarbank.co.jp/foreign/products/?tab=tab-02",
+        "type": "webpage"
+      },
+      {
+        "text": "東京スターダイレクト（インターネットバンキング）",
+        "href": "https://www.tokyostarbank.co.jp/foreign/tokyostardirect/",
+        "type": "webpage"
+      },
+      {
+        "text": "外国送金Web受付サービス",
+        "href": "https://www.tokyostarbank.co.jp/foreign/f_remittance/",
+        "type": "webpage"
+      },
+      {
+        "text": "法人向けサービス",
+        "href": "https://www.tokyostarbank.co.jp/foreign/hojin/products/",
+        "type": "webpage"
+      },
+      {
+        "text": "会社概要",
+        "href": "https://www.tokyostarbank.co.jp/foreign/profile/summary/",
+        "type": "webpage"
+      },
+      {
+        "text": "株主（台湾CTBC Bank）について",
+        "href": "https://www.tokyostarbank.co.jp/foreign/profile/shareholder/",
+        "type": "webpage"
+      },
+      {
+        "text": "外国籍のお客さまへの取り組み",
+        "href": "https://www.tokyostarbank.co.jp/foreign/profile/initiatives/",
+        "type": "webpage"
+      },
+      {
+        "text": "ログイン",
+        "href": "https://www.tokyostarbank.co.jp/tokyostardirect/login.html",
+        "type": "webpage"
+      },
+      {
+        "text": "(无文本)",
+        "href": "https://www.tokyostarbank.co.jp/foreign/products/loan/homeloan_star/",
+        "type": "webpage"
+      },
+      {
+        "text": "(无文本)",
+        "href": "https://www.tokyostarbank.co.jp/foreign/products/loan/property/",
+        "type": "webpage"
+      },
+      {
+        "text": "(无文本)",
+        "href": "https://www.tokyostarbank.co.jp/foreign/orangeport/",
+        "type": "webpage"
+      },
+      {
+        "text": "在留カードご提示のご依頼",
+        "href": "https://www.tokyostarbank.co.jp/foreign/topics/250901.html",
+        "type": "webpage"
+      },
+      {
+        "text": "非居住者口座を開設する",
+        "href": "https://www.tokyostarbank.co.jp/foreign/account/foreign_customers/",
+        "type": "webpage"
+      },
+      {
+        "text": "居住者向け商品を見る",
+        "href": "https://www.tokyostarbank.co.jp/foreign/products/?tab=tab-01",
+        "type": "webpage"
+      },
+      {
+        "text": "東京スター銀行 スターダイレクトアプリ ダウンロード",
+        "href": "https://www.tokyostarbank.co.jp/lp/app/",
+        "type": "webpage"
+      },
+      {
+        "text": "(无文本)",
+        "href": "https://ja-jp.facebook.com/tokyostarbank/",
+        "type": "webpage"
+      },
+      {
+        "text": "(无文本)",
+        "href": "https://www.youtube.com/channel/UCva8Phpv6oJ-4V4UJR5hU7Q",
+        "type": "webpage"
+      },
+      {
+        "text": "(无文本)",
+        "href": "https://twitter.com/tsb_jp",
+        "type": "webpage"
+      },
+      {
+        "text": "(无文本)",
+        "href": "https://lin.ee/RPrD2Th",
+        "type": "webpage"
+      },
+      {
+        "text": "本ウェブサイトのご利用にあたって",
+        "href": "https://www.tokyostarbank.co.jp/foreign/terms/",
+        "type": "webpage"
+      },
+      {
+        "text": "Cookieポリシーについて",
+        "href": "https://www.tokyostarbank.co.jp/foreign/cookie_policy/",
+        "type": "webpage"
+      },
+      {
+        "text": "アクセシビリティについて",
+        "href": "https://www.tokyostarbank.co.jp/foreign/accessibility/",
+        "type": "webpage"
+      },
+      {
+        "text": "セキュリティについて",
+        "href": "https://www.tokyostarbank.co.jp/foreign/security/",
+        "type": "webpage"
+      },
+      {
+        "text": "個人情報のお取り扱いについて",
+        "href": "https://www.tokyostarbank.co.jp/foreign/privacy/",
+        "type": "webpage"
+      },
+      {
+        "text": "反社会的勢力に対する基本方針",
+        "href": "https://www.tokyostarbank.co.jp/foreign/anti-social/",
+        "type": "webpage"
+      },
+      {
+        "text": "お客さまの情報やお取り引きの目的等の定期的な確認について",
+        "href": "https://www.tokyostarbank.co.jp/foreign/money-laundering/",
+        "type": "webpage"
+      },
+      {
+        "text": "電子決済等代行業者との連携及び協働に係る方針",
+        "href": "https://www.tokyostarbank.co.jp/foreign/collaboration/",
+        "type": "webpage"
+      },
+      {
+        "text": "マネー・ローンダリングおよびテロ資金供与対策に関する基本方針",
+        "href": "https://www.tokyostarbank.co.jp/foreign/anti-moneylaundering/",
+        "type": "webpage"
+      },
+      {
+        "text": "利益相反管理方針の概要",
+        "href": "https://www.tokyostarbank.co.jp/foreign/conflicts_interest/",
+        "type": "webpage"
+      },
+      {
+        "text": "金融商品勧誘方針",
+        "href": "https://www.tokyostarbank.co.jp/foreign/legal/",
+        "type": "webpage"
+      },
+      {
+        "text": "預金等との誤認防止について",
+        "href": "https://www.tokyostarbank.co.jp/foreign/prevention/",
+        "type": "webpage"
+      },
+      {
+        "text": "インターネットバンキングによるフィッシング詐欺・サポート詐欺について",
+        "href": "https://www.tokyostarbank.co.jp/foreign/topics/230222.html",
+        "type": "webpage"
+      },
+      {
+        "text": "インターネットバンキングによる不正利用の被害について",
+        "href": "https://www.tokyostarbank.co.jp/foreign/topics/201127.html",
+        "type": "webpage"
+      },
+      {
+        "text": "マルチステークホルダー方針",
+        "href": "https://www.tokyostarbank.co.jp/stakeholder/",
+        "type": "webpage"
+      },
+      {
+        "text": "サイトマップ",
+        "href": "https://www.tokyostarbank.co.jp/sitemap/",
+        "type": "webpage"
+      },
+      {
+        "text": "マイナンバーカードをスマホで読み取り口座開設",
+        "href": "https://direct.tokyostarbank.co.jp/sp_xm2a/page/18001/sX01101CT/dsX0110100",
+        "type": "webpage"
+      }
+    ],
+    "documents": [
+      {
+        "text": "【重要】詐欺メールにご注意ください",
+        "href": "https://www.tokyostarbank.co.jp/foreign/topics/pdf/fraudulent_emails.pdf",
+        "type": "document"
+      },
+      {
+        "text": "暗号資産交換業者宛ならびに資金移動業者宛のお振り込みについて",
+        "href": "https://www.tokyostarbank.co.jp/topics/pdf/251203.pdf",
+        "type": "document"
+      },
+      {
+        "text": "【重要】(日本に居住する外国籍のお客さまへ)在留資格・在留期間等の確認にご協力ください",
+        "href": "https://www.tokyostarbank.co.jp/foreign/topics/pdf/250901.pdf",
+        "type": "document"
+      },
+      {
+        "text": "セブン銀行ATM暗証番号変更機能追加のお知らせ",
+        "href": "https://www.tokyostarbank.co.jp/foreign/topics/pdf/240322_foreign.pdf",
+        "type": "document"
+      },
+      {
+        "text": "ソーシャルメディア利用規約（PDF：866KB）",
+        "href": "https://www.tokyostarbank.co.jp/terms/pdf/social_media.pdf",
+        "type": "document"
+      },
+      {
+        "text": "当行が発行するインボイスに関するご案内",
+        "href": "https://www.tokyostarbank.co.jp/press_ir/press/pdf/250513.pdf",
+        "type": "document"
+      }
+    ],
+    "images": [],
+    "all": [
+      {
+        "text": "個人のお客さま",
+        "href": "https://www.tokyostarbank.co.jp/",
+        "type": "webpage"
+      },
+      {
+        "text": "法人のお客さま",
+        "href": "https://www.tokyostarbank.co.jp/hojin/",
+        "type": "webpage"
+      },
+      {
+        "text": "外国籍のお客さま",
+        "href": "https://www.tokyostarbank.co.jp/foreign/",
+        "type": "webpage"
+      },
+      {
+        "text": "当行のフィデューシャリー・デューティー",
+        "href": "https://www.tokyostarbank.co.jp/foreign/fiduciary_duty/",
+        "type": "webpage"
+      },
+      {
+        "text": "IR（English）",
+        "href": "https://www.tokyostarbank.co.jp/profile/en/",
+        "type": "webpage"
+      },
+      {
+        "text": "採用情報",
+        "href": "https://www.tokyostarbank.co.jp/recruit/",
+        "type": "webpage"
+      },
+      {
+        "text": "FAQ",
+        "href": "https://www.tokyostarbank.co.jp/foreign/faq/",
+        "type": "webpage"
+      },
+      {
+        "text": "English",
+        "href": "https://www.tokyostarbank.co.jp/foreign/en/",
+        "type": "webpage"
+      },
+      {
+        "text": "中文",
+        "href": "https://www.tokyostarbank.co.jp/foreign/cn/",
+        "type": "webpage"
+      },
+      {
+        "text": "口座開設・各種情報",
+        "href": "https://www.tokyostarbank.co.jp/foreign/account/flow/",
+        "type": "webpage"
+      },
+      {
+        "text": "手数料一覧",
+        "href": "https://www.tokyostarbank.co.jp/foreign/account/fee/",
+        "type": "webpage"
+      },
+      {
+        "text": "キャッシュカード（兼電話取引用）暗証番号の変更",
+        "href": "https://www.tokyostarbank.co.jp/foreign/account/number/",
+        "type": "webpage"
+      },
+      {
+        "text": "カード・通帳・お届け印の紛失、盗難にあわれた場合",
+        "href": "https://www.tokyostarbank.co.jp/foreign/account/funsitu/",
+        "type": "webpage"
+      },
+      {
+        "text": "商品",
+        "href": "https://www.tokyostarbank.co.jp/foreign/products/?tab=tab-02",
+        "type": "webpage"
+      },
+      {
+        "text": "東京スターダイレクト（インターネットバンキング）",
+        "href": "https://www.tokyostarbank.co.jp/foreign/tokyostardirect/",
+        "type": "webpage"
+      },
+      {
+        "text": "外国送金Web受付サービス",
+        "href": "https://www.tokyostarbank.co.jp/foreign/f_remittance/",
+        "type": "webpage"
+      },
+      {
+        "text": "法人向けサービス",
+        "href": "https://www.tokyostarbank.co.jp/foreign/hojin/products/",
+        "type": "webpage"
+      },
+      {
+        "text": "会社概要",
+        "href": "https://www.tokyostarbank.co.jp/foreign/profile/summary/",
+        "type": "webpage"
+      },
+      {
+        "text": "株主（台湾CTBC Bank）について",
+        "href": "https://www.tokyostarbank.co.jp/foreign/profile/shareholder/",
+        "type": "webpage"
+      },
+      {
+        "text": "外国籍のお客さまへの取り組み",
+        "href": "https://www.tokyostarbank.co.jp/foreign/profile/initiatives/",
+        "type": "webpage"
+      },
+      {
+        "text": "ログイン",
+        "href": "https://www.tokyostarbank.co.jp/tokyostardirect/login.html",
+        "type": "webpage"
+      },
+      {
+        "text": "【重要】詐欺メールにご注意ください",
+        "href": "https://www.tokyostarbank.co.jp/foreign/topics/pdf/fraudulent_emails.pdf",
+        "type": "document"
+      },
+      {
+        "text": "暗号資産交換業者宛ならびに資金移動業者宛のお振り込みについて",
+        "href": "https://www.tokyostarbank.co.jp/topics/pdf/251203.pdf",
+        "type": "document"
+      },
+      {
+        "text": "【重要】(日本に居住する外国籍のお客さまへ)在留資格・在留期間等の確認にご協力ください",
+        "href": "https://www.tokyostarbank.co.jp/foreign/topics/pdf/250901.pdf",
+        "type": "document"
+      },
+      {
+        "text": "セブン銀行ATM暗証番号変更機能追加のお知らせ",
+        "href": "https://www.tokyostarbank.co.jp/foreign/topics/pdf/240322_foreign.pdf",
+        "type": "document"
+      },
+      {
+        "text": "(无文本)",
+        "href": "https://www.tokyostarbank.co.jp/foreign/products/loan/homeloan_star/",
+        "type": "webpage"
+      },
+      {
+        "text": "(无文本)",
+        "href": "https://www.tokyostarbank.co.jp/foreign/products/loan/property/",
+        "type": "webpage"
+      },
+      {
+        "text": "(无文本)",
+        "href": "https://www.tokyostarbank.co.jp/foreign/orangeport/",
+        "type": "webpage"
+      },
+      {
+        "text": "在留カードご提示のご依頼",
+        "href": "https://www.tokyostarbank.co.jp/foreign/topics/250901.html",
+        "type": "webpage"
+      },
+      {
+        "text": "非居住者口座を開設する",
+        "href": "https://www.tokyostarbank.co.jp/foreign/account/foreign_customers/",
+        "type": "webpage"
+      },
+      {
+        "text": "居住者向け商品を見る",
+        "href": "https://www.tokyostarbank.co.jp/foreign/products/?tab=tab-01",
+        "type": "webpage"
+      },
+      {
+        "text": "東京スター銀行 スターダイレクトアプリ ダウンロード",
+        "href": "https://www.tokyostarbank.co.jp/lp/app/",
+        "type": "webpage"
+      },
+      {
+        "text": "(无文本)",
+        "href": "https://ja-jp.facebook.com/tokyostarbank/",
+        "type": "webpage"
+      },
+      {
+        "text": "(无文本)",
+        "href": "https://www.youtube.com/channel/UCva8Phpv6oJ-4V4UJR5hU7Q",
+        "type": "webpage"
+      },
+      {
+        "text": "(无文本)",
+        "href": "https://twitter.com/tsb_jp",
+        "type": "webpage"
+      },
+      {
+        "text": "(无文本)",
+        "href": "https://lin.ee/RPrD2Th",
+        "type": "webpage"
+      },
+      {
+        "text": "ソーシャルメディア利用規約（PDF：866KB）",
+        "href": "https://www.tokyostarbank.co.jp/terms/pdf/social_media.pdf",
+        "type": "document"
+      },
+      {
+        "text": "本ウェブサイトのご利用にあたって",
+        "href": "https://www.tokyostarbank.co.jp/foreign/terms/",
+        "type": "webpage"
+      },
+      {
+        "text": "Cookieポリシーについて",
+        "href": "https://www.tokyostarbank.co.jp/foreign/cookie_policy/",
+        "type": "webpage"
+      },
+      {
+        "text": "アクセシビリティについて",
+        "href": "https://www.tokyostarbank.co.jp/foreign/accessibility/",
+        "type": "webpage"
+      },
+      {
+        "text": "セキュリティについて",
+        "href": "https://www.tokyostarbank.co.jp/foreign/security/",
+        "type": "webpage"
+      },
+      {
+        "text": "個人情報のお取り扱いについて",
+        "href": "https://www.tokyostarbank.co.jp/foreign/privacy/",
+        "type": "webpage"
+      },
+      {
+        "text": "反社会的勢力に対する基本方針",
+        "href": "https://www.tokyostarbank.co.jp/foreign/anti-social/",
+        "type": "webpage"
+      },
+      {
+        "text": "お客さまの情報やお取り引きの目的等の定期的な確認について",
+        "href": "https://www.tokyostarbank.co.jp/foreign/money-laundering/",
+        "type": "webpage"
+      },
+      {
+        "text": "電子決済等代行業者との連携及び協働に係る方針",
+        "href": "https://www.tokyostarbank.co.jp/foreign/collaboration/",
+        "type": "webpage"
+      },
+      {
+        "text": "マネー・ローンダリングおよびテロ資金供与対策に関する基本方針",
+        "href": "https://www.tokyostarbank.co.jp/foreign/anti-moneylaundering/",
+        "type": "webpage"
+      },
+      {
+        "text": "利益相反管理方針の概要",
+        "href": "https://www.tokyostarbank.co.jp/foreign/conflicts_interest/",
+        "type": "webpage"
+      },
+      {
+        "text": "金融商品勧誘方針",
+        "href": "https://www.tokyostarbank.co.jp/foreign/legal/",
+        "type": "webpage"
+      },
+      {
+        "text": "預金等との誤認防止について",
+        "href": "https://www.tokyostarbank.co.jp/foreign/prevention/",
+        "type": "webpage"
+      },
+      {
+        "text": "インターネットバンキングによるフィッシング詐欺・サポート詐欺について",
+        "href": "https://www.tokyostarbank.co.jp/foreign/topics/230222.html",
+        "type": "webpage"
+      },
+      {
+        "text": "インターネットバンキングによる不正利用の被害について",
+        "href": "https://www.tokyostarbank.co.jp/foreign/topics/201127.html",
+        "type": "webpage"
+      },
+      {
+        "text": "当行が発行するインボイスに関するご案内",
+        "href": "https://www.tokyostarbank.co.jp/press_ir/press/pdf/250513.pdf",
+        "type": "document"
+      },
+      {
+        "text": "マルチステークホルダー方針",
+        "href": "https://www.tokyostarbank.co.jp/stakeholder/",
+        "type": "webpage"
+      },
+      {
+        "text": "サイトマップ",
+        "href": "https://www.tokyostarbank.co.jp/sitemap/",
+        "type": "webpage"
+      },
+      {
+        "text": "マイナンバーカードをスマホで読み取り口座開設",
+        "href": "https://direct.tokyostarbank.co.jp/sp_xm2a/page/18001/sX01101CT/dsX0110100",
+        "type": "webpage"
+      }
+    ]
+  }
+}

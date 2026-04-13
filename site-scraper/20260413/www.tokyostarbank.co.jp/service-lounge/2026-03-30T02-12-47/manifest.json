@@ -1,0 +1,22 @@
+{
+  "startTime": "2026-03-30T02:12:47.876Z",
+  "url": "http://www.tokyostarbank.co.jp/service/lounge/index.html",
+  "pages": [
+    {
+      "url": "http://www.tokyostarbank.co.jp/service/lounge/index.html",
+      "title": "店舗・ATM | 東京スター銀行",
+      "depth": 0,
+      "path": "/Users/zhaoshan/site-scraper-output/www.tokyostarbank.co.jp/service-lounge/2026-03-30T02-12-47",
+      "links": 197,
+      "timestamp": "2026-03-30T02:13:30.874Z"
+    }
+  ],
+  "totalImages": 9,
+  "totalDocuments": 5,
+  "totalLinks": 197,
+  "endTime": "2026-03-30T02:13:30.947Z",
+  "stats": {
+    "pagesCrawled": 1,
+    "visitedUrls": 1
+  }
+}

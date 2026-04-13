@@ -1,0 +1,22 @@
+{
+  "startTime": "2026-04-13T10:13:26.218Z",
+  "url": "https://www.tokyostarbank.co.jp/hojin/contact/confirm.html",
+  "pages": [
+    {
+      "url": "https://www.tokyostarbank.co.jp/hojin/contact/confirm.html",
+      "title": "留意事項に関する確認 | 東京スター銀行",
+      "depth": 0,
+      "path": "/Users/zhaoshan/site-scraper-output/www.tokyostarbank.co.jp/hojin-contact-confirm.html/2026-04-13T10-13-26",
+      "links": 18,
+      "timestamp": "2026-04-13T10:13:59.954Z"
+    }
+  ],
+  "totalImages": 0,
+  "totalDocuments": 0,
+  "totalLinks": 18,
+  "endTime": "2026-04-13T10:13:59.989Z",
+  "stats": {
+    "pagesCrawled": 1,
+    "visitedUrls": 1
+  }
+}

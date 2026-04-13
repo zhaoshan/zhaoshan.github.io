@@ -1,0 +1,12 @@
+{
+  "https://www.tokyostarbank.co.jp/": {
+    "text": "(无文本)",
+    "href": "https://www.tokyostarbank.co.jp/",
+    "type": "webpage"
+  },
+  "https://www.tokyostarbank.co.jp/products/begin/eaccount/upload/#top": {
+    "text": "ページトップに戻る",
+    "href": "https://www.tokyostarbank.co.jp/products/begin/eaccount/upload/#top",
+    "type": "webpage"
+  }
+}

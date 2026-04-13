@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="94" viewBox="0 0 70 94">
+  <g id="グループ_6" data-name="グループ 6" transform="translate(-1050 -1473)">
+    <g id="長方形_4" data-name="長方形 4" transform="translate(1050 1473)" fill="#ffaf00" stroke="#000" stroke-width="3">
+      <rect width="70" height="94" rx="8" stroke="none"/>
+      <rect x="1.5" y="1.5" width="67" height="91" rx="6.5" fill="none"/>
+    </g>
+    <rect id="長方形_5" data-name="長方形 5" width="50" height="24" rx="5" transform="translate(1060 1483)" fill="#fff"/>
+    <circle id="楕円形_2" data-name="楕円形 2" cx="4" cy="4" r="4" transform="translate(1066 1513)" opacity="0.8"/>
+    <circle id="楕円形_3" data-name="楕円形 3" cx="4" cy="4" r="4" transform="translate(1081 1513)" opacity="0.8"/>
+    <circle id="楕円形_4" data-name="楕円形 4" cx="4" cy="4" r="4" transform="translate(1096 1513)" opacity="0.8"/>
+    <circle id="楕円形_5" data-name="楕円形 5" cx="4" cy="4" r="4" transform="translate(1066 1525)" opacity="0.8"/>
+    <circle id="楕円形_6" data-name="楕円形 6" cx="4" cy="4" r="4" transform="translate(1081 1525)" opacity="0.8"/>
+    <circle id="楕円形_7" data-name="楕円形 7" cx="4" cy="4" r="4" transform="translate(1096 1525)" opacity="0.8"/>
+    <circle id="楕円形_8" data-name="楕円形 8" cx="4" cy="4" r="4" transform="translate(1066 1537)" opacity="0.8"/>
+    <circle id="楕円形_9" data-name="楕円形 9" cx="4" cy="4" r="4" transform="translate(1081 1537)" opacity="0.8"/>
+    <circle id="楕円形_10" data-name="楕円形 10" cx="4" cy="4" r="4" transform="translate(1096 1537)" opacity="0.8"/>
+    <rect id="長方形_6" data-name="長方形 6" width="26" height="8" rx="3" transform="translate(1078 1550)"/>
+  </g>
+</svg>

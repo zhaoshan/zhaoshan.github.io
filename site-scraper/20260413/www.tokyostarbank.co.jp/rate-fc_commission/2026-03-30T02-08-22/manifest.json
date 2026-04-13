@@ -1,0 +1,22 @@
+{
+  "startTime": "2026-03-30T02:08:22.290Z",
+  "url": "https://www.tokyostarbank.co.jp/rate/fc_commission/#anc-10-1",
+  "pages": [
+    {
+      "url": "https://www.tokyostarbank.co.jp/rate/fc_commission/#anc-10-1",
+      "title": "外貨預金金利 | 東京スター銀行",
+      "depth": 0,
+      "path": "/Users/zhaoshan/site-scraper-output/www.tokyostarbank.co.jp/rate-fc_commission/2026-03-30T02-08-22",
+      "links": 177,
+      "timestamp": "2026-03-30T02:09:27.878Z"
+    }
+  ],
+  "totalImages": 11,
+  "totalDocuments": 12,
+  "totalLinks": 177,
+  "endTime": "2026-03-30T02:09:27.947Z",
+  "stats": {
+    "pagesCrawled": 1,
+    "visitedUrls": 1
+  }
+}

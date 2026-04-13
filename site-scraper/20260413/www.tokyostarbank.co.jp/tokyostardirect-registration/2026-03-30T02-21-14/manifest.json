@@ -1,0 +1,22 @@
+{
+  "startTime": "2026-03-30T02:21:14.849Z",
+  "url": "https://www.tokyostarbank.co.jp/tokyostardirect/registration/",
+  "pages": [
+    {
+      "url": "https://www.tokyostarbank.co.jp/tokyostardirect/registration/",
+      "title": "東京スターダイレクト（インターネットバンキング）の新規ご登録の方法 | 東京スター銀行",
+      "depth": 0,
+      "path": "/Users/zhaoshan/site-scraper-output/www.tokyostarbank.co.jp/tokyostardirect-registration/2026-03-30T02-21-14",
+      "links": 164,
+      "timestamp": "2026-03-30T02:21:46.714Z"
+    }
+  ],
+  "totalImages": 14,
+  "totalDocuments": 2,
+  "totalLinks": 164,
+  "endTime": "2026-03-30T02:21:46.774Z",
+  "stats": {
+    "pagesCrawled": 1,
+    "visitedUrls": 1
+  }
+}

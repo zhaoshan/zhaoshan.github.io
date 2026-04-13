@@ -1,0 +1,22 @@
+{
+  "startTime": "2026-03-30T02:15:05.525Z",
+  "url": "https://www.tokyostarbank.co.jp/products/begin/eaccount/upload/",
+  "pages": [
+    {
+      "url": "https://www.tokyostarbank.co.jp/products/begin/eaccount/upload/",
+      "title": "画像をアップロードする際のご注意事項 | 東京スター銀行",
+      "depth": 0,
+      "path": "/Users/zhaoshan/site-scraper-output/www.tokyostarbank.co.jp/products-begin-eaccount-upload/2026-03-30T02-15-05",
+      "links": 2,
+      "timestamp": "2026-03-30T02:15:17.940Z"
+    }
+  ],
+  "totalImages": 0,
+  "totalDocuments": 0,
+  "totalLinks": 2,
+  "endTime": "2026-03-30T02:15:17.972Z",
+  "stats": {
+    "pagesCrawled": 1,
+    "visitedUrls": 1
+  }
+}

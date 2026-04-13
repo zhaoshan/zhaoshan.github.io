@@ -1,0 +1,22 @@
+{
+  "startTime": "2026-03-30T02:18:46.720Z",
+  "url": "https://www.tokyostarbank.co.jp/service/tokyostardirect/",
+  "pages": [
+    {
+      "url": "https://www.tokyostarbank.co.jp/service/tokyostardirect/",
+      "title": "東京スターダイレクト（インターネットバンキング） | 東京スター銀行",
+      "depth": 0,
+      "path": "/Users/zhaoshan/site-scraper-output/www.tokyostarbank.co.jp/service-tokyostardirect/2026-03-30T02-18-46",
+      "links": 163,
+      "timestamp": "2026-03-30T02:20:00.976Z"
+    }
+  ],
+  "totalImages": 18,
+  "totalDocuments": 6,
+  "totalLinks": 163,
+  "endTime": "2026-03-30T02:20:01.043Z",
+  "stats": {
+    "pagesCrawled": 1,
+    "visitedUrls": 1
+  }
+}
