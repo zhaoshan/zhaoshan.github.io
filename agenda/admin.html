@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>议程管理后台 · 静态版</title>
+<script src="assets/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+:root{--primary:#0a1628;--primary-light:#1a2744;--accent:#c9a96e;--accent-light:#e8d5a8;--accent-rgb:201,169,110;--gold:#d4af37;--bg:#f4f6f9;--card:#fff;--text:#1a1a2e;--text-light:#666;--border:#e4e7ed;--green:#10b981;--red:#ef4444;--blue:#3b82f6}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter','Noto Sans SC',-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+/* layout */
+.topbar{background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;padding:0 24px;height:60px;display:flex;align-items:center;gap:16px;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.12)}
+.topbar .logo{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--accent),var(--gold));display:flex;align-items:center;justify-content:center;font-size:17px}
+.topbar h1{font-size:17px;font-weight:700;letter-spacing:.3px}
+.topbar .spacer{flex:1}
+.topbar a,.topbar button.topbar-btn{color:rgba(255,255,255,.85);font-size:13px;text-decoration:none;padding:7px 14px;border-radius:8px;border:1px solid rgba(255,255,255,.15);transition:.2s;background:transparent;cursor:pointer;font-family:inherit}
+.topbar a:hover,.topbar button.topbar-btn:hover{background:rgba(255,255,255,.12);color:#fff}
+.layout{display:flex;max-width:1200px;margin:0 auto;gap:0;min-height:calc(100vh - 60px)}
+.sidebar{width:210px;flex-shrink:0;background:var(--card);border-right:1px solid var(--border);padding:18px 12px;position:sticky;top:60px;height:calc(100vh - 60px);overflow-y:auto}
+.nav-item{display:flex;align-items:center;gap:10px;padding:11px 14px;border-radius:10px;cursor:pointer;font-size:14px;font-weight:500;color:var(--text-light);transition:.15s;margin-bottom:3px}
+.nav-item:hover{background:var(--bg);color:var(--text)}
+.nav-item.active{background:rgba(var(--accent-rgb),.12);color:var(--accent);font-weight:600}
+.nav-item .ic{font-size:16px;width:20px;text-align:center}
+.main{flex:1;padding:28px 32px;min-width:0}
+@media(max-width:768px){.sidebar{display:none}.main{padding:18px}.topbar h1{font-size:15px}.mobile-tabs{display:flex!important}}
+.mobile-tabs{display:none;overflow-x:auto;background:var(--card);border-bottom:1px solid var(--border);position:sticky;top:60px;z-index:90}
+.mobile-tabs .nav-item{padding:12px 16px;white-space:nowrap}
+
+/* panel */
+.panel{display:none}
+.panel.active{display:block}
+.panel-head{margin-bottom:22px}
+.panel-head h2{font-size:21px;font-weight:800;color:var(--primary);margin-bottom:5px}
+.panel-head p{font-size:13px;color:var(--text-light)}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px;margin-bottom:18px}
+.card h3{font-size:15px;font-weight:700;margin-bottom:16px;color:var(--primary);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+
+/* form */
+.field{margin-bottom:15px}
+.field:last-child{margin-bottom:0}
+.field label{display:block;font-size:12px;font-weight:600;color:var(--text-light);margin-bottom:6px;letter-spacing:.3px}
+.field label .hint{font-weight:400;color:#aaa;margin-left:6px}
+input[type=text],input[type=password],input[type=url],textarea,select{width:100%;padding:10px 13px;border:1px solid var(--border);border-radius:9px;font-size:14px;font-family:inherit;color:var(--text);background:#fff;outline:none;transition:.15s}
+input:focus,textarea:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(var(--accent-rgb),.15)}
+textarea{resize:vertical;min-height:70px;line-height:1.5}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+@media(max-width:600px){.grid2,.grid3{grid-template-columns:1fr}}
+
+/* buttons */
+.btn{padding:10px 18px;border:none;border-radius:9px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;transition:.15s;display:inline-flex;align-items:center;gap:6px}
+.btn-save{background:var(--accent);color:#0a1628}
+.btn-save:hover{background:var(--accent-light)}
+.btn-green{background:var(--green);color:#fff}
+.btn-green:hover{opacity:.9}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{opacity:.9}
+.btn-outline{background:#fff;color:var(--text);border:1px solid var(--border)}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+.btn-sm{padding:6px 12px;font-size:12px;border-radius:7px}
+.btn-icon{width:30px;height:30px;border-radius:8px;border:1px solid var(--border);background:#fff;cursor:pointer;font-size:14px;display:inline-flex;align-items:center;justify-content:center;transition:.15s;color:var(--text)}
+.btn-icon:hover{background:var(--bg)}
+.btn-icon.danger:hover{background:#fef2f2;color:var(--red);border-color:var(--red)}
+.btn-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.save-bar{position:sticky;bottom:0;background:linear-gradient(0deg,var(--card) 70%,transparent);padding:14px 0;margin-top:8px;display:flex;justify-content:flex-end;gap:10px}
+
+/* theme picker */
+.theme-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px}
+.theme-opt{display:flex;align-items:center;gap:10px;padding:11px 13px;border:2px solid var(--border);border-radius:12px;cursor:pointer;transition:.15s;background:#fff}
+.theme-opt:hover{border-color:var(--accent)}
+.theme-opt.active{border-color:var(--accent);background:rgba(var(--accent-rgb),.06);box-shadow:0 0 0 1px var(--accent)}
+.theme-sw{width:34px;height:34px;border-radius:9px;flex-shrink:0;position:relative}
+.theme-sw .dot{position:absolute;bottom:3px;right:3px;width:13px;height:13px;border-radius:50%;border:1.5px solid #fff}
+.theme-opt .tn{font-size:13px;font-weight:600}
+
+/* upload */
+.upload-zone{border:2px dashed var(--border);border-radius:12px;padding:24px;text-align:center;cursor:pointer;transition:.2s;background:#fafbfc}
+.upload-zone:hover{border-color:var(--accent);background:rgba(var(--accent-rgb),.04)}
+.upload-zone .ic{font-size:30px;margin-bottom:8px}
+.upload-zone .t{font-size:14px;font-weight:600;color:var(--text)}
+.upload-zone .s{font-size:12px;color:#aaa;margin-top:3px}
+.img-preview{margin-top:14px;border-radius:12px;overflow:hidden;border:1px solid var(--border);background:#fafbfc;position:relative}
+.img-preview img{display:block;max-width:100%;max-height:200px;margin:0 auto}
+.cover-preview{height:140px;background-size:cover;background-position:center;background-color:#0a1628}
+
+/* share box */
+.share-card{background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;border-radius:16px;padding:26px;text-align:center}
+.share-card .qr-wrap{background:#fff;padding:12px;border-radius:14px;width:220px;margin:16px auto;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.share-card .qr-wrap canvas{display:block;width:100%!important;height:auto!important;max-width:100%}
+.share-card .link-box{display:flex;gap:8px;margin-top:14px;max-width:420px;margin-left:auto;margin-right:auto}
+.share-card .link-box input{flex:1;padding:10px 13px;border:none;border-radius:9px;font-size:12px;color:#333;background:#fff;min-width:0}
+.share-url-tag{display:inline-block;background:rgba(var(--accent-rgb),.18);color:var(--accent);font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:16px;font-weight:600;margin-bottom:8px}
+
+/* dynamic lists */
+.day-card{border:1px solid var(--border);border-radius:13px;margin-bottom:16px;overflow:hidden}
+.day-card-head{background:#fafbfc;padding:13px 16px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border)}
+.day-card-head .dn{width:28px;height:28px;border-radius:50%;background:var(--primary);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.day-card-head .dt{flex:1;font-size:14px;font-weight:700;color:var(--primary);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.day-card-body{padding:16px}
+.item-card{background:#fafbfc;border:1px solid var(--border);border-radius:10px;padding:13px;margin-bottom:11px}
+.item-card-head{display:flex;gap:8px;align-items:center;margin-bottom:10px}
+.item-card-head .it-time{width:130px;flex-shrink:0}
+.item-card-head .it-title{flex:1;min-width:0}
+.item-row{display:flex;gap:8px;align-items:flex-start}
+.item-row .it-pres{flex:1}
+.item-row .it-bullets{flex:2}
+.add-btn{width:100%;padding:11px;background:#fff;border:1.5px dashed var(--accent);color:var(--accent);border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;transition:.15s;font-family:inherit}
+.add-btn:hover{background:rgba(var(--accent-rgb),.06)}
+.add-btn.big{padding:14px;font-size:14px;border-color:var(--primary);color:var(--primary);border-width:2px}
+
+/* attendee */
+.party-card{border:1px solid var(--border);border-radius:13px;margin-bottom:16px;overflow:hidden}
+.party-card-head{background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;padding:13px 16px;display:flex;align-items:center;gap:10px}
+.party-card-head .pn{flex:1;font-size:14px;font-weight:700}
+.party-card-body{padding:16px}
+.att-row{display:grid;grid-template-columns:1.2fr .7fr 2fr auto;gap:8px;margin-bottom:8px;align-items:center}
+.att-row input{padding:8px 11px;font-size:13px}
+@media(max-width:600px){.att-row{grid-template-columns:1fr 1fr;gap:6px}.att-row .del-btn{grid-column:span 2;justify-self:end}}
+
+/* legend */
+.legend-row{display:flex;gap:8px;margin-bottom:8px;align-items:center}
+.legend-row input{flex:1}
+
+/* info card (static keepalive replacement) */
+.info-card{background:linear-gradient(135deg,rgba(16,185,129,.08),rgba(59,130,246,.06));border:1px solid rgba(16,185,129,.25);border-radius:12px;padding:18px;display:flex;gap:14px;align-items:flex-start}
+.info-card .ic{font-size:26px;flex-shrink:0;line-height:1}
+.info-card .ic-wrap{width:44px;height:44px;border-radius:11px;background:rgba(16,185,129,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.info-card .body{flex:1}
+.info-card .body .t{font-size:14px;font-weight:700;color:var(--primary);margin-bottom:4px}
+.info-card .body .d{font-size:13px;color:var(--text-light);line-height:1.6}
+.info-card .ok-pill{display:inline-flex;align-items:center;gap:7px;background:rgba(16,185,129,.12);color:var(--green);font-size:11px;font-weight:700;padding:4px 10px;border-radius:10px;margin-top:8px}
+.info-card .ok-pill .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px rgba(16,185,129,.2)}
+
+/* toast */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:#1a1a2e;color:#fff;padding:12px 22px;border-radius:10px;font-size:14px;font-weight:600;z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,.2);transition:.3s;opacity:0;max-width:90vw}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+.toast.ok{background:var(--green)}
+.toast.err{background:var(--red)}
+.muted{color:#aaa;font-size:12px}
+.pill{display:inline-block;background:rgba(var(--accent-rgb),.12);color:var(--accent);font-size:11px;font-weight:700;padding:3px 10px;border-radius:10px;margin-left:8px}
+code.inl{background:#f0f0f0;padding:1px 6px;border-radius:4px;font-size:12px;word-break:break-all;color:#333}
+
+/* color picker field */
+.color-field{display:flex;align-items:center;gap:8px}
+.color-field input[type=color]{width:38px;height:38px;border:1px solid var(--border);border-radius:9px;cursor:pointer;padding:2px;background:#fff;flex-shrink:0}
+.color-field input[type=text]{flex:1;min-width:0;font-family:'Courier New',monospace;font-size:13px;text-transform:uppercase}
+.color-field label.cf-label{display:block;font-size:11px;color:var(--text-light);margin-bottom:5px;font-weight:600}
+.color-field-wrap{margin-bottom:12px}
+/* custom theme group editor */
+.ct-filter-row{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.ct-filter-btn{padding:6px 14px;border-radius:8px;border:1px solid var(--border);background:#fff;color:var(--text-light);font-size:12px;font-weight:600;cursor:pointer;transition:.15s;font-family:inherit}
+.ct-filter-btn:hover{border-color:var(--accent);color:var(--accent)}
+.ct-filter-btn.active{background:var(--accent);color:#0a1628;border-color:var(--accent)}
+.ct-group{margin-bottom:20px;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.ct-group-head{display:flex;align-items:center;gap:8px;padding:11px 15px;background:#fafbfc;border-bottom:1px solid var(--border);font-size:13px;font-weight:700;color:var(--primary)}
+.ct-group-head .ctg-icon{font-size:15px}
+.ct-group-head .ctg-type{margin-left:auto;font-size:10px;font-weight:600;padding:2px 8px;border-radius:8px}
+.ct-group-head .ctg-type.fill{background:rgba(99,102,241,.1);color:#6366f1}
+.ct-group-head .ctg-type.text{background:rgba(16,185,129,.1);color:#10b981}
+.ct-group-body{padding:14px 15px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:600px){.ct-group-body{grid-template-columns:1fr}}
+.ct-item[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="logo">📋</div>
+  <h1>议程管理后台 <span style="font-size:11px;color:rgba(255,255,255,.5);font-weight:400">静态版</span></h1>
+  <div class="spacer"></div>
+  <button class="topbar-btn" onclick="openView()">👁 查看浏览页</button>
+  <button class="topbar-btn" onclick="exportJSON()">⬇ 导出</button>
+  <label class="topbar-btn" style="cursor:pointer">⬆ 导入<input type="file" id="importFile" accept="application/json" hidden onchange="importJSON(this)"></label>
+  <button class="topbar-btn" onclick="logout()">退出</button>
+</div>
+
+<div class="mobile-tabs" id="mobileTabs"></div>
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="nav-item active" data-tab="share"><span class="ic">🔗</span> 概览 / 分享</div>
+    <div class="nav-item" data-tab="basic"><span class="ic">📝</span> 基础信息</div>
+    <div class="nav-item" data-tab="assets"><span class="ic">🖼️</span> 素材管理</div>
+    <div class="nav-item" data-tab="schedule"><span class="ic">📅</span> 日程管理</div>
+    <div class="nav-item" data-tab="attendees"><span class="ic">👥</span> 参会人员</div>
+    <div class="nav-item" data-tab="legend"><span class="ic">🏷️</span> 图例</div>
+  </aside>
+  <main class="main">
+
+    <!-- ===== SHARE ===== -->
+    <section class="panel active" id="panel-share">
+      <div class="panel-head"><h2>概览 / 分享</h2><p>生成二维码与分享链接，快速分享给客户</p></div>
+      <div class="card">
+        <div class="share-card">
+          <div class="share-url-tag">SHAREABLE LINK</div>
+          <div style="font-size:13px;color:rgba(255,255,255,.6);margin-bottom:4px">扫描二维码或打开链接查看完整议程</div>
+          <div class="qr-wrap"><canvas id="qrCanvas"></canvas></div>
+          <div class="link-box">
+            <input id="shareInput" readonly value="">
+            <button class="btn btn-green btn-sm" onclick="copyShare()">复制</button>
+          </div>
+        </div>
+        <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn btn-outline btn-sm" onclick="dlQR()">⬇ 下载二维码</button>
+          <button class="btn btn-outline btn-sm" onclick="openView()">↗ 打开浏览页</button>
+          <button class="btn btn-outline btn-sm" onclick="refreshQR()">🔄 刷新二维码</button>
+        </div>
+        <p class="muted" style="margin-top:14px">提示：修改"基础信息"中的"对外基础地址"可自定义链接域名；二维码会自动指向最新的浏览页地址。</p>
+      </div>
+
+      <div class="card">
+        <h3>⚡ 后台服务保活</h3>
+        <div class="info-card">
+          <div class="ic-wrap"><div class="ic">✅</div></div>
+          <div class="body">
+            <div class="t">静态部署版本 · 无需保活</div>
+            <div class="d">本平台已部署为纯静态站点（Vercel / Cloudflare Pages / GitHub Pages），页面由 CDN 始终在线托管，<strong>无需后端守护进程</strong>，链接永久有效。</div>
+            <span class="ok-pill"><span class="dot"></span>始终在线</span>
+          </div>
+        </div>
+        <p class="muted" style="margin-top:14px;line-height:1.7">静态托管具备 99.9%+ 可用性，无沙箱休眠问题。所有数据存储于浏览器 localStorage，可通过顶部"导出 / 导入"按钮进行备份和迁移。</p>
+      </div>
+
+      <div class="card">
+        <h3>💾 数据备份与迁移</h3>
+        <p class="muted" style="margin-bottom:14px">所有配置存储在当前浏览器本地，建议定期导出 JSON 备份；更换设备或浏览器时可通过导入恢复。</p>
+        <div class="btn-row">
+          <button class="btn btn-blue btn-sm" onclick="exportJSON()">⬇ 导出 JSON 备份</button>
+          <label class="btn btn-outline btn-sm" style="cursor:pointer">⬆ 导入 JSON<input type="file" accept="application/json" hidden onchange="importJSON(this)"></label>
+          <button class="btn btn-outline btn-sm" onclick="resetDataConfirm()" style="color:var(--red);border-color:var(--border)">↺ 重置为默认数据</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BASIC ===== -->
+    <section class="panel" id="panel-basic">
+      <div class="panel-head"><h2>基础信息</h2><p>编辑议程标题、日期、地点等核心信息</p></div>
+      <div class="card">
+        <h3>📋 议程头部</h3>
+        <div class="grid2">
+          <div class="field"><label>角标文字 <span class="hint">如 OFFICIAL VISIT</span></label><input type="text" id="f_badge"></div>
+          <div class="field"><label>主标题</label><input type="text" id="f_title"></div>
+        </div>
+        <div class="field"><label>副标题</label><input type="text" id="f_subtitle"></div>
+        <div id="metaList"></div>
+        <button class="btn btn-outline btn-sm" onclick="addMeta()">+ 添加信息项</button>
+      </div>
+      <div class="card">
+        <h3>🎨 主题风格</h3>
+        <div class="theme-grid" id="themeGrid"></div>
+        <div id="customThemeBox" style="display:none;margin-top:18px;padding-top:18px;border-top:1px dashed var(--border)">
+          <div style="font-size:13px;font-weight:600;color:var(--primary);margin-bottom:4px">自定义配色体系</div>
+          <div class="muted" style="margin-bottom:14px">按版面区域分类，文字与非文字解耦配置；点击色块选色或直接输入十六进制数值</div>
+          <div class="ct-filter-row">
+            <button class="ct-filter-btn active" data-ft="all" onclick="filterCustomType('all')">全部</button>
+            <button class="ct-filter-btn" data-ft="fill" onclick="filterCustomType('fill')">🎨 非文字（底色/边框）</button>
+            <button class="ct-filter-btn" data-ft="text" onclick="filterCustomType('text')">✏️ 文字</button>
+          </div>
+          <div id="customColorList"></div>
+          <div class="btn-row" style="margin-top:12px">
+            <button class="btn btn-outline btn-sm" onclick="resetCustomTheme()">↺ 恢复默认配色</button>
+            <span class="muted" style="line-height:32px">共 <span id="ctCount">0</span> 项可配置</span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>⚙️ 平台设置</h3>
+        <div class="grid2">
+          <div class="field"><label>公司名称 <span class="hint">可选</span></label><input type="text" id="f_company"></div>
+          <div class="field"><label>管理密码 <span class="hint">修改后下次登录生效</span></label><input type="text" id="f_password"></div>
+        </div>
+        <div class="field"><label>对外基础地址 <span class="hint">留空则自动使用当前域名；填写后二维码/链接以此为准</span></label><input type="url" id="f_baseurl" placeholder="https://your-domain.com"></div>
+        <div class="field"><label>页脚文字</label><input type="text" id="f_footer"></div>
+      </div>
+      <div class="save-bar">
+        <button class="btn btn-save" onclick="saveBasic()">💾 保存基础信息</button>
+      </div>
+    </section>
+
+    <!-- ===== ASSETS ===== -->
+    <section class="panel" id="panel-assets">
+      <div class="panel-head"><h2>素材管理</h2><p>上传公司 Logo、设计封面图等品牌素材（base64 内嵌存储）</p></div>
+      <div class="card">
+        <h3>🏷️ 公司 Logo <span class="muted">显示在议程顶部，建议 PNG 透明底，宽 ≤ 400px</span></h3>
+        <div id="logoPreview"></div>
+        <div class="upload-zone" id="logoZone" onclick="document.getElementById('logoFile').click()">
+          <div class="ic">⬆️</div>
+          <div class="t">点击或拖拽上传 Logo</div>
+          <div class="s">支持 PNG / JPG / SVG · 建议 ≤ 500KB</div>
+        </div>
+        <input type="file" id="logoFile" accept="image/*" hidden>
+      </div>
+      <div class="card">
+        <h3>🖼️ 设计封面图 <span class="muted">议程顶部背景图，建议 1600×600，深色调更佳</span></h3>
+        <div id="coverPreview"></div>
+        <div class="upload-zone" id="coverZone" onclick="document.getElementById('coverFile').click()">
+          <div class="ic">⬆️</div>
+          <div class="t">点击或拖拽上传封面图</div>
+          <div class="s">支持 PNG / JPG / WEBP · 建议 ≤ 1MB</div>
+        </div>
+        <input type="file" id="coverFile" accept="image/*" hidden>
+      </div>
+      <div class="card">
+        <h3>ℹ️ 存储说明</h3>
+        <p class="muted" style="line-height:1.7">静态版将图片以 base64 data URL 形式嵌入到 JSON 数据中，存储于浏览器 localStorage。<strong>请避免上传过大的图片</strong>（localStorage 单域名通常上限 5–10MB），否则可能导致保存失败。如需使用大图，建议先用工具压缩或裁切。</p>
+      </div>
+    </section>
+
+    <!-- ===== SCHEDULE ===== -->
+    <section class="panel" id="panel-schedule">
+      <div class="panel-head"><h2>日程管理</h2><p>编辑每日议程与时间轴事项，支持增删改与排序</p></div>
+      <div id="daysList"></div>
+      <button class="add-btn big" onclick="addDay()">+ 添加一天</button>
+      <div class="save-bar"><button class="btn btn-save" onclick="saveDays()">💾 保存全部日程</button></div>
+    </section>
+
+    <!-- ===== ATTENDEES ===== -->
+    <section class="panel" id="panel-attendees">
+      <div class="panel-head"><h2>参会人员</h2><p>管理各方参会人员名单，支持多方分组</p></div>
+      <div id="partiesList"></div>
+      <button class="add-btn big" onclick="addParty()">+ 添加参会方</button>
+      <div class="save-bar"><button class="btn btn-save" onclick="saveParties()">💾 保存全部人员</button></div>
+    </section>
+
+    <!-- ===== LEGEND ===== -->
+    <section class="panel" id="panel-legend">
+      <div class="panel-head"><h2>图例</h2><p>议程中使用的缩写说明</p></div>
+      <div class="card">
+        <div id="legendList"></div>
+        <button class="btn btn-outline btn-sm" onclick="addLegend()">+ 添加图例</button>
+      </div>
+      <div class="save-bar"><button class="btn btn-save" onclick="saveLegends()">💾 保存图例</button></div>
+    </section>
+
+  </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============== 全局状态 ============== */
+let DATA = null;
+let currentTheme = 'gold';
+
+const THEMES = [
+  {id:'gold',   name:'流金',  primary:'#0a1628', accent:'#c9a96e'},
+  {id:'blue',   name:'科技蓝', primary:'#0a1a3d', accent:'#006eff'},
+  {id:'ocean',  name:'深海',  primary:'#0a192f', accent:'#00b4d8'},
+  {id:'emerald',name:'翡翠',  primary:'#0a1a14', accent:'#34d399'},
+  {id:'rose',   name:'玫瑰',  primary:'#1a0f14', accent:'#e8a0a0'},
+  {id:'sunset', name:'日落',  primary:'#1a100a', accent:'#ff8c42'},
+  {id:'purple', name:'紫晶',  primary:'#1a0a2e', accent:'#c9a9e8'},
+  {id:'teal',   name:'青碧',  primary:'#0a1a1a', accent:'#20c9b0'},
+  {id:'custom', name:'自定义', primary:'#0a1628', accent:'#c9a96e'}
+];
+
+/* 主题分组图标映射（THEME_FIELDS 中已有 group / type，这里补 icon） */
+const GROUP_ICON = {
+  '页面底色':   '🌐',
+  '头图封面区': '🖼️',
+  '日程时间轴': '📅',
+  '参会人员区': '👥',
+  '导航与强调': '🎨'
+};
+
+/* ============== 工具函数 ============== */
+function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function toast(msg, ok=true){
+  const t=document.getElementById('toast');
+  t.textContent=msg;
+  t.className='toast show '+(ok?'ok':'err');
+  clearTimeout(t._t);
+  t._t=setTimeout(()=>t.className='toast',2200);
+}
+
+/* ============== 登录校验 ============== */
+if(sessionStorage.getItem('admin_logged_in')!=='1'){
+  window.location.href='login.html';
+}
+
+/* ============== 保存到 localStorage ============== */
+function persist(applyTheme){
+  AgendaApp.saveData(DATA);
+  if(applyTheme) AgendaApp.applyTheme(DATA.settings);
+}
+
+/* ============== 分享链接 / 二维码 ============== */
+function getShareUrl(){
+  const baseUrl = (DATA && DATA.settings && DATA.settings.public_base_url) || '';
+  if(baseUrl){
+    return baseUrl.replace(/\/+$/,'') + '/index.html';
+  }
+  return AgendaApp.getShareUrl();
+}
+function refreshQR(){
+  if(typeof QRCode==='undefined'){ toast('二维码库加载中，请稍候', false); return; }
+  const url = getShareUrl();
+  const canvas = document.getElementById('qrCanvas');
+  document.getElementById('shareInput').value = url;
+  QRCode.toCanvas(canvas, url, {width:200, margin:1, color:{dark:'#0a1628', light:'#ffffff'}}, function(err){
+    if(err){ console.error(err); toast('二维码生成失败', false); }
+  });
+}
+function copyShare(){
+  const inp = document.getElementById('shareInput');
+  inp.select();
+  inp.setSelectionRange(0, 99999);
+  try {
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(inp.value).then(()=>toast('✅ 链接已复制'));
+    } else {
+      document.execCommand('copy');
+      toast('✅ 链接已复制');
+    }
+  } catch(e){ toast('复制失败，请手动选择', false); }
+}
+function openView(){ window.open(getShareUrl(), '_blank'); }
+function dlQR(){
+  const canvas = document.getElementById('qrCanvas');
+  try {
+    const a = document.createElement('a');
+    a.href = canvas.toDataURL('image/png');
+    a.download = 'agenda-qr.png';
+    a.click();
+    toast('✅ 二维码已下载');
+  } catch(e){ toast('下载失败：'+e.message, false); }
+}
+
+/* ============== Tab 切换 ============== */
+function switchTab(name){
+  document.querySelectorAll('.nav-item').forEach(n=>n.classList.toggle('active',n.dataset.tab===name));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id==='panel-'+name));
+  if(name==='basic')    renderBasic();
+  if(name==='schedule') renderDays();
+  if(name==='attendees')renderParties();
+  if(name==='legend')   renderLegend();
+  if(name==='assets')   renderAssets();
+  if(name==='share')    refreshQR();
+  window.scrollTo(0,0);
+}
+document.querySelectorAll('.nav-item').forEach(n=>n.addEventListener('click',()=>switchTab(n.dataset.tab)));
+/* build mobile tabs */
+(function(){
+  const mt=document.getElementById('mobileTabs');
+  document.querySelectorAll('.sidebar .nav-item').forEach(n=>{
+    const c=n.cloneNode(true);
+    c.addEventListener('click',()=>switchTab(n.dataset.tab));
+    mt.appendChild(c);
+  });
+})();
+
+/* ============== 导入 / 导出 / 重置 ============== */
+function exportJSON(){
+  const json = AgendaApp.exportData();
+  const blob = new Blob([json], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'agenda-data-'+new Date().toISOString().slice(0,10)+'.json';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(()=>URL.revokeObjectURL(a.href), 1000);
+  toast('✅ 已导出 JSON 备份');
+}
+function importJSON(input){
+  const f = input.files && input.files[0];
+  if(!f) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    try {
+      const data = AgendaApp.importData(e.target.result);
+      DATA = data;
+      currentTheme = (DATA.settings && DATA.settings.theme) || 'gold';
+      AgendaApp.applyTheme(DATA.settings);
+      renderBasic();
+      refreshQR();
+      toast('✅ 导入成功');
+    } catch(err){
+      toast('导入失败：'+err.message, false);
+    }
+    input.value = '';
+  };
+  reader.onerror = ()=>{ toast('读取文件失败', false); input.value=''; };
+  reader.readAsText(f);
+}
+function resetDataConfirm(){
+  if(!confirm('确认重置为默认数据？当前所有自定义内容将被清除！\n\n建议先点击"导出"备份当前数据。')) return;
+  AgendaApp.resetData();
+  AgendaApp.getData().then(d => {
+    DATA = d;
+    currentTheme = (DATA.settings && DATA.settings.theme) || 'gold';
+    AgendaApp.applyTheme(DATA.settings);
+    renderBasic();
+    refreshQR();
+    toast('✅ 已重置为默认数据');
+  });
+}
+function logout(){
+  sessionStorage.removeItem('admin_logged_in');
+  window.location.href = 'login.html';
+}
+
+/* ============== 基础信息 ============== */
+function renderBasic(){
+  if(!DATA) return;
+  const h = DATA.hero, s = DATA.settings;
+  document.getElementById('f_badge').value     = h.badge || '';
+  document.getElementById('f_title').value     = h.title || '';
+  document.getElementById('f_subtitle').value  = h.subtitle || '';
+  document.getElementById('f_company').value   = s.company_name || '';
+  document.getElementById('f_password').value  = s.admin_password || '';
+  document.getElementById('f_baseurl').value   = s.public_base_url || '';
+  document.getElementById('f_footer').value    = DATA.footer || '';
+
+  /* meta 列表 */
+  const ml = document.getElementById('metaList');
+  ml.innerHTML = '';
+  (h.meta||[]).forEach((m,i)=>{
+    const d = document.createElement('div');
+    d.className = 'grid2 field';
+    d.innerHTML =
+      '<div><label>信息项'+(i+1)+' 标签</label><input type="text" value="'+esc(m.label)+'" data-mi="'+i+'" data-mk="label"></div>'+
+      '<div><label>信息项'+(i+1)+' 内容</label><input type="text" value="'+esc(m.value)+'" data-mi="'+i+'" data-mk="value">'+
+      '<button class="btn-icon danger" style="margin-top:6px" onclick="delMeta('+i+')">🗑</button></div>';
+    ml.appendChild(d);
+  });
+
+  /* 主题选择 */
+  const tg = document.getElementById('themeGrid');
+  tg.innerHTML = '';
+  THEMES.forEach(t=>{
+    const o = document.createElement('div');
+    o.className = 'theme-opt'+(currentTheme===t.id?' active':'');
+    if(t.id==='custom'){
+      o.innerHTML = '<div class="theme-sw" style="background:linear-gradient(135deg,#0a1628,#c9a96e)"><div class="dot" style="background:#fff"></div></div><div class="tn">'+t.name+' ✎</div>';
+    } else {
+      o.innerHTML = '<div class="theme-sw" style="background:'+t.primary+'"><div class="dot" style="background:'+t.accent+'"></div></div><div class="tn">'+t.name+'</div>';
+    }
+    o.onclick = ()=>{ currentTheme = t.id; renderBasic(); };
+    tg.appendChild(o);
+  });
+
+  /* 自定义配色编辑器 */
+  const cbox = document.getElementById('customThemeBox');
+  if(currentTheme === 'custom'){
+    cbox.style.display = 'block';
+    renderCustomColors();
+  } else {
+    cbox.style.display = 'none';
+  }
+}
+
+/* 渲染自定义配色：使用 AgendaApp.THEME_FIELDS 分组 */
+function renderCustomColors(){
+  const ct = (DATA.settings.custom_theme) || {};
+  const list = document.getElementById('customColorList');
+  list.innerHTML = '';
+  /* 按 group 分组 */
+  const groups = {};
+  AgendaApp.THEME_FIELDS.forEach(f=>{
+    if(!groups[f.group]) groups[f.group] = [];
+    groups[f.group].push(f);
+  });
+  let total = 0;
+  Object.keys(groups).forEach(gname => {
+    const fields = groups[gname];
+    const grp = document.createElement('div');
+    grp.className = 'ct-group';
+    const hasFill = fields.some(f=>f.type==='fill');
+    const hasText = fields.some(f=>f.type==='text');
+    const typeTag = (hasFill && hasText) ? '' :
+      (hasFill ? '<span class="ctg-type fill">非文字</span>' : '<span class="ctg-type text">文字</span>');
+    grp.innerHTML = '<div class="ct-group-head"><span class="ctg-icon">'+(GROUP_ICON[gname]||'🎨')+'</span>'+gname+typeTag+'</div><div class="ct-group-body"></div>';
+    const body = grp.querySelector('.ct-group-body');
+    fields.forEach(f=>{
+      total++;
+      const val = ct[f.key] || f.def;
+      const typeLabel = f.type==='fill' ? '🎨 底色' : '✏️ 文字';
+      const item = document.createElement('div');
+      item.className = 'ct-item color-field-wrap';
+      item.dataset.ft = f.type;
+      item.innerHTML =
+        '<label class="cf-label">'+f.label+'<div class="muted" style="font-weight:400;display:inline;margin-left:4px">'+esc(f.desc)+' · '+typeLabel+'</div></label>'+
+        '<div class="color-field">'+
+          '<input type="color" value="'+val+'" data-ck="'+f.key+'" oninput="syncColor(this,\''+f.key+'\')">'+
+          '<input type="text" value="'+val+'" data-ck="'+f.key+'" id="txt_'+f.key+'" oninput="syncColor(this,\''+f.key+'\')" placeholder="#000000">'+
+        '</div>';
+      body.appendChild(item);
+    });
+    list.appendChild(grp);
+  });
+  document.getElementById('ctCount').textContent = total;
+}
+
+function filterCustomType(t){
+  document.querySelectorAll('.ct-filter-btn').forEach(b=>b.classList.toggle('active', b.dataset.ft===t));
+  document.querySelectorAll('.ct-item').forEach(it=>{
+    if(t==='all') it.hidden = false;
+    else it.hidden = (it.dataset.ft !== t);
+  });
+  /* 隐藏空分组 */
+  document.querySelectorAll('.ct-group').forEach(g=>{
+    const visible = [...g.querySelectorAll('.ct-item')].some(i=>!i.hidden);
+    g.style.display = visible ? '' : 'none';
+  });
+}
+function syncColor(src, key){
+  const v = src.value;
+  const colorInp = document.querySelector('input[type=color][data-ck="'+key+'"]');
+  const txtInp = document.getElementById('txt_'+key);
+  if(src.type === 'color'){
+    if(txtInp) txtInp.value = v;
+  } else {
+    let hv = v.trim();
+    if(hv && hv[0] !== '#') hv = '#'+hv;
+    if(/^#[0-9a-fA-F]{6}$/.test(hv) && colorInp) colorInp.value = hv;
+  }
+}
+function resetCustomTheme(){
+  const def = {};
+  AgendaApp.THEME_FIELDS.forEach(f => def[f.key] = f.def);
+  DATA.settings.custom_theme = def;
+  renderCustomColors();
+  toast('已恢复默认配色');
+}
+function addMeta(){
+  DATA.hero.meta = DATA.hero.meta || [];
+  DATA.hero.meta.push({label:'新增项', value:''});
+  renderBasic();
+}
+function delMeta(i){
+  DATA.hero.meta.splice(i,1);
+  renderBasic();
+}
+function saveBasic(){
+  const h = DATA.hero, s = DATA.settings;
+  h.badge    = document.getElementById('f_badge').value;
+  h.title    = document.getElementById('f_title').value;
+  h.subtitle = document.getElementById('f_subtitle').value;
+  h.meta = [];
+  document.querySelectorAll('#metaList [data-mi]').forEach(inp=>{
+    const i = +inp.dataset.mi, k = inp.dataset.mk;
+    if(!h.meta[i]) h.meta[i] = {label:'', value:''};
+    h.meta[i][k] = inp.value;
+  });
+  s.theme            = currentTheme;
+  s.company_name     = document.getElementById('f_company').value;
+  s.admin_password   = document.getElementById('f_password').value;
+  s.public_base_url  = document.getElementById('f_baseurl').value;
+  DATA.footer        = document.getElementById('f_footer').value;
+
+  /* 收集自定义颜色 */
+  if(currentTheme === 'custom'){
+    const ct = {};
+    document.querySelectorAll('[data-ck]').forEach(inp=>{
+      if(inp.type === 'text'){
+        let v = inp.value.trim();
+        if(v && v[0] !== '#') v = '#'+v;
+        ct[inp.dataset.ck] = v;
+      }
+    });
+    s.custom_theme = ct;
+  }
+  persist(true);
+  refreshQR();
+  toast('✅ 基础信息已保存');
+}
+
+/* ============== 素材管理 ============== */
+function renderAssets(){
+  if(!DATA) return;
+  const s = DATA.settings;
+  const lp = document.getElementById('logoPreview');
+  if(s.logo_url){
+    lp.innerHTML = '<div class="img-preview"><img src="'+esc(s.logo_url)+'" style="max-height:80px;padding:10px"><button class="btn btn-outline btn-sm" style="position:absolute;top:8px;right:8px" onclick="clearAsset(\'logo_url\')">移除</button></div>';
+  } else {
+    lp.innerHTML = '';
+  }
+  const cp = document.getElementById('coverPreview');
+  if(s.cover_url){
+    cp.innerHTML = '<div class="img-preview"><div class="cover-preview" style="background-image:url(\''+esc(s.cover_url).replace(/'/g,'%27')+'\')"></div><button class="btn btn-outline btn-sm" style="position:absolute;top:8px;right:8px;background:#fff" onclick="clearAsset(\'cover_url\')">移除</button></div>';
+  } else {
+    cp.innerHTML = '';
+  }
+}
+function clearAsset(key){
+  if(!confirm('确认移除此图片？')) return;
+  DATA.settings[key] = '';
+  persist(false);
+  renderAssets();
+  toast('已移除');
+}
+function setupUpload(inputId, key){
+  const inp = document.getElementById(inputId);
+  inp.onchange = ()=>{
+    const f = inp.files && inp.files[0];
+    if(!f) return;
+    if(!/^image\//.test(f.type)){ toast('请选择图片文件', false); inp.value=''; return; }
+    if(f.size > 2 * 1024 * 1024){
+      toast('图片较大（'+(f.size/1024/1024).toFixed(1)+'MB），可能超出 localStorage 上限，建议压缩', false);
+    } else {
+      toast('上传中…');
+    }
+    const reader = new FileReader();
+    reader.onload = e => {
+      DATA.settings[key] = e.target.result;
+      persist(false);
+      renderAssets();
+      toast('✅ 上传成功');
+    };
+    reader.onerror = ()=>{ toast('读取文件失败', false); };
+    reader.readAsDataURL(f);
+    inp.value = '';
+  };
+}
+/* 拖拽上传 */
+['logoZone','coverZone'].forEach(zid=>{
+  const z = document.getElementById(zid);
+  const key = zid === 'logoZone' ? 'logo_url' : 'cover_url';
+  z.ondragover = e => { e.preventDefault(); z.style.borderColor = 'var(--accent)'; z.style.background = 'rgba(var(--accent-rgb),.08)'; };
+  z.ondragleave = ()=>{ z.style.borderColor = ''; z.style.background = ''; };
+  z.ondrop = e => {
+    e.preventDefault();
+    z.style.borderColor = '';
+    z.style.background = '';
+    const f = e.dataTransfer.files && e.dataTransfer.files[0];
+    if(!f) return;
+    if(!/^image\//.test(f.type)){ toast('请拖入图片文件', false); return; }
+    if(f.size > 2 * 1024 * 1024){
+      toast('图片较大（'+(f.size/1024/1024).toFixed(1)+'MB），建议先压缩', false);
+    }
+    const reader = new FileReader();
+    reader.onload = ev => {
+      DATA.settings[key] = ev.target.result;
+      persist(false);
+      renderAssets();
+      toast('✅ 上传成功');
+    };
+    reader.readAsDataURL(f);
+  };
+});
+
+/* ============== 日程管理 ============== */
+function renderDays(){
+  if(!DATA) return;
+  const list = document.getElementById('daysList');
+  list.innerHTML = '';
+  DATA.days.forEach((d, di)=>{
+    const card = document.createElement('div');
+    card.className = 'day-card';
+    card.innerHTML =
+      '<div class="day-card-head">'+
+        '<div class="dn">'+(di+1)+'</div>'+
+        '<input class="dt" type="text" value="'+esc(d.title)+'" data-di="'+di+'" data-dk="title" style="background:#fff">'+
+        '<button class="btn-icon" onclick="moveDay('+di+',-1)" title="上移">↑</button>'+
+        '<button class="btn-icon" onclick="moveDay('+di+',1)" title="下移">↓</button>'+
+        '<button class="btn-icon danger" onclick="delDay('+di+')" title="删除">🗑</button>'+
+      '</div>'+
+      '<div class="day-card-body">'+
+        '<div class="field"><label>当日主题说明</label><input type="text" value="'+esc(d.subtitle||'')+'" data-di="'+di+'" data-dk="subtitle"></div>'+
+        '<div class="items" id="items-'+di+'"></div>'+
+        '<button class="add-btn" onclick="addItem('+di+')">+ 添加议程事项</button>'+
+      '</div>';
+    list.appendChild(card);
+    const ic = card.querySelector('#items-'+di);
+    (d.items||[]).forEach((it, ii)=>{
+      const item = document.createElement('div');
+      item.className = 'item-card';
+      item.innerHTML =
+        '<div class="item-card-head">'+
+          '<input class="it-time" type="text" value="'+esc(it.time||'')+'" placeholder="时间" data-di="'+di+'" data-ii="'+ii+'" data-ik="time">'+
+          '<input class="it-title" type="text" value="'+esc(it.title||'')+'" placeholder="事项标题" data-di="'+di+'" data-ii="'+ii+'" data-ik="title">'+
+          '<button class="btn-icon" onclick="moveItem('+di+','+ii+',-1)" title="上移">↑</button>'+
+          '<button class="btn-icon" onclick="moveItem('+di+','+ii+',1)" title="下移">↓</button>'+
+          '<button class="btn-icon danger" onclick="delItem('+di+','+ii+')" title="删除">🗑</button>'+
+        '</div>'+
+        '<div class="item-row">'+
+          '<input class="it-pres" type="text" value="'+esc(it.presenter||'')+'" placeholder="主讲/参与方（可空）" data-di="'+di+'" data-ii="'+ii+'" data-ik="presenter">'+
+          '<textarea class="it-bullets" placeholder="要点，每行一条（可空）" data-di="'+di+'" data-ii="'+ii+'" data-ik="bullets">'+esc((it.bullets||[]).join('\n'))+'</textarea>'+
+        '</div>';
+      ic.appendChild(item);
+    });
+  });
+}
+function addDay(){
+  DATA.days.push({title:'新的一天', subtitle:'', items:[]});
+  renderDays();
+}
+function delDay(i){
+  if(!confirm('确认删除这一天的全部议程？')) return;
+  DATA.days.splice(i,1);
+  renderDays();
+}
+function moveDay(i, dir){
+  const j = i + dir;
+  if(j < 0 || j >= DATA.days.length) return;
+  [DATA.days[i], DATA.days[j]] = [DATA.days[j], DATA.days[i]];
+  renderDays();
+}
+function addItem(di){
+  DATA.days[di].items.push({time:'', title:'', presenter:'', bullets:[]});
+  renderDays();
+}
+function delItem(di, ii){
+  DATA.days[di].items.splice(ii, 1);
+  renderDays();
+}
+function moveItem(di, ii, dir){
+  const it = DATA.days[di].items, j = ii + dir;
+  if(j < 0 || j >= it.length) return;
+  [it[ii], it[j]] = [it[j], it[ii]];
+  renderDays();
+}
+function saveDays(){
+  document.querySelectorAll('[data-dk]').forEach(inp=>{
+    DATA.days[+inp.dataset.di][inp.dataset.dk] = inp.value;
+  });
+  document.querySelectorAll('[data-ik]').forEach(inp=>{
+    const d = DATA.days[+inp.dataset.di], it = d.items[+inp.dataset.ii], k = inp.dataset.ik;
+    if(k === 'bullets'){
+      it.bullets = inp.value.split('\n');
+    } else {
+      it[k] = inp.value;
+    }
+  });
+  /* 清理尾部空 bullets */
+  DATA.days.forEach(d=>d.items.forEach(it=>{
+    it.bullets = (it.bullets||[]).filter(b=>b.trim());
+  }));
+  persist(false);
+  toast('✅ 日程已保存');
+}
+
+/* ============== 参会人员 ============== */
+function renderParties(){
+  if(!DATA) return;
+  const list = document.getElementById('partiesList');
+  list.innerHTML = '';
+  DATA.parties.forEach((p, pi)=>{
+    const card = document.createElement('div');
+    card.className = 'party-card';
+    card.innerHTML =
+      '<div class="party-card-head">'+
+        '<input type="text" value="'+esc(p.role||'')+'" placeholder="角色标识" style="width:110px;padding:7px 11px;font-size:13px" data-pi="'+pi+'" data-pk="role">'+
+        '<input type="text" value="'+esc(p.name||'')+'" placeholder="参会方名称" class="pn" style="background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2)" data-pi="'+pi+'" data-pk="name">'+
+        '<button class="btn-icon" onclick="moveParty('+pi+',-1)" style="background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.2)">↑</button>'+
+        '<button class="btn-icon" onclick="moveParty('+pi+',1)" style="background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.2)">↓</button>'+
+        '<button class="btn-icon danger" onclick="delParty('+pi+')">🗑</button>'+
+      '</div>'+
+      '<div class="party-card-body">'+
+        '<div id="atts-'+pi+'"></div>'+
+        '<button class="add-btn" onclick="addAtt('+pi+')">+ 添加人员</button>'+
+      '</div>';
+    list.appendChild(card);
+    const ac = card.querySelector('#atts-'+pi);
+    (p.attendees||[]).forEach((a, ai)=>{
+      const row = document.createElement('div');
+      row.className = 'att-row';
+      row.innerHTML =
+        '<input type="text" value="'+esc(a.name||'')+'" placeholder="姓名" data-pi="'+pi+'" data-ai="'+ai+'" data-ak="name">'+
+        '<input type="text" value="'+esc(a.dept||'')+'" placeholder="部门" data-pi="'+pi+'" data-ai="'+ai+'" data-ak="dept">'+
+        '<input type="text" value="'+esc(a.role||'')+'" placeholder="职责/角色" data-pi="'+pi+'" data-ai="'+ai+'" data-ak="role">'+
+        '<button class="btn-icon danger del-btn" onclick="delAtt('+pi+','+ai+')">🗑</button>';
+      ac.appendChild(row);
+    });
+  });
+}
+function addParty(){
+  DATA.parties.push({role:'NEW', name:'参会方名称', attendees:[]});
+  renderParties();
+}
+function delParty(i){
+  if(!confirm('确认删除该参会方？')) return;
+  DATA.parties.splice(i, 1);
+  renderParties();
+}
+function moveParty(i, dir){
+  const j = i + dir;
+  if(j < 0 || j >= DATA.parties.length) return;
+  [DATA.parties[i], DATA.parties[j]] = [DATA.parties[j], DATA.parties[i]];
+  renderParties();
+}
+function addAtt(pi){
+  DATA.parties[pi].attendees.push({name:'', dept:'', role:''});
+  renderParties();
+}
+function delAtt(pi, ai){
+  DATA.parties[pi].attendees.splice(ai, 1);
+  renderParties();
+}
+function saveParties(){
+  document.querySelectorAll('[data-pk]').forEach(inp=>{
+    DATA.parties[+inp.dataset.pi][inp.dataset.pk] = inp.value;
+  });
+  document.querySelectorAll('[data-ak]').forEach(inp=>{
+    DATA.parties[+inp.dataset.pi].attendees[+inp.dataset.ai][inp.dataset.ak] = inp.value;
+  });
+  persist(false);
+  toast('✅ 人员已保存');
+}
+
+/* ============== 图例 ============== */
+function renderLegend(){
+  if(!DATA) return;
+  const list = document.getElementById('legendList');
+  list.innerHTML = '';
+  (DATA.legends||[]).forEach((l, i)=>{
+    const row = document.createElement('div');
+    row.className = 'legend-row';
+    row.innerHTML = '<input type="text" value="'+esc(l)+'" data-li="'+i+'"><button class="btn-icon danger" onclick="delLegend('+i+')">🗑</button>';
+    list.appendChild(row);
+  });
+}
+function addLegend(){
+  DATA.legends.push('新图例 = 说明');
+  renderLegend();
+}
+function delLegend(i){
+  DATA.legends.splice(i, 1);
+  renderLegend();
+}
+function saveLegends(){
+  DATA.legends = [];
+  document.querySelectorAll('[data-li]').forEach(inp=>DATA.legends.push(inp.value));
+  persist(false);
+  toast('✅ 图例已保存');
+}
+
+/* ============== 初始化 ============== */
+AgendaApp.getData().then(d => {
+  DATA = d;
+  currentTheme = (DATA.settings && DATA.settings.theme) || 'gold';
+  AgendaApp.applyTheme(DATA.settings);
+  renderBasic();
+  setupUpload('logoFile', 'logo_url');
+  setupUpload('coverFile', 'cover_url');
+  refreshQR();
+}).catch(err => {
+  console.error(err);
+  toast('数据加载失败：'+err.message, false);
+});
+</script>
+</body>
+</html>

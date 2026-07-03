@@ -1,0 +1,462 @@
+{
+  "settings": {
+    "theme": "gold",
+    "logo_url": "uploads/logo.png",
+    "cover_url": "uploads/cover.jpg",
+    "public_base_url": "",
+    "admin_password": "admin123",
+    "company_name": "VP Bank Ltd.",
+    "service_enabled": true,
+    "custom_theme": {
+      "page_bg": "#f5f0e8",
+      "card_bg": "#ffffff",
+      "border": "#e0d8c8",
+      "text_body": "#1a1a2e",
+      "text_muted": "#666666",
+      "hero_primary": "#0a1628",
+      "hero_primary_light": "#1a2744",
+      "hero_primary_lighter": "#2a3a5c",
+      "hero_accent_bg": "#c9a96e",
+      "hero_title_text": "#ffffff",
+      "hero_sub_text": "#9aa3b8",
+      "hero_accent_text": "#c9a96e",
+      "tl_accent": "#c9a96e",
+      "tl_gold": "#d4af37",
+      "tl_day_num_bg": "#0a1628",
+      "tl_day_title_text": "#0a1628",
+      "tl_time_text": "#c9a96e",
+      "tl_title_text": "#0a1628",
+      "tl_pres_text": "#666666",
+      "tl_day_num_text": "#ffffff",
+      "att_section_bg": "#0a1628",
+      "att_accent_bg": "#c9a96e",
+      "att_section_title": "#ffffff",
+      "att_name_text": "#ffffff",
+      "att_role_text": "#9aa3b8",
+      "att_accent_text": "#c9a96e",
+      "nav_bg": "#ffffff",
+      "nav_chip_bg": "#f5f0e8",
+      "nav_chip_active_bg": "#0a1628",
+      "fab_start": "#c9a96e",
+      "fab_end": "#d4af37",
+      "nav_chip_text": "#666666",
+      "nav_chip_active_text": "#ffffff",
+      "fab_text": "#0a1628"
+    }
+  },
+  "hero": {
+    "badge": "OFFICIAL VISIT",
+    "title": "Draft Agenda",
+    "subtitle": "VP Bank Delegation Visit to Ma Shang Consumer Finance & ZKJ Technology",
+    "meta": [
+      {
+        "label": "Date",
+        "value": "July 6th - July 10th, 2026"
+      },
+      {
+        "label": "Location",
+        "value": "Chongqing, China"
+      }
+    ]
+  },
+  "days": [
+    {
+      "items": [
+        {
+          "bullets": [],
+          "presenter": "",
+          "time": "13:45 – 14:00",
+          "title": "Arrival at Office"
+        },
+        {
+          "bullets": [
+            "Company history and market position",
+            "Business model and growth journey",
+            "Integrated ecosystem"
+          ],
+          "presenter": "Presenter: Frank Jiang, MS CEO",
+          "time": "14:00 – 14:30",
+          "title": "MaShang Overview (Visual Display Wall）"
+        },
+        {
+          "bullets": [
+            "Introduction of VPB & FE Credit",
+            "Introduction of MS & ZKJ",
+            "Co-define the strategic partnership direction"
+          ],
+          "presenter": "All",
+          "time": "14:30 - 16:00",
+          "title": "Welcome & Introduction"
+        },
+        {
+          "bullets": [],
+          "presenter": "",
+          "time": "16:00 - 16:30",
+          "title": "Proceed to MS the New HeadQuarters"
+        },
+        {
+          "bullets": [
+            "First-hand assessment of MS operational scale and tech infrastructure(To be determined)"
+          ],
+          "presenter": "To be determined",
+          "time": "16:30 - 18:00",
+          "title": "Visit the MS New Headquarters"
+        },
+        {
+          "bullets": [],
+          "presenter": "All",
+          "time": "18:00 - 18:30",
+          "title": "Proceed to Welcome Dinner"
+        },
+        {
+          "bullets": [],
+          "presenter": "All",
+          "time": "18:30 – 20:30",
+          "title": "Welcome Dinner"
+        }
+      ],
+      "subtitle": "Immersive deep-dive into MS's business model, ecosystem and operational excellence",
+      "title": "Day 1 – Understanding the Business & Operations"
+    },
+    {
+      "items": [
+        {
+          "bullets": [],
+          "presenter": "",
+          "time": "08:45 – 09:00",
+          "title": "Arrival at Office"
+        },
+        {
+          "bullets": [
+            "GenAI callbot multi-agent architecture",
+            "Define technical integration requirements (API, data flow, security, performance)",
+            "Assess progress of current 90-day pilot use cases (Phase 1)",
+            "Live demo in production environment: GenAI callbot, AI stand-in agent, virtual assistant",
+            "Confirm Phase 1 scope"
+          ],
+          "presenter": "MS&ZKJ: Huansen Zhang, Liqian Yu, Di Chen, Jing Yang, Xianjue Shi, VPB: All",
+          "time": "09:00 – 10:00",
+          "title": "Digital Collection Deep-dive& Live Demo：GenAI Callbot and AI Stand-in Agent"
+        },
+        {
+          "bullets": [],
+          "presenter": "All",
+          "time": "10:00 – 10:30",
+          "title": "Coffee Break"
+        },
+        {
+          "bullets": [
+            "AICC platform architecture: omnichannel, intelligent orchestration, outbound engine",
+            "Define technical integration requirements(API, data flow, security, performance)",
+            "Assess progress of current 90-day pilot use cases (Phase 1)",
+            "Live demo in production environment: AICC",
+            "Confirm Phase 1 scope"
+          ],
+          "presenter": "MS&ZKJ: Feng Yang, Liqian Yu, Di Chen, Xianjue Shi, VPB: All",
+          "time": "10:30 – 11:30",
+          "title": "Digital Collection Deep-dive& Live Demo：AICC"
+        },
+        {
+          "bullets": [],
+          "presenter": "All",
+          "time": "12:00 – 13:30",
+          "title": "Lunch"
+        },
+        {
+          "bullets": [
+            "Evaluate Vietnamese ASR/TTS: accuracy, domain customisation, voice cloning",
+            "Define technical integration requirements(API, data flow, security, performance)",
+            "Assess progress of current 90-day pilot use cases (Phase 1)",
+            "Live demo in production environment: automatic call recording & summary, real-time compliance monitoring",
+            "Confirm Phase 1 scope"
+          ],
+          "presenter": "MS&ZKJ: Min Liu, Xianjue Shi, VPB: All",
+          "time": "14:00 – 15:00",
+          "title": "Digital Collection Deep-dive& Live Demo：ASR & TTS"
+        },
+        {
+          "bullets": [
+            "AI Training & Coaching multi-agent architecture",
+            "Define technical integration requirements(API, data flow, security, performance)",
+            "Assess progress of current 90-day pilot use cases (Phase 1)",
+            "Live demo in production environment: End-to-end AI Coaching & Training System(Learn → Practice → Test → Evaluate → Certify)",
+            "Confirm Phase 1 scope"
+          ],
+          "presenter": "MS&ZKJ: Lei Wang, Liqian Yu, Yi Li, VPB: All",
+          "time": "15:00 – 16:00",
+          "title": "Digital Collection Deep-dive& Live Demo：AI Training & Coaching"
+        },
+        {
+          "bullets": [],
+          "presenter": "All",
+          "time": "16:00 – 16:30",
+          "title": "Coffee Break"
+        },
+        {
+          "bullets": [
+            "Review operational scale, org structure, and E2E workflows",
+            "Focus on actual KPIs and collection performance across buckets"
+          ],
+          "presenter": "MS&ZKJ: Jing Yang, VPB: All",
+          "time": "16:30 - 17:30",
+          "title": "Site Visit MS AI Collection Centre"
+        },
+        {
+          "bullets": [],
+          "presenter": "All",
+          "time": "18:00 – 20:00",
+          "title": "Group Dinner"
+        }
+      ],
+      "subtitle": "To conduct in-depth live demonstrations of core AI products",
+      "title": "Day 2 – Mapping MS & ZKJ's AI Technical Foundation & Core Capabilities"
+    },
+    {
+      "items": [
+        {
+          "bullets": [],
+          "presenter": "",
+          "time": "08:45 – 09:00",
+          "title": "Arrival at Office"
+        },
+        {
+          "bullets": [
+            "Deep-dive on Feature Engineering​",
+            "Demo Feature Engineering Agent: 300,000+ feature logics",
+            "Data integration: internal sources (core, apps, ECIF) + external sources (credit bureau, telecom, third-party)."
+          ],
+          "presenter": "MS&ZKJ: Liang Jiang, Yonghui Zhang, Yong Li, VPB: All",
+          "time": "09:00 – 10:00",
+          "title": "Unsecured Underwriting: Feature Engineering"
+        },
+        {
+          "bullets": [],
+          "presenter": "All",
+          "time": "10:00 – 10:30",
+          "title": "Coffee Break"
+        },
+        {
+          "bullets": [
+            "Deep dive into Data Platform: architecture, feature store, model training, policy simulation, deployment & monitoring",
+            "Demo on Data Validation for New Data Sources"
+          ],
+          "presenter": "MS&ZKJ: Siyuan Wang, Liang Jiang, Yonghui Zhang, Yong Li,, VPB: All",
+          "time": "10:30 – 11:30",
+          "title": "Unsecured Underwriting: Data Platform"
+        },
+        {
+          "bullets": [],
+          "presenter": "All",
+          "time": "12:00 – 13:30",
+          "title": "Lunch"
+        },
+        {
+          "bullets": [
+            "Deep dive into OCR & Face Forgery Detection",
+            "Demo on OCR & Face Forgery Detection"
+          ],
+          "presenter": "MS&ZKJ: Haifeng Shen, Chengxiang Ran, Zhengpeng Hao, Yong Li,  VPB: All",
+          "time": "14:00 – 15:00",
+          "title": "Unsecured Underwriting: OCR & Face Forgery Detection"
+        },
+        {
+          "bullets": [
+            "Summarize prior sessions key findings and recommendations",
+            "Establish Phase 2 partnership framework & governance",
+            "Confirm parallel execution of Phase 1",
+            "Align on the 30-60-90 day roadmap"
+          ],
+          "presenter": "MS&ZKJ: Bin Fan, Siyuan Wang, Yanfei Pan, Nan Liu, VPB: All",
+          "time": "15:00 – 16:00",
+          "title": "Defining Phase 2 and the Roadmap Ahead"
+        },
+        {
+          "bullets": [],
+          "presenter": "All",
+          "time": "16:00 – 16:30",
+          "title": "Coffee Break"
+        },
+        {
+          "bullets": [
+            "Discuss and confirm pricing model",
+            "Discuss and confirm contract terms (including parties, template, payment terms & credit period, etc.)"
+          ],
+          "presenter": "MS&ZKJ: Bin Fan,  Nan Liu, VPB: TBD",
+          "time": "16:30 - 17:30",
+          "title": "Commercial & Contractual Terms"
+        },
+        {
+          "bullets": [],
+          "presenter": "All",
+          "time": "18:00 – 20:00",
+          "title": "Group Dinner"
+        }
+      ],
+      "subtitle": "Translating Technical Insights into Operational Excellence",
+      "title": "Day 3 – Building VPB's AI-Enabled Operational Future State"
+    },
+    {
+      "items": [],
+      "subtitle": "To Be Determined",
+      "title": "Day 4 Free Activity"
+    },
+    {
+      "items": [],
+      "subtitle": "To Be Determined",
+      "title": "Day 5 Topic1:Free Activity"
+    },
+    {
+      "items": [
+        {
+          "bullets": [],
+          "presenter": "",
+          "time": "Time TBD",
+          "title": "Depart Chongqing → Hanoi / HCMC"
+        },
+        {
+          "bullets": [],
+          "presenter": "",
+          "time": "17:00",
+          "title": "TBD"
+        }
+      ],
+      "subtitle": "To Be Determined",
+      "title": "Day 5 Topic2:Travel"
+    }
+  ],
+  "parties": [
+    {
+      "role": "VPB",
+      "name": "Attendee List",
+      "attendees": [
+        {
+          "name": "Haroon Durrani",
+          "dept": "RB",
+          "role": "Unsecured Lending & Card Solutions"
+        },
+        {
+          "name": "Nguyễn Công Tuấn",
+          "dept": "RB",
+          "role": "Unsecured Loan & Overdraft Products"
+        },
+        {
+          "name": "Rahul Singh",
+          "dept": "RB",
+          "role": "DBS Retail Banking"
+        },
+        {
+          "name": "Trịnh Thị Thanh Huyền",
+          "dept": "DCD",
+          "role": "Deputy Director – DCD Division"
+        },
+        {
+          "name": "Lê Trung Hậu",
+          "dept": "DCD",
+          "role": "Portfolio Management & NPL Strategy"
+        },
+        {
+          "name": "Vũ Tuấn Linh",
+          "dept": "DCD",
+          "role": "EA to SDCEO – RB Ops / AI Digitalization Project Sec"
+        },
+        {
+          "name": "Thân Ngọc Hương",
+          "dept": "QTRR",
+          "role": "A/Head of Retail Risk"
+        },
+        {
+          "name": "Đặng Thị Phương Thảo",
+          "dept": "QTRR",
+          "role": "Team Lead – Credit Policy Management, Retail Risk"
+        },
+        {
+          "name": "Nguyễn Thị Hạ Hương",
+          "dept": "QTRR",
+          "role": "Team Lead-Risk Model Development"
+        },
+        {
+          "name": "Wong Ching Kian",
+          "dept": "EDA",
+          "role": "CDO-Enterprise Data & Analytics"
+        },
+        {
+          "name": "Phạm Hồng Thái",
+          "dept": "EDA",
+          "role": "Team Lead-Data Architecture"
+        },
+        {
+          "name": "Nguyễn Thanh Hảo",
+          "dept": "EDA",
+          "role": "Data Science / Machine Learning Specialist"
+        },
+        {
+          "name": "Nguyễn Thị Thu Nga",
+          "dept": "IT",
+          "role": "Head-Digital Banking Transformation"
+        },
+        {
+          "name": "Nguyễn Đức Duy",
+          "dept": "IT",
+          "role": "Team Lead – Collection Tech Services"
+        },
+        {
+          "name": "Bùi Xuân Khải",
+          "dept": "IT",
+          "role": "CIO of FE Credit"
+        },
+        {
+          "name": "Parekh Yash",
+          "dept": "Credit",
+          "role": "Head-Credit Processing"
+        },
+        {
+          "name": "Anton Perepelitsia",
+          "dept": "Credit",
+          "role": "Head-Cross-sell & Bundling Management"
+        },
+        {
+          "name": "Nguyễn Đăng Minh Tú",
+          "dept": "Credit",
+          "role": "Head-Business Management / Transformation"
+        }
+      ]
+    },
+    {
+      "role": "MS&zkj",
+      "name": "Attendee List",
+      "attendees": [
+        {
+          "name": "Frank Jiang",
+          "dept": "-",
+          "role": "CEO of MaShang"
+        },
+        {
+          "name": "Bin Fan",
+          "dept": "-",
+          "role": "SVP of ZKJ"
+        },
+        {
+          "name": "Yanfei Pan",
+          "dept": "PD",
+          "role": "Director of Product​"
+        },
+        {
+          "name": "Nan Liu",
+          "dept": "BD",
+          "role": "Commercial Director"
+        },
+        {
+          "name": "Siyuan Wang",
+          "dept": "RM",
+          "role": "Director of Risk"
+        }
+      ]
+    }
+  ],
+  "legends": [
+    "MS = Ma Shang Consumer Finance",
+    "ZKJ = ZKJ Technology",
+    "VPB = VP Bank Group"
+  ],
+  "footer": "CONFIDENTIAL • FOR INTERNAL USE ONLY"
+}
