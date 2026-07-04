@@ -155,7 +155,7 @@
   // ===== 分享 URL =====
   function getShareUrl() {
     // 优先使用后台配置的 public_base_url
-    const data = loadData() || _defaultData;
+    const data = loadData() || _defaultData || {};
     const base = (data.settings || {}).public_base_url || '';
     if (base) {
       const b = base.trim().replace(/\/+$/, '');
@@ -167,7 +167,7 @@
 
   function getAppUrl() {
     // 自包含应用页地址（用于二维码）
-    const data = loadData() || _defaultData;
+    const data = loadData() || _defaultData || {};
     const base = (data.settings || {}).public_base_url || '';
     if (base) {
       return base.trim().replace(/\/+$/, '') + '/app';

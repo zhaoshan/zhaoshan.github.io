@@ -320,7 +320,7 @@ textarea{resize:vertical;min-height:70px;line-height:1.5}
 <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
 <script src="assets/app.js"></script>
 <script>
-var DATA = AgendaApp.loadData() || AgendaApp._defaultData;
+var DATA = AgendaApp.loadData() || AgendaApp._defaultData || {settings:{},hero:{},days:[],parties:[],legends:[],footer:''};
 var SHARE_URL = AgendaApp.getShareUrl();
 const THEMES = [
   {id:'gold',name:'流金',primary:'#0a1628',accent:'#c9a96e'},
