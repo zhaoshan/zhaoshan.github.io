@@ -1,7 +1,7 @@
 {
   "settings": {
     "theme": "gold",
-    "cover_url": "uploads/cover.jpg",
+    "cover_url": "https://zhaoshan.github.io/agenda/uploads/cover.png",
     "public_base_url": "",
     "admin_password": "admin123",
     "company_name": "VP Bank Ltd.",
