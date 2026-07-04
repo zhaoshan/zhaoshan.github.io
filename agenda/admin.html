@@ -163,6 +163,7 @@ textarea{resize:vertical;min-height:70px;line-height:1.5}
 @media(max-width:600px){.ct-group-body{grid-template-columns:1fr}}
 .ct-item[hidden]{display:none!important}
 </style>
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
 </head>
 <body>
 <div class="topbar">
@@ -192,7 +193,7 @@ textarea{resize:vertical;min-height:70px;line-height:1.5}
         <div class="share-card">
           <div class="share-url-tag">SHAREABLE LINK</div>
           <div style="font-size:13px;color:rgba(255,255,255,.6);margin-bottom:4px">扫描二维码或打开链接查看完整议程</div>
-          <div class="qr-wrap"><img id="qrImg" src="" id="qrImgSrc" alt="QR"></div>
+          <div class="qr-wrap"><img id="qrImg" src="" alt="QR"></div>
           <div class="link-box">
             <input id="shareInput" readonly value="{{ share_url }}">
             <button class="btn btn-green btn-sm" onclick="copyShare()">复制</button>
@@ -316,7 +317,8 @@ textarea{resize:vertical;min-height:70px;line-height:1.5}
 </div>
 
 <div class="toast" id="toast"></div>
-
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+<script src="assets/app.js"></script>
 <script>
 var DATA = AgendaApp.loadData() || AgendaApp._defaultData;
 var SHARE_URL = AgendaApp.getShareUrl();
@@ -403,8 +405,36 @@ document.querySelectorAll('.nav-item').forEach(n=>n.addEventListener('click',()=
 /* ===== share ===== */
 function copyShare(){const inp=document.getElementById('shareInput');inp.select();document.execCommand('copy');toast('✅ 链接已复制');}
 function openView(){window.open(SHARE_URL,'_blank');}
-function refreshQR(){document.getElementById('qrImg').src='/api/qr?t='+Date.now();}
-function dlQR(){const a=document.createElement('a');a.href='/api/qr?t='+Date.now();a.download='agenda-qr.png';a.click();}
+function refreshQR(){
+  const url = SHARE_URL;
+  const img = document.getElementById('qrImg');
+  if (typeof QRCode === 'undefined') {
+    toast('⚠️ 二维码库加载失败', false);
+    return;
+  }
+  QRCode.toDataURL(url, {width: 168, margin: 1, color: {dark: '#0a1628', light: '#ffffff'}}, function(err, dataUrl) {
+    if (err) {
+      console.error(err);
+      toast('生成二维码失败', false);
+      return;
+    }
+    img.src = dataUrl;
+  });
+}
+function dlQR(){
+  const url = SHARE_URL;
+  if (typeof QRCode === 'undefined') {
+    toast('⚠️ 二维码库加载失败', false);
+    return;
+  }
+  QRCode.toDataURL(url, {width: 300, margin: 2, color: {dark: '#0a1628', light: '#ffffff'}}, function(err, dataUrl) {
+    if (err) { console.error(err); toast('生成失败', false); return; }
+    const a = document.createElement('a');
+    a.href = dataUrl;
+    a.download = 'agenda-qr.png';
+    a.click();
+  });
+}
 function dlPDF(){window.open('/dl/pdf','_blank');}
 
 /* ===== service keepalive ===== */
@@ -755,6 +785,8 @@ function post(url,body){return fetch(url,{method:'POST',headers:{'Content-Type':
 // init
 renderBasic();
 loadServiceStatus();
+// 初始化二维码（分享 tab 默认展示）
+refreshQR();
 </script>
 </body>
 </html>
