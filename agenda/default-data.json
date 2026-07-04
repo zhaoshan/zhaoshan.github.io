@@ -1,7 +1,6 @@
 {
   "settings": {
     "theme": "gold",
-    "logo_url": "uploads/logo.png",
     "cover_url": "uploads/cover.jpg",
     "public_base_url": "",
     "admin_password": "admin123",
@@ -42,7 +41,16 @@
       "nav_chip_text": "#666666",
       "nav_chip_active_text": "#ffffff",
       "fab_text": "#0a1628"
-    }
+    },
+    "fab_text": "Share",
+    "day_tabs": [
+      "Day_1",
+      "Day_2",
+      "Day_3",
+      "Day_4",
+      "Day_5",
+      "Day_6"
+    ]
   },
   "hero": {
     "badge": "OFFICIAL VISIT",
@@ -66,7 +74,8 @@
           "bullets": [],
           "presenter": "",
           "time": "13:45 – 14:00",
-          "title": "Arrival at Office"
+          "title": "Arrival at Office",
+          "location": "MS 总部大厅"
         },
         {
           "bullets": [
@@ -76,7 +85,8 @@
           ],
           "presenter": "Presenter: Frank Jiang, MS CEO",
           "time": "14:00 – 14:30",
-          "title": "MaShang Overview (Visual Display Wall）"
+          "title": "MaShang Overview (Visual Display Wall）",
+          "location": "MS 展示大厅"
         },
         {
           "bullets": [
@@ -92,7 +102,8 @@
           "bullets": [],
           "presenter": "",
           "time": "16:00 - 16:30",
-          "title": "Proceed to MS the New HeadQuarters"
+          "title": "Proceed to MS the New HeadQuarters",
+          "location": "MS 新总部大楼"
         },
         {
           "bullets": [
@@ -106,7 +117,8 @@
           "bullets": [],
           "presenter": "All",
           "time": "18:00 - 18:30",
-          "title": "Proceed to Welcome Dinner"
+          "title": "Proceed to Welcome Dinner",
+          "location": "欢迎晚宴餐厅"
         },
         {
           "bullets": [],
@@ -136,7 +148,8 @@
           ],
           "presenter": "MS&ZKJ: Huansen Zhang, Liqian Yu, Di Chen, Jing Yang, Xianjue Shi, VPB: All",
           "time": "09:00 – 10:00",
-          "title": "Digital Collection Deep-dive& Live Demo：GenAI Callbot and AI Stand-in Agent"
+          "title": "Digital Collection Deep-dive& Live Demo：GenAI Callbot and AI Stand-in Agent",
+          "location": "MS 会议室 A"
         },
         {
           "bullets": [],
@@ -184,7 +197,8 @@
           ],
           "presenter": "MS&ZKJ: Lei Wang, Liqian Yu, Yi Li, VPB: All",
           "time": "15:00 – 16:00",
-          "title": "Digital Collection Deep-dive& Live Demo：AI Training & Coaching"
+          "title": "Digital Collection Deep-dive& Live Demo：AI Training & Coaching",
+          "location": "MS AI 催收中心"
         },
         {
           "bullets": [],
@@ -217,7 +231,8 @@
           "bullets": [],
           "presenter": "",
           "time": "08:45 – 09:00",
-          "title": "Arrival at Office"
+          "title": "Arrival at Office",
+          "location": "MS 会议室 B"
         },
         {
           "bullets": [

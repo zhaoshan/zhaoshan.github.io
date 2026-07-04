@@ -154,14 +154,32 @@
 
   // ===== 分享 URL =====
   function getShareUrl() {
+    // 优先使用后台配置的 public_base_url
+    const data = loadData() || _defaultData;
+    const base = (data.settings || {}).public_base_url || '';
+    if (base) {
+      const b = base.trim().replace(/\/+$/, '');
+      return b + '/index.html';
+    }
+    // 自动推断：当前地址
     return window.location.origin + window.location.pathname.replace(/\/admin\.html$/, '/') + 'index.html';
+  }
+
+  function getAppUrl() {
+    // 自包含应用页地址（用于二维码）
+    const data = loadData() || _defaultData;
+    const base = (data.settings || {}).public_base_url || '';
+    if (base) {
+      return base.trim().replace(/\/+$/, '') + '/app';
+    }
+    return window.location.origin + window.location.pathname.replace(/[^/]*$/, '') + 'app';
   }
 
   global.AgendaApp = {
     THEME_FIELDS,
     hexToRgb, lighten, deriveCustomTheme,
     loadData, saveData, getData, resetData, loadDefaultData,
-    applyTheme, exportData, importData, getShareUrl,
+    applyTheme, exportData, importData, getShareUrl, getAppUrl,
     STORAGE_KEY,
   };
 })(window);
